@@ -26,7 +26,7 @@ I also have many hands-on experience, projects with
 
 - [_Cantrill's AWS Courses Comparer_](https://cantrill-aws.vercel.app): This helps me get my 4th, 5th & 6th AWS certificates.
 
-- [GTDB](https://gtdb.vercel.app): Be a safe driver 🚲🛵🏍️🚗 (Road signs, road surface markings, driving laws...)
+- [GTDB](https://gtdb.vercel.app): Be a safe driver 🚲🛵🏍️🚗, please! Road signs, road surface markings, driving laws...
 
 ## 🆓 Things I've done for myself but may be helpful for others
 
@@ -63,15 +63,15 @@ I also have many hands-on experience, projects with
 
 - Weather app - [Demo](https://lqt-weather-app.netlify.app/)
 
-  <a href="https://lqt-weather-app.netlify.app/"><img src="assets/Weather-App.png" height="auto" width="250px"></a>
+  <a href="https://lqt-weather-app.netlify.app/"><img src="https://i.imgur.com/ZfxCZFq.png" height="auto" width="250px"></a>
 
 - Random Quote Machine - [Demo](https://lqt-quote-machine.netlify.app)
 
-  <a href="https://lqt-quote-machine.netlify.app"><img src="assets/Quote-Machine.png" height="auto" width="250px"></a>
+  <a href="https://lqt-quote-machine.netlify.app"><img src="https://i.imgur.com/KevXkMe.png" height="auto" width="250px"></a>
 
 - Rock, Paper, Scissors - [Demo](https://lqt-rps.netlify.app/)
 
-  <a href="https://lqt-rps.netlify.app/"><img src="assets/Rock-paper-scissors.png" height="auto" width="400px"></a>
+  <a href="https://lqt-rps.netlify.app/"><img src="https://i.imgur.com/0c3sw7n.png" height="auto" width="400px"></a>
 
 ### **Responsive Design**
 
@@ -103,15 +103,15 @@ I also have many hands-on experience, projects with
 
 - BMI Calculator - [Demo](https://lqt-bmi-calculator.netlify.app/)
 
-  <a href="https://lqt-bmi-calculator.netlify.app/"><img src="assets/BMI-Calculator.png" height="auto" width="400px"></a>
+  <a href="https://lqt-bmi-calculator.netlify.app/"><img src="https://i.imgur.com/1YITKXr.png" height="auto" width="400px"></a>
 
 - Recorder - [Demo](https://lqt-recorder.netlify.app/)
 
-  <a href="https://lqt-recorder.netlify.app/"><img src="assets/Recorder.png" height="auto" width="250px"></a>
+  <a href="https://lqt-recorder.netlify.app/"><img src="https://i.imgur.com/FIfw441.png" height="auto" width="250px"></a>
 
 - Balder - The hero - A canvas game - [Demo](https://balder-the-hero.netlify.app/)
 
-  <a href="https://balder-the-hero.netlify.app/"><img src="assets/Balder-the-hero.png" height="auto" width="250px"></a>
+  <a href="https://balder-the-hero.netlify.app/"><img src="https://i.imgur.com/FLau03U.png" height="auto" width="250px"></a>
 
 </details>
 
