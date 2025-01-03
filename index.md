@@ -13,7 +13,7 @@ I'm
 - a **[6x AWS Certified](https://www.credly.com/users/lequangthang/) - Cloud Enthusiastic** (by chance)
 - a Mechatronics Engineer (by training)
 
-My current stack is Golang, MySQL, React.
+My current stack is Golang, MySQL, TypeScript, React, Next.js.
 
 I also have many hands-on experience, projects with
 
