@@ -22,11 +22,12 @@ I also have many hands-on experience, projects with
 
 ## 🆕 Things I've worked on recently
 
+- [GTDB](https://gtdb.vercel.app): Be a safe driver 🚲🛵🏍️🚗, please! Road signs, road surface markings, driving laws...
+
 - [_AWSsome_](https://awssome.vercel.app/): Mind-maps for AWS Certificates.
 
 - [_Cantrill's AWS Courses Comparer_](https://cantrill-aws.vercel.app): This helps me get my 4th, 5th & 6th AWS certificates.
 
-- [GTDB](https://gtdb.vercel.app): Be a safe driver 🚲🛵🏍️🚗, please! Road signs, road surface markings, driving laws...
 
 ## 🆓 Things I've done for myself but may be helpful for others
 
