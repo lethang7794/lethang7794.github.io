@@ -22,7 +22,7 @@ I also have many hands-on experience, projects with
 
 ## 🆕 Things I've worked on recently
 
-- [GTDB](https://gtdb.vercel.app): Be a safe driver 🚲🛵🏍️🚗, please! Road signs, road surface markings, driving laws...
+- [GTDB](https://gtdb.app): Use social network to spread knowledge about safe driving: Road signs, road surface markings, driving laws...
 
 - [_AWSsome_](https://awssome.vercel.app/): Mind-maps for AWS Certificates.
 
