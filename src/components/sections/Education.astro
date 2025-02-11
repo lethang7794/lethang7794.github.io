@@ -9,10 +9,13 @@ import { certificates } from "@cv";
 	<ul class="space-y-4 py-3 print:space-y-0">
 		{
 			education.map(({ institution, startDate, endDate, area, url }) => {
-				const startYear = new Date(startDate).getFullYear();
-				const endYear =
-					endDate != null ? new Date(endDate).getFullYear() : "Actual";
-				const years = `${startYear} - ${endYear}`;
+				const start = new Date(startDate);
+				const startYear = start.getFullYear();
+				const startMonth = start.toLocaleString("en-US", { month: "short" });
+				const end = new Date(endDate);
+				const endYear = endDate != null ? end.getFullYear() : "Present";
+				const endMonth = end.toLocaleString("en-US", { month: "short" });
+				const years = `${startYear} ${startMonth} - ${endYear} ${endMonth}`;
 
 				return (
 					<div class="flex items-baseline">
@@ -53,13 +56,17 @@ import { certificates } from "@cv";
 		}
 	</ul>
 </Section>
+
 <Section className={Astro.props.className} title="Certificates">
 	{
 		certificates.length > 0 && (
 			<>
 				<ul class="space-y-4 py-3 print:space-y-0">
 					{certificates.map(({ name, date, issuer, url }) => {
-						const certificateYear = new Date(date).getFullYear();
+						const d = new Date(date);
+						const year = d.getFullYear();
+						const month = d.toLocaleString("en-US", { month: "short" });
+						const certificateYear = `${month} ${year}`;
 						return (
 							<div class="flex items-baseline">
 								<svg

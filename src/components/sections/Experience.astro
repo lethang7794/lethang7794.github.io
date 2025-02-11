@@ -92,7 +92,7 @@ const SKILLS_ICONS: Record<string, any> = {
                 )}
 
                 {(responsibilities || achievements) &&  (
-                <div class="md:after:from-skin-hue dark:md:after:to-skin-hue/0  flex relative flex-col max-sm:!h-auto print:!h-auto gap-4 print:gap-2 md:after:bg-gradient-to-t md:after:absolute md:after:bottom-0 md:after:w-full print:after:hidden md:after:h-12 md:after:content-[''] " :class="expanded ? 'after:hidden' : ''" x-show="expanded" x-collapse.min.50px>
+                <div class="md:after:from-skin-hue dark:md:after:to-skin-hue/0  flex relative flex-col max-sm:!h-auto print:!h-auto gap-4 print:gap-2 md:after:bg-gradient-to-t md:after:absolute md:after:bottom-0 md:after:w-full print:after:hidden md:after:h-16 md:after:content-[''] " :class="expanded ? 'after:hidden' : ''" x-show="expanded" x-collapse.min.72px>
                 {responsibilities?.length > 0 && (
                   <div class="flex flex-col gap-1">
                     <h4>Responsibilities:</h4>
@@ -137,8 +137,8 @@ const SKILLS_ICONS: Record<string, any> = {
               </div>
             </div>
 
-            <header class="relative mt-1 text-xs font-semibold sm:col-span-2 order-1 sm:order-2">
-              <time datetime={endDate} data-title={endDate}>{endYear} {endMonth}</time> - <time datetime={startDate} data-title={startDate} class="whitespace-nowrap">{startYear} {startMonth}</time>
+            <header class="relative mt-1 text-xs text-skin-muted sm:col-span-3 order-1 sm:order-2">
+              <time datetime={startDate} data-title={startDate} class="whitespace-nowrap"><span class="font-normal">{startMonth} {startYear}</span></time> - <time datetime={endDate} data-title={endDate}><span class="font-normal">{endMonth}</span> {endYear}</time>
             </header>
 
           </div>

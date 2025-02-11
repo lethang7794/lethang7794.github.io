@@ -25,27 +25,35 @@
       "position": "Full Stack Developer",
       "startDate": "2022-06",
       "endDate": "2023-07",
-      "summary-TODO": "",
+      "summary": "Collaborated with product owners, UI/UX designers, and cross-functional teams to refine product specifications, ensuring seamless alignment between business requirements and technical solutions.",
       "highlights": [
         "Developed a CMS for a gaming system.",
         "Developed and deployed a performance review system used by over 100 employees.",
         "Migrated a legacy system from Docker Compose to Kubernetes.",
         "Contributed to building the design system.",
-        "Developed a high-performance table component.",
-        "Collaborated with product owners, UI/UX designers, and cross-functional teams.",
         "Mentored a Frontend Developer and a Backend Developer, supporting their growth and technical skills",
         "Achievement: Promoted four times in two years — twice the usual pace — recognizing outstanding contributions."
       ],
-      "responsibilities": [],
+      "responsibilities": [
+        "Developed a CMS for a gaming system, enhancing content management and operational efficiency.",
+        "Developed and deployed a performance review system used by 100+ employees, improving evaluation processes.",
+        "Led the migration of a legacy system from Docker Compose to Kubernetes, boosting scalability and reliability.",
+        "Contributed to the development of a design system, ensuring UI consistency and efficiency across products.",
+        "Mentored a Frontend and a Backend Developer, accelerating their technical growth and productivity."
+      ],
       "achievements": [
-        "Promoted four times in two years — twice the usual pace — recognizing outstanding contributions."
+        "Engineered an optimized table component for the CMS using React, significantly improving performance and usability across key features.",
+        "Promoted four times in two years — twice the typical pace — recognizing outstanding contributions and impact."
       ],
       "skills": [
+        "TypeScript",
         "React",
+        "CSS Modules",
         "Design System",
         "Golang",
-        "Google Cloud",
         "Kubernetes",
+        "Google Cloud (Google Analytics, Big Query)",
+        "AWS (EKS)",
         "GitLab CI/CD"
       ]
     },
@@ -54,18 +62,35 @@
       "position": "Junior Full Stack Developer",
       "startDate": "2022-01",
       "endDate": "2022-07",
-      "summary-TODO": "Co-founded General Electric, one of the largest and most diversified industrial corporations in the world.",
+      "summary": "Focused on frontend development, creating reusable libraries to support team members and improve code efficiency.",
       "highlights": [
-        "Developed key UI components for company-wide projects.",
         "Set up CI pipelines to automate the publishing of frontend core NPM packages.",
+        "Developed key UI components for company-wide projects.",
         "Translated design wireframes into functional UI components.",
         "Built pixel-perfect landing pages.",
         "Mentored a Frontend Developer, providing guidance and support.",
         "Achievement: Achieved a 100% salary increase within my first year, reflecting exceptional performance."
       ],
-      "responsibilities": [],
+      "responsibilities": [
+        "Set up CI pipelines to automate the publishing of frontend core NPM packages.",
+        "Developed key UI components for company-wide projects.",
+        "Translated design wireframes into functional UI components.",
+        "Built pixel-perfect landing pages.",
+        "Mentored a Frontend Developer, providing guidance and support.",
+        "Researched and evaluated micro frontend technologies to improve performance and scalability."
+      ],
       "achievements": [
+        "Introduced Tailwind CSS to a team of six frontend developers, accelerating development speed for new projects and improving UI consistency.",
         "Achieved a 100% salary increase within my first year, reflecting exceptional performance."
+      ],
+      "skills": [
+        "TypeScript",
+        "React",
+        "Tailwind CSS",
+        "AWS",
+        "Ant Design",
+        "Next.js",
+        "Micro Frontends"
       ]
     },
     {
@@ -73,14 +98,31 @@
       "position": "Junior Backend Developer",
       "startDate": "2021-07",
       "endDate": "2021-12",
-      "summary": "",
+      "summary": "Worked as a Full-Stack Developer (beyond the job description) in a cross-functional product team alongside a Product Manager, Product Owner, UI/UX Designer, and two Frontend Developers to develop a Human Resource Management System.",
       "highlights": [
-        "Developed a Human Resource Management system.",
-        "Designed and integrated gRPC APIs.",
+        "Collaborated with frontend engineers to design and integrate gRPC APIs, ensuring seamless communication between services.",
+        "Managed regular deployments with an Agile approach.",
+        "Optimized Dockerfile, reducing feedback loops by up to 600% (from 60s to 5-10s) for each microservice.",
+        "Automated the attendance tracking and approval proce"
+      ],
+      "responsibilities": [
+        "Collaborated with frontend engineers to design and integrate gRPC APIs, ensuring seamless communication between services.",
         "Managed regular deployments with an Agile approach."
       ],
       "achievements": [
-        "Optimized Dockerfile, reducing feedback loops by up to 600% (from 60s to 5-10s) for each microservice."
+        "Optimized Dockerfile, reducing feedback loops by up to 600% (from 60s to 5-10s) for each microservice.",
+        "Automated the attendance tracking and approval process, reducing processing time from several days to just hours, achieving a 95%+ satisfaction rate."
+      ],
+      "skills": [
+        "Golang",
+        "Microservices",
+        "Envoy Proxy",
+        "Docker Compose",
+        "TypeScript",
+        "React",
+        "Material UI",
+        "Styled Component",
+        "GitLab CI"
       ]
     },
     {
@@ -88,16 +130,33 @@
       "position": "Fresher Backend Developer",
       "startDate": "2021-04",
       "endDate": "2021-06",
-      "summary": "Researched Golang, TypeScript, gRPC, and other technologies",
+      "summary": "Joined as the second team member for a new product, contributing to backend development while establishing frontend foundations for other projects.",
       "highlights": [
         "Authored official onboarding documentation for setting up the backend environment, streamlining the process for new team members."
       ],
       "achievements": [
         "Authored official onboarding documentation for setting up the backend environment, streamlining the process for new team members."
+      ],
+      "skills": [
+        "Golang",
+        "TypeScript",
+        "React",
+        "Material UI",
+        "gRPC"
       ]
     }
   ],
   "education": [
+    {
+      "institution": "Inspire Lab Technology",
+      "area": "DevOps Fresher Program",
+      "studyType": "Bootcamp",
+      "startDate": "2022-02",
+      "endDate": "2022-04",
+      "courses": [
+        "Joined the DevOps Fresher Program while working as a Full Stack Developer"
+      ]
+    },
     {
       "institution": "CoderSchool Vietnam",
       "area": "Full Stack Web Development",
@@ -214,16 +273,12 @@
     {
       "name": "Frontend",
       "keywords": [
-        "Next.js",
-        "React",
-        "TypeScript",
-        "JavaScript",
-        "MaterialUI",
-        "Bootstrap",
-        "Tailwind",
-        "SASS",
-        "CSS",
-        "HTML"
+        "Next.js / React",
+        "TypeScript / JavaScript",
+        "MaterialUI / Bootstrap / Ant Design",
+        "Tailwind / Styled Component",
+        "SASS / CSS / HTML",
+        "Micro Frontend"
       ]
     },
     {
@@ -240,8 +295,9 @@
         "Kubernetes",
         "Docker",
         "Terraform",
+        "GitLab CI/CD",
         "GitHub Actions",
-        "GitLab CICD"
+        "Bash Script"
       ]
     },
     {
@@ -250,7 +306,7 @@
     },
     {
       "name": "Collaboration",
-      "keywords": ["Git", "Jira", "Agile", "Confluence", "Figma"]
+      "keywords": ["Git", "Agile", "Jira", "Confluence", "Figma", "Slack"]
     }
   ],
   "languages": [
