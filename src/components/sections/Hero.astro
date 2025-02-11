@@ -158,18 +158,25 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ");
 	const theme = localStorage.getItem("theme");
 	const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 
-	if (theme !== null) {
-		select.value = theme;
-	} else {
-		select.value = systemTheme;
-	}
-
 	function updateTheme(value: string) {
-		const theme = value === "system" ? systemTheme : value;
+		const theme = value === "system" ? 'system' : value;
 		document.documentElement.classList.remove("light", "dark");
 		document.documentElement.classList.add(theme);
 		localStorage.setItem("theme", value);
 	}
+
+	if (theme !== null) {
+		select.value = theme;
+	} else {
+		select.value = systemTheme;
+		updateTheme(systemTheme)
+	}
+
+	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+		const isDarkMode = event.matches;
+		console.log("Hello, isDarkMode", isDarkMode)
+    updateTheme(isDarkMode ? 'dark' : 'light')
+	});
 
 	updateTheme(select.value);
 
