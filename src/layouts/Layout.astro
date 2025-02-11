@@ -28,7 +28,7 @@ const { image, summary, url, theme } = basics;
 		<meta property="og:image" content="" />
 
 		<meta name="twitter:card" content="summary_large_image" />
-		<meta property="twitter:domain" content={url.split("//")[1] ?? ""} />
+		<meta property="twitter:domain" content={url?.split("//")[1] ?? ""} />
 		<meta property="twitter:url" content={url} />
 		<meta name="twitter:title" content={title} />
 		<meta name="twitter:description" content={summary} />

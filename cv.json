@@ -1,364 +1,259 @@
 {
   "basics": {
-    "name": "John Doe",
-    "label": "Junior Full Stack Developer",
-    "image": "/me_avatar.jpg",
-    "email": "john.doe@example.com",
-    "phone": "+1 555-555-5555",
-    "url": "https://johndoe.dev",
-    "summary": "Junior Full Stack Developer with a passion for building web applications. Currently seeking opportunities to further develop my skills in a professional setting.",
-    "theme": "default",
+    "name": "Le Quang Thang",
+    "label": "Full Stack Developer",
+    "picture-TODO": "https://example.com/photo.jpg",
+    "email": "lethang7794@gmail.com",
+    "phone": "+84 944 990 631",
+    "website": "https://lethang7794.github.io",
+    "summary": "Ambitious Full Stack Developer with expertise in cloud computing, driven by growth and innovation, seeking new challenges to build impactful solutions and create value for businesses and users.",
     "location": {
-      "address": "",
-      "postalCode": "10001",
-      "city": "Auckland",
-      "countryCode": "NZ",
-      "region": "New Zealand"
+      "city": "Ho Chi Minh City",
+      "countryCode": "Vietnam"
     },
     "profiles": [
       {
-        "network": "LinkedIn",
-        "username": "john-doe",
-        "url": "https://linkedin.com/in/john-doe"
-      },
-      {
-        "network": "X",
-        "username": "john-doe",
-        "url": "https://x.com/john-doe"
-      },
-      {
-        "network": "GitHub",
-        "username": "johndoe",
-        "url": "https://github.com/johndoe"
+        "network": "Github",
+        "username": "lethang7794",
+        "url": "https://github.com/lethang7794"
       }
     ]
   },
   "work": [
     {
-      "name": "Tech Startup",
-      "position": "Junior Web Developer",
-      "location_type": "On site",
-      "location": "Auckland, New Zealand",
-      "url": "https://techstartup.com",
-      "startDate": "2024-01-01",
-      "endDate": null,
-      "summary": "Developing and maintaining web applications using JavaScript, HTML, and CSS. Collaborating with the team to implement new features and fix bugs.",
+      "company": "Inspire Lab Technology",
+      "position": "Full Stack Developer",
+      "startDate": "2022-06",
+      "endDate": "2023-07",
+      "summary-TODO": "",
       "highlights": [
-        "Improved website performance by optimizing code"
-      ],
-      "responsibilities": [
-        "Collaborated with senior developers to design and implement web applications using modern JavaScript frameworks.",
-        "Assisted in debugging and optimizing front-end code to ensure smooth user experiences.",
-        "Participated in code reviews and contributed to improving coding standards within the team."
-      ],
-      "achievements": [
-        "Developing and maintaining web applications using JavaScript, HTML, and CSS. Collaborating with the team to implement new features and fix bugs."
-      ],
-      "skills": [
-        "React",
-        "Tailwind",
-        "GitHub"
+        "Developed a CMS for a gaming system.",
+        "Developed and deployed a performance review system used by over 100 employees.",
+        "Migrated a legacy system from Docker Compose to Kubernetes.",
+        "Contributed to building the design system.",
+        "Developed a high-performance table component.",
+        "Collaborated with product owners, UI/UX designers, and cross-functional teams.",
+        "Mentored a Frontend Developer and a Backend Developer, supporting their growth and technical skills",
+        "Achievement: Promoted four times in two years — twice the usual pace — recognizing outstanding contributions."
       ]
     },
     {
-      "name": "Innovative Solutions",
-      "position": "Junior Software Developer",
-      "location_type": "Hybrid",
-      "location": "Wellington, New Zealand",
-      "url": "https://innovativesolutions.com",
-      "startDate": "2022-06-01",
-      "endDate": "2023-06-01",
-      "summary": "Assisting in the development and maintenance of software applications using Python and Django. Collaborating with cross-functional teams to ensure quality and timely delivery of software solutions.",
+      "company": "Inspire Lab Technology",
+      "position": "Junior Full Stack Developer",
+      "startDate": "2022-01",
+      "endDate": "2022-07",
+      "summary-TODO": "Co-founded General Electric, one of the largest and most diversified industrial corporations in the world.",
       "highlights": [
-        "Contributed to a major project that streamlined internal workflows, improving efficiency by 30%"
-      ],
-      "responsibilities": [
-        "Developed and maintained backend services using Python and Django.",
-        "Worked closely with front-end developers to integrate user-facing elements with server-side logic.",
-        "Participated in daily stand-ups and bi-weekly sprint planning meetings to ensure alignment with project goals."
-      ],
-      "achievements": [
-        "Successfully implemented a feature that enhanced user authentication, improving security measures."
-      ],
-      "skills": [
-        "Python",
-        "Django",
-        "SQL",
-        "Git"
+        "Developed key UI components for company-wide projects.",
+        "Set up CI pipelines to automate the publishing of frontend core NPM packages.",
+        "Translated design wireframes into functional UI components.",
+        "Built pixel-perfect landing pages.",
+        "Optimized Dockerfile, reducing feedback loops by up to 600% (from 60s to 5-10s) for each microservice.",
+        "Mentored a Frontend Developer, providing guidance and support.",
+        "Achievement: Achieved a 100% salary increase within my first year, reflecting exceptional performance."
       ]
     },
     {
-      "name": "Web Agency",
-      "position": "Intern Web Developer",
-      "location_type": "Remote",
-      "location": "Sydney, Australia",
-      "startDate": "2022-06-01",
-      "endDate": "2022-12-01",
-      "summary": "Assisted in developing client websites and applications. Gained hands-on experience with front-end and back-end technologies.",
+      "company": "Inspire Lab Technology",
+      "position": "Junior Backend Developer",
+      "startDate": "2021-07",
+      "endDate": "2021-12",
+      "summary": "",
       "highlights": [
-        "Completed several client projects successfully"
-      ],
-      "skills": [
-        "HTML",
-        "CSS"
+        "Developed a Human Resource Management system.",
+        "Designed and integrated gRPC APIs.",
+        "Managed regular deployments with an Agile approach."
       ]
-    }
-  ],
-  "volunteer": [
+    },
     {
-      "organization": "Local Coding Club",
-      "position": "Volunteer",
-      "url": "https://codingclub.com/",
-      "startDate": "2021-01-01",
-      "endDate": "2022-01-01",
-      "summary": "Helped organize coding workshops and mentored new members.",
+      "company": "Inspire Lab Technology",
+      "position": "Fresher Backend Developer",
+      "startDate": "2021-04",
+      "endDate": "2021-06",
+      "summary": "Researched Golang, TypeScript, gRPC, and other technologies",
       "highlights": [
-        "Awarded 'Volunteer of the Month'"
+        "Authored official onboarding documentation for setting up the backend environment, streamlining the process for new team members."
       ]
     }
   ],
   "education": [
     {
-      "institution": "State University",
-      "url": "https://stateuniversity.edu",
-      "area": "Computer Science",
-      "studyType": "Bachelor",
-      "startDate": "2018-09-01",
-      "endDate": "2022-05-01",
-      "score": "3.8",
+      "institution": "CoderSchool Vietnam",
+      "area": "Full Stack Web Development",
+      "studyType": "Bootcamp",
+      "startDate": "2020-12",
+      "endDate": "2021-03",
       "courses": [
-        "CS101 - Introduction to Computer Science",
-        "CS102 - Data Structures"
+        "Studied best practices in front-end/back-end software design for 60-70 hours a week over 3 months."
       ]
     },
     {
-      "institution": "Tech Institute",
-      "url": "https://techinstitute.edu",
-      "area": "Software Engineering",
-      "studyType": "Master",
-      "startDate": "2020-09-01",
-      "endDate": "2022-12-01",
-      "score": "3.9",
-      "courses": [
-        "SE201 - Advanced Software Development",
-        "SE202 - Software Architecture and Design"
-      ]
-    },
-    {
-      "institution": "City College",
-      "url": "https://citycollege.edu",
-      "area": "Information Technology",
-      "studyType": "Associate Degree",
-      "startDate": "2017-01-01",
-      "endDate": "2019-12-01",
-      "score": "3.7",
-      "courses": [
-        "IT101 - Networking Fundamentals",
-        "IT102 - Database Management Systems"
-      ]
+      "institution": "Bach Khoa University (Ho Chi Minh City University of Technology)",
+      "area": "Bachelor of Mechatronics Engineering",
+      "studyType": "Programme de Formation d’Ingénieurs d’Excellence au Vietnam (P.F.I.E.V)",
+      "startDate": "2012-09",
+      "endDate": "2020-05"
     }
   ],
   "certificates": [
     {
-      "name": "Full Stack Web Development",
-      "date": "2023-05-01",
-      "issuer": "Online University",
-      "url": "https://onlineuniversity.com/certificates/fullstack"
-    }
-  ],
-  "skills": [
-    {
-      "name": "Figma",
-      "level": "Expert",
-      "keywords": [
-        "Design",
-        "UI"
-      ]
+      "name": "AWS Certified Solutions Architect – Professional",
+      "issuer": "AWS",
+      "date": "2024-12",
+      "url": "https://www.credly.com/badges/c7683503-ead3-44ef-aa1b-87ebdaf7a58b/public_url"
     },
     {
-      "name": "Gitlab",
-      "level": "Intermediate",
-      "keywords": [
-        "Version Control",
-        "Collaboration",
-        "Source Code"
-      ]
+      "name": "AWS Certified Advanced Networking – Specialty",
+      "issuer": "AWS",
+      "date": "2024-12",
+      "url": "https://www.credly.com/badges/dcb41a1a-6914-4806-9254-c925d1b5ffaa/public_url"
     },
     {
-      "name": "HTML",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend"
-      ]
+      "name": "AWS Certified Security – Specialty",
+      "issuer": "AWS",
+      "date": "2024-12",
+      "url": "https://www.credly.com/badges/4c0ad097-a1a3-424e-aff7-dc96006649a4/public_url"
     },
     {
-      "name": "CSS",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "Responsive Design"
-      ]
+      "name": "AWS Certified SysOps Administrator – Associate",
+      "issuer": "AWS",
+      "date": "2024-01",
+      "url": "https://www.credly.com/badges/27ace902-aafb-4605-a640-abe09584dce5/public_url"
     },
     {
-      "name": "JavaScript",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "Backend",
-        "Fullstack"
-      ]
+      "name": "AWS Certified Developer – Associate",
+      "issuer": "AWS",
+      "date": "2023-12",
+      "url": "https://www.credly.com/badges/d8bbaef3-0edd-4de0-97da-22cd63fe368b/public_url"
     },
     {
-      "name": "Tailwind",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "CSS Framework",
-        "Responsive Design"
-      ]
+      "name": "AWS Certified Solutions Architect – Associate",
+      "issuer": "AWS",
+      "date": "2023-10",
+      "url": "https://www.credly.com/badges/ed6cbaa1-ce54-404a-8824-fd92d748b202/public_url"
     },
     {
-      "name": "TypeScript",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "Backend",
-        "JavaScript Superset"
-      ]
+      "name": "Envoy Fundamentals",
+      "issuer": "Tetrate",
+      "date": "2022-10",
+      "url": "https://tetrate-academy.thinkific.com/certificates/arase23pot"
     },
     {
-      "name": "Node",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Backend",
-        "JavaScript",
-        "Server"
-      ]
+      "name": "JavaScript Algorithms and Data Structures Developer Certification",
+      "issuer": "freeCodeCamp",
+      "date": "2021-03",
+      "url": "https://www.freecodecamp.org/certification/lethang7794/javascript-algorithms-and-data-structures"
     },
     {
-      "name": "MySQL",
-      "level": "Intermediate",
-      "keywords": [
-        "Databases",
-        "SQL",
-        "Data Storage",
-        "Backend"
-      ]
+      "name": "Responsive Web Design Developer",
+      "issuer": "freeCodeCamp",
+      "date": "2020-12",
+      "url": "https://www.freecodecamp.org/certification/lethang7794/responsive-web-design"
     },
     {
-      "name": "Git",
-      "level": "Intermediate",
-      "keywords": [
-        "Version Control",
-        "Collaboration",
-        "Source Code"
-      ]
+      "name": "Big-O Green: Elementary Algorithms",
+      "issuer": "Big-O Coding",
+      "date": "2020-09"
     },
     {
-      "name": "GitHub",
-      "level": "Intermediate",
-      "keywords": [
-        "Version Control",
-        "Collaboration",
-        "Source Code",
-        "Git"
-      ]
+      "name": "Diploma in French Language Studies (DELF) - Level B1",
+      "issuer": "French Ministry of Education",
+      "date": "2019-07"
     },
     {
-      "name": "Next.js",
-      "level": "Beginner",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "React Framework",
-        "SSR",
-        "Static Generation"
-      ]
-    },
-    {
-      "name": "React",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "JavaScript Library",
-        "UI"
-      ]
-    }
-  ],
-  "languages": [
-    {
-      "language": "English",
-      "fluency": "Native speaker"
-    },
-    {
-      "language": "Spanish",
-      "fluency": "Intermediate"
-    }
-  ],
-  "interests": [
-    {
-      "name": "Technology",
-      "keywords": [
-        "AI",
-        "Blockchain"
-      ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Jane Smith",
-      "reference": "Reference…"
+      "name": "TOEIC - 845/990",
+      "issuer": "IIG",
+      "date": "2016-11"
     }
   ],
   "projects": [
     {
-      "name": "Personal Portfolio",
-      "isActive": false,
-      "description": "A personal portfolio website to showcase my projects and skills.",
+      "name": "gtdb",
+      "description": "A place to be a better driver in Vietnam",
       "highlights": [
-        "Built with React and Tailwind CSS",
-        "Includes a blog and contact form"
+        "Leveraged social media to educate users on driving safety, including road signs, road markings, and traffic laws."
       ],
-      "url": "https://johndoe.dev",
-      "github": "https://github.com"
+      "startDate": "2024-07",
+      "url": "https://gtdb.app"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Backend",
+      "keywords": [
+        "Golang",
+        "Node.js",
+        "Ruby on Rails",
+        "Microservices",
+        "gRPC",
+        "REST"
+      ]
     },
     {
-      "name": "Weather App",
-      "isActive": true,
-      "description": "A web application that provides weather information for any location.",
-      "highlights": [
-        "Built with JavaScript and OpenWeatherMap API",
-        "Responsive design"
-      ],
-      "url": "https://weatherapp.com"
+      "name": "Frontend",
+      "keywords": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "JavaScript",
+        "MaterialUI",
+        "Bootstrap",
+        "Tailwind",
+        "SASS",
+        "CSS",
+        "HTML"
+      ]
     },
     {
-      "name": "Task Manager",
-      "isActive": true,
-      "description": "A simple task management app to keep track of daily tasks.",
-      "highlights": [
-        "Built with Node.js and MongoDB",
-        "User authentication and CRUD operations"
-      ],
-      "url": "https://taskmanager.com",
-      "github": "https://github.com"
+      "name": "Database",
+      "keywords": ["MySQL", "MongoDB"]
     },
     {
-      "name": "E-commerce Site",
-      "isActive": false,
-      "description": "An online store built with Next.js and Stripe for payment processing.",
-      "highlights": [
-        "Product management and shopping cart functionality",
-        "Secure payment integration"
-      ],
-      "url": "https://ecommerce.com"
+      "name": "Testing",
+      "keywords": ["Minitest", "Capybara", "Selenium", "Postman", "TDD"]
+    },
+    {
+      "name": "DevOps",
+      "keywords": [
+        "Kubernetes",
+        "Docker",
+        "Terraform",
+        "GitHub Actions",
+        "GitLab CICD"
+      ]
+    },
+    {
+      "name": "Cloud Computing",
+      "keywords": ["AWS", "Google Cloud", "Vercel", "Netlify", "Heroku"]
+    },
+    {
+      "name": "Collaboration",
+      "keywords": ["Git", "Jira", "Agile", "Confluence", "Figma"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Vietnamese",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Professional working proficient"
+    },
+    {
+      "language": "French",
+      "fluency": "Limited working proficient"
+    }
+  ],
+  "interests-TODO": [
+    {
+      "name": "Football"
+    },
+    {
+      "name": "Language Learning"
+    },
+    {
+      "name": "Reading"
     }
   ]
 }
