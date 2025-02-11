@@ -1,5 +1,7 @@
 ---
 import Theme from "@/icons/themeSwitch.astro";
+import Moon from "@/icons/Moon.astro";
+import Sun from "@/icons/Sun.astro";
 ---
 
 <div class="no-print inline-flex items-center">
@@ -13,8 +15,19 @@ import Theme from "@/icons/themeSwitch.astro";
 	</div> -->
 
 	<div class="group/theme flex items-center gap-2">
-		<label for="themeSwitch" class="flex items-center gap-1 text-sm font-medium leading-6 text-skin-base transition-transform ease-in-out group-hover/theme:rotate-45"> <Theme /></label>
-		<select id="themeSwitch" name="themeSwitch" class="focus:ring-skin-hue ring-skin-muted block w-full rounded-md border-0 py-1.5 pl-3 pr-10 text-skin-base ring-1 ring-inset focus:ring-2 sm:text-sm sm:leading-6">
+		<label
+			for="themeSwitch"
+			class="flex items-center gap-1 text-sm font-medium leading-6 text-skin-base transition-transform ease-in-out group-hover/theme:rotate-45"
+		>
+			<span id="iconContainer">
+				<Theme />
+			</span></label
+		>
+		<select
+			id="themeSwitch"
+			name="themeSwitch"
+			class="block w-full rounded-md border-0 py-1.5 pl-3 pr-10 text-skin-base ring-1 ring-inset ring-skin-muted focus:ring-2 focus:ring-skin-hue sm:text-sm sm:leading-6"
+		>
 			<option value="system">System</option>
 			<option value="dark">Dark</option>
 			<option value="light">Light</option>
@@ -26,30 +39,78 @@ import Theme from "@/icons/themeSwitch.astro";
 			color-scheme: dark;
 		}
 	</style>
-
-	<script>
-		const select = document.getElementById("themeSwitch") as HTMLSelectElement;
-		const theme = localStorage.getItem("theme");
-		const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-
-		if (theme !== null) {
-			select.value = theme;
-		} else {
-			select.value = systemTheme;
-		}
-
-		function updateTheme(value: string) {
-			const theme = value === "system" ? systemTheme : value;
-			document.documentElement.classList.remove("light", "dark");
-			document.documentElement.classList.add(theme);
-			localStorage.setItem("theme", value);
-		}
-
-		updateTheme(select.value);
-
-		select.addEventListener("change", (event: Event) => {
-			const select = event.target as HTMLSelectElement;
-			updateTheme(select.value);
-		});
-	</script>
 </div>
+
+<script>
+	const select = document.getElementById("themeSwitch") as HTMLSelectElement;
+	const iconContainer = document.getElementById("iconContainer");
+	const theme = localStorage.getItem("theme");
+	const getSystemTheme = () =>
+		window.matchMedia("(prefers-color-scheme: dark)").matches
+			? "dark"
+			: "light";
+
+	function updateTheme(value: string) {
+		const theme = value === "system" ? getSystemTheme() : value;
+		document.documentElement.classList.remove("light", "dark");
+		document.documentElement.classList.add(theme);
+
+		if (!iconContainer) {
+			return;
+		}
+		iconContainer.innerHTML = "";
+		if (theme === "system") {
+			iconContainer.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-moon"><path d="M12 8a2.83 2.83 0 0 0 4 4 4 4 0 1 1-4-4"></path><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.9 4.9 1.4 1.4"></path><path d="m17.7 17.7 1.4 1.4"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.3 17.7-1.4 1.4"></path><path d="m19.1 4.9-1.4 1.4"></path></svg>`;
+		}
+		if (theme === "dark") {
+			iconContainer.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>`;
+		}
+		if (theme === "light") {
+			iconContainer.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>`;
+		}
+	}
+	function saveTheme(value: string) {
+		localStorage.setItem("theme", value);
+	}
+
+	if (theme !== null) {
+		select.value = theme;
+	} else {
+		select.value = getSystemTheme();
+		updateTheme(getSystemTheme());
+	}
+
+	window
+		.matchMedia("(prefers-color-scheme: dark)")
+		.addEventListener("change", (event) => {
+			const theme = localStorage.getItem("theme");
+			if (theme !== "system") {
+				return;
+			}
+			const isDarkMode = event.matches;
+			updateTheme(isDarkMode ? "dark" : "light");
+		});
+
+	updateTheme(select.value);
+
+	select.addEventListener("change", (event: Event) => {
+		const select = event.target as HTMLSelectElement;
+		updateTheme(select.value);
+		saveTheme(select.value)
+	});
+
+	// Deshabilitar modo oscuro al imprimir
+	window.addEventListener("beforeprint", () => {
+		document.documentElement.classList.remove("dark");
+	});
+
+	// Restaurar el modo oscuro después de imprimir
+	window.addEventListener("afterprint", () => {
+		if (
+			select.value === "dark" ||
+			(select.value === "system" && systemTheme === "dark")
+		) {
+			document.documentElement.classList.add("dark");
+		}
+	});
+</script>
