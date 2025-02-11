@@ -256,6 +256,31 @@
       "startDate": "2024-07",
       "url": "https://gtdb.app",
       "isActive": true
+    },
+    {
+      "name": "AWSsome",
+      "description": "Mind-maps for AWS certificates",
+      "highlights": [
+        "A collections of mind-maps written in Xmind for AWS certificates, available as a web app."
+      ],
+      "startDate": "2024-12",
+      "endDate": "2024-12",
+      "url": "https://lethang7794.github.io/awssome/",
+      "isActive": true,
+      "github": "https://github.com/lethang7794/AWSsome"
+    },
+    {
+      "name": "Cantrill AWS Courses",
+      "description": "Compare the Cantrill courses for the AWS certificates",
+      "highlights": [
+        "Choose the next AWS certificate.",
+        "Know which lessons you have learned to skip it."
+      ],
+      "startDate": "2024-12",
+      "endDate": "2024-12",
+      "url": "https://cantrill-aws.vercel.app/",
+      "isActive": true,
+      "github": "https://github.com/lethang7794/cantrill-aws"
     }
   ],
   "skills": [
