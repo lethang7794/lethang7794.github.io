@@ -9,7 +9,7 @@
     "summary": "Ambitious Full Stack Developer with expertise in cloud computing, driven by growth and innovation, seeking new challenges to build impactful solutions and create value for businesses and users.",
     "location": {
       "city": "Ho Chi Minh City",
-      "countryCode": "Vietnam"
+      "region": "Vietnam"
     },
     "profiles": [
       {
@@ -35,6 +35,18 @@
         "Collaborated with product owners, UI/UX designers, and cross-functional teams.",
         "Mentored a Frontend Developer and a Backend Developer, supporting their growth and technical skills",
         "Achievement: Promoted four times in two years — twice the usual pace — recognizing outstanding contributions."
+      ],
+      "responsibilities": [],
+      "achievements": [
+        "Promoted four times in two years — twice the usual pace — recognizing outstanding contributions."
+      ],
+      "skills": [
+        "React",
+        "Design System",
+        "Golang",
+        "Google Cloud",
+        "Kubernetes",
+        "GitLab CI/CD"
       ]
     },
     {
@@ -48,9 +60,12 @@
         "Set up CI pipelines to automate the publishing of frontend core NPM packages.",
         "Translated design wireframes into functional UI components.",
         "Built pixel-perfect landing pages.",
-        "Optimized Dockerfile, reducing feedback loops by up to 600% (from 60s to 5-10s) for each microservice.",
         "Mentored a Frontend Developer, providing guidance and support.",
         "Achievement: Achieved a 100% salary increase within my first year, reflecting exceptional performance."
+      ],
+      "responsibilities": [],
+      "achievements": [
+        "Achieved a 100% salary increase within my first year, reflecting exceptional performance."
       ]
     },
     {
@@ -63,6 +78,9 @@
         "Developed a Human Resource Management system.",
         "Designed and integrated gRPC APIs.",
         "Managed regular deployments with an Agile approach."
+      ],
+      "achievements": [
+        "Optimized Dockerfile, reducing feedback loops by up to 600% (from 60s to 5-10s) for each microservice."
       ]
     },
     {
@@ -72,6 +90,9 @@
       "endDate": "2021-06",
       "summary": "Researched Golang, TypeScript, gRPC, and other technologies",
       "highlights": [
+        "Authored official onboarding documentation for setting up the backend environment, streamlining the process for new team members."
+      ],
+      "achievements": [
         "Authored official onboarding documentation for setting up the backend environment, streamlining the process for new team members."
       ]
     }
@@ -174,7 +195,8 @@
         "Leveraged social media to educate users on driving safety, including road signs, road markings, and traffic laws."
       ],
       "startDate": "2024-07",
-      "url": "https://gtdb.app"
+      "url": "https://gtdb.app",
+      "isActive": true
     }
   ],
   "skills": [
