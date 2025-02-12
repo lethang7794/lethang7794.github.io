@@ -128,7 +128,7 @@
 			"skills": [
 				"Golang",
 				"Microservices",
-				"Envoy Proxy",
+				"Envoy",
 				"Docker Compose",
 				"TypeScript",
 				"React",
@@ -251,7 +251,7 @@
 			"url": "https://tetrate-academy.thinkific.com/certificates/arase23pot"
 		},
 		{
-			"name": "JavaScript Algorithms and Data Structures Developer Certification",
+			"name": "JavaScript Algorithms and Data Structures",
 			"issuer": "freeCodeCamp",
 			"iconName": "simple-icons:freecodecamp",
 			"date": "2021-03",
@@ -326,6 +326,7 @@
 				"Node.js",
 				"Ruby on Rails",
 				"Microservices",
+				"Protocol Buffers",
 				"gRPC",
 				"REST"
 			]
@@ -356,12 +357,21 @@
 		},
 		{
 			"name": "Testing",
-			"keywords": ["Minitest", "Capybara", "Selenium", "Postman", "TDD"]
+			"keywords": [
+				"Minitest",
+				"Capybara",
+				"Selenium",
+				"BloomRPC",
+				"Postman",
+				"TDD"
+			]
 		},
 		{
 			"name": "DevOps",
 			"keywords": [
 				"Kubernetes",
+				"Helm",
+				"Lens",
 				"Docker",
 				"Terraform",
 				"GitLab CI/CD",
