@@ -370,7 +370,14 @@
 		},
 		{
 			"name": "Cloud Computing",
-			"keywords": ["AWS", "Google Cloud", "Vercel", "Netlify", "Heroku"]
+			"keywords": [
+				"AWS",
+				"Google Cloud",
+				"CloudFlare",
+				"Vercel",
+				"Netlify",
+				"Heroku"
+			]
 		},
 		{
 			"name": "Collaboration",
