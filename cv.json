@@ -334,6 +334,10 @@
     {
       "name": "Collaboration",
       "keywords": ["Git", "Agile", "Jira", "Confluence", "Figma", "Slack"]
+    },
+    {
+      "name": "OS",
+      "keywords": ["Linux", "MacOS", "Windows"]
     }
   ],
   "languages": [
