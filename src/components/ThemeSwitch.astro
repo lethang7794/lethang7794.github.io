@@ -43,7 +43,6 @@ import Sun from "@/icons/Sun.astro";
 
 <script>
 	const select = document.getElementById("themeSwitch") as HTMLSelectElement;
-	const iconContainer = document.getElementById("iconContainer");
 	const theme = localStorage.getItem("theme");
 	const getSystemTheme = () =>
 		window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -54,7 +53,10 @@ import Sun from "@/icons/Sun.astro";
 		const theme = value === "system" ? getSystemTheme() : value;
 		document.documentElement.classList.remove("light", "dark");
 		document.documentElement.classList.add(theme);
+	}
 
+	function updateThemeIcon(theme: string) {
+		const iconContainer = document.getElementById("iconContainer");
 		if (!iconContainer) {
 			return;
 		}
@@ -89,6 +91,7 @@ import Sun from "@/icons/Sun.astro";
 			}
 			const isDarkMode = event.matches;
 			updateTheme(isDarkMode ? "dark" : "light");
+			updateThemeIcon("system")
 		});
 
 	updateTheme(select.value);
@@ -96,6 +99,7 @@ import Sun from "@/icons/Sun.astro";
 	select.addEventListener("change", (event: Event) => {
 		const select = event.target as HTMLSelectElement;
 		updateTheme(select.value);
+		updateThemeIcon(select.value)
 		saveTheme(select.value)
 	});
 
@@ -108,7 +112,7 @@ import Sun from "@/icons/Sun.astro";
 	window.addEventListener("afterprint", () => {
 		if (
 			select.value === "dark" ||
-			(select.value === "system" && systemTheme === "dark")
+			(select.value === "system" && getSystemTheme() === "dark")
 		) {
 			document.documentElement.classList.add("dark");
 		}
