@@ -92,7 +92,7 @@ const SKILLS_ICONS: Record<string, any> = {
                 )}
 
                 {(responsibilities || achievements) && (
-                  <div class="md:after:from-skin-hue dark:md:after:to-skin-hue/0  flex relative flex-col max-sm:!h-auto print:!h-auto gap-4 print:gap-2 md:after:bg-gradient-to-t md:after:absolute md:after:bottom-0 md:after:w-full print:after:hidden md:after:h-16 md:after:content-[''] " :class="expanded ? 'after:hidden' : ''" x-show="expanded" x-collapse.min.72px>
+                  <div class="flex relative flex-col print:!h-auto gap-4 print:gap-2 after:bg-gradient-to-t after:absolute after:bottom-0 after:w-full print:after:hidden after:h-16 after:content-[''] after:from-skin-hue dark:after:to-skin-hue/0" :class="expanded ? 'after:hidden' : ''" x-show="expanded" x-collapse.min.72px>
                     {responsibilities && responsibilities?.length > 0 && (
                       <div class="flex flex-col gap-1">
                         <h4>Responsibilities:</h4>
