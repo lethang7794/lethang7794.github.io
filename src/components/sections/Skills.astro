@@ -6,22 +6,22 @@ import { SKILLS_ICONS } from "@/constants/skill-icons";
 ---
 
 <Section className={Astro.props.className} title="Skills">
-  <ul
-    class="inline-flex flex-col flex-wrap gap-6 [&>li>svg]:size-5 [&>li>svg]:text-skin-hue [&>li]:text-sm"
-  >
-    {
-      skills.map(({ name, keywords }) => {
-        const iconName = name === "Next.js" ? "Next" : name;
-        const IconCategory = SKILLS_ICONS[iconName];
+	<ul
+		class="inline-flex flex-col flex-wrap gap-6 [&>li>svg]:size-5 [&>li>svg]:text-skin-hue [&>li]:text-sm"
+	>
+		{
+			skills.map(({ name, keywords }) => {
+				const iconName = name === "Next.js" ? "Next" : name;
+				const IconCategory = SKILLS_ICONS[iconName];
 
-        return (
-          <li class="border-skin-hue/20s bg-skin-button-accent/20s borders border-solids flex flex-col items-start gap-1 rounded-md px-0 py-0.5 text-xs text-skin-muted print:border-none print:bg-transparent print:p-0 print:text-zinc-800">
-            <h4 class="font-bold">
-              {IconCategory && <IconCategory />} <span>{name}</span>
-            </h4>
+				return (
+					<li class="border-skin-hue/20s bg-skin-button-accent/20s borders border-solids flex flex-col items-start gap-1 rounded-md px-0 py-0.5 text-xs text-skin-muted print:border-none print:bg-transparent print:p-0 print:text-zinc-800">
+						<h4 class="font-bold">
+							{IconCategory && <IconCategory />} <span>{name}</span>
+						</h4>
 
-            <div class="flex flex-wrap gap-2">
-              {/* {keywords?.map((skill) => {
+						<div class="flex flex-wrap gap-2">
+							{/* {keywords?.map((skill) => {
                 let skillName = skill?.replace(/ \(.*\)/, "");
                 console.log({ skillName });
 
@@ -34,22 +34,22 @@ import { SKILLS_ICONS } from "@/constants/skill-icons";
                   </li>
                 );
               })} */}
-              {keywords?.map((skill) => {
-                let skillName = skill?.replace(/ \(.*\)/, "");
-                const icon = SKILLS_ICONS[skillName];
-                const iconName = icon?.iconName || "";
+							{keywords?.map((skill) => {
+								let skillName = skill?.replace(/ \(.*\)/, "");
+								const icon = SKILLS_ICONS[skillName];
+								const iconName = icon?.iconName || "";
 
-                return (
-                  <div class="flex items-center gap-1 rounded-md border border-solid border-skin-hue/30 bg-skin-button-accent/20 bg-transparent px-2 py-0.5 text-xs text-skin-hue/80 print:border-none print:bg-transparent print:p-0 print:text-zinc-800">
-                    {iconName && <Icon name={icon?.iconName} />}
-                    <span>{skill}</span>
-                  </div>
-                );
-              })}
-            </div>
-          </li>
-        );
-      })
-    }
-  </ul>
+								return (
+									<div class="flex items-center gap-1 rounded-md border border-solid border-skin-hue/30 bg-skin-button-accent/20 bg-transparent px-2 py-0.5 text-xs text-skin-hue/80 print:border-none print:bg-transparent print:p-0 print:text-zinc-800">
+										{iconName && <Icon name={icon?.iconName} />}
+										<span>{skill}</span>
+									</div>
+								);
+							})}
+						</div>
+					</li>
+				);
+			})
+		}
+	</ul>
 </Section>

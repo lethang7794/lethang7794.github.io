@@ -9,7 +9,7 @@ import { basics } from "@cv";
 
 const { profiles } = basics;
 const githubInfo = profiles.find(({ network }) => network === "Github");
-const githubUrl = githubInfo?.url;
+const githubUrl = githubInfo?.projects || githubInfo?.url;
 ---
 
 <Section className={Astro.props.className} title="Projects">
