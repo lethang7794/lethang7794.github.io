@@ -1,13 +1,13 @@
 ---
 import { basics } from "@cv";
 import Vengeance from "@/layouts/Vengeance.astro";
+import { env } from "@/env";
 
 interface Props {
 	title: string;
 }
 
 const { title } = Astro.props;
-
 
 const { picture, summary, url, theme } = basics;
 ---
@@ -19,7 +19,7 @@ const { picture, summary, url, theme } = basics;
 		<title>{title}</title>
 		<meta name="description" content={summary} />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" href="/favicon.png" />
+		<link rel="icon" type="image/png" href={env.BASE_PATH + "/favicon.png"} />
 		<link rel="preload" as="image" href={picture} />
 
 		<meta property="og:url" content={url} />
@@ -35,14 +35,20 @@ const { picture, summary, url, theme } = basics;
 		<meta name="twitter:description" content={summary} />
 		<meta name="twitter:image" content="" />
 
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Inter"
+		/>
 
-		<link rel="stylesheet" href="/themes/themes.css" />
+		<link rel="stylesheet" href={env.BASE_PATH + "/themes/themes.css"} />
 		<Vengeance />
 	</head>
 	<body data-theme={theme} class="relative bg-skin-fill">
 		<div class="absolute top-0 -z-10 h-full w-full print:hidden">
-			<div class="bg-skin-hue/10 absolute bottom-auto left-[20%] right-auto top-0 h-[200px] w-[200px] -translate-x-[30%] translate-y-[20%] rounded-full blur-[80px] invert-0 dark:bg-white/5"></div>
+			<div
+				class="absolute bottom-auto left-[20%] right-auto top-0 h-[200px] w-[200px] -translate-x-[30%] translate-y-[20%] rounded-full bg-skin-hue/10 blur-[80px] invert-0 dark:bg-white/5"
+			>
+			</div>
 		</div>
 		<slot />
 		<style is:global>
