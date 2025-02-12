@@ -343,6 +343,7 @@
 				"Tailwind CSS",
 				"Styled Components",
 				"CSS Modules",
+				"Less",
 				"SASS",
 				"CSS",
 				"HTML",
@@ -386,6 +387,10 @@
 		{
 			"name": "OS",
 			"keywords": ["Linux", "MacOS", "Windows"]
+		},
+		{
+			"name": "Misc",
+			"keywords": ["Regex", "Markdown", "MDX", "CLI"]
 		}
 	],
 	"languages": [
