@@ -251,6 +251,12 @@
 			"url": "https://tetrate-academy.thinkific.com/certificates/arase23pot"
 		},
 		{
+			"name": "CSS for JavaScript Developers",
+			"issuer": "Josh Comeau",
+			"date": "2022-06",
+			"url": "https://courses.joshwcomeau.com/certificate/62b603528677061bf769e3f4"
+		},
+		{
 			"name": "JavaScript Algorithms and Data Structures",
 			"issuer": "freeCodeCamp",
 			"iconName": "simple-icons:freecodecamp",
