@@ -2,11 +2,19 @@
 import Section from "../Section.astro";
 
 import { basics } from "@cv";
-const { summary } = basics;
+const { summary, summaries } = basics;
 ---
 
 <Section title="About">
-	<p>
-		{summary}
-	</p>
+	{
+		summaries ? (
+			<ul class="&>li]:ml-4 flex list-disc flex-col gap-2 marker:text-skin-hue/80">
+				{summaries.map((item) => (
+					<li>{item}</li>
+				))}
+			</ul>
+		) : (
+			<p>{summary}</p>
+		)
+	}
 </Section>

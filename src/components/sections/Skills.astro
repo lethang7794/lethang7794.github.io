@@ -7,7 +7,7 @@ import { SKILLS_ICONS } from "@/constants/skill-icons";
 
 <Section className={Astro.props.className} title="Skills">
 	<ul
-		class="inline-flex flex-col flex-wrap gap-6 [&>li>svg]:size-5 [&>li>svg]:text-skin-hue [&>li]:text-sm"
+		class="flex list-disc flex-col flex-wrap gap-6 [&>li>svg]:size-5 [&>li>svg]:text-skin-hue [&>li]:text-sm"
 	>
 		{
 			skills.map(({ name, keywords }) => {
@@ -15,12 +15,12 @@ import { SKILLS_ICONS } from "@/constants/skill-icons";
 				const IconCategory = SKILLS_ICONS[iconName];
 
 				return (
-					<li class="border-skin-hue/20s bg-skin-button-accent/20s borders border-solids flex flex-col items-start gap-1 rounded-md px-0 py-0.5 text-xs text-skin-muted print:border-none print:bg-transparent print:p-0 print:text-zinc-800">
+					<li class="border-skin-hue/20s bg-skin-button-accent/20s marker:text-skin-hue/80 borders border-solids list-item flex-col items-start gap-1 rounded-md px-0 py-0.5 text-xs text-skin-muted print:border-none print:bg-transparent print:p-0 print:text-zinc-800">
 						<h4 class="font-bold">
 							{IconCategory && <IconCategory />} <span>{name}</span>
 						</h4>
 
-						<div class="flex flex-wrap gap-2">
+						<div class="mt-3 flex flex-wrap gap-2">
 							{/* {keywords?.map((skill) => {
                 let skillName = skill?.replace(/ \(.*\)/, "");
                 console.log({ skillName });

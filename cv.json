@@ -7,6 +7,10 @@
 		"phone": "+84 944 990 631",
 		"website": "https://lethang7794.github.io",
 		"summary": "Ambitious Full Stack Developer with expertise in cloud computing, driven by challenges, growth, and innovation. Seeking opportunities to build impactful solutions and deliver value to businesses and users.",
+		"summaries": [
+			"Ambitious Full Stack Developer with expertise in cloud computing, driven by challenges, growth, and innovation.",
+			"Seeking opportunities to build impactful solutions and deliver value to businesses and users."
+		],
 		"location": {
 			"city": "Ho Chi Minh City",
 			"region": "Vietnam"
