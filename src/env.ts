@@ -1,4 +1,4 @@
 export const env = {
-	DOMAIN: import.meta.env.DOMAIN || "",
-	BASE_PATH: import.meta.env.BASE_PATH || "",
+	PUBLIC_DOMAIN: import.meta.env.PUBLIC_DOMAIN || "",
+	PUBLIC_BASE_PATH: import.meta.env.PUBLIC_BASE_PATH || "",
 };
