@@ -4,7 +4,7 @@ export const SKILLS_ICONS: Record<string, { iconName: string }> = {
 	"Bash Script": { iconName: "skill-icons:bash-dark" },
 	BigQuery: { iconName: "bigquery" },
 	Bootstrap: { iconName: "skill-icons:bootstrap" },
-	CloudFlare: { iconName: "skill-icons:cloudflare-dark" },
+	Cloudflare: { iconName: "skill-icons:cloudflare-dark" },
 	Confluence: { iconName: "logos:confluence" },
 	"CSS Modules": { iconName: "simple-icons:cssmodules" },
 	CSS: { iconName: "skill-icons:css" },
