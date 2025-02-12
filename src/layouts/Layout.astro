@@ -8,7 +8,8 @@ interface Props {
 
 const { title } = Astro.props;
 
-const { image, summary, url, theme } = basics;
+
+const { picture, summary, url, theme } = basics;
 ---
 
 <!doctype html>
@@ -19,7 +20,7 @@ const { image, summary, url, theme } = basics;
 		<meta name="description" content={summary} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="preload" as="image" href={image} />
+		<link rel="preload" as="image" href={picture} />
 
 		<meta property="og:url" content={url} />
 		<meta property="og:type" content="website" />
