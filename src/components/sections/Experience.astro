@@ -2,6 +2,8 @@
 import Section from "../Section.astro"
 import { work } from "@cv"
 
+import { Icon } from 'astro-icon/components';
+
 import HTML from "@/icons/html.astro"
 import CSS from "@/icons/css.astro"
 import JavaScript from "@/icons/javascript.astro"
@@ -22,8 +24,8 @@ const SKILLS_ICONS: Record<string, any> = {
   HTML,
   CSS,
   JavaScript,
-  TypeScript,
-  React,
+  TypeScript: { iconName: 'skill-icons:typescript'},
+  React: { iconName: 'skill-icons:react-dark'},
   Node,
   MySQL,
   Git,
@@ -34,6 +36,19 @@ const SKILLS_ICONS: Record<string, any> = {
   SwiftUI,
   Kotlin,
   Flutter,
+  Golang: { iconName: 'skill-icons:golang' },
+  Kubernetes: { iconName: 'skill-icons:kubernetes' },
+  AWS: { iconName: 'skill-icons:aws-dark' },
+  'Google Cloud': { iconName: 'skill-icons:gcp-dark' },
+  'GitLab CI/CD': { iconName: 'skill-icons:gitlab-dark' },
+  'GitLab CI': { iconName: 'skill-icons:gitlab-dark' },
+  'Tailwind CSS': { iconName: 'skill-icons:tailwindcss-dark' },
+  // 'Ant Design': { iconName: '' }, TODO
+  'Next.js': { iconName: 'skill-icons:nextjs-light' },
+  'Docker Compose': { iconName: 'skill-icons:docker' },
+  'Docker': { iconName: 'skill-icons:docker' },
+  'Material UI': { iconName: 'skill-icons:materialui-dark' },
+  'Styled Components': { iconName: 'skill-icons:styledcomponents' },
 }
 ---
 <Section className={Astro.props.className} title="Experience">
@@ -124,11 +139,14 @@ const SKILLS_ICONS: Record<string, any> = {
                   <ul class="flex print:hidden flex-wrap gap-2" aria-label="Technologies used">
                     {
                       skills && skills.map(skill => {
-                        const iconName = skill === "Next.js" ? "Next" : skill
-                        const Icon = SKILLS_ICONS[iconName]
+                        let skillName = skill?.replace(/ \(.*\)/, "")
+                        console.log({skillName})
+                        
+                        const icon = SKILLS_ICONS[skillName]
+                        const iconName = icon?.iconName || ''
                         return (
-                          <li class="bg-skin-button-accent/20 border-skin-hue/20 text-skin-hue print:p-0 print:bg-transparent print:text-zinc-800 flex gap-1 items-center border-solid print:border-none border rounded-md px-2 py-0.5 text-xs">
-                            {Icon && <Icon />} <span>{skill}</span>
+                          <li class="bg-skin-button-accent/20 bg-transparent border-skin-hue/30 text-skin-hue/80 print:p-0 print:bg-transparent print:text-zinc-800 flex gap-1 items-center border-solid print:border-none border rounded-md px-2 py-0.5 text-xs">
+                            {iconName && <Icon name={icon?.iconName} />} <span>{skill}</span>
                           </li>
                         )}
                       )

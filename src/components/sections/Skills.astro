@@ -1,4 +1,6 @@
 ---
+import { Icon } from "astro-icon/components";
+
 import Section from "../Section.astro";
 import HTML from "@/icons/html.astro";
 import CSS from "@/icons/css.astro";
@@ -20,49 +22,102 @@ import Figma from "@/icons/Figma.astro";
 import Gitlab from "@/icons/Gitlab.astro";
 
 const SKILLS_ICONS: Record<string, any> = {
-	HTML,
-	CSS,
-	JavaScript,
-	TypeScript,
-	React,
-	Node,
-	MySQL,
-	Git,
-	GitHub,
-	Next,
-	Tailwind,
-	Swift,
-	SwiftUI,
-	Kotlin,
-	Flutter,
-	Figma,
-	Gitlab,
+  // HTML,
+  // CSS,
+  // JavaScript,
+  TypeScript: { iconName: "skill-icons:typescript" },
+  React: { iconName: "skill-icons:react-dark" },
+  // Node,
+  // MySQL,
+  // Git,
+  // GitHub,
+  // Next,
+  // Tailwind,
+  // Swift,
+  // SwiftUI,
+  // Kotlin,
+  // Flutter,
+  Golang: { iconName: "skill-icons:golang" },
+  Kubernetes: { iconName: "skill-icons:kubernetes" },
+  AWS: { iconName: "skill-icons:aws-dark" },
+  "Google Cloud": { iconName: "skill-icons:gcp-dark" },
+  "GitLab CI/CD": { iconName: "skill-icons:gitlab-dark" },
+  "GitLab CI": { iconName: "skill-icons:gitlab-dark" },
+  "Tailwind CSS": { iconName: "skill-icons:tailwindcss-dark" },
+  // 'Ant Design': { iconName: '' }, TODO
+  "Next.js": { iconName: "skill-icons:nextjs-light" },
+  "Docker Compose": { iconName: "skill-icons:docker" },
+  Docker: { iconName: "skill-icons:docker" },
+  "Material UI": { iconName: "skill-icons:materialui-dark" },
+  "Styled Components": { iconName: "skill-icons:styledcomponents" },
+  "Node.js": { iconName: "skill-icons:nodejs-dark" },
+  "Ruby on Rails": { iconName: "skill-icons:rails" },
+  "JavaScript": { iconName: "skill-icons:javascript" },
+  "Bootstrap": { iconName: "skill-icons:bootstrap" },
+  "SASS": { iconName: "skill-icons:sass" },
+  "CSS": { iconName: "skill-icons:css" },
+  "HTML": { iconName: "skill-icons:html" },
+  "MySQL": { iconName: "skill-icons:mysql-light" },
+  "MongoDB": { iconName: "skill-icons:mongodb" },
+  "Selenium": { iconName: "skill-icons:selenium" },
+  "Postman": { iconName: "skill-icons:postman" },
+  "Terraform": { iconName: "skill-icons:terraform-light" },
+  "GitHub Actions": { iconName: "skill-icons:github-dark" },
+  "Bash Script": { iconName: "skill-icons:bash-dark" },
+  "Vercel": { iconName: "skill-icons:vercel-dark" },
+  "Netlify": { iconName: "skill-icons:netlify-dark" },
+  "Heroku": { iconName: "skill-icons:heroku" },
+  "Git": { iconName: "skill-icons:git" },
+  // "Jira": { iconName: "skill-icons:jira-dark" },
+  "Figma": { iconName: "skill-icons:figma-dark" },
 };
 ---
 
 <Section className={Astro.props.className} title="Skills">
-	<ul
-		class="inline-flex flex-col flex-wrap gap-6 [&>li>svg]:size-5 [&>li>svg]:text-skin-hue [&>li]:text-sm"
-	>
-		{
-			skills.map(({ name, keywords }) => {
-				const iconName = name === "Next.js" ? "Next" : name;
-				const Icon = SKILLS_ICONS[iconName];
+  <ul
+    class="inline-flex flex-col flex-wrap gap-6 [&>li>svg]:size-5 [&>li>svg]:text-skin-hue [&>li]:text-sm"
+  >
+    {
+      skills.map(({ name, keywords }) => {
+        const iconName = name === "Next.js" ? "Next" : name;
+        const IconCategory = SKILLS_ICONS[iconName];
 
-				return (
-					<li class="border-skin-hue/20s bg-skin-button-accent/20s borders border-solids flex flex-col items-start gap-1 rounded-md px-0 py-0.5 text-xs text-skin-muted print:border-none print:bg-transparent print:p-0 print:text-zinc-800">
-						<h4 class="font-bold">
-							{Icon && <Icon />} <span>{name}</span>
-						</h4>
+        return (
+          <li class="border-skin-hue/20s bg-skin-button-accent/20s borders border-solids flex flex-col items-start gap-1 rounded-md px-0 py-0.5 text-xs text-skin-muted print:border-none print:bg-transparent print:p-0 print:text-zinc-800">
+            <h4 class="font-bold">
+              {IconCategory && <IconCategory />} <span>{name}</span>
+            </h4>
 
-						<div class="flex flex-wrap gap-2">
-							{keywords?.map((item) => {
-								return <span class="px-2 py-0.5 text-xs border rounded-md border-solid border-skin-hue/20 text-skin-hue/80">{item}</span>;
-							})}
-						</div>
-					</li>
-				);
-			})
-		}
-	</ul>
+            <div class="flex flex-wrap gap-2">
+              {/* {keywords?.map((skill) => {
+                let skillName = skill?.replace(/ \(.*\)/, "");
+                console.log({ skillName });
+
+                const icon = SKILLS_ICONS[skillName];
+                const iconName = icon?.iconName || "";
+                return (
+                  <li class="flex items-center gap-1 rounded-md border border-solid border-skin-hue/30 bg-skin-button-accent/20 bg-transparent px-2 py-0.5 text-xs text-skin-hue/80 print:border-none print:bg-transparent print:p-0 print:text-zinc-800">
+                    {iconName && <Icon name={icon?.iconName} />}{" "}
+                    <span>{skill}</span>
+                  </li>
+                );
+              })} */}
+              {keywords?.map((skill) => {
+                let skillName = skill?.replace(/ \(.*\)/, "");
+                const icon = SKILLS_ICONS[skillName];
+                const iconName = icon?.iconName || "";
+
+                return (
+                  <div class="flex items-center gap-1 rounded-md border border-solid border-skin-hue/30 bg-skin-button-accent/20 bg-transparent px-2 py-0.5 text-xs text-skin-hue/80 print:border-none print:bg-transparent print:p-0 print:text-zinc-800">
+                    {iconName && <Icon name={icon?.iconName} />}
+                    <span>{skill}</span>
+                  </div>
+                );
+              })}
+            </div>
+          </li>
+        );
+      })
+    }
+  </ul>
 </Section>

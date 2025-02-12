@@ -121,7 +121,7 @@
         "TypeScript",
         "React",
         "Material UI",
-        "Styled Component",
+        "Styled Components",
         "GitLab CI"
       ]
     },
@@ -137,13 +137,7 @@
       "achievements": [
         "Authored official onboarding documentation for setting up the backend environment, streamlining the process for new team members."
       ],
-      "skills": [
-        "Golang",
-        "TypeScript",
-        "React",
-        "Material UI",
-        "gRPC"
-      ]
+      "skills": ["Golang", "TypeScript", "React", "Material UI", "gRPC"]
     }
   ],
   "education": [
@@ -298,11 +292,19 @@
     {
       "name": "Frontend",
       "keywords": [
-        "Next.js / React",
-        "TypeScript / JavaScript",
-        "MaterialUI / Bootstrap / Ant Design",
-        "Tailwind / Styled Component",
-        "SASS / CSS / HTML",
+        "Next.js",
+        "React",
+        "TypeScript",
+        "JavaScript",
+        "Material UI",
+        "Bootstrap",
+        "Ant Design",
+        "Tailwind CSS",
+        "Styled Components",
+        "CSS Modules",
+        "SASS",
+        "CSS",
+        "HTML",
         "Micro Frontend"
       ]
     },
