@@ -8,8 +8,8 @@ export default defineConfig({
 	integrations: [tailwind(), icon()],
 
 	// Deployments
-	site: import.meta.env.PUBLIC_DOMAIN
-		? `https://${import.meta.env.PUBLIC_DOMAIN}`
+	site: process.env.PUBLIC_DOMAIN
+		? `https://${process.env.PUBLIC_DOMAIN}`
 		: undefined,
-	base: import.meta.env.PUBLIC_BASE_URL,
+	base: process.env.PUBLIC_BASE_URL || "",
 });
