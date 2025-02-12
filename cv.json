@@ -52,8 +52,11 @@
         "Design System",
         "Golang",
         "Kubernetes",
-        "Google Cloud (Google Analytics, Big Query)",
-        "AWS (EKS)",
+        "Google Cloud",
+        "Google Analytics",
+        "BigQuery",
+        "AWS",
+        "EKS",
         "GitLab CI/CD"
       ]
     },
