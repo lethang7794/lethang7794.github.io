@@ -12,6 +12,7 @@ export const SKILLS_ICONS: Record<string, any> = {
   "GitLab CI": { iconName: "skill-icons:gitlab-dark" },
   "Tailwind CSS": { iconName: "skill-icons:tailwindcss-dark" },
   "Next.js": { iconName: "skill-icons:nextjs-light" },
+  "Envoy Proxy": { iconName: "simple-icons:envoyproxy" },
   "Docker Compose": { iconName: "skill-icons:docker" },
   Docker: { iconName: "skill-icons:docker" },
   "Material UI": { iconName: "skill-icons:materialui-dark" },
