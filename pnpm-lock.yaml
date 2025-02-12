@@ -36,6 +36,9 @@ importers:
         specifier: 5.3.3
         version: 5.3.3
     devDependencies:
+      '@iconify-json/logos':
+        specifier: ^1.2.4
+        version: 1.2.4
       '@iconify-json/skill-icons':
         specifier: ^1.2.0
         version: 1.2.0
@@ -359,6 +362,9 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [win32]
+
+  '@iconify-json/logos@1.2.4':
+    resolution: {integrity: sha512-XC4If5D/hbaZvUkTV8iaZuGlQCyG6CNOlaAaJaGa13V5QMYwYjgtKk3vPP8wz3wtTVNVEVk3LRx1fOJz+YnSMw==}
 
   '@iconify-json/skill-icons@1.2.0':
     resolution: {integrity: sha512-5zlPrzF5pelV1wut7C88zmAiYONvGxvFw11dXW1Pr1oIhUOtYhC7x3zkErSTFkyZ3m5fEgcEUrcO1W3UhNJVpw==}
@@ -2861,6 +2867,10 @@ snapshots:
 
   '@esbuild/win32-x64@0.19.12':
     optional: true
+
+  '@iconify-json/logos@1.2.4':
+    dependencies:
+      '@iconify/types': 2.0.0
 
   '@iconify-json/skill-icons@1.2.0':
     dependencies:

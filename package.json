@@ -21,6 +21,7 @@
     "typescript": "5.3.3"
   },
   "devDependencies": {
+    "@iconify-json/logos": "^1.2.4",
     "@iconify-json/skill-icons": "^1.2.0",
     "prettier": "^3.3.2",
     "prettier-plugin-astro": "^0.14.0"
