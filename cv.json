@@ -252,7 +252,8 @@
       ],
       "startDate": "2024-07",
       "url": "https://gtdb.app",
-      "isActive": true
+      "isActive": true,
+      "icon": "gtdb-landscape"
     },
     {
       "name": "AWSsome",
