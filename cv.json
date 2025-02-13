@@ -382,7 +382,7 @@
 		},
 		{
 			"name": "Database",
-			"keywords": ["MySQL", "MongoDB"]
+			"keywords": ["SQL", "NoSQL", "ORM", "MySQL", "MongoDB"]
 		},
 		{
 			"name": "Testing",
