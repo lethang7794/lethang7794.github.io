@@ -19,7 +19,7 @@ const { picture, summary, url, theme } = basics;
 		<title>{title}</title>
 		<meta name="description" content={summary} />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" href={env.BASE_PATH + "/favicon.png"} />
+		<link rel="icon" type="image/png" href={env.PUBLIC_BASE_PATH + "/favicon.png"} />
 		<link rel="preload" as="image" href={picture} />
 
 		<meta property="og:url" content={url} />
@@ -40,7 +40,7 @@ const { picture, summary, url, theme } = basics;
 			href="https://fonts.googleapis.com/css2?family=Inter"
 		/>
 
-		<link rel="stylesheet" href={env.BASE_PATH + "/themes/themes.css"} />
+		<link rel="stylesheet" href={env.PUBLIC_BASE_PATH + "/themes/themes.css"} />
 		<Vengeance />
 	</head>
 	<body data-theme={theme} class="relative bg-skin-fill">
