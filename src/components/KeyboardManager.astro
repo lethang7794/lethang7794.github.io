@@ -4,6 +4,7 @@ import "hotkeypad/index.css";
 import { type SocialIcon } from "@/types";
 import { basics, projects, certificates } from "@cv";
 import '../styles/global.css';
+import { Icon } from "astro-icon/components";
 
 const { profiles } = basics;
 
@@ -97,25 +98,7 @@ const certsInfo = certificates
 	</div>
 </footer>
 
-<div class="footer-button no-print">
-	<svg
-		xmlns="http://www.w3.org/2000/svg"
-		class="icon icon-tabler icon-tabler-command"
-		width="32"
-		height="32"
-		viewBox="0 0 24 24"
-		stroke-width="1.5"
-		stroke="#777"
-		fill="none"
-		stroke-linecap="round"
-		stroke-linejoin="round"
-	>
-		<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-		<path
-			d="M7 9a2 2 0 1 1 2 -2v10a2 2 0 1 1 -2 -2h10a2 2 0 1 1 -2 2v-10a2 2 0 1 1 2 2h-10"
-		></path>
-	</svg>
-</div>
+<Icon name="mdi:apple-keyboard-command" class="w-8 h-8 footer-button no-print text-black p-2"/>
 
 <div
 	id="hotkeypad"
