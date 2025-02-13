@@ -7,7 +7,7 @@ import { SKILLS_ICONS } from "@/constants/skill-icons";
 
 <Section className={Astro.props.className} title="Skills">
 	<ul
-		class="flex list-disc flex-col flex-wrap gap-6 [&>li>svg]:size-5 [&>li>svg]:text-skin-hue [&>li]:text-sm print:mt-4 print:gap-6"
+		class="flex list-disc flex-col flex-wrap gap-6 print:mt-4 print:gap-4 [&>li>svg]:size-5 [&>li>svg]:text-skin-hue [&>li]:text-sm"
 	>
 		{
 			skills.map(({ name: skill, keywords }) => {
@@ -18,10 +18,11 @@ import { SKILLS_ICONS } from "@/constants/skill-icons";
 					<a href={"#" + id}>
 						<li class="border-skin-hue/20s bg-skin-button-accent/20s borders border-solids list-item flex-col items-start gap-1 rounded-md px-0 py-0.5 text-base text-skin-muted marker:text-skin-hue/80 print:border-none print:bg-transparent print:p-0 print:text-zinc-800">
 							<h4 id={id} class="font-bold">
-								{iconName && <Icon name={iconName} />} <span>{skill}</span>
+								{iconName && <Icon name={iconName} class="print:hidden" />}{" "}
+								<span>{skill}</span>
 							</h4>
 
-							<div class="mt-3 flex flex-wrap gap-2">
+							<div class="mt-3 flex flex-wrap gap-2 print:mt-2 print:justify-start">
 								{/* {keywords?.map((skill) => {
                 let skillName = skill?.replace(/ \(.*\)/, "");
                 console.log({ skillName });
@@ -41,8 +42,10 @@ import { SKILLS_ICONS } from "@/constants/skill-icons";
 									const iconName = icon?.iconName || "";
 
 									return (
-										<div class="flex items-center gap-1 rounded-md border border-solid border-skin-hue/30 bg-skin-button-accent/20 bg-transparent px-2 py-0.5 text-xs text-skin-hue/80 print:border-none print:bg-transparent print:p-1 print:text-skin-muted">
-											{iconName && <Icon name={icon?.iconName} />}
+										<div class="flex items-center gap-1 rounded-md border border-solid border-skin-hue/30 bg-skin-button-accent/20 bg-transparent px-2 py-0.5 text-xs text-skin-hue/80 print:border-none print:bg-transparent print:p-0 print:text-skin-muted">
+											{iconName && (
+												<Icon name={icon?.iconName} class="print:hidden" />
+											)}
 											<span>{skill}</span>
 										</div>
 									);

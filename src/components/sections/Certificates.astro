@@ -7,7 +7,7 @@ import { certificates } from "@cv";
 <Section className={Astro.props.className} title="Certificates">
 	{
 		certificates.length > 0 && (
-			<ul class="space-y-4 py-3 print:space-y-0">
+			<ul class="space-y-4 py-3 print:flex print:flex-col print:gap-4 print:space-y-0 print:pt-0">
 				{certificates.map(
 					({ name, date, issuer, url, url_verify, iconName }) => {
 						const d = new Date(date);
@@ -15,8 +15,8 @@ import { certificates } from "@cv";
 						const month = d.toLocaleString("en-US", { month: "short" });
 						const certificateYear = `${month} ${year}`;
 						return (
-							<div class="flex flex-col items-baseline lg:flex-row">
-								<div class="relative flex w-full items-baseline gap-2">
+							<div class="flex flex-col items-baseline lg:flex-row print:mt-3 print:flex-row print:items-start">
+								<div class="relative flex w-full items-baseline gap-2 print:mt-0">
 									<Icon
 										name={iconName || "mdi:certificate-outline"}
 										class="hidden h-6 w-6 shrink-0 self-start md:inline print:hidden"
@@ -42,7 +42,7 @@ import { certificates } from "@cv";
 									target="_blank"
 									tabindex="-1"
 								>
-									<time class="whitespace-nowrap text-xs text-skin-muted md:block md:pl-8 lg:pl-0">
+									<time class="whitespace-nowrap text-xs text-skin-muted md:block md:pl-8 lg:pl-0 print:pl-0">
 										{certificateYear}
 									</time>
 								</a>
