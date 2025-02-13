@@ -3,7 +3,7 @@ import "hotkeypad/reset.css";
 import "hotkeypad/index.css";
 import { type SocialIcon } from "@/types";
 import { basics, projects, certificates } from "@cv";
-import '../styles/global.css';
+import "../styles/global.css";
 import { Icon } from "astro-icon/components";
 
 const { profiles } = basics;
@@ -90,15 +90,23 @@ const certsInfo = certificates
 			hotkey: `ctrl+${projectsInfo.length + idx + 2}`,
 		};
 	});
+
+// TODO: fix hotkeypad item not in view on focused
+// items[this.currentIndex].removeAttribute("data-active");
+// items[nextIndex].setAttribute("data-active", "");
+// items[nextIndex].scrollIntoView({ behavior: "smooth" });
 ---
 
-<footer id="normal-footer" class="no-print flex flex-col gap-2">
-	<div>
-		Press <kbd>Cmd</kbd> + <kbd>K</kbd> to open the command palette.
+<footer id="normal-footer" class="no-print flex flex-col gap-2 z-20">
+	<div class="flex items-center justify-center gap-2">
+		Press <kbd>Cmd/Ctrl</kbd> + <kbd>K</kbd> to open the command palette.
 	</div>
 </footer>
 
-<Icon name="mdi:apple-keyboard-command" class="w-8 h-8 footer-button no-print text-black p-2"/>
+<Icon
+	name="mdi:apple-keyboard-command"
+	class="footer-button no-print h-8 w-8 p-2 text-black"
+/>
 
 <div
 	id="hotkeypad"
