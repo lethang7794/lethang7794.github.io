@@ -7,7 +7,7 @@ import { projects } from "@cv";
 import { basics } from "@cv";
 
 const { profiles } = basics;
-const githubInfo = profiles.find(({ network }) => network === "Github");
+const githubInfo = profiles.find(({ network }) => network === "GitHub");
 const githubUrl = githubInfo?.projects || githubInfo?.url;
 ---
 
