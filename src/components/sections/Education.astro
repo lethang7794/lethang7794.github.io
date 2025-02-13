@@ -2,7 +2,6 @@
 import { Icon } from "astro-icon/components";
 import Section from "../Section.astro";
 import { education } from "@cv";
-import { certificates } from "@cv";
 ---
 
 <Section className={Astro.props.className} title="Education">
@@ -17,6 +16,7 @@ import { certificates } from "@cv";
 					url,
 					iconName,
 					highlights,
+					studyType,
 				}) => {
 					const start = new Date(startDate);
 					const startYear = start.getFullYear();
@@ -52,7 +52,14 @@ import { certificates } from "@cv";
 									<div class="flex w-full items-baseline justify-between">
 										<div class="mb-1 text-sm font-semibold italic text-skin-muted">
 											{area}
+											{studyType ? (
+												<span class="font-normal not-italic">
+													{" "}
+													• {studyType}
+												</span>
+											) : null}
 										</div>
+
 										<time class="whitespace-nowrap text-xs text-skin-muted md:block md:pl-8 lg:pl-0">
 											{years}
 										</time>
