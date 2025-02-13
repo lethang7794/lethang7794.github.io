@@ -1,5 +1,6 @@
 ---
 import Theme from "@/icons/themeSwitch.astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <div class="no-print inline-flex items-center">
@@ -31,6 +32,13 @@ import Theme from "@/icons/themeSwitch.astro";
 			<option value="light" class="text-black">Light</option>
 		</select>
 	</div>
+
+	<button
+		type="button"
+		class="no-print footer-button group ml-4 flex h-8 w-8 cursor-pointer items-center justify-center rounded-md border-[1px] border-solid border-skin-hue text-skin-hue hover:bg-skin-button-accent hover:text-skin-inverted max-sm:hidden [&>span]:hover:text-skin-inverted"
+	>
+		<Icon name="mdi:apple-keyboard-command" class="h-5 w-5" />
+	</button>
 
 	<style>
 		:global(.dark) {
