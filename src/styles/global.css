@@ -34,3 +34,17 @@
 	width: 1.5rem;
 	height: 1.5rem;
 }
+
+@media (max-width: 768px) {
+	#hotkeypad [data-hotkey] div {
+		display: none;
+	}
+
+	#hotkeypad [data-container] footer {
+		display: none;
+	}
+
+	#normal-footer {
+		display: none;
+	}
+}
