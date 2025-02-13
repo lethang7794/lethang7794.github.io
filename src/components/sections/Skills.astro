@@ -7,7 +7,7 @@ import { SKILLS_ICONS } from "@/constants/skill-icons";
 
 <Section className={Astro.props.className} title="Skills">
 	<ul
-		class="flex list-disc flex-col flex-wrap gap-6 [&>li>svg]:size-5 [&>li>svg]:text-skin-hue [&>li]:text-sm"
+		class="flex list-disc flex-col flex-wrap gap-6 [&>li>svg]:size-5 [&>li>svg]:text-skin-hue [&>li]:text-sm print:mt-4 print:gap-6"
 	>
 		{
 			skills.map(({ name: skill, keywords }) => {
@@ -41,7 +41,7 @@ import { SKILLS_ICONS } from "@/constants/skill-icons";
 									const iconName = icon?.iconName || "";
 
 									return (
-										<div class="flex items-center gap-1 rounded-md border border-solid border-skin-hue/30 bg-skin-button-accent/20 bg-transparent px-2 py-0.5 text-xs text-skin-hue/80 print:border-none print:bg-transparent print:p-0 print:text-zinc-800">
+										<div class="flex items-center gap-1 rounded-md border border-solid border-skin-hue/30 bg-skin-button-accent/20 bg-transparent px-2 py-0.5 text-xs text-skin-hue/80 print:border-none print:bg-transparent print:p-1 print:text-skin-muted">
 											{iconName && <Icon name={icon?.iconName} />}
 											<span>{skill}</span>
 										</div>

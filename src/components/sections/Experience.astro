@@ -21,7 +21,7 @@ import { SKILLS_ICONS } from "@/constants/skill-icons";
         <li class="relative print:py-2">
           <div class="group relative grid pb-1 print:pb-0 transition-all print:grid-cols-1 print:gap-1 md:grid-cols-12 md:gap-4 lg:hover:!opacity-100 ">
             
-            <div class="order-2 md:order-1 relative flex flex-col pb-6 lg:pb-8 print:pb-0 before:-ml-4 md:before:-ml-6 md:col-span-9 md:-mr-6 before:w-px print:before:hidden before:absolute before:bg-skin-muted before:h-full before:mt-2">
+            <div class="order-2 md:order-1 print:order-2 relative flex flex-col pb-6 lg:pb-8 print:pb-0 before:-ml-4 print:ml-0 md:before:-ml-6 md:col-span-9 print:col-span-12 md:-mr-6 before:w-px print:before:hidden before:absolute before:bg-skin-muted before:h-full before:mt-2">
               <div class="absolute w-2 h-2 bg-skin-hue rounded-full mt-2 -translate-x-[1.2rem] md:-translate-x-[1.71rem] ring print:hidden ring-skin-fill"></div>
               <h3>
                 <div class="flex items-center text-lg print:text-base leading-tight group/link focus-visible:text-amber-500" aria-label="{position} - {company}">
@@ -50,7 +50,7 @@ import { SKILLS_ICONS } from "@/constants/skill-icons";
                   {location} {location && location_type && '-'} {location_type}
                 </div>
               )}
-              <div class="mt-4  print:gap-0 flex flex-col gap-4 print:text-xs text-sm" x-data="{ expanded: false }">
+              <div class="mt-4 print:mt-2 print:gap-0 flex flex-col gap-4 print:text-xs text-sm" x-data="{ expanded: false }">
                 {summary && (
                   <div class="flex flex-col gap-1">
                     <h4>Summary:</h4>
@@ -67,7 +67,7 @@ import { SKILLS_ICONS } from "@/constants/skill-icons";
                 )}
 
                 {(responsibilities || achievements) && (
-                  <div class="flex relative flex-col print:!h-auto gap-4 print:gap-2 after:bg-gradient-to-t after:absolute after:bottom-0 after:w-full print:after:hidden after:h-16 after:content-[''] after:from-skin-hue dark:after:to-skin-hue/0" :class="expanded ? 'after:hidden' : ''" x-show="expanded" x-collapse.min.72px>
+                  <div class="flex relative flex-col print:!h-auto gap-4 print:mt-2 print:gap-2 after:bg-gradient-to-t after:absolute after:bottom-0 after:w-full print:after:hidden after:h-16 after:content-[''] after:from-skin-hue dark:after:to-skin-hue/0" :class="expanded ? 'after:hidden' : ''" x-show="expanded" x-collapse.min.72px>
                     {responsibilities && responsibilities?.length > 0 && (
                       <div class="flex flex-col gap-1">
                         <h4>Responsibilities:</h4>
@@ -114,7 +114,7 @@ import { SKILLS_ICONS } from "@/constants/skill-icons";
               </div>
             </div>
 
-            <header class="relative mt-1 text-xs text-skin-muted md:col-span-3 md:pl-6 order-1 md:order-2 text-start md:text-end">
+            <header class="relative mt-1 text-xs text-skin-muted md:col-span-3 md:pl-6 order-1 md:order-2 print:order-1 text-start md:text-end print:text-start print:pl-0">
               <time datetime={startDate} data-title={startDate} class="whitespace-nowrap"><span class="font-normal">{startMonth} {startYear}</span></time> - <time datetime={endDate} data-title={endDate}><span class="font-normal">{endMonth}</span> {endYear}</time>
             </header>
 
