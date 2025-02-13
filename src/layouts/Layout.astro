@@ -35,6 +35,8 @@ const { picture, summary, url, theme } = basics;
 			content={env.PUBLIC_BASE_PATH + "/open-graph.png-TODO"}
 		/>
 
+		<EasterEgg />
+
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta property="twitter:domain" content={url?.split("//")[1] ?? ""} />
 		<meta property="twitter:url" content={url} />
@@ -48,7 +50,6 @@ const { picture, summary, url, theme } = basics;
 		/>
 
 		<link rel="stylesheet" href={env.PUBLIC_BASE_PATH + "/themes/themes.css"} />
-		<EasterEgg />
 	</head>
 	<body data-theme={theme} class="relative bg-skin-fill">
 		<div class="absolute top-0 -z-10 h-full w-full print:hidden">
