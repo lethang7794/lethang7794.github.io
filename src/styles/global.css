@@ -35,6 +35,11 @@
 	height: 1.5rem;
 }
 
+#hotkeypad [data-section="projects"] > ul > li > div:nth-child(3),
+#hotkeypad [data-section="certificates"] > ul > li > div:nth-child(3) {
+	display: none;
+}
+
 @media (max-width: 768px) {
 	#hotkeypad [data-hotkey] div {
 		display: none;
