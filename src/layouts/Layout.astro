@@ -1,7 +1,7 @@
 ---
 import { basics } from "@cv";
-import Vengeance from "@/layouts/Vengeance.astro";
 import { env } from "@/env";
+import EasterEgg from "@/components/EasterEgg.astro";
 
 interface Props {
 	title: string;
@@ -19,14 +19,21 @@ const { picture, summary, url, theme } = basics;
 		<title>{title}</title>
 		<meta name="description" content={summary} />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="icon" type="image/png" href={env.PUBLIC_BASE_PATH + "/favicon.png"} />
+		<link
+			rel="icon"
+			type="image/png"
+			href={env.PUBLIC_BASE_PATH + "/favicon.png"}
+		/>
 		<link rel="preload" as="image" href={picture} />
 
 		<meta property="og:url" content={url} />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={summary} />
-		<meta property="og:image" content={env.PUBLIC_BASE_PATH + "/open-graph.png-TODO"} />
+		<meta
+			property="og:image"
+			content={env.PUBLIC_BASE_PATH + "/open-graph.png-TODO"}
+		/>
 
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta property="twitter:domain" content={url?.split("//")[1] ?? ""} />
@@ -41,7 +48,7 @@ const { picture, summary, url, theme } = basics;
 		/>
 
 		<link rel="stylesheet" href={env.PUBLIC_BASE_PATH + "/themes/themes.css"} />
-		<Vengeance />
+		<EasterEgg />
 	</head>
 	<body data-theme={theme} class="relative bg-skin-fill">
 		<div class="absolute top-0 -z-10 h-full w-full print:hidden">
