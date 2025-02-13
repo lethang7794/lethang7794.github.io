@@ -18,7 +18,7 @@ const { picture, summary, url, theme } = basics;
 		<meta charset="UTF-8" />
 		<title>{title}</title>
 		<meta name="description" content={summary} />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" type="image/png" href={env.PUBLIC_BASE_PATH + "/favicon.png"} />
 		<link rel="preload" as="image" href={picture} />
 
@@ -26,7 +26,7 @@ const { picture, summary, url, theme } = basics;
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={summary} />
-		<meta property="og:image" content="" />
+		<meta property="og:image" content={env.PUBLIC_BASE_PATH + "/open-graph.png-TODO"} />
 
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta property="twitter:domain" content={url?.split("//")[1] ?? ""} />
