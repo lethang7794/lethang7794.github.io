@@ -19,7 +19,7 @@ const githubUrl = githubInfo?.projects || githubInfo?.url;
 					return (
 						<div
 							role="contentinfo"
-							class="grid-span-1 relative flex flex-col rounded-md border-[1px] border-solid border-skin-hue/50 bg-skin-button-muted/100 p-5 shadow-sm ring-1 ring-skin-muted"
+							class="grid-span-1 relative flex flex-col rounded-md border-[1px] border-solid border-skin-hue/50 bg-skin-button-muted/100 p-5 shadow-sm"
 						>
 							<div class="flex items-center justify-between space-x-[10px]">
 								<div class="flex items-center gap-2">
@@ -29,6 +29,7 @@ const githubUrl = githubInfo?.projects || githubInfo?.url;
 												href={url}
 												title={`View ${name} project`}
 												target="_blank"
+												tabindex="-1"
 											>
 												<Icon name={icon} height="2em" width="4em" />
 											</a>
@@ -77,6 +78,7 @@ const githubUrl = githubInfo?.projects || githubInfo?.url;
 										target="_blank"
 										rel="noopener"
 										class="opacity-75 transition-opacity duration-100 hover:opacity-100"
+										tabindex="-1"
 									>
 										<Icon name="logos:git" />
 									</a>

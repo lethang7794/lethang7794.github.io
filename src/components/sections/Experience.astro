@@ -85,7 +85,7 @@ import { SKILLS_ICONS } from "@/constants/skill-icons";
                     )}
                   </div>
                   
-                  <button @click="expanded = ! expanded" class="ml-auto -mt-4 print:hidden group/more w-fit cursor-pointer items-center justify-center gap-1.5 text-xs underline text-skin-muted transition-all hover:text-skin-base flex">
+                  <button @click="expanded = ! expanded" class="ml-auto -mt-3 print:hidden group/more w-fit cursor-pointer items-center justify-center gap-1.5 text-xs underline text-skin-muted transition-all hover:text-skin-base flex">
                     <span x-text="expanded ? 'Show less' : 'Show more'">Show more</span>
                     <svg class="w-4 h-4 group-hover/more:translate-y-0.5 duration-200 ease-out" :class="{ 'rotate-180': expanded }" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
                   </button>
