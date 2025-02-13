@@ -9,7 +9,15 @@ import { certificates } from "@cv";
 	<ul class="space-y-4 py-3 print:space-y-0">
 		{
 			education.map(
-				({ institution, startDate, endDate, area, url, iconName }) => {
+				({
+					institution,
+					startDate,
+					endDate,
+					area,
+					url,
+					iconName,
+					highlights,
+				}) => {
 					const start = new Date(startDate);
 					const startYear = start.getFullYear();
 					const startMonth = start.toLocaleString("en-US", { month: "short" });
@@ -25,8 +33,8 @@ import { certificates } from "@cv";
 									name={iconName || "mdi:university-outline"}
 									class="hidden h-6 w-6 shrink-0 self-start md:inline print:hidden"
 								/>
-								<div>
-									<h3 class="mr-6 items-baseline gap-x-2 gap-y-0.5 font-medium">
+								<div class="w-full">
+									<h3 class="mr-6 flex-grow items-baseline gap-x-2 gap-y-0.5 font-medium mb-1">
 										{url ? (
 											<a
 												target="_blank"
@@ -41,13 +49,23 @@ import { certificates } from "@cv";
 											</span>
 										)}
 									</h3>
-									<div class="mb-1 text-sm italic text-skin-muted">{area}</div>
+									<div class="flex w-full items-baseline justify-between">
+										<div class="mb-1 text-sm italic text-skin-muted">
+											{area}
+										</div>
+										<time class="whitespace-nowrap text-xs text-skin-muted md:block md:pl-8 lg:pl-0">
+											{years}
+										</time>
+									</div>
+									<ul class="flex list-disc flex-col gap-2 text-sm text-skin-muted [&>li]:ml-4">
+										{Array.isArray(highlights) ? (
+											highlights.map((item) => <li>{item}</li>)
+										) : (
+											<li>{highlights}</li>
+										)}
+									</ul>
 								</div>
 							</div>
-
-							<time class="whitespace-nowrap text-xs text-skin-muted md:block md:pl-8 lg:pl-0">
-								{years}
-							</time>
 						</div>
 					);
 				}
@@ -55,3 +73,9 @@ import { certificates } from "@cv";
 		}
 	</ul>
 </Section>
+
+<style>
+	li::marker {
+		@apply text-skin-hue;
+	}
+</style>
