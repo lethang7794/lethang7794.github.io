@@ -19,12 +19,22 @@ const githubUrl = githubInfo?.projects || githubInfo?.url;
 					return (
 						<div
 							role="contentinfo"
-							class="grid-span-1 relative flex flex-col rounded-md bg-skin-button-muted/50 p-5 shadow-sm ring-1 ring-skin-muted"
+							class="grid-span-1 relative flex flex-col rounded-md border-[1px] border-solid border-skin-hue/50 bg-skin-button-muted/100 p-5 shadow-sm ring-1 ring-skin-muted"
 						>
 							<div class="flex items-center justify-between space-x-[10px]">
 								<div class="flex items-center gap-2">
 									{icon ? (
-										<Icon name={icon} height="2em" width="4em" />
+										isActive ? (
+											<a
+												href={url}
+												title={`View ${name} project`}
+												target="_blank"
+											>
+												<Icon name={icon} height="2em" width="4em" />
+											</a>
+										) : (
+											<Icon name={icon} height="2em" width="4em" />
+										)
 									) : (
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
