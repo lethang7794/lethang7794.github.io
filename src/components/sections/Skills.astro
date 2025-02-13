@@ -12,18 +12,20 @@ import { SKILLS_ICONS } from "@/constants/skill-icons";
 		{
 			skills.map(({ name: skill, keywords }) => {
 				const iconName = SKILLS_ICONS[skill]?.iconName;
+				const id = encodeURI(skill);
 
 				return (
-					<li class="border-skin-hue/20s bg-skin-button-accent/20s borders border-solids list-item flex-col items-start gap-1 rounded-md px-0 py-0.5 text-xs text-skin-muted marker:text-skin-hue/80 print:border-none print:bg-transparent print:p-0 print:text-zinc-800">
-						<h4 class="font-bold">
-							{iconName && <Icon name={iconName} />} <span>{skill}</span>
-						</h4>
+					<a href={"#" + id}>
+						<li class="border-skin-hue/20s bg-skin-button-accent/20s borders border-solids list-item flex-col items-start gap-1 rounded-md px-0 py-0.5 text-xs text-skin-muted marker:text-skin-hue/80 print:border-none print:bg-transparent print:p-0 print:text-zinc-800">
+							<h4 id={id} class="font-bold">
+								{iconName && <Icon name={iconName} />} <span>{skill}</span>
+							</h4>
 
-						<div class="mt-3 flex flex-wrap gap-2">
-							{/* {keywords?.map((skill) => {
+							<div class="mt-3 flex flex-wrap gap-2">
+								{/* {keywords?.map((skill) => {
                 let skillName = skill?.replace(/ \(.*\)/, "");
                 console.log({ skillName });
-
+								
                 const icon = SKILLS_ICONS[skillName];
                 const iconName = icon?.iconName || "";
                 return (
@@ -32,21 +34,22 @@ import { SKILLS_ICONS } from "@/constants/skill-icons";
                     <span>{skill}</span>
                   </li>
                 );
-              })} */}
-							{keywords?.map((skill) => {
-								let skillName = skill?.replace(/ \(.*\)/, "");
-								const icon = SKILLS_ICONS[skillName];
-								const iconName = icon?.iconName || "";
+								})} */}
+								{keywords?.map((skill) => {
+									let skillName = skill?.replace(/ \(.*\)/, "");
+									const icon = SKILLS_ICONS[skillName];
+									const iconName = icon?.iconName || "";
 
-								return (
-									<div class="flex items-center gap-1 rounded-md border border-solid border-skin-hue/30 bg-skin-button-accent/20 bg-transparent px-2 py-0.5 text-xs text-skin-hue/80 print:border-none print:bg-transparent print:p-0 print:text-zinc-800">
-										{iconName && <Icon name={icon?.iconName} />}
-										<span>{skill}</span>
-									</div>
-								);
-							})}
-						</div>
-					</li>
+									return (
+										<div class="flex items-center gap-1 rounded-md border border-solid border-skin-hue/30 bg-skin-button-accent/20 bg-transparent px-2 py-0.5 text-xs text-skin-hue/80 print:border-none print:bg-transparent print:p-0 print:text-zinc-800">
+											{iconName && <Icon name={icon?.iconName} />}
+											<span>{skill}</span>
+										</div>
+									);
+								})}
+							</div>
+						</li>
+					</a>
 				);
 			})
 		}
