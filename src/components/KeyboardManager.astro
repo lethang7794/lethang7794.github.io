@@ -233,21 +233,21 @@ const certsInfo = certificates
 	}
 
 	#hotkeypad {
-		--hotkeypad-bg-kbd: rgb(var(--muted));
-		--hotkeypad-bg-backdrop: rgb(var(--color-fill));
-		--hotkeypad-bg-container: rgb(var(--color-fill));
-		--hotkeypad-bg-item-hover: rgba(var(--color), 50%);
-		--hotkeypad-border-container: rgb(var(--muted));
-		--hotkeypad-border-container-hover: rgb(var(--color-fill));
-		--hotkeypad-fg-muted: rgba(var(--color-text-muted), var(--tw-text-opacity));
+		--hotkeypad-bg-kbd: hsl(var(--color-muted));
+		--hotkeypad-bg-backdrop: hsl(var(--color-fill));
+		--hotkeypad-bg-container: hsl(var(--color-fill));
+		--hotkeypad-bg-item-hover: hsla(var(--color-main), 50%);
+		--hotkeypad-border-container: hsl(var(--color-muted));
+		--hotkeypad-border-container-hover: hsl(var(--color-fill));
+		--hotkeypad-fg-muted: hsla(var(--color-text-secondary), var(--tw-text-opacity));
 		@media (prefers-color-scheme: dark) {
-			--hotkeypad-bg-kbd: rgb(var(--muted));
-			--hotkeypad-bg-backdrop: rgb(var(--color-fill));
-			--hotkeypad-bg-container: rgb(var(--color-fill));
-			--hotkeypad-bg-item-hover: rgba(var(--color), 50%);
-			--hotkeypad-border-container: rgb(var(--muted));
-			--hotkeypad-border-container-hover: rgb(var(--color-fill));
-			--hotkeypad-fg-muted: rgb(var(--color-text-base));
+			--hotkeypad-bg-kbd: hsl(var(--color-muted));
+			--hotkeypad-bg-backdrop: hsl(var(--color-fill));
+			--hotkeypad-bg-container: hsl(var(--color-fill));
+			--hotkeypad-bg-item-hover: hsla(var(--color-main), 50%);
+			--hotkeypad-border-container: hsl(var(--color-muted));
+			--hotkeypad-border-container-hover: hsl(var(--color-fill));
+			--hotkeypad-fg-muted: hsl(var(--color-text));
 		}
 	}
 
@@ -258,7 +258,7 @@ const certsInfo = certificates
 	html.light {
 		#hotkeypad [data-container] header input,
 		#hotkeypad [data-section] h4 {
-			--hotkeypad-fg-muted: rgba(var(--color-text-muted), 80);
+			--hotkeypad-fg-muted: hsla(var(--color-text-secondary), 80);
 		}
 	}
 </style>
