@@ -7,7 +7,7 @@ import { SKILLS_ICONS } from "@/constants/skill-icons";
 
 <Section className={Astro.props.className} title="Skills">
 	<ul
-		class="flex list-disc flex-col flex-wrap gap-6 print:mt-4 print:gap-4 [&>li>svg]:size-5 [&>li>svg]:text-skin-hue [&>li]:text-sm"
+		class="flex list-disc flex-col flex-wrap gap-6 print:mt-4 print:gap-4 [&>li>svg]:size-5 [&>li>svg]:text-skin-hue [&>li]:text-sm print:pb-4"
 	>
 		{
 			skills.map(({ name: skill, keywords }) => {
