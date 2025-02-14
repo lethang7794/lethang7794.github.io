@@ -2,6 +2,7 @@
 import { basics } from "@cv";
 import { env } from "@/env";
 import EasterEgg from "@/components/EasterEgg.astro";
+import ThemeColor from "@/components/ThemeColor.astro";
 
 interface Props {
 	title: string;
@@ -50,6 +51,8 @@ const { picture, summary, url, theme } = basics;
 		/>
 
 		<link rel="stylesheet" href={env.PUBLIC_BASE_PATH + "/themes/themes.css"} />
+
+		<ThemeColor />
 	</head>
 	<body data-theme={theme} class="relative bg-skin-fill print:bg-white">
 		<slot />

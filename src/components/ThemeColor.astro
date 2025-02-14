@@ -1,0 +1,18 @@
+<script>
+	function getQueryParam(param: string) {
+		const urlParams = new URLSearchParams(window.location.search);
+		return urlParams.get(param);
+	}
+
+	function updateThemeFromQuery() {
+		const theme = getQueryParam("theme");
+		if (theme) {
+			document.body.setAttribute("data-theme", theme);
+		}
+	}
+
+	// Run on page load
+	window.addEventListener("DOMContentLoaded", () => {
+		updateThemeFromQuery();
+	});
+</script>
