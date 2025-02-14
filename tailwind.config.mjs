@@ -14,23 +14,23 @@ export default {
     extend: {
       textColor: {
         skin: {
-          base: withOpacity("--color-text-base"),
-          muted: withOpacity("--color-text-muted"),
-          inverted: withOpacity("--color-text-inverted"),
+          base: withOpacity("--color-text"),
+          muted: withOpacity("--color-text-secondary"),
+          inverted: withOpacity("--color-text-inverse"),
         },
       },
       backgroundColor: {
         skin: {
           fill: withOpacity("--color-fill"),
-          "button-accent": withOpacity("--color-button-accent"),
-          "button-accent-hover": withOpacity("--color-button-accent-hover"),
-          "button-muted": withOpacity("--color-button-muted"),
+          "button-accent": withOpacity("--color-bg"),
+          "button-accent-hover": withOpacity("--color-bg-hover"),
+          "button-muted": withOpacity("--color-bg-inverse"),
         },
       },
       colors: {
         skin: {
-          hue: withOpacity("--color"),
-          muted: withOpacity("--muted"),
+          hue: withOpacity("--color-main"),
+          muted: withOpacity("--color-secondary"),
         },
       },
       ringColor: {
