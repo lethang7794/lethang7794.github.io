@@ -124,9 +124,18 @@ const certsInfo = certificates
 			hotkey,
 			section,
 			handler: () => {
-				const w = window.open(url, "_blank");
+				const w = window.open(url, "_blank"); // Open in a new tab
+
+				// Safari on iOS devices that block popup don't have access to window object
 				if (!w) {
-					const w = window.open(url, "_top");
+					// Create an anchor element and programmatically click it
+					if (!document) {
+						return;
+					}
+					const link = document.createElement("a");
+					link.href = url;
+					link.target = "_blank"; // Open in a new tab
+					link.click();
 				}
 			},
 		};
