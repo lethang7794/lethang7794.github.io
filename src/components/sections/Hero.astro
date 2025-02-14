@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon/components';
+import { Icon } from "astro-icon/components";
 import { basics } from "@cv";
 import Section from "@/components/Section.astro";
 import Mail from "@/icons/Mail.astro";
@@ -9,7 +9,8 @@ import LinkedIn from "@/icons/LinkedIn.astro";
 import GitHub from "@/icons/GitHub.astro";
 import type { SocialIcon } from "@/types";
 
-const { name, label, image, location, profiles, phone, email, website } = basics;
+const { name, label, image, location, profiles, phone, email, website } =
+	basics;
 const { city, region } = location;
 
 const SOCIAL_ICONS: SocialIcon = {
@@ -18,14 +19,10 @@ const SOCIAL_ICONS: SocialIcon = {
 	X,
 };
 
-const linkedInfo = profiles.find(({ network }) => network === "LinkedIn");
-const linkedUrl = linkedInfo?.url;
-
-const printInfo = [email, phone, website, linkedUrl].filter(Boolean).join(" • ");
 ---
 
 <Section>
-	<div class="pt-2 flex flex-col-reverse gap-8">
+	<div class="flex flex-col-reverse gap-8 pt-2">
 		<div class="info">
 			<h1>{name}</h1>
 			<h2>{label}</h2>
@@ -33,9 +30,69 @@ const printInfo = [email, phone, website, linkedUrl].filter(Boolean).join(" • 
 				<Icon name="fa6-solid:location-dot" />
 				{city}, {region}
 			</div>
-			<footer class="print print:text-skin-muted">
-				{printInfo}
-			</footer>
+			<div
+				class="hidden grid-cols-3 flex-wrap gap-x-2 whitespace-nowrap text-sm text-skin-muted print:grid"
+			>
+				{
+					phone && (
+						<a
+							class="flex items-center gap-2 pt-2 text-sm text-skin-muted"
+							href={`tel:${phone}`}
+							title={`Call ${name} at ${phone}`}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<Phone /> {phone}
+						</a>
+					)
+				}
+				{
+					email && (
+						<a
+							class="flex items-center gap-2 pt-2 text-sm text-skin-muted"
+							href={`mailto:${email}`}
+							title={`Email ${name} at ${email}`}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<Mail /> {email}
+						</a>
+					)
+				}
+				{
+					website && (
+						<a
+							class="flex items-center gap-2 pt-2 text-sm text-skin-muted"
+							href={`${website}`}
+							title={`Visit ${name}'s website at ${website}`}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<Icon name="www" /> {website.replace("https://", "")}
+						</a>
+					)
+				}
+				{
+					profiles.map(({ network, url, username }) => {
+						const Icon = SOCIAL_ICONS[network];
+						if (!Icon) {
+							return null;
+						}
+
+						return (
+							<a
+								class="flex items-center gap-2 pt-2 text-sm text-skin-muted"
+								href={url}
+								title={`Visit ${name} profile on ${network}`}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<Icon /> {username}
+							</a>
+						);
+					})
+				}
+			</div>
 			<footer class="no-print">
 				{
 					email && (
@@ -61,7 +118,12 @@ const printInfo = [email, phone, website, linkedUrl].filter(Boolean).join(" • 
 				}
 				{
 					phone && (
-						<a href={`tel:${phone}`} title={`Call ${name} at ${phone}`} target="_blank" rel="noopener noreferrer">
+						<a
+							href={`tel:${phone}`}
+							title={`Call ${name} at ${phone}`}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							<Phone />
 						</a>
 					)
@@ -71,28 +133,36 @@ const printInfo = [email, phone, website, linkedUrl].filter(Boolean).join(" • 
 						const Icon = SOCIAL_ICONS[network];
 
 						if (!Icon) {
-							return null
+							return null;
 						}
 
 						return (
-							<a href={url} title={`Visit ${name} profile on ${network}`} target="_blank" rel="noopener noreferrer">
+							<a
+								href={url}
+								title={`Visit ${name} profile on ${network}`}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								<Icon />
 							</a>
 						);
 					})
 				}
-				
 			</footer>
 		</div>
-		{image ? <figure class="print:hidden w-fit relative">
-			<img class="shadow-lg shadow-skin-hues" src={image} alt={name} />
-			<div class="pointer-events-none absolute -inset-2">
-				<div class="absolute -inset-y-8 right-0 w-px bg-skin-hue/50 [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-				<div class="absolute -inset-y-8 left-0 w-px bg-skin-hue/50 [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-				<div class="absolute -inset-x-8 bottom-0 h-px bg-skin-hue/50 [mask-image:linear-gradient(to_left,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-				<div class="absolute -inset-x-8 top-0 h-px bg-skin-hue/50 [mask-image:linear-gradient(to_left,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
-			</div>
-		</figure> : null}
+		{
+			image ? (
+				<figure class="relative w-fit print:hidden">
+					<img class="shadow-skin-hues shadow-lg" src={image} alt={name} />
+					<div class="pointer-events-none absolute -inset-2">
+						<div class="absolute -inset-y-8 right-0 w-px bg-skin-hue/50 [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]" />
+						<div class="absolute -inset-y-8 left-0 w-px bg-skin-hue/50 [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]" />
+						<div class="absolute -inset-x-8 bottom-0 h-px bg-skin-hue/50 [mask-image:linear-gradient(to_left,transparent,white_4rem,white_calc(100%-4rem),transparent)]" />
+						<div class="absolute -inset-x-8 top-0 h-px bg-skin-hue/50 [mask-image:linear-gradient(to_left,transparent,white_4rem,white_calc(100%-4rem),transparent)]" />
+					</div>
+				</figure>
+			) : null
+		}
 	</div>
 </Section>
 
@@ -114,15 +184,16 @@ const printInfo = [email, phone, website, linkedUrl].filter(Boolean).join(" • 
 	}
 
 	span {
-		@apply flex items-center gap-1 text-xs text-skin-hue ;
+		@apply flex items-center gap-1 text-xs text-skin-hue;
 	}
 
 	footer {
-		@apply mt-2 flex gap-1 text-sm ;
+		@apply mt-2 flex gap-1 text-sm;
 	}
 
-	footer a, footer button {
-		@apply inline-flex size-8 items-center justify-center rounded-md p-1 transition-all duration-500 ease-linear text-skin-hue hover:bg-skin-button-accent hover:text-skin-inverted;
+	footer a,
+	footer button {
+		@apply inline-flex size-8 items-center justify-center rounded-md p-1 text-skin-hue transition-all duration-500 ease-linear hover:bg-skin-button-accent hover:text-skin-inverted;
 	}
 
 	@media (width <= 700px) {
@@ -131,7 +202,7 @@ const printInfo = [email, phone, website, linkedUrl].filter(Boolean).join(" • 
 		}
 
 		.info {
-			@apply md:items-center md:justify-center pr-0 ;
+			@apply pr-0 md:items-center md:justify-center;
 		}
 
 		figure {
@@ -147,4 +218,3 @@ const printInfo = [email, phone, website, linkedUrl].filter(Boolean).join(" • 
 		}
 	}
 </style>
-
