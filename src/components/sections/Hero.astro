@@ -24,8 +24,8 @@ const SOCIAL_ICONS: SocialIcon = {
 <Section>
 	<div class="flex flex-col-reverse gap-8 pt-2">
 		<div class="info">
-			<h1>{name}</h1>
-			<h2>{label}</h2>
+			<h1 class="text-skin-hue">{name}</h1>
+			<h2 class="text-skin-hue font-bold !text-xl">{label}</h2>
 			<div class="flex items-center gap-2 pt-2 text-sm text-skin-muted">
 				<Icon name="fa6-solid:location-dot" />
 				{city}, {region}
@@ -176,7 +176,7 @@ const SOCIAL_ICONS: SocialIcon = {
 	}
 
 	h2 {
-		@apply text-balance text-base text-skin-muted print:text-lg;
+		@apply text-balance text-base print:text-lg;
 	}
 
 	img {

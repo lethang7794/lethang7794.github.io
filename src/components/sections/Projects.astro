@@ -9,7 +9,7 @@ import { SOCIALS } from "@/constants/social-names";
 
 const { profiles } = basics;
 const githubInfo = profiles.find(
-	({ network }) => network.toLowerCase() === SOCIALS.GitHub,
+	({ network }) => network.toLowerCase() === SOCIALS.GitHub
 );
 const githubUrl = githubInfo?.projects || githubInfo?.url;
 ---
@@ -67,13 +67,13 @@ const githubUrl = githubInfo?.projects || githubInfo?.url;
 												title={`View ${name} project`}
 												target="_blank"
 											>
-												{name}
+												<span class="text-skin-hue">{name}</span>
 												<span class="text-skin-hue transition ease-linear group-hover:-translate-y-0.5 group-hover:translate-x-0.5 print:hidden">
 													<Arrow />
 												</span>
 											</a>
 										) : (
-											<span class="">{name}</span>
+											<span class="text-skin-hue">{name}</span>
 										)}
 									</div>
 								</div>
@@ -102,7 +102,7 @@ const githubUrl = githubInfo?.projects || githubInfo?.url;
 							</ul>
 						</div>
 					);
-				},
+				}
 			)
 		}
 		<div
