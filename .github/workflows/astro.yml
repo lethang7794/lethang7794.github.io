@@ -106,33 +106,33 @@ jobs:
         with:
           path: ${{ env.BUILD_PATH }}/dist
 
-      # - name: Get context
-      #   run: |
-      #     echo "DATE_AND_TIME=$(date +%Y.%m.%d-%H.%M)" >> $GITHUB_ENV
-      #     echo "DATE=$(date +%Y.%m.%d)" >> $GITHUB_ENV
-      #     SHA=${{ github.sha }}
-      #     echo "SHA=${SHA:0:7}" >> $GITHUB_ENV
-
-      # - name: Compress artifact
-      #   run: |
-      #     tar czf github-pages.tar.gz --directory=${{ env.BUILD_PATH }}/dist .
-
-      # - name: Release
-      #   uses: softprops/action-gh-release@v2
-      #   if: startsWith(github.ref, 'refs/tags/')
-      #   with:
-      #     name: "${{ github.ref_name }} — ${{ env.DATE }}"
-      #     files: github-pages.tar.gz
   release:
     needs: build
     runs-on: ubuntu-latest
-    name: Release
+    name: Release'
+    if: startsWith(github.ref, 'refs/tags/')
     steps:
       - uses: actions/download-artifact@v4
         with:
           name: github-pages
       - name: Display structure of downloaded files
         run: ls -R
+      - name: Extract downloaded artifact and compress extracted files
+        run: |
+          mkdir dist
+          tar xf artifact.tar --directory=dist
+          tar czf github-pages.tar.gz --directory=dist .
+      - name: Get context
+        run: |
+          echo "DATE_AND_TIME=$(date +%Y.%m.%d-%H.%M)" >> $GITHUB_ENV
+          echo "DATE=$(date +%Y.%m.%d)" >> $GITHUB_ENV
+          SHA=${{ github.sha }}
+          echo "SHA=${SHA:0:7}" >> $GITHUB_ENV
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: "${{ github.ref_name }} — ${{ env.DATE }}"
+          files: github-pages.tar.gz
 
   deploy:
     environment:
