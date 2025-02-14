@@ -222,19 +222,20 @@ const certsInfo = certificates
 		padding: 2px 4px;
 		font-size: 12px;
 	}
+
 	#hotkeypad {
 		--hotkeypad-bg-kbd: rgb(var(--muted));
 		--hotkeypad-bg-backdrop: rgb(var(--color-fill));
 		--hotkeypad-bg-container: rgb(var(--color-fill));
-		--hotkeypad-bg-item-hover: rgba(var(--color-text), 20%);
+		--hotkeypad-bg-item-hover: rgba(var(--color), 50%);
 		--hotkeypad-border-container: rgb(var(--muted));
 		--hotkeypad-border-container-hover: rgb(var(--color-fill));
-		--hotkeypad-fg-muted: rgb(var(--muted));
+		--hotkeypad-fg-muted: rgba(var(--color-text-muted), var(--tw-text-opacity));
 		@media (prefers-color-scheme: dark) {
 			--hotkeypad-bg-kbd: rgb(var(--muted));
 			--hotkeypad-bg-backdrop: rgb(var(--color-fill));
 			--hotkeypad-bg-container: rgb(var(--color-fill));
-			--hotkeypad-bg-item-hover: rgba(var(--color), 10%);
+			--hotkeypad-bg-item-hover: rgba(var(--color), 50%);
 			--hotkeypad-border-container: rgb(var(--muted));
 			--hotkeypad-border-container-hover: rgb(var(--color-fill));
 			--hotkeypad-fg-muted: rgb(var(--color-text-base));
@@ -243,5 +244,12 @@ const certsInfo = certificates
 
 	#hotkeypad {
 		transition: visibility 0.2s;
+	}
+
+	html.light {
+		#hotkeypad [data-container] header input,
+		#hotkeypad [data-section] h4 {
+			--hotkeypad-fg-muted: rgba(var(--color-text-muted), 80);
+		}
 	}
 </style>
