@@ -1,124 +1,124 @@
 @tailwind base;
 @layer base {
   :root {
-    --color-text-base: hsl(0, 0%, 0%);
-    --color-text-muted: hsl(0, 0%, 47.1%);
-    --color-text-inverted: hsl(0, 0%, 100%);
-    --color-fill: hsl(0, 0%, 96.1%);
-    --muted: hsl(0, 0%, 78.4%);
-    --color: hsl(24.6, 95%, 53.1%);
-    --color-button-accent: hsl(24.6, 95%, 53.1%);
-    --color-button-accent-hover: hsl(0, 0%, 21.6%);
-    --color-button-muted: hsl(10, 21.4%, 94.5%);
-    --color-border: hsl(0, 0%, 0%);
+    --color-text-base: 0, 0%, 0%;
+    --color-text-muted: 0, 0%, 47.1%;
+    --color-text-inverted: 0, 0%, 100%;
+    --color-fill: 0, 0%, 96.1%;
+    --muted: 0, 0%, 78.4%;
+    --color: 24.6, 95%, 53.1%;
+    --color-button-accent: 24.6, 95%, 53.1%;
+    --color-button-accent-hover: 0, 0%, 21.6%;
+    --color-button-muted: 10, 21.4%, 94.5%;
+    --color-border: 0, 0%, 0%;
 
     [data-theme="blue"] {
-      --color-text-base: hsl(222.2, 47.4%, 11.2%);
-      --color-text-muted: hsl(215.4, 16.3%, 46.9%);
-      --color-text-inverted: hsl(0, 0%, 94.1%);
-      --color-fill: hsl(212.7, 26.8%, 83.9%);
-      --muted: hsl(215, 20.2%, 65.1%);
-      --color: hsl(217.2, 91.2%, 59.8%);
-      --color-button-accent: hsl(217.2, 91.2%, 59.8%);
-      --color-button-accent-hover: hsl(196.5, 100%, 50%);
-      --color-button-muted: hsl(214.3, 31.8%, 91.4%);
+      --color-text-base: 222.2, 47.4%, 11.2%;
+      --color-text-muted: 215.4, 16.3%, 46.9%;
+      --color-text-inverted: 0, 0%, 94.1%;
+      --color-fill: 212.7, 26.8%, 83.9%;
+      --muted: 215, 20.2%, 65.1%;
+      --color: 217.2, 91.2%, 59.8%;
+      --color-button-accent: 217.2, 91.2%, 59.8%;
+      --color-button-accent-hover: 196.5, 100%, 50%;
+      --color-button-muted: 214.3, 31.8%, 91.4%;
     }
 
     [data-theme="red"] {
-      --color-text-base: hsl(24, 9.8%, 10%);
-      --color-text-muted: hsl(0, 0%, 39.2%);
-      --color-text-inverted: hsl(0, 0%, 96.1%);
-      --color-fill: hsl(20, 5.9%, 90%);
-      --muted: hsl(0, 0%, 86.3%);
-      --color: hsl(0, 84.2%, 60.2%);
-      --color-button-accent: hsl(0, 84.2%, 60.2%);
-      --color-button-accent-hover: hsl(352.9, 70.8%, 52.9%);
-      --color-button-muted: hsl(0, 0%, 96.1%);
+      --color-text-base: 24, 9.8%, 10%;
+      --color-text-muted: 0, 0%, 39.2%;
+      --color-text-inverted: 0, 0%, 96.1%;
+      --color-fill: 20, 5.9%, 90%;
+      --muted: 0, 0%, 86.3%;
+      --color: 0, 84.2%, 60.2%;
+      --color-button-accent: 0, 84.2%, 60.2%;
+      --color-button-accent-hover: 352.9, 70.8%, 52.9%;
+      --color-button-muted: 0, 0%, 96.1%;
     }
 
     [data-theme="green"] {
-      --color-text-base: hsl(0, 0%, 15.7%);
-      --color-text-muted: hsl(0, 0%, 43.1%);
-      --color-text-inverted: hsl(0, 0%, 90.2%);
-      --color-fill: hsl(79.6, 89.1%, 89.2%);
-      --muted: hsl(85.5, 51%, 72%);
-      --color: hsl(84.8, 85.2%, 34.5%);
-      --color-button-accent: hsl(84.8, 85.2%, 34.5%);
-      --color-button-accent-hover: hsl(120, 58.8%, 66.7%);
-      --color-button-muted: hsl(83.2, 60.8%, 80%);
+      --color-text-base: 0, 0%, 15.7%;
+      --color-text-muted: 0, 0%, 43.1%;
+      --color-text-inverted: 0, 0%, 90.2%;
+      --color-fill: 79.6, 89.1%, 89.2%;
+      --muted: 85.5, 51%, 72%;
+      --color: 84.8, 85.2%, 34.5%;
+      --color-button-accent: 84.8, 85.2%, 34.5%;
+      --color-button-accent-hover: 120, 58.8%, 66.7%;
+      --color-button-muted: 83.2, 60.8%, 80%;
     }
 
     [data-theme="cyber"] {
-      --color-text-base: hsl(0, 0%, 5.9%);
-      --color-text-muted: hsl(56.1, 93.3%, 29.2%);
-      --color-text-inverted: hsl(0, 0%, 94.1%);
-      --color-fill: hsl(60.9, 100%, 62.5%);
-      --muted: hsl(0, 0%, 19.6%);
-      --color: hsl(353.8, 84.3%, 50.2%);
-      --color-button-accent: hsl(353.8, 84.3%, 50.2%);
-      --color-button-accent-hover: hsl(196.5, 100%, 50%);
-      --color-button-muted: hsl(57.5, 95.3%, 50%);
+      --color-text-base: 0, 0%, 5.9%;
+      --color-text-muted: 56.1, 93.3%, 29.2%;
+      --color-text-inverted: 0, 0%, 94.1%;
+      --color-fill: 60.9, 100%, 62.5%;
+      --muted: 0, 0%, 19.6%;
+      --color: 353.8, 84.3%, 50.2%;
+      --color-button-accent: 353.8, 84.3%, 50.2%;
+      --color-button-accent-hover: 196.5, 100%, 50%;
+      --color-button-muted: 57.5, 95.3%, 50%;
     }
   }
 
   .dark {
-    --color-text-base: hsl(0, 0%, 100%);
-    --color-text-muted: hsl(0, 0%, 58.8%);
-    --color-text-inverted: hsl(0, 0%, 100%);
-    --color-fill: hsl(0, 0%, 7.1%);
-    --muted: hsl(0, 0%, 14.1%);
-    --color: hsl(18.5, 91.6%, 46.5%);
-    --color-button-accent: hsl(18.5, 91.6%, 46.5%);
-    --color-button-accent-hover: hsl(24.9, 79.7%, 53.7%);
-    --color-button-muted: hsl(0, 0%, 10.2%);
-    --color-border: hsl(0, 0%, 100%);
+    --color-text-base: 0, 0%, 100%;
+    --color-text-muted: 0, 0%, 58.8%;
+    --color-text-inverted: 0, 0%, 100%;
+    --color-fill: 0, 0%, 7.1%;
+    --muted: 0, 0%, 14.1%;
+    --color: 18.5, 91.6%, 46.5%;
+    --color-button-accent: 18.5, 91.6%, 46.5%;
+    --color-button-accent-hover: 24.9, 79.7%, 53.7%;
+    --color-button-muted: 0, 0%, 10.2%;
+    --color-border: 0, 0%, 100%;
 
     [data-theme="blue"] {
-      --color-text-base: hsl(210, 40%, 98%);
-      --color-text-muted: hsl(215, 20.2%, 65.1%);
-      --color-text-inverted: hsl(0, 0%, 94.1%);
-      --color-fill: hsl(228.6, 84%, 4.9%);
-      --muted: hsl(215.3, 25%, 26.7%);
-      --color: hsl(217.2, 91.2%, 59.8%);
-      --color-button-accent: hsl(217.2, 91.2%, 59.8%);
-      --color-button-accent-hover: hsl(196.5, 100%, 50%);
-      --color-button-muted: hsl(217.2, 32.6%, 17.5%);
+      --color-text-base: 210, 40%, 98%;
+      --color-text-muted: 215, 20.2%, 65.1%;
+      --color-text-inverted: 0, 0%, 94.1%;
+      --color-fill: 228.6, 84%, 4.9%;
+      --muted: 215.3, 25%, 26.7%;
+      --color: 217.2, 91.2%, 59.8%;
+      --color-button-accent: 217.2, 91.2%, 59.8%;
+      --color-button-accent-hover: 196.5, 100%, 50%;
+      --color-button-muted: 217.2, 32.6%, 17.5%;
     }
 
     [data-theme="red"] {
-      --color-text-base: hsl(20, 5.9%, 90%);
-      --color-text-muted: hsl(24, 5.4%, 63.9%);
-      --color-text-inverted: hsl(0, 0%, 96.1%);
-      --color-fill: hsl(24, 9.8%, 10%);
-      --muted: hsl(0, 0%, 17.6%);
-      --color: hsl(0, 90.6%, 70.8%);
-      --color-button-accent: hsl(0, 90.6%, 70.8%);
-      --color-button-accent-hover: hsl(352.9, 70.8%, 52.9%);
-      --color-button-muted: hsl(25, 5.3%, 44.7%);
+      --color-text-base: 20, 5.9%, 90%;
+      --color-text-muted: 24, 5.4%, 63.9%;
+      --color-text-inverted: 0, 0%, 96.1%;
+      --color-fill: 24, 9.8%, 10%;
+      --muted: 0, 0%, 17.6%;
+      --color: 0, 90.6%, 70.8%;
+      --color-button-accent: 0, 90.6%, 70.8%;
+      --color-button-accent-hover: 352.9, 70.8%, 52.9%;
+      --color-button-muted: 25, 5.3%, 44.7%;
     }
 
     [data-theme="green"] {
-      --color-text-base: hsl(0, 0%, 90.2%);
-      --color-text-muted: hsl(120, 8.8%, 44.7%);
-      --color-text-inverted: hsl(0, 0%, 90.2%);
-      --color-fill: hsl(120, 33.3%, 5.9%);
-      --muted: hsl(120, 8.5%, 23.1%);
-      --color: hsl(83.7, 80.5%, 44.3%);
-      --color-button-accent: hsl(83.7, 80.5%, 44.3%);
-      --color-button-accent-hover: hsl(120, 58.8%, 66.7%);
-      --color-button-muted: hsl(120, 12.8%, 15.3%);
+      --color-text-base: 0, 0%, 90.2%;
+      --color-text-muted: 120, 8.8%, 44.7%;
+      --color-text-inverted: 0, 0%, 90.2%;
+      --color-fill: 120, 33.3%, 5.9%;
+      --muted: 120, 8.5%, 23.1%;
+      --color: 83.7, 80.5%, 44.3%;
+      --color-button-accent: 83.7, 80.5%, 44.3%;
+      --color-button-accent-hover: 120, 58.8%, 66.7%;
+      --color-button-muted: 120, 12.8%, 15.3%;
     }
 
     [data-theme="cyber"] {
-      --color-text-base: hsl(60.9, 100%, 62.5%);
-      --color-text-muted: hsl(0, 0%, 49%);
-      --color-text-inverted: hsl(0, 0%, 94.1%);
-      --color-fill: hsl(0, 0%, 5.9%);
-      --muted: hsl(0, 0%, 19.6%);
-      --color: hsl(185.2, 95.3%, 66.9%);
-      --color-button-accent: hsl(185.2, 95.3%, 66.9%);
-      --color-button-accent-hover: hsl(196.5, 100%, 50%);
-      --color-button-muted: hsl(184.9, 55%, 21.8%);
+      --color-text-base: 60.9, 100%, 62.5%;
+      --color-text-muted: 0, 0%, 49%;
+      --color-text-inverted: 0, 0%, 94.1%;
+      --color-fill: 0, 0%, 5.9%;
+      --muted: 0, 0%, 19.6%;
+      --color: 185.2, 95.3%, 66.9%;
+      --color-button-accent: 185.2, 95.3%, 66.9%;
+      --color-button-accent-hover: 196.5, 100%, 50%;
+      --color-button-muted: 184.9, 55%, 21.8%;
     }
   }
 }
