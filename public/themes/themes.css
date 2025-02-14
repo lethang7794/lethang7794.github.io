@@ -3,17 +3,17 @@
 	:root {
 		--color-brand: 24.6, 95%, 53.1%;
 
-		--color-text: 0, 0%, 0%;
-		--color-text-secondary: 0, 0%, 47.1%;
-		--color-text-inverse: 0, 0%, 100%;
-
+    
 		--color-main: var(--color-brand);
 		--color-fill: 0, 0%, 96.1%;
 		--color-muted: 0, 0%, 78.4%;
-
+    
 		--color-bg: var(--color-brand);
-		--color-bg-hover: 0, 0%, 21.6%;
 		--color-bg-inverse: 10, 21.4%, 94.5%;
+
+		--color-text: 0, 0%, 0%;
+		--color-text-secondary: 0, 0%, 47.1%;
+		--color-text-inverse: 0, 0%, 100%;
 
 		[data-theme="blue"] {
 			--color-brand: 217.2, 91.2%, 59.8%;
@@ -23,7 +23,6 @@
 			--color-muted: 215, 20.2%, 65.1%;
 
 			--color-bg: var(--color-brand);
-			--color-bg-hover: 196.5, 100%, 50%;
 			--color-bg-inverse: 214.3, 31.8%, 91.4%;
 
 			--color-text: 222.2, 47.4%, 11.2%;
@@ -39,7 +38,6 @@
 			--color-muted: 0, 0%, 86.3%;
 
 			--color-bg: var(--color-brand);
-			--color-bg-hover: 352.9, 70.8%, 52.9%;
 			--color-bg-inverse: 0, 0%, 96.1%;
 
 			--color-text: 24, 9.8%, 10%;
@@ -55,7 +53,6 @@
 			--color-muted: 85.5, 51%, 72%;
 
 			--color-bg: var(--color-brand);
-			--color-bg-hover: 120, 58.8%, 66.7%;
 			--color-bg-inverse: 83.2, 60.8%, 80%;
 
 			--color-text: 0, 0%, 15.7%;
@@ -71,7 +68,6 @@
 			--color-muted: 0, 0%, 19.6%;
 
 			--color-bg: var(--color-brand);
-			--color-bg-hover: 196.5, 100%, 50%;
 			--color-bg-inverse: 57.5, 95.3%, 50%;
 
 			--color-text: 0, 0%, 5.9%;
@@ -83,17 +79,16 @@
 	.dark {
 		--color-brand: 18.5, 91.6%, 46.5%;
     
-		--color-text: 0, 0%, 100%;
-		--color-text-secondary: 0, 0%, 58.8%;
-		--color-text-inverse: 0, 0%, 100%;
-    
 		--color-main: var(--color-brand);
 		--color-fill: 0, 0%, 7.1%;
 		--color-muted: 0, 0%, 14.1%;
     
 		--color-bg: var(--color-brand);
-		--color-bg-hover: 24.9, 79.7%, 53.7%;
 		--color-bg-inverse: 0, 0%, 10.2%;
+    
+		--color-text: 0, 0%, 100%;
+		--color-text-secondary: 0, 0%, 58.8%;
+		--color-text-inverse: 0, 0%, 100%;
 
 		[data-theme="blue"] {
 			--color-brand: 217.2, 91.2%, 59.8%;
@@ -103,7 +98,6 @@
 			--color-muted: 215.3, 25%, 26.7%;
 
 			--color-bg: var(--color-brand);
-			--color-bg-hover: 196.5, 100%, 50%;
 			--color-bg-inverse: 217.2, 32.6%, 17.5%;
 
 			--color-text: 210, 40%, 98%;
@@ -119,7 +113,6 @@
 			--color-muted: 0, 0%, 17.6%;
 
 			--color-bg: var(--color-brand);
-			--color-bg-hover: 352.9, 70.8%, 52.9%;
 			--color-bg-inverse: 25, 5.3%, 44.7%;
 
 			--color-text: 20, 5.9%, 90%;
@@ -135,7 +128,6 @@
 			--color-muted: 120, 8.5%, 23.1%;
 
 			--color-bg: var(--color-brand);
-			--color-bg-hover: 120, 58.8%, 66.7%;
 			--color-bg-inverse: 120, 12.8%, 15.3%;
 
 			--color-text: 0, 0%, 90.2%;
@@ -151,7 +143,6 @@
 			--color-muted: 0, 0%, 19.6%;
 
 			--color-bg: var(--color-brand);
-			--color-bg-hover: 196.5, 100%, 50%;
 			--color-bg-inverse: 184.9, 55%, 21.8%;
 
 			--color-text: 60.9, 100%, 62.5%;

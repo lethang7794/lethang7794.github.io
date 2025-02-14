@@ -23,7 +23,6 @@ export default {
         skin: {
           fill: withOpacity("--color-fill"),
           "button-accent": withOpacity("--color-bg"),
-          "button-accent-hover": withOpacity("--color-bg-hover"),
           "button-muted": withOpacity("--color-bg-inverse"),
         },
       },
