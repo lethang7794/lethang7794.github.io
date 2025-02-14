@@ -11,6 +11,7 @@
     --color-button-accent-hover: 55, 55, 55;
     --color-button-muted: 244, 239, 238;
     --color-border: black;
+
     [data-theme="blue"] {
       --color-text-base: 15, 23, 42;
       --color-text-muted: 100, 116, 139;
@@ -22,6 +23,7 @@
       --color-button-accent-hover: 0, 185, 255;
       --color-button-muted: 226, 232, 240;
     }
+
     [data-theme="red"] {
       --color-text-base: 28, 25, 23;
       --color-text-muted: 100, 100, 100;
@@ -33,6 +35,7 @@
       --color-button-accent-hover: 220, 50, 70;
       --color-button-muted: 245, 245, 245;
     }
+
     [data-theme="green"] {
       --color-text-base: 40, 40, 40;
       --color-text-muted: 110, 110, 110;
@@ -44,6 +47,7 @@
       --color-button-accent-hover: 120, 220, 120;
       --color-button-muted: 211, 235, 173;
     }
+
     [data-theme="cyber"] {
       --color-text-base: 15, 15, 15;
       --color-text-muted: 144, 135, 5;
@@ -56,6 +60,7 @@
       --color-button-muted: 249, 239, 6;
     }
   }
+  
   .dark {
     --color-text-base: 255, 255, 255;
     --color-text-muted: 150, 150, 150;
@@ -67,6 +72,7 @@
     --color-button-accent-hover: 231, 121, 43;
     --color-button-muted: 26, 26, 26;
     --color-border: white;
+
     [data-theme="blue"] {
       --color-text-base: 248, 250, 252;
       --color-text-muted: 148, 163, 184;
@@ -78,6 +84,7 @@
       --color-button-accent-hover: 0, 185, 255;
       --color-button-muted: 30, 41, 59;
     }
+
     [data-theme="red"] {
       --color-text-base: 231, 229, 228;
       --color-text-muted: 168, 162, 158;
@@ -89,6 +96,7 @@
       --color-button-accent-hover: 220, 50, 70;
       --color-button-muted: 120, 113, 108; 
     }
+
     [data-theme="green"] {
       --color-text-base: 230, 230, 230;
       --color-text-muted: 104, 124, 104;
@@ -100,6 +108,7 @@
       --color-button-accent-hover: 120, 220, 120;
       --color-button-muted: 34, 44, 34;
     }
+
     [data-theme="cyber"] {
       --color-text-base: 252, 255, 64;
       --color-text-muted: 125, 125, 125;
