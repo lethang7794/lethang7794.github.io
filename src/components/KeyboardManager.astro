@@ -45,7 +45,7 @@ const projectsInfo = projects.map(({ name, url, iconSearch }, idx) => {
 });
 
 const githubInfo = profiles.find(
-	({ network }) => network?.toLowerCase() === SOCIALS.GitHub
+	({ network }) => network?.toLowerCase() === SOCIALS.GitHub,
 );
 const githubUrl = githubInfo?.projects || githubInfo?.url;
 const moreProjects = {

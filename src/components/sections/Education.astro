@@ -5,7 +5,7 @@ import { education } from "@cv";
 ---
 
 <Section className={Astro.props.className} title="Education">
-	<ul class="space-y-4 pt-0 pb-4 print:space-y-0 print:pt-0">
+	<ul class="space-y-4 pb-4 pt-0 print:space-y-0 print:pt-0">
 		{
 			education.map(
 				({
@@ -28,7 +28,7 @@ import { education } from "@cv";
 
 					return (
 						<div class="flex flex-col items-baseline lg:flex-row">
-							<div class="relative mt-2 flex w-full items-baseline gap-2 print:pt-0 print:mt-0 print:pb-4">
+							<div class="relative mt-2 flex w-full items-baseline gap-2 print:mt-0 print:pb-4 print:pt-0">
 								<Icon
 									name={iconName || "mdi:university-outline"}
 									class="hidden h-6 w-6 shrink-0 self-start md:inline print:hidden"
@@ -64,7 +64,7 @@ import { education } from "@cv";
 											{years}
 										</time>
 									</div>
-									<ul class="flex list-disc flex-col gap-2 text-sm text-skin-muted [&>li]:ml-4 print:pr-32 print:mt-2">
+									<ul class="flex list-disc flex-col gap-2 text-sm text-skin-muted print:mt-2 print:pr-32 [&>li]:ml-4">
 										{Array.isArray(highlights) ? (
 											highlights.map((item) => <li>{item}</li>)
 										) : (
@@ -75,7 +75,7 @@ import { education } from "@cv";
 							</div>
 						</div>
 					);
-				}
+				},
 			)
 		}
 	</ul>

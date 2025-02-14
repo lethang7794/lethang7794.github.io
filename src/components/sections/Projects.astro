@@ -9,7 +9,7 @@ import { SOCIALS } from "@/constants/social-names";
 
 const { profiles } = basics;
 const githubInfo = profiles.find(
-	({ network }) => network.toLowerCase() === SOCIALS.GitHub
+	({ network }) => network.toLowerCase() === SOCIALS.GitHub,
 );
 const githubUrl = githubInfo?.projects || githubInfo?.url;
 ---
@@ -102,7 +102,7 @@ const githubUrl = githubInfo?.projects || githubInfo?.url;
 							</ul>
 						</div>
 					);
-				}
+				},
 			)
 		}
 		<div
