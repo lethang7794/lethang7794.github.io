@@ -5,6 +5,7 @@ import { type SocialIcon } from "@/types";
 import { basics, projects, certificates } from "@cv";
 import "../styles/global.css";
 import { Icon } from "astro-icon/components";
+import { SOCIALS } from "@/constants/social-names";
 
 const { profiles } = basics;
 
@@ -43,8 +44,10 @@ const projectsInfo = projects.map(({ name, url, iconSearch }, idx) => {
 	};
 });
 
-const githubInfo = profiles.find(({ network }) => network === "Github");
-const githubUrl = githubInfo?.url;
+const githubInfo = profiles.find(
+	({ network }) => network?.toLowerCase() === SOCIALS.GitHub
+);
+const githubUrl = githubInfo?.projects || githubInfo?.url;
 const moreProjects = {
 	id: "more-projects",
 	section: "Projects",
@@ -121,7 +124,10 @@ const certsInfo = certificates
 			hotkey,
 			section,
 			handler: () => {
-				window.open(url, "_top");
+				const w = window.open(url, "_blank");
+				if (!w) {
+					const w = window.open(url, "_top");
+				}
 			},
 		};
 	});

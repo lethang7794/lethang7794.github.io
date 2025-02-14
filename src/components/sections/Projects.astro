@@ -5,14 +5,19 @@ import Section from "../Section.astro";
 
 import { projects } from "@cv";
 import { basics } from "@cv";
+import { SOCIALS } from "@/constants/social-names";
 
 const { profiles } = basics;
-const githubInfo = profiles.find(({ network }) => network === "GitHub");
+const githubInfo = profiles.find(
+	({ network }) => network.toLowerCase() === SOCIALS.GitHub
+);
 const githubUrl = githubInfo?.projects || githubInfo?.url;
 ---
 
 <Section className={Astro.props.className} title="Projects">
-	<div class="mt-2 grid grid-cols-1 gap-3 md:grid-cols-2 print:flex print:flex-col">
+	<div
+		class="mt-2 grid grid-cols-1 gap-3 md:grid-cols-2 print:flex print:flex-col"
+	>
 		{
 			projects.map(
 				({ url, description, highlights, name, isActive, github, icon }) => {
