@@ -4,15 +4,25 @@
 		return urlParams.get(param);
 	}
 
-	function updateThemeFromQuery() {
-		const theme = getQueryParam("theme");
+	function updateThemeColorFromQuery() {
+		const theme = getQueryParam("color");
 		if (theme) {
 			document.body.setAttribute("data-theme", theme);
 		}
 	}
 
+	function updateThemeFromQuery() {
+		const theme = getQueryParam("theme");
+		if (theme) {
+			localStorage.setItem("theme", theme);
+			document.documentElement.classList.remove("light", "dark");
+			document.documentElement.classList.add(theme);
+		}
+	}
+
 	// Run on page load
 	window.addEventListener("DOMContentLoaded", () => {
+		updateThemeColorFromQuery();
 		updateThemeFromQuery();
 	});
 </script>
