@@ -51,14 +51,9 @@ const { picture, summary, url, theme } = basics;
 
 		<link rel="stylesheet" href={env.PUBLIC_BASE_PATH + "/themes/themes.css"} />
 	</head>
-	<body data-theme={theme} class="relative bg-skin-fill">
-		<div class="absolute top-0 -z-10 h-full w-full print:hidden">
-			<div
-				class="absolute bottom-auto left-[20%] right-auto top-0 h-[200px] w-[200px] -translate-x-[30%] translate-y-[20%] rounded-full bg-skin-hue/10 blur-[80px] invert-0 dark:bg-white/5"
-			>
-			</div>
-		</div>
+	<body data-theme={theme} class="relative bg-skin-fill print:bg-white">
 		<slot />
+
 		<style is:global>
 			body,
 			figure {
