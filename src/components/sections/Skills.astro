@@ -17,7 +17,7 @@ import { SKILLS_ICONS } from "@/constants/skill-icons";
 				return (
 					<a href={"#" + id}>
 						<li class="border-skin-hue/20s bg-skin-button-accent/20s borders border-solids list-item flex-col items-start gap-1 rounded-md px-0 py-0.5 text-base text-skin-muted marker:text-skin-hue/80 print:border-none print:bg-transparent print:p-0 print:text-zinc-800">
-							<h4 id={id} class="font-bold">
+							<h4 id={id} class="font-normal">
 								{iconName && <Icon name={iconName} class="print:hidden" />}{" "}
 								<span class="text-skin-hue">{skill}</span>
 							</h4>
@@ -29,7 +29,7 @@ import { SKILLS_ICONS } from "@/constants/skill-icons";
 									const iconName = icon?.iconName || "";
 
 									return (
-										<div class="flex items-center gap-1 rounded-md border border-solid border-skin-hue/30 bg-skin-button-accent/20 bg-transparent px-2 py-0.5 text-xs text-skin-hue/80 print:border-none print:bg-transparent print:p-0 print:text-skin-muted">
+										<div class="flex items-center gap-1 rounded-md border border-solid border-skin-hue/30 bg-skin-button-accent/20 bg-transparent px-2 py-0.5 text-xs text-skin-muted print:border-none print:bg-transparent print:p-0 print:text-skin-muted">
 											{iconName && (
 												<Icon name={icon?.iconName} class="print:hidden" />
 											)}

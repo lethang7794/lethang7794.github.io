@@ -62,7 +62,7 @@ const githubUrl = githubInfo?.projects || githubInfo?.url;
 									<div class="flex items-center gap-[6px]">
 										{isActive ? (
 											<a
-												class="group flex items-center gap-[6px] text-lg font-semibold decoration-dotted underline-offset-[5px] hover:text-skin-hue hover:underline"
+												class="group flex items-center gap-[6px] text-lg font-normal decoration-dotted underline-offset-[5px] hover:text-skin-hue hover:underline"
 												href={url}
 												title={`View ${name} project`}
 												target="_blank"
@@ -92,7 +92,7 @@ const githubUrl = githubInfo?.projects || githubInfo?.url;
 								)}
 							</div>
 
-							<p class="my-3 text-sm text-skin-base print:mb-1 print:mt-0">
+							<p class="my-3 text-sm text-skin-base print:dark:text-black/60 print:mb-1 print:mt-0">
 								{description}
 							</p>
 							<ul class="mt-1 text-sm text-skin-muted print:mt-0">
