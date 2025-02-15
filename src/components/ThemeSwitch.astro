@@ -25,7 +25,7 @@ import { Icon } from "astro-icon/components";
 		<select
 			id="themeSwitch"
 			name="themeSwitch"
-			class="block w-full rounded-md border-0 py-1.5 pl-3 pr-10 text-skin-base ring-1 ring-inset ring-skin-muted focus:ring-2 focus:ring-skin-hue sm:text-sm sm:leading-6"
+			class="block w-full rounded-md border-[1px] border-solid border-skin-muted py-1.5 pl-3 pr-10 text-skin-base ring-1 ring-skin-muted hover:border-skin-hue focus:border-skin-hue focus:ring-2 focus:ring-skin-hue sm:text-sm sm:leading-6"
 		>
 			<option value="system" class="text-black">System</option>
 			<option value="dark" class="text-black">Dark</option>
@@ -117,13 +117,13 @@ import { Icon } from "astro-icon/components";
 
 	// Restaurar el modo oscuro después de imprimir
 	window.addEventListener("afterprint", () => {
-		let theme = 'light'
+		let theme = "light";
 		if (
 			select.value === "dark" ||
 			(select.value === "system" && getSystemTheme() === "dark")
 		) {
-			theme = 'dark'
+			theme = "dark";
 		}
-		updateTheme(theme)
+		updateTheme(theme);
 	});
 </script>

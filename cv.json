@@ -6,7 +6,7 @@
 		"phone": "+84 944 990 631",
 		"website": "https://lethang7794.github.io",
 		"url": "https://lethang7794.github.io",
-		"picture": "https://lethang7794.github.io/photo.jpg TODO",
+		"picture-TODO": "https://lethang7794.github.io/photo.jpg",
 		"image": "",
 		"theme": "default",
 		"summary": "Ambitious Full Stack Developer with expertise in cloud computing, driven by challenges, growth, and innovation. Seeking opportunities to build impactful solutions and deliver value to businesses and users.",
@@ -29,6 +29,11 @@
 				"network": "LinkedIn",
 				"username": "thanglequang",
 				"url": "https://linkedin.com/in/thanglequang"
+			},
+			{
+				"network": "CV",
+				"username": "CV",
+				"url": "/CV.pdf"
 			}
 		]
 	},
