@@ -166,7 +166,7 @@ jobs:
           name: playwright-result
       - name: Extract downloaded CV artifact
         run: |
-          mkdir dist
+          mkdir playwright-result-artifact
           tar xf playwright-result.tar --directory=playwright-result-artifact
       - name: Get context
         run: |
