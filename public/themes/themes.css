@@ -10,7 +10,7 @@
 		--color-bg: var(--color-brand);
 		--color-bg-inverse: 10, 21.4%, 94.5%;
 
-		--color-text: 0, 0%, 0%;
+		--color-text: 0, 0%, 20%;
 		--color-text-secondary: 0, 0%, 47.1%;
 		--color-text-inverse: 0, 0%, 100%;
 
@@ -100,7 +100,7 @@
 		--color-bg: var(--color-brand);
 		--color-bg-inverse: 0, 0%, 10.2%;
 
-		--color-text: 0, 0%, 100%;
+		--color-text: 0, 0%, 85%;
 		--color-text-secondary: 0, 0%, 58.8%;
 		--color-text-inverse: 0, 0%, 100%;
 

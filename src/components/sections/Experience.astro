@@ -45,7 +45,7 @@ import { SKILLS_ICONS } from "@/constants/skill-icons";
 											<a href={"#" + id}>
 												<span id={id}>
 													<span class="font-normal text-skin-hue">{position}</span>
-													<span class="font-normal text-skin-base">@</span>
+													<span class="font-normal text-skin-base print:dark:text-black/60">@</span>
 													{url ? (
 														<a
 															class="text-skin-hue"
@@ -57,7 +57,7 @@ import { SKILLS_ICONS } from "@/constants/skill-icons";
 															{company}
 														</a>
 													) : (
-														<span class="font-normal italic">{company}</span>
+														<span class="font-normal italic text-skin-base print:dark:text-black/60">{company}</span>
 													)}
 													{url && (
 														<span class="inline-block text-skin-hue print:[&>svg]:hidden">
@@ -107,7 +107,7 @@ import { SKILLS_ICONS } from "@/constants/skill-icons";
 									>
 										{summary && (
 											<div class="flex flex-col gap-1">
-												<h4>Summary:</h4>
+												<h4 class="text-skin-base print:dark:text-black/60">Summary:</h4>
 												<ul class="flex list-disc flex-col gap-2 text-skin-muted [&>li]:ml-4">
 													{Array.isArray(summary) ? (
 														summary.map((item) => ({ item }))
@@ -122,7 +122,7 @@ import { SKILLS_ICONS } from "@/constants/skill-icons";
                       <div class="flex relative flex-col print:!h-auto gap-4 print:mt-2 print:gap-2 after:bg-gradient-to-t after:absolute after:bottom-0 after:w-full print:after:hidden after:h-16 after:content-[''] after:from-skin-hue dark:after:to-skin-hue/0" :class="expanded ? 'after:hidden' : ''" x-show="expanded" x-collapse.min.72px>
                         {responsibilities && responsibilities?.length > 0 && (
                           <div class="flex flex-col gap-1">
-                            <h4>Responsibilities:</h4>
+                            <h4 class="text-skin-base print:dark:text-black/60">Responsibilities:</h4>
                             <ul class="text-skin-muted [&>li]:ml-4 flex list-disc flex-col gap-2">
                               {responsibilities.map(responsibility => (
                                 <li>{responsibility}</li>
@@ -133,7 +133,7 @@ import { SKILLS_ICONS } from "@/constants/skill-icons";
 
                         {achievements && (
                           <div class="flex flex-col gap-1">
-                            <h4>Achievements:</h4>
+                            <h4 class="text-skin-base print:dark:text-black/60">Achievements:</h4>
                             <ul class="text-skin-muted [&>li]:ml-4 flex list-disc flex-col gap-2">
                               {achievements.map(achievement => (
                                 <li>{achievement}</li>
