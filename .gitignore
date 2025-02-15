@@ -22,3 +22,10 @@ pnpm-debug.log*
 
 # local folders
 .history
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright-result/

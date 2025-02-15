@@ -10,6 +10,8 @@ on:
     branches: ["main"]
     tags:
       - "*"
+  pull_request:
+    branches: [main]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -106,8 +108,45 @@ jobs:
         with:
           path: ${{ env.BUILD_PATH }}/dist
 
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+      - name: Install dependencies
+        run: npm install -g pnpm && pnpm install
+
+      - uses: actions/cache@v4
+        id: playwright-cache
+        with:
+          path: |
+            ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ hashFiles('**/package-lock.json') }}
+
+      - name: Install Playwright Browsers
+        run: pnpm exec playwright install --with-deps chromium
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+
+      - name: Run Playwright tests
+        run: pnpm exec playwright test
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: playwright-result
+          path: playwright-result/
+          retention-days: 30
+
   release:
-    needs: build
+    needs: [build, test]
     runs-on: ubuntu-latest
     name: Release
     if: startsWith(github.ref, 'refs/tags/')
@@ -122,6 +161,13 @@ jobs:
           mkdir dist
           tar xf artifact.tar --directory=dist
           tar czf github-pages.tar.gz --directory=dist .
+      - uses: actions/download-artifact@v4
+        with:
+          name: playwright-result
+      - name: Extract downloaded CV artifact
+        run: |
+          mkdir dist
+          tar xf playwright-result.tar --directory=playwright-result-artifact
       - name: Get context
         run: |
           echo "DATE_AND_TIME=$(date +%Y.%m.%d-%H.%M)" >> $GITHUB_ENV
@@ -132,13 +178,16 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           name: "${{ github.ref_name }} — ${{ env.DATE }}"
-          files: github-pages.tar.gz
+          files: |
+            github-pages.tar.gz
+            playwright-result-artifact/*
 
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
+    needs: release
+    if: startsWith(github.ref, 'refs/branches/main')
     runs-on: ubuntu-latest
     name: Deploy
     steps:
