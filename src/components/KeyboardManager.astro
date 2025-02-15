@@ -19,19 +19,21 @@ const iconProject =
 	"<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-folder size-4' > <path d='M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z' /> </svg>";
 const iconEmpty = "<svg width='24' height='24' viewBox='0 0 24 24'></svg>";
 
-const profilesInfo = profiles.map(({ network, url }) => {
-	const icon = SOCIAL_ICONS[network];
-	const firstLetter = network[0].toUpperCase();
+const profilesInfo = profiles
+	.filter((item) => item.network !== "CV")
+	.map(({ network, url }) => {
+		const icon = SOCIAL_ICONS[network];
+		const firstLetter = network[0].toUpperCase();
 
-	return {
-		id: network,
-		section: "Socials",
-		title: `Visit ${network}`,
-		url,
-		icon,
-		hotkey: `ctrl+${firstLetter}`,
-	};
-});
+		return {
+			id: network,
+			section: "Socials",
+			title: `Visit ${network}`,
+			url,
+			icon,
+			hotkey: `ctrl+${firstLetter}`,
+		};
+	});
 
 const projectsInfo = projects.map(({ name, url, iconSearch }, idx) => {
 	return {
@@ -45,7 +47,7 @@ const projectsInfo = projects.map(({ name, url, iconSearch }, idx) => {
 });
 
 const githubInfo = profiles.find(
-	({ network }) => network?.toLowerCase() === SOCIALS.GitHub,
+	({ network }) => network?.toLowerCase() === SOCIALS.GitHub
 );
 const githubUrl = githubInfo?.projects || githubInfo?.url;
 const moreProjects = {
@@ -143,12 +145,34 @@ const certsInfo = certificates
 	hotkeypad.setCommands([
 		{
 			id: "print",
-			title: "Print Resume",
+			title: "Print this website as CV",
 			icon: `<svg style="margin-right: 0px" width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" d="M6.72 13.829c-.24.03-.48.062-.72.096m.72-.096a42.415 42.415 0 0 1 10.56 0m-10.56 0L6.34 18m10.94-4.171c.24.03.48.062.72.096m-.72-.096L17.66 18m0 0 .229 2.523a1.125 1.125 0 0 1-1.12 1.227H7.231c-.662 0-1.18-.568-1.12-1.227L6.34 18m11.318 0h1.091A2.25 2.25 0 0 0 21 15.75V9.456c0-1.081-.768-2.015-1.837-2.175a48.055 48.055 0 0 0-1.913-.247M6.34 18H5.25A2.25 2.25 0 0 1 3 15.75V9.456c0-1.081.768-2.015 1.837-2.175a48.041 48.041 0 0 1 1.913-.247m10.5 0a48.536 48.536 0 0 0-10.5 0m10.5 0V3.375c0-.621-.504-1.125-1.125-1.125h-8.25c-.621 0-1.125.504-1.125 1.125v3.659M18 10.5h.008v.008H18V10.5Zm-3 0h.008v.008H15V10.5Z" /> </svg>`,
 			hotkey: "ctrl+P",
 			section: "Actions",
 			handler: () => {
 				window.print();
+			},
+		},
+		{
+			id: "download",
+			title: "Download CV",
+			icon: `<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="-32 0 512 512"><path fill="currentColor" d="M48 32C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm98.88 133.234c19.636 0 37.082 6.789 49.929 16.971c11.88 9.452 17.444 18.907 22.298 27.393l-33.923 16.949c-2.427-5.565-5.347-11.387-12.846-17.682c-8.248-6.552-16.478-8.484-23.524-8.484c-27.626 0-42.17 25.693-42.17 54.287c0 37.573 19.161 56.22 42.17 56.22c22.3 0 31.278-15.51 37.08-25.435L219.6 302.66c-6.315 9.926-12.374 19.635-25.95 29.069c-7.262 5.09-23.977 15.037-47.736 15.037C100.586 346.766 64 313.81 64 255.87c0-50.636 34.415-90.637 82.88-90.637m75.483 5.328h45.565L303.31 292.24l35.125-121.678H384l-59.379 171.112H281.01z"/></svg>`,
+			hotkey: "ctrl+D",
+			section: "Actions",
+			handler: () => {
+				const w = window.open("/CV.pdf", "_blank"); // Open in a new tab
+
+				// Safari on iOS devices that block popup don't have access to window object
+				if (!w) {
+					// Create an anchor element and programmatically click it
+					if (!document) {
+						return;
+					}
+					const link = document.createElement("a");
+					link.href = "/CV.pdf";
+					link.target = "_blank"; // Open in a new tab
+					link.click();
+				}
 			},
 		},
 		...data,
@@ -195,8 +219,9 @@ const certsInfo = certificates
 
 		.footer-button {
 			background: #fff;
+			color: hsl(var(--color-main));
 			position: fixed;
-			border: 1px solid #eee;
+			border: 1px solid hsl(var(--color-main));
 			right: 10px;
 			bottom: 10px;
 			width: 50px;
@@ -239,7 +264,10 @@ const certsInfo = certificates
 		--hotkeypad-bg-item-hover: hsla(var(--color-main), 50%);
 		--hotkeypad-border-container: hsl(var(--color-muted));
 		--hotkeypad-border-container-hover: hsl(var(--color-fill));
-		--hotkeypad-fg-muted: hsla(var(--color-text-secondary), var(--tw-text-opacity));
+		--hotkeypad-fg-muted: hsla(
+			var(--color-text-secondary),
+			var(--tw-text-opacity)
+		);
 		@media (prefers-color-scheme: dark) {
 			--hotkeypad-bg-kbd: hsl(var(--color-muted));
 			--hotkeypad-bg-backdrop: hsl(var(--color-fill));
