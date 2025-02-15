@@ -29,7 +29,7 @@ export default {
       colors: {
         skin: {
           hue: withOpacity("--color-main"),
-          muted: withOpacity("--color-secondary"),
+          muted: withOpacity("--color-text-secondary"),
         },
       },
       ringColor: {
