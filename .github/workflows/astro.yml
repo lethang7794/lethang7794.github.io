@@ -100,6 +100,7 @@ jobs:
             --site "${{ steps.pages.outputs.origin }}" \
             --base "${{ steps.pages.outputs.base_path }}"
         working-directory: ${{ env.BUILD_PATH }}
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -112,12 +113,16 @@ jobs:
           SHA=${{ github.sha }}
           echo "SHA=${SHA:0:7}" >> $GITHUB_ENV
 
+      - name: Compress artifact
+        run: |
+          tar czf astro-page.tar.gz --directory=${{ env.BUILD_PATH }}/dist .
+
       - name: Release
         uses: softprops/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/')
         with:
           name: "${{ github.ref_name }} — ${{ env.DATE }}"
-          files: ${{ env.BUILD_PATH }}/dist/**
+          files: astro-page.tar.gz
 
   deploy:
     environment:
