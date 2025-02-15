@@ -178,6 +178,17 @@ jobs:
             github-pages.tar.gz
             *.pdf
 
+      # Copy CV to astro build output
+      - name: Upload artifact with PDF
+        run: |
+          cp *.pdf dist/
+      # Reupload github-pages
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ env.BUILD_PATH }}/dist
+          name: github-pages-with-cv
+
   # Deploy for tags starts with v, e.g. v0.0.1
   deploy:
     environment:
@@ -191,3 +202,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages-with-cv
