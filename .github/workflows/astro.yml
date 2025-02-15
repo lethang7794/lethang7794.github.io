@@ -8,8 +8,8 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
-    tags:        
-      - '*' 
+    tags:
+      - "*"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -106,23 +106,33 @@ jobs:
         with:
           path: ${{ env.BUILD_PATH }}/dist
 
-      - name: Get context
-        run: |
-          echo "DATE_AND_TIME=$(date +%Y.%m.%d-%H.%M)" >> $GITHUB_ENV
-          echo "DATE=$(date +%Y.%m.%d)" >> $GITHUB_ENV
-          SHA=${{ github.sha }}
-          echo "SHA=${SHA:0:7}" >> $GITHUB_ENV
+      # - name: Get context
+      #   run: |
+      #     echo "DATE_AND_TIME=$(date +%Y.%m.%d-%H.%M)" >> $GITHUB_ENV
+      #     echo "DATE=$(date +%Y.%m.%d)" >> $GITHUB_ENV
+      #     SHA=${{ github.sha }}
+      #     echo "SHA=${SHA:0:7}" >> $GITHUB_ENV
 
-      - name: Compress artifact
-        run: |
-          tar czf astro-page.tar.gz --directory=${{ env.BUILD_PATH }}/dist .
+      # - name: Compress artifact
+      #   run: |
+      #     tar czf github-pages.tar.gz --directory=${{ env.BUILD_PATH }}/dist .
 
-      - name: Release
-        uses: softprops/action-gh-release@v2
-        if: startsWith(github.ref, 'refs/tags/')
+      # - name: Release
+      #   uses: softprops/action-gh-release@v2
+      #   if: startsWith(github.ref, 'refs/tags/')
+      #   with:
+      #     name: "${{ github.ref_name }} — ${{ env.DATE }}"
+      #     files: github-pages.tar.gz
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    name: Release
+    steps:
+      - uses: actions/download-artifact@v4
         with:
-          name: "${{ github.ref_name }} — ${{ env.DATE }}"
-          files: astro-page.tar.gz
+          name: github-pages
+      - name: Display structure of downloaded files
+        run: ls -R
 
   deploy:
     environment:
