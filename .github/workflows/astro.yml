@@ -117,7 +117,7 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         with:
           name: "${{ github.ref_name }} — ${{ env.DATE }}"
-          files: ${{ env.BUILD_PATH }}/dist
+          files: ${{ env.BUILD_PATH }}/dist/**
 
   deploy:
     environment:
