@@ -9,6 +9,7 @@ import type { SocialIcon } from "@/types";
 const { name, label, image, location, profiles, phone, email, website } =
 	basics;
 const { city, region } = location;
+const profilesWithoutCV = profiles.filter((item) => item.network !== "CV")
 
 const SOCIAL_ICONS: SocialIcon = {
 	GitHub: "mdi:github",
@@ -70,7 +71,7 @@ const SOCIAL_ICONS: SocialIcon = {
 					)
 				}
 				{
-					profiles.map(({ network, url, username }) => {
+					profilesWithoutCV.map(({ network, url, username }) => {
 						const iconName = SOCIAL_ICONS[network];
 						if (!iconName) {
 							return null;
