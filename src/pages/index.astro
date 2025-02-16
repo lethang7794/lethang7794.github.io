@@ -32,13 +32,13 @@ const { name, label } = basics;
 		<div
 			class="space-y-8 md:col-span-4 lg:space-y-12 print:col-span-1 print:mt-5 print:grid print:grid-cols-1 print:gap-2 print:space-y-0"
 		>
-			<Experience className="print:col-span-1" />
-			<Projects className="print:hidden- break-before-page" />
-			<Skills className="print-" />
-			<Education className="order-first" />
+			<Experience className="print:order-1 print:col-span-1" />
+			<Projects className="print:order-2" />
+			<Skills className="print:order-3" />
+			<Education className="print:order-4" />
 			<Certificates className="order-last break-before-page" />
 			<Languages className="order-last" />
-			<Interests className="order-last" />
+			<Interests className="order-last md:pb-8" />
 		</div>
 		<!-- <Tail /> -->
 	</main>
