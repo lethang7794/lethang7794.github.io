@@ -319,17 +319,51 @@
 			"name": "gtdb",
 			"description": "A place to be a better driver in Vietnam",
 			"highlights": [
-				"Leveraged social media to educate users on driving safety, including road signs, road markings, and traffic laws."
+				"Leveraged social media to educate users on driving safety, including road signs, road markings, and Vietnam driving laws."
 			],
 			"startDate": "2024-07",
 			"url": "https://gtdb.app",
 			"isActive": true,
 			"icon": "gtdb-landscape",
-			"iconSearch": "<img src='https://gtdb.app/assets/branding/logo-landscape.svg' alt='gtdb logo' />"
+			"iconSearch": "<img src='https://gtdb.app/assets/branding/logo-landscape.svg' alt='gtdb logo' />",
+			"skills": [
+				"Next.js",
+				"React",
+				"SSG",
+				"Tailwind CSS",
+				"Open Graph",
+				"GitHub Actions",
+				"Vercel",
+				"Cloudflare Page"
+			]
+		},
+		{
+			"name": "gtdb's laws",
+			"description": "Modern way to read Vietnam driving laws.",
+			"highlights": [
+				"Use web technology to make driving laws accessible, searchable, and easy to understand."
+			],
+			"startDate": "2025-01",
+			"endDate": "2025-01",
+			"url": "https://luat.gtdb.app",
+			"isActive": true,
+			"skills": ["Next.js", "SSG", "MDX"]
+		},
+		{
+			"name": "Modern minimal CV",
+			"description": "JSON -> Portfolio Website -> PDF CV.",
+			"highlights": [
+				"Seamlessly converts JSON data into a sleek portfolio website and generates a professional PDF CV."
+			],
+			"startDate": "2025-02",
+			"url": "https://lethang7794.github.io",
+			"github": "https://github.com/lethang7794/",
+			"isActive": true,
+			"skills": ["Astro", "React", "Tailwind", "Playwright"]
 		},
 		{
 			"name": "AWSsome",
-			"description": "Mind-maps for AWS certificates",
+			"description": "Mind-maps for AWS certificates.",
 			"highlights": [
 				"A collections of mind-maps written in Xmind for AWS certificates, available as a web app."
 			],
@@ -337,20 +371,21 @@
 			"endDate": "2024-12",
 			"url": "https://lethang7794.github.io/awssome/",
 			"isActive": true,
-			"github": "https://github.com/lethang7794/AWSsome"
+			"github": "https://github.com/lethang7794/AWSsome",
+			"skills": ["Next.js", "React", "Tailwind"]
 		},
 		{
 			"name": "Cantrill AWS Courses",
-			"description": "Compare the Cantrill courses for the AWS certificates",
+			"description": "Compare the Cantrill courses for the AWS certificates.",
 			"highlights": [
-				"Choose the next AWS certificate.",
-				"Know which lessons you have learned to skip it."
+				"Select your next AWS certification and skip lessons you've already mastered."
 			],
 			"startDate": "2024-12",
 			"endDate": "2024-12",
 			"url": "https://cantrill-aws.vercel.app/",
 			"isActive": true,
-			"github": "https://github.com/lethang7794/cantrill-aws"
+			"github": "https://github.com/lethang7794/cantrill-aws",
+			"skills": ["Next.js", "React", "Tailwind"]
 		}
 	],
 	"skills": [
@@ -379,11 +414,12 @@
 				"Tailwind CSS",
 				"Styled Components",
 				"CSS Modules",
-				"Less",
 				"SASS",
 				"CSS",
 				"HTML",
-				"Micro Frontend"
+				"Micro Frontend",
+				"SPA",
+				"SSG"
 			]
 		},
 		{
