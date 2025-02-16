@@ -90,7 +90,7 @@
 		}
 	}
 
-	.dark {
+	:root.dark {
 		--color-brand: 18.5, 91.6%, 46.5%;
 
 		--color-main: var(--color-brand);
@@ -168,7 +168,6 @@
 			--color-brand: 267.66666, 72%, 49%;
 
 			--color-main: var(--color-brand);
-			--color-fill: 0, 0%, 96.1%;
 			--color-fill: 266.6667, 69%, 95%;
 			--color-muted: 0, 0%, 78.4%;
 
