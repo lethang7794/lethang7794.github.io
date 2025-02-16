@@ -6,6 +6,7 @@ import Section from "../Section.astro";
 import { projects } from "@cv";
 import { basics } from "@cv";
 import { SOCIALS } from "@/constants/social-names";
+import { SKILLS_ICONS } from "@/constants/skill-icons";
 
 const { profiles } = basics;
 const githubInfo = profiles.find(
@@ -20,7 +21,16 @@ const githubUrl = githubInfo?.projects || githubInfo?.url;
 	>
 		{
 			projects.map(
-				({ url, description, highlights, name, isActive, github, icon }) => {
+				({
+					url,
+					description,
+					highlights,
+					name,
+					isActive,
+					github,
+					icon,
+					skills,
+				}) => {
 					return (
 						<div
 							role="contentinfo"
@@ -101,6 +111,26 @@ const githubUrl = githubInfo?.projects || githubInfo?.url;
 										return <li>{highlight}</li>;
 									})}
 								</ul>
+							) : null}
+
+							{skills ? (
+								<>
+									<div class="mt-3 flex flex-wrap gap-2 print:mt-1 print:justify-start">
+										{skills?.map((skill) => {
+											let skillName = skill?.replace(/ \(.*\)/, "");
+											const icon = SKILLS_ICONS[skillName];
+											const iconName = icon?.iconName || "";
+											return (
+												<div class="flex items-center gap-1 rounded-md border border-solid border-skin-hue/30 bg-transparent px-2 py-0.5 text-xs text-skin-muted print:border-none print:bg-transparent print:p-0 print:text-skin-muted">
+													{iconName && (
+														<Icon name={icon?.iconName} class="print:hidden" />
+													)}
+													<span class="print:hidden">{skill}</span>
+												</div>
+											);
+										})}
+									</div>
+								</>
 							) : null}
 						</div>
 					);
