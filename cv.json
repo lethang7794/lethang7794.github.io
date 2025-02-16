@@ -359,7 +359,8 @@
 			"url": "https://lethang7794.github.io",
 			"github": "https://github.com/lethang7794/",
 			"isActive": true,
-			"skills": ["Astro", "React", "Tailwind", "Playwright"]
+			"skills": ["Astro", "React", "Tailwind", "Playwright"],
+			"hidden": true
 		},
 		{
 			"name": "AWSsome",

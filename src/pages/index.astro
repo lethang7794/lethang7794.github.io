@@ -30,13 +30,13 @@ const { name, label } = basics;
 			<ThemeSwitch />
 		</div>
 		<div
-			class="space-y-10 md:col-span-4 lg:space-y-12 print:col-span-1 print:mt-5 print:grid print:grid-cols-1 print:gap-2 print:space-y-0"
+			class="space-y-8 md:col-span-4 lg:space-y-12 print:col-span-1 print:mt-5 print:grid print:grid-cols-1 print:gap-2 print:space-y-0"
 		>
 			<Experience className="print:col-span-1" />
-			<Projects className="print:hidden-" />
+			<Projects className="print:hidden- break-before-page" />
 			<Skills className="print-" />
 			<Education className="order-first" />
-			<Certificates className="order-last" />
+			<Certificates className="order-last break-before-page" />
 			<Languages className="order-last" />
 			<Interests className="order-last" />
 		</div>
