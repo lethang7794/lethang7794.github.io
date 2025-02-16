@@ -1,0 +1,28 @@
+---
+import { Icon } from "astro-icon/components";
+import Section from "../Section.astro";
+import { languages } from "@cv";
+import { SKILLS_ICONS } from "@/constants/skill-icons";
+---
+
+<Section className={Astro.props.className} title="Languages">
+	<ul
+		class="flex list-disc flex-col flex-wrap gap-6 print:mt-4 print:gap-4 print:pb-4 [&>li>svg]:size-5 [&>li>svg]:text-skin-hue [&>li]:text-sm"
+	>
+		{
+			languages.map(({ language: item, fluency }) => {
+				const iconName = SKILLS_ICONS[item]?.iconName;
+
+				return (
+					<li class="border-skin-hue/20s bg-skin-button-accent/20s borders border-solids list-item flex-col items-start gap-1 rounded-md px-0 py-0.5 text-base text-skin-muted marker:text-skin-hue/80 print:border-none print:bg-transparent print:p-0 print:text-zinc-800">
+						<h4 class="font-normal">
+							{iconName && <Icon name={iconName} class="print:hidden" />}{" "}
+							<span class="text-skin-hue">{item}: </span>
+							<span class="text-skin-muted">{fluency}</span>
+						</h4>
+					</li>
+				);
+			})
+		}
+	</ul>
+</Section>

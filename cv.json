@@ -350,7 +350,7 @@
 			"skills": ["Next.js", "SSG", "MDX"]
 		},
 		{
-			"name": "Modern minimal CV",
+			"name": "Modern Minimal CV",
 			"description": "JSON -> Portfolio Website -> PDF CV.",
 			"highlights": [
 				"Seamlessly converts JSON data into a sleek portfolio website and generates a professional PDF CV."
@@ -488,7 +488,7 @@
 			"fluency": "Limited working proficient"
 		}
 	],
-	"interests-TODO": [
+	"interests": [
 		{
 			"name": "Football"
 		},

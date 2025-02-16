@@ -1,0 +1,27 @@
+---
+import { Icon } from "astro-icon/components";
+import Section from "../Section.astro";
+import { interests } from "@cv";
+import { SKILLS_ICONS } from "@/constants/skill-icons";
+---
+
+<Section className={Astro.props.className} title="Interests">
+	<ul
+		class="flex list-disc flex-row flex-wrap gap-8 print:mt-4 print:gap-8 print:pb-4 [&>li>svg]:size-5 [&>li>svg]:text-skin-hue [&>li]:text-sm"
+	>
+		{
+			interests.map(({ name: item }) => {
+				const iconName = SKILLS_ICONS[item]?.iconName;
+
+				return (
+					<li class="border-skin-hue/20s bg-skin-button-accent/20s borders border-solids list-item px-0 py-0.5 text-base text-skin-muted marker:text-skin-hue/80 print:border-none print:bg-transparent print:p-0 print:text-zinc-800">
+						<h4 class="font-normal">
+							{iconName && <Icon name={iconName} class="print:hidden" />}{" "}
+							<span class="text-skin-muted">{item}</span>
+						</h4>
+					</li>
+				);
+			})
+		}
+	</ul>
+</Section>
