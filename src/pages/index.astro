@@ -18,7 +18,7 @@ const { name, label } = basics;
 
 <Layout title={`${name} - ${label}`}>
 	<main
-		class="relative grid max-w-7xl gap-12 p-8 max-sm:py-16 md:grid-cols-6 md:p-12 lg:p-16 xl:gap-24 print:max-w-none print:grid-cols-1 print:gap-6 print:px-10 print:py-6"
+		class="relative grid max-w-7xl gap-12 p-8 max-sm:py-16 md:grid-cols-6 md:p-12 lg:p-16 xl:gap-24 print:max-w-none print:block print:grid-cols-1 print:gap-6 print:px-10 print:py-6"
 	>
 		<div
 			class="h-min space-y-6 md:sticky md:top-12 md:col-span-2 lg:top-16 print:static print:col-span-1 print:grid print:grid-cols-1 print:gap-5 print:space-y-0"
@@ -28,7 +28,7 @@ const { name, label } = basics;
 			<ThemeSwitch />
 		</div>
 		<div
-			class="space-y-10 md:col-span-4 lg:space-y-12 print:col-span-1 print:grid print:grid-cols-1 print:gap-2 print:space-y-0"
+			class="space-y-10 md:col-span-4 lg:space-y-12 print:col-span-1 print:grid print:grid-cols-1 print:gap-2 print:space-y-0 print:mt-5"
 		>
 			<Experience className="print:col-span-1" />
 			<Projects className="print:hidden-" />
@@ -45,9 +45,9 @@ const { name, label } = basics;
 <style>
 	@page {
 		size: auto;
-		margin: 0mm;
-		padding-top: 8mm;
-		padding-bottom: 8mm;
+		margin: 0mm !important;
+		padding-top: 8mm !important;
+		padding-bottom: 8mm !important;
 	}
 	main {
 		margin: auto;
