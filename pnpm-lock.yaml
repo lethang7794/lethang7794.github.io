@@ -62,7 +62,7 @@ importers:
         version: 1.50.1
       '@tailwindcss/container-queries':
         specifier: ^0.1.1
-        version: 0.1.1(tailwindcss@3.4.4)
+        version: 0.1.1(tailwindcss@3.4.4(ts-node@10.9.2(@types/node@22.13.4)(typescript@5.3.3)))
       '@types/node':
         specifier: ^22.13.4
         version: 22.13.4
@@ -3591,9 +3591,9 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.9.6':
     optional: true
 
-  '@tailwindcss/container-queries@0.1.1(tailwindcss@3.4.4)':
+  '@tailwindcss/container-queries@0.1.1(tailwindcss@3.4.4(ts-node@10.9.2(@types/node@22.13.4)(typescript@5.3.3)))':
     dependencies:
-      tailwindcss: 3.4.4
+      tailwindcss: 3.4.4(ts-node@10.9.2(@types/node@22.13.4)(typescript@5.3.3))
 
   '@trysound/sax@0.2.0': {}
 
