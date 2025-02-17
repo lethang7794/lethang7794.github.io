@@ -3,29 +3,29 @@ Generated automated from cv.json. Don't edit.
 To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 -->
 
-# Le Quang Thang (Full Stack Developer)
+# **Le Quang Thang** (Full Stack Developer)
 
-## Summary
+## **Summary**
 
 - Ambitious Full Stack Developer with expertise in cloud computing, driven by challenges, growth, and innovation.
 - Seeking opportunities to build impactful solutions and deliver value to businesses and users.
 
-## Contacts
+## **Contacts**
 
-- **Email:** lethang7794@gmail.com  
-- **Phone:** +84 944 990 631  
-- **Website:** [https://lethang7794.github.io](https://lethang7794.github.io)  
-- **Location:** Ho Chi Minh City, Vietnam
+- Email: lethang7794@gmail.com  
+- Phone: +84 944 990 631  
+- Website: [https://lethang7794.github.io](https://lethang7794.github.io)  
+- Location: Ho Chi Minh City, Vietnam
 
-## Profiles
+## **Profiles**
 
-- **GitHub:** [lethang7794](https://github.com/lethang7794)
-- **LinkedIn:** [thanglequang](https://linkedin.com/in/thanglequang)
-- **CV:** [CV](/CV.pdf)
+- GitHub: [lethang7794](https://github.com/lethang7794)
+- LinkedIn: [thanglequang](https://linkedin.com/in/thanglequang)
+- CV: [CV](/CV.pdf)
 
-## Work Experience
+## **Experience**
 
-### Inspire Lab Technology - Full Stack Developer (2022-06 - 2023-07)
+### **Full Stack Developer** - Inspire Lab Technology (2022-06 - 2023-07)
 
 #### Summary
 
@@ -43,7 +43,7 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 - Engineered an optimized table component for the CMS using React, significantly improving performance and usability across key features.
 - Promoted four times in two years — twice the typical pace — recognizing outstanding contributions and impact.
 
-### Inspire Lab Technology - Junior Full Stack Developer (2022-01 - 2022-07)
+### **Junior Full Stack Developer** - Inspire Lab Technology (2022-01 - 2022-07)
 
 #### Summary
 
@@ -62,7 +62,7 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 - Introduced Tailwind CSS to a team of six frontend developers, accelerating development speed for new projects and improving UI consistency.
 - Achieved a 100% salary increase within my first year, reflecting exceptional performance.
 
-### Inspire Lab Technology - Junior Backend Developer (2021-07 - 2021-12)
+### **Junior Backend Developer** - Inspire Lab Technology (2021-07 - 2021-12)
 
 #### Summary
 
@@ -77,7 +77,7 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 - Optimized Dockerfile, reducing feedback loops by up to 600% (from 60s to 5-10s) for each microservice.
 - Automated the attendance tracking and approval process, reducing processing time from several days to just hours, achieving a 95%+ satisfaction rate.
 
-### Inspire Lab Technology - Fresher Backend Developer (2021-04 - 2021-06)
+### **Fresher Backend Developer** - Inspire Lab Technology (2021-04 - 2021-06)
 
 #### Summary
 
@@ -89,7 +89,7 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 
 - Authored official onboarding documentation for setting up the backend environment, streamlining the process for new team members.
 
-## Projects
+## **Projects**
 
 ### [gtdb](https://gtdb.app)
 
@@ -121,9 +121,9 @@ Compare the Cantrill courses for the AWS certificates.
 
 - Select your next AWS certification and skip lessons you've already mastered.
 
-## Skills
+## **Skills**
 
-### Backend <!-- markmap: fold -->
+### **Backend** <!-- markmap: fold -->
 
 - Golang
 - Node.js
@@ -133,7 +133,7 @@ Compare the Cantrill courses for the AWS certificates.
 - gRPC
 - REST
 
-### Frontend <!-- markmap: fold -->
+### **Frontend** <!-- markmap: fold -->
 
 - Next.js
 - React
@@ -152,7 +152,7 @@ Compare the Cantrill courses for the AWS certificates.
 - SPA
 - SSG
 
-### Database <!-- markmap: fold -->
+### **Database** <!-- markmap: fold -->
 
 - SQL
 - NoSQL
@@ -160,7 +160,7 @@ Compare the Cantrill courses for the AWS certificates.
 - MySQL
 - MongoDB
 
-### Testing <!-- markmap: fold -->
+### **Testing** <!-- markmap: fold -->
 
 - Minitest
 - Capybara
@@ -169,7 +169,7 @@ Compare the Cantrill courses for the AWS certificates.
 - Postman
 - TDD
 
-### DevOps <!-- markmap: fold -->
+### **DevOps** <!-- markmap: fold -->
 
 - Kubernetes
 - Helm
@@ -180,7 +180,7 @@ Compare the Cantrill courses for the AWS certificates.
 - GitHub Actions
 - Bash Script
 
-### Cloud Computing <!-- markmap: fold -->
+### **Cloud Computing** <!-- markmap: fold -->
 
 - AWS
 - Google Cloud
@@ -189,7 +189,7 @@ Compare the Cantrill courses for the AWS certificates.
 - Netlify
 - Heroku
 
-### Collaboration <!-- markmap: fold -->
+### **Collaboration** <!-- markmap: fold -->
 
 - Git
 - Agile
@@ -198,41 +198,41 @@ Compare the Cantrill courses for the AWS certificates.
 - Figma
 - Slack
 
-### OS <!-- markmap: fold -->
+### **OS** <!-- markmap: fold -->
 
 - Linux
 - MacOS
 - Windows
 
-### Misc <!-- markmap: fold -->
+### **Misc** <!-- markmap: fold -->
 
 - Regex
 - Markdown
 - MDX
 - CLI
 
-## Education
+## **Education**
 
-### Self-taught and continuous-improvement - Computer, software & DevOps (2023-07 - 2024-12) <!-- markmap: fold -->
+### **Self-taught and continuous-improvement** - Computer, software & DevOps (2023-07 - 2024-12) <!-- markmap: fold -->
 
 - Dedicated 18 months to independently mastering startup methodologies, software design, software delivery, Linux, DevOps, cloud computing, networking, security...
 - Applied knowledge through hands-on projects, earned industry-recognized certifications, and actively contributed to open-source communities.
 
-### Inspire Lab Technology - DevOps Fresher Program (2022-02 - 2022-04) <!-- markmap: fold -->
+### **Inspire Lab Technology** - DevOps Fresher Program (2022-02 - 2022-04) <!-- markmap: fold -->
 
 - Joined the DevOps Fresher Program while working as a Full Stack Developer.
 
-### CoderSchool Vietnam - Full Stack Web Development (2020-12 - 2021-03) <!-- markmap: fold -->
+### **CoderSchool Vietnam** - Full Stack Web Development (2020-12 - 2021-03) <!-- markmap: fold -->
 
 - Studied best practices in front-end/back-end software design for 60-70 hours a week over 3 months.
 
-### Bach Khoa University (Ho Chi Minh City University of Technology) - Bachelor of Mechatronics Engineering (2012-09 - 2020-05) <!-- markmap: fold -->
+### **Bach Khoa University (Ho Chi Minh City University of Technology)** - Bachelor of Mechatronics Engineering (2012-09 - 2020-05) <!-- markmap: fold -->
 
 - Programme de Formation d’Ingénieurs d’Excellence au Vietnam (P.F.I.E.V).
 
-## Certificates
+## **Certificates**
 
-### AWS Certified Solutions Architect – Professional <!-- markmap: fold -->
+### **AWS Certified Solutions Architect – Professional** <!-- markmap: fold -->
 
 - [Verify](https://www.credly.com/badges/c7683503-ead3-44ef-aa1b-87ebdaf7a58b/public_url)
 
@@ -240,7 +240,7 @@ Compare the Cantrill courses for the AWS certificates.
 
 - 2024-12
 
-### AWS Certified Advanced Networking – Specialty <!-- markmap: fold -->
+### **AWS Certified Advanced Networking – Specialty** <!-- markmap: fold -->
 
 - [Verify](https://www.credly.com/badges/dcb41a1a-6914-4806-9254-c925d1b5ffaa/public_url)
 
@@ -248,7 +248,7 @@ Compare the Cantrill courses for the AWS certificates.
 
 - 2024-12
 
-### AWS Certified Security – Specialty <!-- markmap: fold -->
+### **AWS Certified Security – Specialty** <!-- markmap: fold -->
 
 - [Verify](https://www.credly.com/badges/4c0ad097-a1a3-424e-aff7-dc96006649a4/public_url)
 
@@ -256,7 +256,7 @@ Compare the Cantrill courses for the AWS certificates.
 
 - 2024-12
 
-### AWS Certified SysOps Administrator – Associate <!-- markmap: fold -->
+### **AWS Certified SysOps Administrator – Associate** <!-- markmap: fold -->
 
 - [Verify](https://www.credly.com/badges/27ace902-aafb-4605-a640-abe09584dce5/public_url)
 
@@ -264,7 +264,7 @@ Compare the Cantrill courses for the AWS certificates.
 
 - 2024-01
 
-### AWS Certified Developer – Associate <!-- markmap: fold -->
+### **AWS Certified Developer – Associate** <!-- markmap: fold -->
 
 - [Verify](https://www.credly.com/badges/d8bbaef3-0edd-4de0-97da-22cd63fe368b/public_url)
 
@@ -272,7 +272,7 @@ Compare the Cantrill courses for the AWS certificates.
 
 - 2023-12
 
-### AWS Certified Solutions Architect – Associate <!-- markmap: fold -->
+### **AWS Certified Solutions Architect – Associate** <!-- markmap: fold -->
 
 - [Verify](https://www.credly.com/badges/ed6cbaa1-ce54-404a-8824-fd92d748b202/public_url)
 
@@ -280,7 +280,7 @@ Compare the Cantrill courses for the AWS certificates.
 
 - 2023-10
 
-### Envoy Fundamentals <!-- markmap: fold -->
+### **Envoy Fundamentals** <!-- markmap: fold -->
 
 - [Verify](https://tetrate-academy.thinkific.com/certificates/arase23pot)
 
@@ -288,7 +288,7 @@ Compare the Cantrill courses for the AWS certificates.
 
 - 2022-10
 
-### CSS for JavaScript Developers <!-- markmap: fold -->
+### **CSS for JavaScript Developers** <!-- markmap: fold -->
 
 - [Verify](https://courses.joshwcomeau.com/certificate/62b603528677061bf769e3f4)
 
@@ -296,7 +296,7 @@ Compare the Cantrill courses for the AWS certificates.
 
 - 2022-06
 
-### JavaScript Algorithms and Data Structures <!-- markmap: fold -->
+### **JavaScript Algorithms and Data Structures** <!-- markmap: fold -->
 
 - [Verify](https://www.freecodecamp.org/certification/lethang7794/javascript-algorithms-and-data-structures)
 
@@ -304,7 +304,7 @@ Compare the Cantrill courses for the AWS certificates.
 
 - 2021-03
 
-### Responsive Web Design Developer <!-- markmap: fold -->
+### **Responsive Web Design Developer** <!-- markmap: fold -->
 
 - [Verify](https://www.freecodecamp.org/certification/lethang7794/responsive-web-design)
 
@@ -312,31 +312,30 @@ Compare the Cantrill courses for the AWS certificates.
 
 - 2020-12
 
-### Big-O Green: Elementary Algorithms <!-- markmap: fold -->
+### **Big-O Green: Elementary Algorithms** <!-- markmap: fold -->
 
 - Big-O Coding
 
 - 2020-09
 
-### Diploma in French Language Studies (DELF) - Level B1 <!-- markmap: fold -->
+### **Diploma in French Language Studies (DELF) - Level B1** <!-- markmap: fold -->
 
 - French Ministry of Education
 
 - 2019-07
 
-### TOEIC - 845/990 <!-- markmap: fold -->
+### **TOEIC - 845/990** <!-- markmap: fold -->
 
 - IIG
 
 - 2016-11
 
-## Languages
+## **Languages**
 
 - **Vietnamese**: Native speaker
 - **English**: Professional working proficient
 - **French**: Limited working proficient
-
-## Interests
+## **Interests**
 
 - Football
 - Language Learning
