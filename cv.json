@@ -208,7 +208,9 @@
 		{
 			"institution": "Bach Khoa University (Ho Chi Minh City University of Technology)",
 			"area": "Bachelor of Mechatronics Engineering",
-			"highlights": "Programme de Formation d’Ingénieurs d’Excellence au Vietnam (P.F.I.E.V).",
+			"highlights": [
+				"Programme de Formation d’Ingénieurs d’Excellence au Vietnam (P.F.I.E.V)."
+			],
 			"startDate": "2012-09",
 			"endDate": "2020-05"
 		}
