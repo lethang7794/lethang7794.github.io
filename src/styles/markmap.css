@@ -1,0 +1,16 @@
+/* 
+  Markmap
+*/
+.markmap-wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.markmap-wrapper > .markmap {
+	width: 100%;
+	height: 100%;
+}
+.markmap-wrapper > .markmap > svg {
+	width: 100%;
+	height: 100%;
+}

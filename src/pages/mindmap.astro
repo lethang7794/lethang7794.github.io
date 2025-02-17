@@ -1,0 +1,16 @@
+---
+import "../styles/markmap.css";
+import * as file from "src/markmap.md";
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout title="">
+	<div class="markmap-wrapper">
+		<div class="markmap">
+			<script is:inline type="text/template" set:html={file.rawContent()} />
+		</div>
+	</div>
+</Layout>
+
+<script is:inline src="https://cdn.jsdelivr.net/npm/markmap-autoloader@latest"
+></script>
