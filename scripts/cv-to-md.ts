@@ -56,11 +56,11 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 
 `;
 
-	md += `# **${resume.basics.name}** (${resume.basics.label})\n\n`;
+	md += `# [**${resume.basics.name}**](${resume.basics.website}) (_${resume.basics.label}_)\n\n`;
 
-	md += `## **Summary**\n\n`;
+	md += `## **About**\n\n`;
 	resume.basics.summaries?.forEach((highlight) => {
-		md += `- ${highlight}\n`;
+		md += `- _${highlight}_\n`;
 	});
 	md += `\n`;
 
@@ -76,9 +76,9 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 	});
 	md += `\n`;
 
-	md += `## **Experience**\n\n`;
+	md += `## [**Experience**](${resume.basics.website}#Experience)\n\n`;
 	resume.work.forEach((job) => {
-		md += `### **${job.position}** - ${job.company} (${job.startDate} - ${job.endDate || "Present"})\n\n`;
+		md += `### **${job.position}** - _${job.company}_ (${job.startDate} - ${job.endDate || "Present"})\n\n`;
 		md += `#### Summary\n\n`;
 		md += `- ${job.summary}\n\n`;
 		md += `#### Responsibilities <!-- markmap: fold -->\n\n`;
@@ -87,12 +87,12 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 		});
 		md += `#### Achievements\n\n`;
 		job.achievements.forEach((item) => {
-			md += `- ${item}\n`;
+			md += `- _${item}_\n`;
 		});
 		md += `\n`;
 	});
 
-	md += `## **Projects**\n\n`;
+	md += `## [**Projects**](${resume.basics.website}#Projects)\n\n`;
 	resume.projects.forEach((project) => {
 		md += `### [${project.name}](${project.url})\n\n`;
 		md += `${project.description}\n\n`;
@@ -102,22 +102,22 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 		md += `\n`;
 	});
 
-	md += `## **Skills**\n\n`;
+	md += `## [**Skills**](${resume.basics.website}#Skills)\n\n`;
 	resume.skills.forEach((skill) => {
 		md += `### **${skill.name}** <!-- markmap: fold -->\n\n`;
 		md += skill.keywords.map((k) => `- ${k}`).join("\n") + "\n\n";
 	});
 
-	md += `## **Education**\n\n`;
+	md += `## [**Education**](${resume.basics.website}#Education)\n\n`;
 	resume.education.forEach((edu) => {
-		md += `### **${edu.institution}** - ${edu.area} (${edu.startDate} - ${edu.endDate}) <!-- markmap: fold -->\n\n`;
+		md += `### **${edu.institution}** - _${edu.area}_ (${edu.startDate} - ${edu.endDate}) <!-- markmap: fold -->\n\n`;
 		edu.highlights?.forEach((highlight) => {
 			md += `- ${highlight}\n`;
 		});
 		md += `\n`;
 	});
 
-	md += `## **Certificates**\n\n`;
+	md += `## [**Certificates**](${resume.basics.website}#Certificates)\n\n`;
 	resume.certificates.forEach((item) => {
 		md += `### **${item.name}** <!-- markmap: fold -->\n\n`;
 		if (item.url) {
