@@ -49,7 +49,17 @@ interface Resume {
 }
 
 function convertToMarkdown(resume: Resume): string {
-	let md = `# ${resume.basics.name} (${resume.basics.label})\n\n`;
+	let md = `
+---
+markmap:
+  maxWidth: 300
+  color:
+    - blue
+---
+
+`;
+
+	md += `# ${resume.basics.name} (${resume.basics.label})\n\n`;
 
 	md += `## Summary\n\n`;
 	resume.basics.summaries?.forEach((highlight) => {
