@@ -32,9 +32,26 @@ import { certificates } from "@cv";
 													{name}
 												</a>
 											</h3>
-											<div class="mb-0.5 text-sm italic text-skin-muted">
-												{issuer}
-											</div>
+											{url_verify ? (
+												<a
+													class="print:hidden"
+													href={url_verify}
+													target="_blank"
+												>
+													<Icon
+														name="line-md:confirm-circle-filled"
+														class="text-xl text-skin-hue hover:text-green-500"
+													/>
+												</a>
+											) : null}
+											{!url_verify && url ? (
+												<a class="print:hidden" href={url} target="_blank">
+													<Icon
+														name="line-md:confirm-circle"
+														class="text-xl text-skin-hue hover:text-green-500"
+													/>
+												</a>
+											) : null}
 										</div>
 									</div>
 									<a
