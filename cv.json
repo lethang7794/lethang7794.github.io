@@ -360,7 +360,7 @@
 			"github": "https://github.com/lethang7794/",
 			"isActive": true,
 			"skills": ["Astro", "React", "Tailwind", "Playwright"],
-			"hidden": true
+			"hidden": false
 		},
 		{
 			"name": "AWSsome",
