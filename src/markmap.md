@@ -1,8 +1,7 @@
-
----
-markmap:
-	maxWidth: 300
----
+<!--
+Generated automated from cv.json. Don't edit. 
+To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
+-->
 
 # Le Quang Thang (Full Stack Developer)
 
