@@ -70,7 +70,7 @@ const githubUrl = githubInfo?.projects || githubInfo?.url;
 													<span class="text-skin-hue transition ease-linear group-hover:-translate-y-0.5 group-hover:translate-x-0.5 print:hidden">
 														<Arrow />
 													</span>
-													<span class="hidden text-xs text-skin-muted print:block">
+													<span class="hidden text-xs text-skin-muted print:contents">
 														{url}
 													</span>
 												</a>
@@ -113,7 +113,7 @@ const githubUrl = githubInfo?.projects || githubInfo?.url;
 												const icon = SKILLS_ICONS[skillName];
 												const iconName = icon?.iconName || "";
 												return (
-													<div class="flex items-center gap-1 rounded-md border border-solid border-skin-hue/30 bg-transparent px-2 py-0.5 text-sm leading-[14px] text-skin-muted print:border-none print:bg-transparent print:p-0 print:text-skin-muted">
+													<div class="flex items-center gap-1 rounded-md border border-solid border-skin-hue/30 bg-transparent px-2 py-0.5 text-xs leading-3 text-skin-muted print:border-none print:bg-transparent print:p-0 print:text-skin-muted">
 														{iconName && (
 															<Icon
 																name={icon?.iconName}
