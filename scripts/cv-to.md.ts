@@ -1,4 +1,5 @@
 import fs from "fs";
+import path from "path";
 
 interface Resume {
 	basics: {
@@ -48,7 +49,7 @@ interface Resume {
 }
 
 function convertToMarkdown(resume: Resume): string {
-	let md = `# ${resume.basics.name}<br/>(${resume.basics.label})\n\n`;
+	let md = `# ${resume.basics.name} (${resume.basics.label})\n\n`;
 
 	md += `## Summary\n\n`;
 	resume.basics.summaries?.forEach((highlight) => {
@@ -132,11 +133,26 @@ function convertToMarkdown(resume: Resume): string {
 	return md;
 }
 
-// Read the JSON file and generate Markdown
-const inputJson = fs.readFileSync("../cv.json", "utf-8");
-const resume: Resume = JSON.parse(inputJson);
-const markdownOutput = convertToMarkdown(resume);
+/**
+ * Reads a file and writes its content to another file.
+ * @param inputFilePath - Path to the source file
+ * @param outputFilePath - Path to the destination file
+ */
+function transformJsonToMarkmap(
+	inputFilePath: string,
+	outputFilePath: string,
+): void {
+	try {
+		const data = fs.readFileSync(inputFilePath, "utf8");
+		const resume: Resume = JSON.parse(data);
+		const markdownOutput = convertToMarkdown(resume);
+		fs.writeFileSync(outputFilePath, markdownOutput);
+		console.log("Transform from cv.json to markmap.md");
+	} catch (err) {
+		console.error("Error processing the file:", err);
+	}
+}
 
-fs.writeFileSync("output.md", markdownOutput);
-
-console.log("Markdown file generated as output.md");
+const inputFile = path.join(path.resolve(), "./cv.json");
+const outputFile = path.join(path.resolve(), "./src/markmap.md");
+transformJsonToMarkmap(inputFile, outputFile);
