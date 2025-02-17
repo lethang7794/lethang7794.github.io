@@ -94,11 +94,11 @@ const githubUrl = githubInfo?.projects || githubInfo?.url;
 									)}
 								</div>
 
-								<p class="my-3 text-sm text-skin-base print:mb-1 print:mt-0 print:dark:text-black/60">
+								<p class="mt-1 text-base text-skin-base print:mb-1 print:mt-0 print:dark:text-black/60">
 									{description}
 								</p>
 								{highlights ? (
-									<ul class="mt-1 text-xs text-skin-muted print:mt-0">
+									<ul class="mt-1 text-sm text-skin-muted print:mt-0">
 										{highlights.map((highlight) => {
 											return <li>{highlight}</li>;
 										})}
@@ -113,7 +113,7 @@ const githubUrl = githubInfo?.projects || githubInfo?.url;
 												const icon = SKILLS_ICONS[skillName];
 												const iconName = icon?.iconName || "";
 												return (
-													<div class="flex items-center gap-1 rounded-md border border-solid border-skin-hue/30 bg-transparent px-2 py-0.5 text-xs text-skin-muted print:border-none print:bg-transparent print:p-0 print:text-skin-muted">
+													<div class="flex items-center gap-1 rounded-md border border-solid border-skin-hue/30 bg-transparent px-2 py-0.5 text-sm leading-[14px] text-skin-muted print:border-none print:bg-transparent print:p-0 print:text-skin-muted">
 														{iconName && (
 															<Icon
 																name={icon?.iconName}
