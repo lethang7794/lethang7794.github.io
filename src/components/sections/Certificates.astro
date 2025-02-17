@@ -7,7 +7,7 @@ import { certificates } from "@cv";
 <Section className={Astro.props.className} title="Certificates">
 	{
 		certificates.length > 0 && (
-			<ul class="space-y-4 py-3 print:flex print:flex-col print:gap-4 print:space-y-0 print:pt-0">
+			<ul class="space-y-4 py-3 print:flex print:flex-col print:gap-3 print:space-y-0 print:pt-0">
 				{certificates.map(
 					({ name, date, issuer, url, url_verify, iconName }) => {
 						const d = new Date(date);

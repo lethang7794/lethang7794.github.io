@@ -5,7 +5,7 @@ import { education } from "@cv";
 ---
 
 <Section className={Astro.props.className} title="Education">
-	<ul class="space-y-4 pb-4 pt-0 print:space-y-0 print:pt-0">
+	<ul class="space-y-4 pb-4 pt-0 print:list-disc print:space-y-0 print:pt-0">
 		{
 			education.map(
 				({
@@ -27,7 +27,7 @@ import { education } from "@cv";
 					const years = `${startYear} ${startMonth} - ${endYear} ${endMonth}`;
 
 					return (
-						<div class="flex flex-col items-baseline lg:flex-row">
+						<li class="flex flex-col items-baseline lg:flex-row print:list-item">
 							<div class="relative mt-2 flex w-full items-baseline gap-2 print:mt-0 print:pb-4 print:pt-0">
 								<Icon
 									name={iconName || "mdi:university-outline"}
@@ -38,13 +38,13 @@ import { education } from "@cv";
 										{url ? (
 											<a
 												target="_blank"
-												class="group flex items-center gap-[6px] decoration-dotted underline-offset-[5px] text-skin-hue hover:underline"
+												class="group flex items-center gap-[6px] text-skin-hue decoration-dotted underline-offset-[5px] hover:underline"
 												href={url}
 											>
 												{institution}
 											</a>
 										) : (
-											<span class="group flex items-center gap-[6px] decoration-dotted underline-offset-[5px] text-skin-hue hover:underline">
+											<span class="group flex items-center gap-[6px] text-skin-hue decoration-dotted underline-offset-[5px] hover:underline">
 												{institution}
 											</span>
 										)}
@@ -64,7 +64,7 @@ import { education } from "@cv";
 											{years}
 										</time>
 									</div>
-									<ul class="flex list-disc flex-col gap-2 text-sm text-skin-muted print:mt-2 print:pr-32 [&>li]:ml-4">
+									<ul class="flex list-disc flex-col gap-2 text-xs text-skin-muted print:mt-2 print:pr-32 [&>li]:ml-4">
 										{Array.isArray(highlights) ? (
 											highlights.map((item) => <li>{item}</li>)
 										) : (
@@ -73,9 +73,9 @@ import { education } from "@cv";
 									</ul>
 								</div>
 							</div>
-						</div>
+						</li>
 					);
-				},
+				}
 			)
 		}
 	</ul>
