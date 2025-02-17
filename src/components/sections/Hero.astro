@@ -9,12 +9,13 @@ import type { SocialIcon } from "@/types";
 const { name, label, image, location, profiles, phone, email, website } =
 	basics;
 const { city, region } = location;
-const profilesWithoutCV = profiles.filter((item) => item.network !== "CV")
+const printProfiles = profiles.filter((item) => !["CV", "Mindmap"].includes(item.network))
 
 const SOCIAL_ICONS: SocialIcon = {
 	GitHub: "mdi:github",
 	LinkedIn: "mdi:linkedin",
 	CV: "cv",
+	Mindmap: "mindmap",
 };
 
 ---
@@ -71,7 +72,7 @@ const SOCIAL_ICONS: SocialIcon = {
 					)
 				}
 				{
-					profilesWithoutCV.map(({ network, url, username }) => {
+					printProfiles.map(({ network, url, username }) => {
 						const iconName = SOCIAL_ICONS[network];
 						if (!iconName) {
 							return null;

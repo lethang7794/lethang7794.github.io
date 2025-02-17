@@ -35,6 +35,11 @@
 				"network": "CV",
 				"username": "CV",
 				"url": "/CV.pdf"
+			},
+			{
+				"network": "Mindmap",
+				"username": "mindmap",
+				"url": "/mindmap"
 			}
 		]
 	},
@@ -208,7 +213,9 @@
 		{
 			"institution": "Bach Khoa University (Ho Chi Minh City University of Technology)",
 			"area": "Bachelor of Mechatronics Engineering",
-			"highlights": "Programme de Formation d’Ingénieurs d’Excellence au Vietnam (P.F.I.E.V).",
+			"highlights": [
+				"Programme de Formation d’Ingénieurs d’Excellence au Vietnam (P.F.I.E.V)."
+			],
 			"startDate": "2012-09",
 			"endDate": "2020-05"
 		}
@@ -351,9 +358,9 @@
 		},
 		{
 			"name": "Modern Minimal CV",
-			"description": "JSON -> Portfolio Website -> PDF CV.",
+			"description": "JSON -> Portfolio Website -> PDF + Mind map",
 			"highlights": [
-				"Seamlessly converts JSON data into a sleek portfolio website and generates a professional PDF CV."
+				"Seamlessly converts JSON data into a sleek portfolio website, generates a professional PDF CV and views the CV as a mind map."
 			],
 			"startDate": "2025-02",
 			"url": "https://lethang7794.github.io",

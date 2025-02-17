@@ -1,0 +1,36 @@
+---
+import "../styles/markmap.css";
+import * as file from "src/markmap.md";
+import Layout from "@/layouts/Layout.astro";
+
+const frontmatter = `
+---
+markmap:
+  // maxWidth: 640
+---
+
+`;
+---
+
+<Layout title="">
+	<div class="markmap-wrapper">
+		<div class="markmap">
+			<script
+				is:inline
+				type="text/template"
+				set:html={frontmatter + file.rawContent()}
+			/>
+		</div>
+	</div>
+</Layout>
+
+<script>
+	(window as any).markmap = {
+		/** @type AutoLoaderOptions */
+		autoLoader: {
+			toolbar: true, // Enable toolbar
+		},
+	};
+</script>
+<script is:inline src="https://cdn.jsdelivr.net/npm/markmap-autoloader@latest"
+></script>

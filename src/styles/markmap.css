@@ -1,0 +1,76 @@
+/* 
+  Markmap
+*/
+.markmap-wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.markmap-wrapper > .markmap {
+	width: 100%;
+	height: 100%;
+}
+.markmap-wrapper > .markmap > svg {
+	width: 100%;
+	height: 100%;
+}
+
+.markmap {
+	--markmap-font: 300 16px / 20px sans-serif;
+	font: var(--markmap-font);
+	background-color: var(--bgColor-default);
+
+	.markmap-foreign {
+		a {
+			/* color: var(--fgColor-accent) !important; */
+			font-weight: bold;
+			&:hover {
+				color: var(--markmap-a-hover-color);
+			}
+		}
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.markmap,
+	[data-theme="dark"] {
+		color-scheme: dark;
+		--bgColor-default: hsl(212, 19%, 16%);
+		--bgColor-muted: #161b22;
+		--bgColor-neutral-muted: #6e768166;
+		--bgColor-attention-muted: #bb800926;
+	}
+}
+@media (prefers-color-scheme: light) {
+	.markmap,
+	[data-theme="light"] {
+		color-scheme: light;
+		--bgColor-default: #fff;
+		--bgColor-muted: #f6f8fa;
+		--bgColor-neutral-muted: #afb8c133;
+		--bgColor-attention-muted: #fff8c5;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.markmap {
+		/*dark*/
+		color-scheme: dark;
+		--markmap-code-bg: #1a1b26;
+		--markmap-code-color: #ddd;
+		--markmap-circle-open-bg: #444;
+		--markmap-text-color: #eee;
+		color: hsl(216, 19.5%, 84.9%) !important;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	.markmap {
+		/*light*/
+		color-scheme: light;
+		--markmap-code-bg: #f0f0f0;
+		--markmap-code-color: #555;
+		--markmap-circle-open-bg: #fff;
+		--markmap-text-color: #333;
+	}
+}
