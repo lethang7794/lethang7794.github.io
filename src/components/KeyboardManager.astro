@@ -20,7 +20,7 @@ const iconProject =
 const iconEmpty = "<svg width='24' height='24' viewBox='0 0 24 24'></svg>";
 
 const profilesInfo = profiles
-	.filter((item) => item.network !== "CV")
+	.filter((item) => !["CV", "Mindmap"].includes(item.network))
 	.map(({ network, url }) => {
 		const icon = SOCIAL_ICONS[network];
 		const firstLetter = network[0].toUpperCase();
@@ -170,6 +170,28 @@ const certsInfo = certificates
 					}
 					const link = document.createElement("a");
 					link.href = "/CV.pdf";
+					link.target = "_blank"; // Open in a new tab
+					link.click();
+				}
+			},
+		},
+		{
+			id: "mindmap",
+			title: "View CV as mind map",
+			icon: `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M26 24h16M26 38h16M26 10h16M18 24H6h4m8 14c-6-2-2-14-8-14m8-14c-6 2-2 14-8 14"/></svg>`,
+			hotkey: "ctrl+M",
+			section: "Actions",
+			handler: () => {
+				const w = window.open("/mindmap", "_blank"); // Open in a new tab
+
+				// Safari on iOS devices that block popup don't have access to window object
+				if (!w) {
+					// Create an anchor element and programmatically click it
+					if (!document) {
+						return;
+					}
+					const link = document.createElement("a");
+					link.href = "/mindmap";
 					link.target = "_blank"; // Open in a new tab
 					link.click();
 				}

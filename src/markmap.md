@@ -22,6 +22,7 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 - GitHub: [lethang7794](https://github.com/lethang7794)
 - LinkedIn: [thanglequang](https://linkedin.com/in/thanglequang)
 - CV: [CV](/CV.pdf)
+- Mindmap: [mindmap](/mindmap)
 
 ## [**Experience**](https://lethang7794.github.io#Experience)
 
