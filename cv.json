@@ -35,6 +35,11 @@
 				"network": "CV",
 				"username": "CV",
 				"url": "/CV.pdf"
+			},
+			{
+				"network": "Mindmap",
+				"username": "mindmap",
+				"url": "/mindmap"
 			}
 		]
 	},
