@@ -21,7 +21,7 @@ import { SKILLS_ICONS } from "@/constants/skill-icons";
 							<span class="text-skin-hue">{skill}</span>
 						</h4>
 
-						<div class="mt-3 flex flex-wrap gap-2 print:mt-1 print:justify-start">
+						<div class="mt-3 flex flex-wrap gap-2 print:mt-1 print:justify-start print:gap-1">
 							{keywords?.map((skill) => {
 								let skillName = skill?.replace(/ \(.*\)/, "");
 								const icon = SKILLS_ICONS[skillName];
