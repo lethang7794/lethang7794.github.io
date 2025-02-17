@@ -49,13 +49,10 @@ interface Resume {
 }
 
 function convertToMarkdown(resume: Resume): string {
-	let md = `
----
-markmap:
-  maxWidth: 300
-  color:
-    - blue
----
+	let md = `<!--
+Generated automated from cv.json. Don't edit. 
+To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
+-->
 
 `;
 
@@ -157,7 +154,7 @@ function transformJsonToMarkmap(
 		const resume: Resume = JSON.parse(data);
 		const markdownOutput = convertToMarkdown(resume);
 		fs.writeFileSync(outputFilePath, markdownOutput);
-		console.log("Transform from cv.json to markmap.md");
+		console.log("🚀 Transformed from cv.json to markmap.md");
 	} catch (err) {
 		console.error("Error processing the file:", err);
 	}
