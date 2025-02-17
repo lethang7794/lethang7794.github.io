@@ -7,7 +7,8 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "gen-markmap": "ts-node ./scripts/cv-to-md.ts"
   },
   "dependencies": {
     "@astrojs/check": "0.4.1",
@@ -37,6 +38,7 @@
     "@types/node": "^22.13.4",
     "prettier": "^3.3.2",
     "prettier-plugin-astro": "^0.14.0",
+    "ts-node": "^10.9.2",
     "vite": "^6.1.0"
   },
   "packageManager": "pnpm@10.3.0+sha512.ee592eda8815a8a293c206bb0917c4bb0ff274c50def7cbc17be05ec641fc2d1b02490ce660061356bd0d126a4d7eb2ec8830e6959fb8a447571c631d5a2442d"
