@@ -58,22 +58,12 @@ import { certificates } from "@cv";
 												<div class="mb-0.5 text-sm italic text-skin-muted">
 													{issuer}
 												</div>
-												<time class="whitespace-nowrap text-xs text-skin-muted md:hidden md:pl-8 lg:pl-0 print:hidden print:pl-0">
+												<time class="whitespace-nowrap text-xs text-skin-muted md:pl-8 lg:pl-0 print:pl-0">
 													{certificateYear}
 												</time>
 											</div>
 										</div>
 									</div>
-									<a
-										class="group hidden items-center gap-[6px] decoration-dotted underline-offset-[5px] hover:text-skin-hue hover:underline md:block print:block"
-										href={url_verify}
-										target="_blank"
-										tabindex="-1"
-									>
-										<time class="whitespace-nowrap text-xs text-skin-muted md:block md:pl-8 lg:pl-0 print:pl-0">
-											{certificateYear}
-										</time>
-									</a>
 								</div>
 							</li>
 						);
