@@ -1,5 +1,6 @@
 export const SKILLS_ICONS: Record<string, { iconName: string }> = {
 	"Ant Design": { iconName: "logos:ant-design" },
+	Astro: { iconName: "logos:astro" },
 	AWS: { iconName: "skill-icons:aws-dark" },
 	"Bash Script": { iconName: "skill-icons:bash-dark" },
 	BigQuery: { iconName: "bigquery" },
@@ -45,6 +46,7 @@ export const SKILLS_ICONS: Record<string, { iconName: string }> = {
 	"Node.js": { iconName: "skill-icons:nodejs-dark" },
 	"Open Graph": { iconName: "logos:open-graph" },
 	Postman: { iconName: "skill-icons:postman" },
+	Playwright: { iconName: "logos:playwright" },
 	"Protocol Buffers": { iconName: "protobuf" },
 	"React Hook Form": { iconName: "react-hook-form" },
 	React: { iconName: "skill-icons:react-dark" },

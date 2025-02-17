@@ -358,9 +358,9 @@
 		},
 		{
 			"name": "Modern Minimal CV",
-			"description": "JSON -> Portfolio Website -> PDF CV.",
+			"description": "JSON -> Portfolio Website -> PDF + Mind map",
 			"highlights": [
-				"Seamlessly converts JSON data into a sleek portfolio website and generates a professional PDF CV."
+				"Seamlessly converts JSON data into a sleek portfolio website, generates a professional PDF CV and views the CV as a mind map."
 			],
 			"startDate": "2025-02",
 			"url": "https://lethang7794.github.io",
