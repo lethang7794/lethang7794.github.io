@@ -3,12 +3,12 @@ Generated automated from cv.json. Don't edit.
 To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 -->
 
-# **Le Quang Thang** (Full Stack Developer)
+# [**Le Quang Thang**](https://lethang7794.github.io) (_Full Stack Developer_)
 
-## **Summary**
+## **About**
 
-- Ambitious Full Stack Developer with expertise in cloud computing, driven by challenges, growth, and innovation.
-- Seeking opportunities to build impactful solutions and deliver value to businesses and users.
+- _Ambitious Full Stack Developer with expertise in cloud computing, driven by challenges, growth, and innovation._
+- _Seeking opportunities to build impactful solutions and deliver value to businesses and users._
 
 ## **Contacts**
 
@@ -23,9 +23,9 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 - LinkedIn: [thanglequang](https://linkedin.com/in/thanglequang)
 - CV: [CV](/CV.pdf)
 
-## **Experience**
+## [**Experience**](https://lethang7794.github.io#Experience)
 
-### **Full Stack Developer** - Inspire Lab Technology (2022-06 - 2023-07)
+### **Full Stack Developer** - _Inspire Lab Technology_ (2022-06 - 2023-07)
 
 #### Summary
 
@@ -40,10 +40,10 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 - Mentored a Frontend and a Backend Developer, accelerating their technical growth and productivity.
 #### Achievements
 
-- Engineered an optimized table component for the CMS using React, significantly improving performance and usability across key features.
-- Promoted four times in two years — twice the typical pace — recognizing outstanding contributions and impact.
+- _Engineered an optimized table component for the CMS using React, significantly improving performance and usability across key features._
+- _Promoted four times in two years — twice the typical pace — recognizing outstanding contributions and impact._
 
-### **Junior Full Stack Developer** - Inspire Lab Technology (2022-01 - 2022-07)
+### **Junior Full Stack Developer** - _Inspire Lab Technology_ (2022-01 - 2022-07)
 
 #### Summary
 
@@ -59,10 +59,10 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 - Researched and evaluated micro frontend technologies to improve performance and scalability.
 #### Achievements
 
-- Introduced Tailwind CSS to a team of six frontend developers, accelerating development speed for new projects and improving UI consistency.
-- Achieved a 100% salary increase within my first year, reflecting exceptional performance.
+- _Introduced Tailwind CSS to a team of six frontend developers, accelerating development speed for new projects and improving UI consistency._
+- _Achieved a 100% salary increase within my first year, reflecting exceptional performance._
 
-### **Junior Backend Developer** - Inspire Lab Technology (2021-07 - 2021-12)
+### **Junior Backend Developer** - _Inspire Lab Technology_ (2021-07 - 2021-12)
 
 #### Summary
 
@@ -74,10 +74,10 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 - Managed regular deployments with an Agile approach.
 #### Achievements
 
-- Optimized Dockerfile, reducing feedback loops by up to 600% (from 60s to 5-10s) for each microservice.
-- Automated the attendance tracking and approval process, reducing processing time from several days to just hours, achieving a 95%+ satisfaction rate.
+- _Optimized Dockerfile, reducing feedback loops by up to 600% (from 60s to 5-10s) for each microservice._
+- _Automated the attendance tracking and approval process, reducing processing time from several days to just hours, achieving a 95%+ satisfaction rate._
 
-### **Fresher Backend Developer** - Inspire Lab Technology (2021-04 - 2021-06)
+### **Fresher Backend Developer** - _Inspire Lab Technology_ (2021-04 - 2021-06)
 
 #### Summary
 
@@ -87,9 +87,9 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 
 #### Achievements
 
-- Authored official onboarding documentation for setting up the backend environment, streamlining the process for new team members.
+- _Authored official onboarding documentation for setting up the backend environment, streamlining the process for new team members._
 
-## **Projects**
+## [**Projects**](https://lethang7794.github.io#Projects)
 
 ### [gtdb](https://gtdb.app)
 
@@ -121,7 +121,7 @@ Compare the Cantrill courses for the AWS certificates.
 
 - Select your next AWS certification and skip lessons you've already mastered.
 
-## **Skills**
+## [**Skills**](https://lethang7794.github.io#Skills)
 
 ### **Backend** <!-- markmap: fold -->
 
@@ -211,26 +211,26 @@ Compare the Cantrill courses for the AWS certificates.
 - MDX
 - CLI
 
-## **Education**
+## [**Education**](https://lethang7794.github.io#Education)
 
-### **Self-taught and continuous-improvement** - Computer, software & DevOps (2023-07 - 2024-12) <!-- markmap: fold -->
+### **Self-taught and continuous-improvement** - _Computer, software & DevOps_ (2023-07 - 2024-12) <!-- markmap: fold -->
 
 - Dedicated 18 months to independently mastering startup methodologies, software design, software delivery, Linux, DevOps, cloud computing, networking, security...
 - Applied knowledge through hands-on projects, earned industry-recognized certifications, and actively contributed to open-source communities.
 
-### **Inspire Lab Technology** - DevOps Fresher Program (2022-02 - 2022-04) <!-- markmap: fold -->
+### **Inspire Lab Technology** - _DevOps Fresher Program_ (2022-02 - 2022-04) <!-- markmap: fold -->
 
 - Joined the DevOps Fresher Program while working as a Full Stack Developer.
 
-### **CoderSchool Vietnam** - Full Stack Web Development (2020-12 - 2021-03) <!-- markmap: fold -->
+### **CoderSchool Vietnam** - _Full Stack Web Development_ (2020-12 - 2021-03) <!-- markmap: fold -->
 
 - Studied best practices in front-end/back-end software design for 60-70 hours a week over 3 months.
 
-### **Bach Khoa University (Ho Chi Minh City University of Technology)** - Bachelor of Mechatronics Engineering (2012-09 - 2020-05) <!-- markmap: fold -->
+### **Bach Khoa University (Ho Chi Minh City University of Technology)** - _Bachelor of Mechatronics Engineering_ (2012-09 - 2020-05) <!-- markmap: fold -->
 
 - Programme de Formation d’Ingénieurs d’Excellence au Vietnam (P.F.I.E.V).
 
-## **Certificates**
+## [**Certificates**](https://lethang7794.github.io#Certificates)
 
 ### **AWS Certified Solutions Architect – Professional** <!-- markmap: fold -->
 
