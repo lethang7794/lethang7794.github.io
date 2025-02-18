@@ -2,11 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.28](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.27...v0.0.28) - 2025-02-18
+
+### ⚙️ Miscellaneous Tasks
+
+- Update commit message (#35)
+
 ## [0.0.27](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.26...v0.0.27) - 2025-02-18
 
 ### 🐛 Bug Fixes
 
 - Update release template (#34)
+
+### ⚙️ Miscellaneous Tasks
+
+- Bump to v0.0.27 and update CHANGELOG.md [skip ci]
 
 ## [0.0.26](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.25...v0.0.26) - 2025-02-18
 
