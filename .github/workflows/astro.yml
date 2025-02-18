@@ -37,6 +37,10 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
+      - name: Dump GitHub Context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
       - name: Checkout
         uses: actions/checkout@v4
       - name: Detect package manager
