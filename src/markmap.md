@@ -5,6 +5,12 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 
 # [**Le Quang Thang**](https://lethang7794.github.io) (_Full Stack Developer_)
 
+## **Also available as**
+
+- Website: [https://lethang7794.github.io](https://lethang7794.github.io)
+- PDF: [https://lethang7794.github.io/CV.pdf](https://lethang7794.github.io/CV.pdf)
+- Mind map: [https://lethang7794.github.io/mindmap](https://lethang7794.github.io/mindmap) (You're viewing this)
+
 ## **About**
 
 - _Ambitious Full Stack Developer with expertise in cloud computing, driven by challenges, growth, and innovation._
@@ -12,17 +18,15 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 
 ## **Contacts**
 
-- Email: lethang7794@gmail.com  
-- Phone: +84 944 990 631  
-- Website: [https://lethang7794.github.io](https://lethang7794.github.io)  
+- Email: lethang7794@gmail.com
+- Phone: +84 944 990 631
+- Website: [https://lethang7794.github.io](https://lethang7794.github.io)
 - Location: Ho Chi Minh City, Vietnam
 
 ## **Profiles**
 
 - GitHub: [lethang7794](https://github.com/lethang7794)
 - LinkedIn: [thanglequang](https://linkedin.com/in/thanglequang)
-- CV: [CV](/CV.pdf)
-- Mindmap: [mindmap](/mindmap)
 
 ## [**Experience**](https://lethang7794.github.io#Experience)
 
@@ -106,9 +110,9 @@ Modern way to read Vietnam driving laws.
 
 ### [Modern Minimal CV](https://lethang7794.github.io)
 
-JSON -> Portfolio Website -> PDF CV.
+JSON -> Portfolio Website -> PDF + Mind map
 
-- Seamlessly converts JSON data into a sleek portfolio website and generates a professional PDF CV.
+- Seamlessly converts JSON data into a sleek portfolio website, generates a professional PDF CV and views the CV as a mind map.
 
 ### [AWSsome](https://lethang7794.github.io/awssome/)
 
@@ -334,10 +338,18 @@ Compare the Cantrill courses for the AWS certificates.
 ## **Languages**
 
 - **Vietnamese**: Native speaker
+
 - **English**: Professional working proficient
+
 - **French**: Limited working proficient
+
 ## **Interests**
 
 - Football
 - Language Learning
 - Reading
+
+## Last updated
+
+- Tue, 18 Feb 2025 08:01:56 GMT
+
