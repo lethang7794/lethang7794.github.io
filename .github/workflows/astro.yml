@@ -95,6 +95,7 @@ jobs:
         run: |
           echo "PUBLIC_DOMAIN=${{ vars.PUBLIC_DOMAIN }}" >> .env.production
           echo "PUBLIC_BASE_PATH=${{ vars.PUBLIC_BASE_PATH }}" >> .env.production
+          echo "PUBLIC_TIME=${{ vars.PUBLIC_TIME }}" >> .env.production
 
       - name: Build with Astro
         run: |
