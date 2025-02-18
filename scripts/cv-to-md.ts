@@ -35,6 +35,7 @@ interface Resume {
 		description: string;
 		url: string;
 		highlights: string[];
+		skills?: string[];
 	}[];
 	skills: { name: string; keywords: string[] }[];
 	certificates: {
@@ -104,10 +105,14 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 		md += `### **${job.position}** - _${job.company}_ (${job.startDate} - ${job.endDate || "Present"})\n\n`;
 		md += `#### Summary\n\n`;
 		md += `- ${job.summary}\n\n`;
-		md += `#### Responsibilities <!-- markmap: fold -->\n\n`;
-		job.responsibilities?.forEach((item) => {
-			md += `- ${item}\n`;
-		});
+
+		if (job.responsibilities?.length > 0) {
+			md += `#### Responsibilities <!-- markmap: fold -->\n\n`;
+			job.responsibilities?.forEach((item) => {
+				md += `- ${item}\n\n`;
+			});
+		}
+
 		md += `#### Achievements\n\n`;
 		job.achievements.forEach((item) => {
 			md += `- _${item}_\n`;
@@ -118,17 +123,23 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 	md += `## [**Projects**](${resume.basics.website}#Projects)\n\n`;
 	resume.projects.forEach((project) => {
 		md += `### [${project.name}](${project.url})\n\n`;
-		md += `${project.description}\n\n`;
+		md += `#### ${project.description} <!-- markmap: fold -->\n\n`;
 		project.highlights.forEach((highlight) => {
-			md += `- ${highlight}\n`;
+			md += `##### ${highlight}\n`;
 		});
+		if (project.skills) {
+			md += `##### Skills\n\n`;
+			project.skills?.forEach((item) => {
+				md += `- ${item}\n\n`;
+			});
+		}
 		md += `\n`;
 	});
 
 	md += `## [**Skills**](${resume.basics.website}#Skills)\n\n`;
 	resume.skills.forEach((skill) => {
-		md += `### **${skill.name}** <!-- markmap: fold -->\n\n`;
-		md += skill.keywords.map((k) => `- ${k}`).join("\n") + "\n\n";
+		md += `### **${skill.name}**\n\n`;
+		md += skill.keywords.map((k) => `- ${k}`).join(" ") + "\n\n";
 	});
 
 	md += `## [**Education**](${resume.basics.website}#Education)\n\n`;
@@ -152,8 +163,9 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 
 	md += `## **Languages**\n\n`;
 	resume.languages.forEach((lang) => {
-		md += `- **${lang.language}**: ${lang.fluency}\n\n`;
+		md += `- **${lang.language}**: ${lang.fluency}\n`;
 	});
+	md += "\n";
 
 	md += `## **Interests**\n\n`;
 	resume.interests.forEach((interest) => {
@@ -163,10 +175,10 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 
 	const time = process.env.TIME;
 	const now = new Date();
-	const nowStr = now.toUTCString();
+	const nowStr = now.toDateString();
 	if (time !== "") {
 		md += `## Last updated\n\n`;
-		md += `- ${time === undefined ? nowStr : time}\n\n`;
+		md += `- ${time === undefined ? nowStr : time}\n`;
 	}
 
 	return md;

@@ -358,7 +358,7 @@
 		},
 		{
 			"name": "Modern Minimal CV",
-			"description": "JSON -> Portfolio Website -> PDF + Mind map",
+			"description": "JSON → Portfolio Website → PDF + Mind map",
 			"highlights": [
 				"Seamlessly converts JSON data into a sleek portfolio website, generates a professional PDF CV and views the CV as a mind map."
 			],

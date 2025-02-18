@@ -39,10 +39,15 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 #### Responsibilities <!-- markmap: fold -->
 
 - Developed a CMS for a gaming system, enhancing content management and operational efficiency.
+
 - Developed and deployed a performance review system used by 100+ employees, improving evaluation processes.
+
 - Led the migration of a legacy system from Docker Compose to Kubernetes, boosting scalability and reliability.
+
 - Contributed to the development of a design system, ensuring UI consistency and efficiency across products.
+
 - Mentored a Frontend and a Backend Developer, accelerating their technical growth and productivity.
+
 #### Achievements
 
 - _Engineered an optimized table component for the CMS using React, significantly improving performance and usability across key features._
@@ -57,11 +62,17 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 #### Responsibilities <!-- markmap: fold -->
 
 - Set up CI pipelines to automate the publishing of frontend core NPM packages.
+
 - Developed key UI components for company-wide projects.
+
 - Translated design wireframes into functional UI components.
+
 - Built pixel-perfect landing pages.
+
 - Mentored a Frontend Developer, providing guidance and support.
+
 - Researched and evaluated micro frontend technologies to improve performance and scalability.
+
 #### Achievements
 
 - _Introduced Tailwind CSS to a team of six frontend developers, accelerating development speed for new projects and improving UI consistency._
@@ -76,7 +87,9 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 #### Responsibilities <!-- markmap: fold -->
 
 - Collaborated with frontend engineers to design and integrate gRPC APIs, ensuring seamless communication between services.
+
 - Managed regular deployments with an Agile approach.
+
 #### Achievements
 
 - _Optimized Dockerfile, reducing feedback loops by up to 600% (from 60s to 5-10s) for each microservice._
@@ -88,8 +101,6 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 
 - Joined as the second team member for a new product, contributing to backend development while establishing frontend foundations for other projects.
 
-#### Responsibilities <!-- markmap: fold -->
-
 #### Achievements
 
 - _Authored official onboarding documentation for setting up the backend environment, streamlining the process for new team members._
@@ -98,123 +109,123 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 
 ### [gtdb](https://gtdb.app)
 
-A place to be a better driver in Vietnam
+#### A place to be a better driver in Vietnam <!-- markmap: fold -->
 
-- Leveraged social media to educate users on driving safety, including road signs, road markings, and Vietnam driving laws.
+##### Leveraged social media to educate users on driving safety, including road signs, road markings, and Vietnam driving laws.
+##### Skills
+
+- Next.js
+
+- React
+
+- SSG
+
+- Tailwind CSS
+
+- Open Graph
+
+- GitHub Actions
+
+- Vercel
+
+- Cloudflare Page
+
 
 ### [gtdb's laws](https://luat.gtdb.app)
 
-Modern way to read Vietnam driving laws.
+#### Modern way to read Vietnam driving laws. <!-- markmap: fold -->
 
-- Use web technology to make driving laws accessible, searchable, and easy to understand.
+##### Use web technology to make driving laws accessible, searchable, and easy to understand.
+##### Skills
+
+- Next.js
+
+- SSG
+
+- MDX
+
 
 ### [Modern Minimal CV](https://lethang7794.github.io)
 
-JSON -> Portfolio Website -> PDF + Mind map
+#### JSON → Portfolio Website → PDF + Mind map <!-- markmap: fold -->
 
-- Seamlessly converts JSON data into a sleek portfolio website, generates a professional PDF CV and views the CV as a mind map.
+##### Seamlessly converts JSON data into a sleek portfolio website, generates a professional PDF CV and views the CV as a mind map.
+##### Skills
+
+- Astro
+
+- React
+
+- Tailwind
+
+- Playwright
+
 
 ### [AWSsome](https://lethang7794.github.io/awssome/)
 
-Mind-maps for AWS certificates.
+#### Mind-maps for AWS certificates. <!-- markmap: fold -->
 
-- A collections of mind-maps written in Xmind for AWS certificates, available as a web app.
+##### A collections of mind-maps written in Xmind for AWS certificates, available as a web app.
+##### Skills
+
+- Next.js
+
+- React
+
+- Tailwind
+
 
 ### [Cantrill AWS Courses](https://cantrill-aws.vercel.app/)
 
-Compare the Cantrill courses for the AWS certificates.
+#### Compare the Cantrill courses for the AWS certificates. <!-- markmap: fold -->
 
-- Select your next AWS certification and skip lessons you've already mastered.
+##### Select your next AWS certification and skip lessons you've already mastered.
+##### Skills
+
+- Next.js
+
+- React
+
+- Tailwind
+
 
 ## [**Skills**](https://lethang7794.github.io#Skills)
 
-### **Backend** <!-- markmap: fold -->
+### **Backend**
 
-- Golang
-- Node.js
-- Ruby on Rails
-- Microservices
-- Protocol Buffers
-- gRPC
-- REST
+- Golang - Node.js - Ruby on Rails - Microservices - Protocol Buffers - gRPC - REST
 
-### **Frontend** <!-- markmap: fold -->
+### **Frontend**
 
-- Next.js
-- React
-- TypeScript
-- JavaScript
-- Material UI
-- Bootstrap
-- Ant Design
-- Tailwind CSS
-- Styled Components
-- CSS Modules
-- SASS
-- CSS
-- HTML
-- Micro Frontend
-- SPA
-- SSG
+- Next.js - React - TypeScript - JavaScript - Material UI - Bootstrap - Ant Design - Tailwind CSS - Styled Components - CSS Modules - SASS - CSS - HTML - Micro Frontend - SPA - SSG
 
-### **Database** <!-- markmap: fold -->
+### **Database**
 
-- SQL
-- NoSQL
-- ORM
-- MySQL
-- MongoDB
+- SQL - NoSQL - ORM - MySQL - MongoDB
 
-### **Testing** <!-- markmap: fold -->
+### **Testing**
 
-- Minitest
-- Capybara
-- Selenium
-- BloomRPC
-- Postman
-- TDD
+- Minitest - Capybara - Selenium - BloomRPC - Postman - TDD
 
-### **DevOps** <!-- markmap: fold -->
+### **DevOps**
 
-- Kubernetes
-- Helm
-- Lens
-- Docker
-- Terraform
-- GitLab CI/CD
-- GitHub Actions
-- Bash Script
+- Kubernetes - Helm - Lens - Docker - Terraform - GitLab CI/CD - GitHub Actions - Bash Script
 
-### **Cloud Computing** <!-- markmap: fold -->
+### **Cloud Computing**
 
-- AWS
-- Google Cloud
-- Cloudflare
-- Vercel
-- Netlify
-- Heroku
+- AWS - Google Cloud - Cloudflare - Vercel - Netlify - Heroku
 
-### **Collaboration** <!-- markmap: fold -->
+### **Collaboration**
 
-- Git
-- Agile
-- Jira
-- Confluence
-- Figma
-- Slack
+- Git - Agile - Jira - Confluence - Figma - Slack
 
-### **OS** <!-- markmap: fold -->
+### **OS**
 
-- Linux
-- MacOS
-- Windows
+- Linux - MacOS - Windows
 
-### **Misc** <!-- markmap: fold -->
+### **Misc**
 
-- Regex
-- Markdown
-- MDX
-- CLI
+- Regex - Markdown - MDX - CLI
 
 ## [**Education**](https://lethang7794.github.io#Education)
 
@@ -338,9 +349,7 @@ Compare the Cantrill courses for the AWS certificates.
 ## **Languages**
 
 - **Vietnamese**: Native speaker
-
 - **English**: Professional working proficient
-
 - **French**: Limited working proficient
 
 ## **Interests**
@@ -351,5 +360,4 @@ Compare the Cantrill courses for the AWS certificates.
 
 ## Last updated
 
-- Tue, 18 Feb 2025 08:01:56 GMT
-
+- Tue Feb 18 2025
