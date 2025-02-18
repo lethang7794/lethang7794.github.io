@@ -15,9 +15,9 @@
 		"release": "pnpm run set-next-version && pnpm run gen-changelog && pnpm run commit-version-and-push-tag",
 		"get-next-version": "pnpm exec git-cliff --bumped-version",
 		"set-next-version": "pnpm version $(pnpm exec git-cliff --bumped-version)",
-		"get-current-tag-changelog-diff": "git cliff --current --strip header",
-		"get-latest-tag-changelog-diff": "git cliff --latest --strip header",
-		"gen-changelog": "git cliff --bump > CHANGELOG.md",
+		"get-current-tag-changelog-diff": "pnpm exec git-cliff --current --strip header",
+		"get-latest-tag-changelog-diff": "pnpm exec git-cliff --latest --strip header",
+		"gen-changelog": "pnpm exec git-cliff --bump > CHANGELOG.md",
 		"commit-version-and-push-tag": "git commit -a -m 'chore: bump version and update CHANGELOG.md [skip ci]' && && git push --follow-tags"
 	},
 	"dependencies": {
