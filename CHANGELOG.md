@@ -2,13 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
-## [unreleased]
+## [0.0.25] - 2025-02-18
 
 ### 🐛 Bug Fixes
 
 - *(cicd)* Checkout repo before bump version (#24)
 - Setup java (#26)
 - Run pnpm run with --silent (#27)
+
+### 💼 Other
+
+- Git-cliff
 
 ### ⚙️ Miscellaneous Tasks
 
