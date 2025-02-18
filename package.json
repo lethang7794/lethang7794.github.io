@@ -18,7 +18,7 @@
 		"get-current-tag-changelog-diff": "pnpm exec git-cliff --current --strip header",
 		"get-latest-tag-changelog-diff": "pnpm exec git-cliff --latest --strip header",
 		"gen-changelog": "pnpm exec git-cliff --bump > CHANGELOG.md",
-		"commit-version-and-push-tag": "git commit -a -m 'chore: bump version and update CHANGELOG.md [skip ci]' && && git push --follow-tags"
+		"commit-version-and-push-tag": "git commit -a -m 'chore: bump version and update CHANGELOG.md [skip ci]' && git status && git log -n 5 --oneline && git tag"
 	},
 	"dependencies": {
 		"@astrojs/check": "0.4.1",
