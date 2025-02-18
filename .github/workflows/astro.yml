@@ -173,7 +173,7 @@ jobs:
 
       - name: Bump version in code and bump tag
         run: |
-          npm run release
+          pnpm run release
 
       - uses: actions/download-artifact@v4
         with:
