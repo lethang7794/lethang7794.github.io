@@ -151,6 +151,9 @@ jobs:
           retention-days: 30
 
   release:
+    environment:
+      name: release
+      url: ${{ steps.release-artifact.outputs.upload_url }}
     needs: [build, test]
     runs-on: ubuntu-latest
     name: Release
@@ -177,8 +180,6 @@ jobs:
 
       - name: Bump version in code and bump tag
         run: |
-          echo NEXT_VERSION
-          echo ${{ env.NEXT_VERSION }}
           npm run release
 
       - uses: actions/download-artifact@v4
@@ -202,13 +203,20 @@ jobs:
           SHA=${{ github.sha }}
           echo "SHA=${SHA:0:7}" >> $GITHUB_ENV
 
-      # - name: Release artifact
-      #   uses: softprops/action-gh-release@v2
-      #   with:
-      #     name: "${{ startsWith(github.ref, 'refs/tags/') && github.ref_name || env.NEXT_VERSION }} — ${{ env.DATE }}"
-      #     files: |
-      #       github-pages.tar.gz
-      #       *.pdf
+      - name: Get current tag changelog
+        run: |
+          pnpm run --silent get-latest-tag-changelog-diff | tail -n +3 | head -n -2 > CURRENT_CHANGELOG.md
+
+      - name: Release artifact
+        id: release-artifact
+        uses: softprops/action-gh-release@v2
+        with:
+          name: "${{ startsWith(github.ref, 'refs/tags/') && github.ref_name || env.NEXT_VERSION }} — ${{ env.DATE }}"
+          files: |
+            github-pages.tar.gz
+            *.pdf
+          make_latest: "{{ github.ref == 'refs/heads/main' && true }}"
+          body_path: CURRENT_CHANGELOG.md
 
       # # Copy CV to astro build output
       # - name: Upload artifact with PDF
