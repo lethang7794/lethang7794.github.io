@@ -12,10 +12,10 @@
 		"//BUILD": "BUILD",
 		"gen-markmap": "ts-node ./scripts/cv-to-md.ts",
 		"//RELEASE": "RELEASE",
-		"release": "pnpm run set-next-version && pnpm run changelog && pnpm run commit-version-and-push-tag",
-		"get-next-version": "npx git-changelog-command-line --print-next-version",
+		"release": "pnpm run set-next-version && pnpm run gen-changelog && pnpm run commit-version-and-push-tag",
+		"get-next-version": "pnpx git-changelog-command-line --print-next-version",
 		"//set-next-version": "Bump version in package.json and create new git tag",
-		"set-next-version": "pnpm version $(npx git-changelog-command-line --print-next-version)",
+		"set-next-version": "pnpm version $(pnpx git-changelog-command-line --print-next-version)",
 		"gen-changelog": "pnpx git-changelog-command-line -of CHANGELOG.md",
 		"commit-version-and-push-tag": "git commit -a -m 'chore: bump version and update CHANGELOG.md [skip ci]' && && git push --follow-tags"
 	},
