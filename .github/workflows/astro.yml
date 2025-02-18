@@ -97,6 +97,10 @@ jobs:
           echo "PUBLIC_BASE_PATH=${{ vars.PUBLIC_BASE_PATH }}" >> .env.production
           echo "PUBLIC_TIME=${{ vars.PUBLIC_TIME }}" >> .env.production
 
+      - name: Generate Markmap
+        run: |
+          ${{ steps.detect-package-manager.outputs.manager }} run gen-markmap
+
       - name: Build with Astro
         run: |
           ${{ steps.detect-package-manager.outputs.manager }} run astro build \
@@ -150,8 +154,16 @@ jobs:
     needs: [build, test]
     runs-on: ubuntu-latest
     name: Release
-    if: startsWith(github.ref, 'refs/tags/')
+    if: ${{ github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/') }}
     steps:
+      - name: Get release context
+        run: |
+          echo "NEXT_VERSION=$(npx git-changelog-command-line --print-next-version)" >> $GITHUB_ENV
+
+      - name: Bump version in code and bump tag
+        run: |
+          npm run release
+
       - uses: actions/download-artifact@v4
         with:
           name: github-pages
@@ -165,16 +177,18 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: playwright-result
+
       - name: Get context
         run: |
           echo "DATE_AND_TIME=$(date +%Y.%m.%d-%H.%M)" >> $GITHUB_ENV
           echo "DATE=$(date +%Y.%m.%d)" >> $GITHUB_ENV
           SHA=${{ github.sha }}
           echo "SHA=${SHA:0:7}" >> $GITHUB_ENV
-      - name: Release
+
+      - name: Release artifact
         uses: softprops/action-gh-release@v2
         with:
-          name: "${{ github.ref_name }} — ${{ env.DATE }}"
+          name: "${{ startsWith(github.ref, 'refs/tags/') && github.ref_name || env.NEXT_VERSION }} — ${{ env.DATE }}"
           files: |
             github-pages.tar.gz
             *.pdf
@@ -183,6 +197,7 @@ jobs:
       - name: Upload artifact with PDF
         run: |
           cp *.pdf dist/
+
       # Reupload github-pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -190,13 +205,13 @@ jobs:
           path: ${{ env.BUILD_PATH }}/dist
           name: github-pages-with-cv
 
-  # Deploy for tags starts with v, e.g. v0.0.1
+  # Continuous Deployment: Any changes to main branch will be deploy
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     needs: release
-    if: startsWith(github.ref, 'refs/tags/v')
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     name: Deploy
     steps:
