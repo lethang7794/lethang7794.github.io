@@ -157,7 +157,7 @@ jobs:
   release:
     environment:
       name: release
-      url: ${{ steps.release-artifact.outputs.upload_url }}
+      url: https://github.com/${{ github.repository }}/releases/tag/${{ steps.next-version.outputs.version }}
     needs: [build, test]
     runs-on: ubuntu-latest
     name: Release
@@ -182,8 +182,10 @@ jobs:
           run_install: true
 
       - name: Get release context
+        id: next-version
         run: |
           echo "NEXT_VERSION=$(pnpm exec git-cliff --bumped-version)" >> $GITHUB_ENV
+          echo "version=$(pnpm exec git-cliff --bumped-version)" >> $GITHUB_OUTPUT
 
       - name: Setup Git
         run: |
