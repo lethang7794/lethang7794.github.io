@@ -13,10 +13,10 @@
 		"gen-markmap": "ts-node ./scripts/cv-to-md.ts",
 		"//RELEASE": "RELEASE",
 		"release": "pnpm run --silent set-next-version && pnpm run gen-changelog && pnpm run commit-version-and-push-tag",
-		"get-next-version": "pnpx git-changelog-command-line --print-next-version",
+		"get-next-version": "npm exec git-cliff --bumped-version",
 		"//set-next-version": "Bump version in package.json and create new git tag",
-		"set-next-version": "pnpm version $(pnpx git-changelog-command-line --print-next-version)",
-		"gen-changelog": "pnpx git-changelog-command-line -of CHANGELOG.md",
+		"set-next-version": "pnpm version $(npm exec git-cliff --bumped-version)",
+		"gen-changelog": "npm exec git-cliff --bump > CHANGELOG.md",
 		"commit-version-and-push-tag": "git commit -a -m 'chore: bump version and update CHANGELOG.md [skip ci]' && && git push --follow-tags"
 	},
 	"dependencies": {
@@ -41,6 +41,7 @@
 		"@playwright/test": "^1.50.1",
 		"@tailwindcss/container-queries": "^0.1.1",
 		"@types/node": "^22.13.4",
+		"git-cliff": "^2.8.0",
 		"prettier": "^3.3.2",
 		"prettier-plugin-astro": "^0.14.0",
 		"ts-node": "^10.9.2",
