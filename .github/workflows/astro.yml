@@ -161,6 +161,12 @@ jobs:
         name: Install pnpm
         with:
           run_install: false
+
+      - name: Setup java (used by git-changelog-command-line )
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'zulu'
+          java-version: 17
       - name: Get release context
         run: |
           echo "NEXT_VERSION=$(pnpm run get-next-version)" >> $GITHUB_ENV
