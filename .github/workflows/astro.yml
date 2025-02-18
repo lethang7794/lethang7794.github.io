@@ -158,7 +158,7 @@ jobs:
     steps:
       - name: Get release context
         run: |
-          echo "NEXT_VERSION=$(npx git-changelog-command-line --print-next-version)" >> $GITHUB_ENV
+          echo "NEXT_VERSION=$(pnpm run get-next-version)" >> $GITHUB_ENV
 
       - name: Bump version in code and bump tag
         run: |
