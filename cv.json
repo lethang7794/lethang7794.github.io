@@ -6,6 +6,7 @@
 		"phone": "+84 944 990 631",
 		"website": "https://lethang7794.github.io",
 		"url": "https://lethang7794.github.io",
+		"urlLastUpdated": "https://github.com/lethang7794/lethang7794.github.io/releases",
 		"picture-TODO": "",
 		"picture": "",
 		"image": "",
@@ -364,7 +365,7 @@
 			],
 			"startDate": "2025-02",
 			"url": "https://lethang7794.github.io",
-			"github": "https://github.com/lethang7794/",
+			"github": "https://github.com/lethang7794/lethang7794.github.io",
 			"isActive": true,
 			"skills": ["Astro", "React", "Tailwind", "Playwright"],
 			"hidden": false
