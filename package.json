@@ -3,16 +3,19 @@
 	"type": "module",
 	"version": "0.0.25",
 	"scripts": {
-		"//": "RELEASE",
+		"//ASTRO": "ASTRO",
 		"dev": "astro dev",
 		"start": "astro dev",
 		"build": "astro check && astro build",
 		"preview": "astro preview",
 		"astro": "astro",
+		"//BUILD": "BUILD",
 		"gen-markmap": "ts-node ./scripts/cv-to-md.ts",
-		"release": "pnpm run set-version && pnpm run changelog",
+		"//RELEASE": "RELEASE",
+		"release": "pnpm run set-version && pnpm run changelog && pnpm run commit-version-and-push-tag",
 		"set-version": "pnpm version $(npx git-changelog-command-line --print-next-version)",
-		"changelog": "pnpx git-changelog-command-line -of CHANGELOG.md && git commit -a -m 'chore: bump version and update CHANGELOG.md [skip ci]' && git push --follow-tags"
+		"gen-changelog": "pnpx git-changelog-command-line -of CHANGELOG.md",
+		"commit-version-and-push-tag": "git commit -a -m 'chore: bump version and update CHANGELOG.md [skip ci]' && git push --follow-tags"
 	},
 	"dependencies": {
 		"@astrojs/check": "0.4.1",
