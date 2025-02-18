@@ -157,6 +157,10 @@ jobs:
     if: ${{ github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/') }}
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          run_install: false
       - name: Get release context
         run: |
           echo "NEXT_VERSION=$(pnpm run get-next-version)" >> $GITHUB_ENV
