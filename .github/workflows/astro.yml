@@ -8,13 +8,16 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
-    tags:
-      - "*"
   pull_request:
     branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    inputs:
+      tag:
+        description: "The tag to be created"
+        type: string
+        required: true
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -31,6 +34,7 @@ concurrency:
 env:
   BUILD_PATH: "." # default value when not using subfolders
   # BUILD_PATH: subfolder
+  TAG: ${{ inputs.tag }}
 
 jobs:
   build:
@@ -187,6 +191,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
       - name: Bump version in code and bump tag
+        if: github.ref == 'refs/heads/main'
         run: |
           npm run release
 
@@ -219,12 +224,13 @@ jobs:
         id: release-artifact
         uses: softprops/action-gh-release@v2
         with:
-          name: "${{ startsWith(github.ref, 'refs/tags/') && github.ref_name || env.NEXT_VERSION }} — ${{ env.DATE }}"
+          name: "${{ env.NEXT_VERSION || env.TAG }} — ${{ env.DATE }}"
           files: |
             github-pages.tar.gz
             *.pdf
           make_latest: "{{ github.ref == 'refs/heads/main' && true }}"
           body_path: CURRENT_CHANGELOG.md
+          tag_name: ${{ env.NEXT_VERSION || env.TAG }}
 
       # Copy CV to astro build output
       - name: Upload artifact with PDF
