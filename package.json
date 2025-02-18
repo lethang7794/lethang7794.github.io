@@ -12,7 +12,7 @@
 		"//BUILD": "BUILD",
 		"gen-markmap": "ts-node ./scripts/cv-to-md.ts",
 		"//RELEASE": "RELEASE",
-		"release": "pnpm run set-next-version && pnpm run gen-changelog && pnpm run commit-version-and-push-tag",
+		"release": "pnpm run --silent set-next-version && pnpm run gen-changelog && pnpm run commit-version-and-push-tag",
 		"get-next-version": "pnpx git-changelog-command-line --print-next-version",
 		"//set-next-version": "Bump version in package.json and create new git tag",
 		"set-next-version": "pnpm version $(pnpx git-changelog-command-line --print-next-version)",
