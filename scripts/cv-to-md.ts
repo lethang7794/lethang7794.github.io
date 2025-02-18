@@ -58,22 +58,45 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 
 	md += `# [**${resume.basics.name}**](${resume.basics.website}) (_${resume.basics.label}_)\n\n`;
 
-	md += `## **About**\n\n`;
-	resume.basics.summaries?.forEach((highlight) => {
-		md += `- _${highlight}_\n`;
-	});
-	md += `\n`;
+	const mindmap = resume.basics.profiles.filter(
+		(item) => item.network?.toLowerCase() === "mindmap",
+	)[0];
+	const cv = resume.basics.profiles.filter(
+		(item) => item.network?.toLowerCase() === "cv",
+	)[0];
+
+	if (resume.basics.website || cv || mindmap) {
+		md += `## **Also available as**\n\n`;
+		if (resume.basics.website) {
+			md += `- Website: [${resume.basics.website}](${resume.basics.website})\n`;
+		}
+		if (cv) {
+			md += `- PDF: [${cv.url}](${cv.url})\n`;
+		}
+		if (mindmap) {
+			md += `- Mind map: [${mindmap.url}](${mindmap.url}) (You're viewing this)\n`;
+		}
+		md += `\n`;
+
+		md += `## **About**\n\n`;
+		resume.basics.summaries?.forEach((highlight) => {
+			md += `- _${highlight}_\n`;
+		});
+		md += `\n`;
+	}
 
 	md += `## **Contacts**\n\n`;
-	md += `- Email: ${resume.basics.email}  \n`;
-	md += `- Phone: ${resume.basics.phone}  \n`;
-	md += `- Website: [${resume.basics.website}](${resume.basics.website})  \n`;
+	md += `- Email: ${resume.basics.email}\n`;
+	md += `- Phone: ${resume.basics.phone}\n`;
+	md += `- Website: [${resume.basics.website}](${resume.basics.website})\n`;
 	md += `- Location: ${resume.basics.location.city}, ${resume.basics.location.region}\n\n`;
 
 	md += `## **Profiles**\n\n`;
-	resume.basics.profiles.forEach((profile) => {
-		md += `- ${profile.network}: [${profile.username}](${profile.url})\n`;
-	});
+	resume.basics.profiles
+		.filter((item) => !["cv", "mindmap"].includes(item.network.toLowerCase()))
+		.forEach((profile) => {
+			md += `- ${profile.network}: [${profile.username}](${profile.url})\n`;
+		});
 	md += `\n`;
 
 	md += `## [**Experience**](${resume.basics.website}#Experience)\n\n`;
@@ -129,7 +152,7 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 
 	md += `## **Languages**\n\n`;
 	resume.languages.forEach((lang) => {
-		md += `- **${lang.language}**: ${lang.fluency}\n`;
+		md += `- **${lang.language}**: ${lang.fluency}\n\n`;
 	});
 
 	md += `## **Interests**\n\n`;
