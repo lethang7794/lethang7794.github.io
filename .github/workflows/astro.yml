@@ -156,9 +156,12 @@ jobs:
     name: Release
     # if: ${{ github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/') }}
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-tags: true
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Fetch git tags
+        run: |
+          git fetch --tags
+
       - uses: pnpm/action-setup@v4
         name: Install pnpm
         with:
@@ -167,7 +170,7 @@ jobs:
       - name: Setup java (used by git-changelog-command-line )
         uses: actions/setup-java@v2
         with:
-          distribution: 'zulu'
+          distribution: "zulu"
           java-version: 17
       - name: Get release context
         run: |
