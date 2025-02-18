@@ -179,6 +179,10 @@ jobs:
       - name: Bump version in code and bump tag
         run: |
           echo ${{ env.NEXT_VERSION }}
+          echo "pwd: $(pwd)"
+          echo ls
+          ls
+
           pnpm run release
 
       - uses: actions/download-artifact@v4
