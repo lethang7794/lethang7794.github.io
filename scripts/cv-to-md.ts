@@ -35,6 +35,7 @@ interface Resume {
 		description: string;
 		url: string;
 		highlights: string[];
+		skills?: string[];
 	}[];
 	skills: { name: string; keywords: string[] }[];
 	certificates: {
@@ -58,22 +59,45 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 
 	md += `# [**${resume.basics.name}**](${resume.basics.website}) (_${resume.basics.label}_)\n\n`;
 
-	md += `## **About**\n\n`;
-	resume.basics.summaries?.forEach((highlight) => {
-		md += `- _${highlight}_\n`;
-	});
-	md += `\n`;
+	const mindmap = resume.basics.profiles.filter(
+		(item) => item.network?.toLowerCase() === "mindmap",
+	)[0];
+	const cv = resume.basics.profiles.filter(
+		(item) => item.network?.toLowerCase() === "cv",
+	)[0];
+
+	if (resume.basics.website || cv || mindmap) {
+		md += `## **Also available as**\n\n`;
+		if (resume.basics.website) {
+			md += `- Website: [${resume.basics.website}](${resume.basics.website})\n`;
+		}
+		if (cv) {
+			md += `- PDF: [${cv.url}](${cv.url})\n`;
+		}
+		if (mindmap) {
+			md += `- Mind map: [${mindmap.url}](${mindmap.url}) (You're viewing this)\n`;
+		}
+		md += `\n`;
+
+		md += `## **About**\n\n`;
+		resume.basics.summaries?.forEach((highlight) => {
+			md += `- _${highlight}_\n`;
+		});
+		md += `\n`;
+	}
 
 	md += `## **Contacts**\n\n`;
-	md += `- Email: ${resume.basics.email}  \n`;
-	md += `- Phone: ${resume.basics.phone}  \n`;
-	md += `- Website: [${resume.basics.website}](${resume.basics.website})  \n`;
+	md += `- Email: [${resume.basics.email}](mailto:${resume.basics.email})\n`;
+	md += `- Phone: [${resume.basics.phone}](tel:${resume.basics.phone?.replaceAll(" ", "")})\n`;
+	md += `- Website: [${resume.basics.website}](${resume.basics.website})\n`;
 	md += `- Location: ${resume.basics.location.city}, ${resume.basics.location.region}\n\n`;
 
 	md += `## **Profiles**\n\n`;
-	resume.basics.profiles.forEach((profile) => {
-		md += `- ${profile.network}: [${profile.username}](${profile.url})\n`;
-	});
+	resume.basics.profiles
+		.filter((item) => !["cv", "mindmap"].includes(item.network.toLowerCase()))
+		.forEach((profile) => {
+			md += `- ${profile.network}: [${profile.username}](${profile.url})\n`;
+		});
 	md += `\n`;
 
 	md += `## [**Experience**](${resume.basics.website}#Experience)\n\n`;
@@ -81,10 +105,14 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 		md += `### **${job.position}** - _${job.company}_ (${job.startDate} - ${job.endDate || "Present"})\n\n`;
 		md += `#### Summary\n\n`;
 		md += `- ${job.summary}\n\n`;
-		md += `#### Responsibilities <!-- markmap: fold -->\n\n`;
-		job.responsibilities?.forEach((item) => {
-			md += `- ${item}\n`;
-		});
+
+		if (job.responsibilities?.length > 0) {
+			md += `#### Responsibilities <!-- markmap: fold -->\n\n`;
+			job.responsibilities?.forEach((item) => {
+				md += `- ${item}\n\n`;
+			});
+		}
+
 		md += `#### Achievements\n\n`;
 		job.achievements.forEach((item) => {
 			md += `- _${item}_\n`;
@@ -95,17 +123,23 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 	md += `## [**Projects**](${resume.basics.website}#Projects)\n\n`;
 	resume.projects.forEach((project) => {
 		md += `### [${project.name}](${project.url})\n\n`;
-		md += `${project.description}\n\n`;
+		md += `#### ${project.description} <!-- markmap: fold -->\n\n`;
 		project.highlights.forEach((highlight) => {
-			md += `- ${highlight}\n`;
+			md += `##### ${highlight}\n`;
 		});
+		if (project.skills) {
+			md += `##### Skills\n\n`;
+			project.skills?.forEach((item) => {
+				md += `- ${item}\n\n`;
+			});
+		}
 		md += `\n`;
 	});
 
 	md += `## [**Skills**](${resume.basics.website}#Skills)\n\n`;
 	resume.skills.forEach((skill) => {
-		md += `### **${skill.name}** <!-- markmap: fold -->\n\n`;
-		md += skill.keywords.map((k) => `- ${k}`).join("\n") + "\n\n";
+		md += `### **${skill.name}**\n\n`;
+		md += skill.keywords.map((k) => `- ${k}`).join(" ") + "\n\n";
 	});
 
 	md += `## [**Education**](${resume.basics.website}#Education)\n\n`;
@@ -131,11 +165,21 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 	resume.languages.forEach((lang) => {
 		md += `- **${lang.language}**: ${lang.fluency}\n`;
 	});
+	md += "\n";
 
 	md += `## **Interests**\n\n`;
 	resume.interests.forEach((interest) => {
 		md += `- ${interest.name}\n`;
 	});
+	md += "\n";
+
+	const time = process.env.TIME;
+	const now = new Date();
+	const nowStr = now.toDateString();
+	if (time !== "") {
+		md += `## Last updated\n\n`;
+		md += `- ${time === undefined ? nowStr : time}\n`;
+	}
 
 	return md;
 }

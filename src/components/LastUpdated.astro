@@ -1,0 +1,22 @@
+---
+import Arrow from "@/icons/Arrow.astro";
+import { getLastUpdated } from "@/libs/get-last-updated";
+import { basics } from "@cv";
+const lastUpdatedUrl = basics.urlLastUpdated;
+const shouldLinkToUrl = Boolean(lastUpdatedUrl);
+---
+
+<a
+	class="group flex items-center text-xs text-skin-muted/75 decoration-dotted underline-offset-[5px] hover:text-skin-hue hover:underline print:hidden"
+	href={shouldLinkToUrl ? lastUpdatedUrl : undefined}
+	target="_blank"
+>
+	<span>Last updated: {getLastUpdated()}</span>
+	{
+		lastUpdatedUrl ? (
+			<span class="text-skin-hue transition ease-linear group-hover:-translate-y-0.5 group-hover:translate-x-0.5 print:hidden">
+				<Arrow />
+			</span>
+		) : null
+	}
+</a>

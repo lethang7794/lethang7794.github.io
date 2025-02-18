@@ -2,6 +2,7 @@
 import "../styles/markmap.css";
 import * as file from "src/markmap.md";
 import Layout from "@/layouts/Layout.astro";
+import { basics } from "@cv";
 
 const frontmatter = `
 ---
@@ -12,7 +13,7 @@ markmap:
 `;
 ---
 
-<Layout title="">
+<Layout title={`${basics.name} - Mind map CV`}>
 	<div class="markmap-wrapper">
 		<div class="markmap">
 			<script
@@ -25,12 +26,24 @@ markmap:
 </Layout>
 
 <script>
-	(window as any).markmap = {
+	declare global {
+		interface Window {
+			markmap: any;
+		}
+	}
+	window.markmap = {
 		/** @type AutoLoaderOptions */
 		autoLoader: {
-			toolbar: true, // Enable toolbar
+			toolbar: true,
+			manual: true,
 		},
 	};
 </script>
 <script is:inline src="https://cdn.jsdelivr.net/npm/markmap-autoloader@latest"
 ></script>
+
+<script is:inline>
+	setTimeout(() => {
+		markmap.autoLoader.renderAll();
+	}, 500);
+</script>

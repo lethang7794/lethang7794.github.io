@@ -5,11 +5,15 @@ import Section from "@/components/Section.astro";
 import Mail from "@/icons/Mail.astro";
 import Phone from "@/icons/Phone.astro";
 import type { SocialIcon } from "@/types";
+import { getLastUpdated } from "@/libs/get-last-updated";
 
-const { name, label, image, location, profiles, phone, email, website } =
+const { name, label, image, location, profiles, phone, email, website, url } =
 	basics;
 const { city, region } = location;
 const printProfiles = profiles.filter((item) => !["CV", "Mindmap"].includes(item.network))
+
+const mindMap = profiles.filter((item) => item.network?.toLowerCase() === 'mindmap')?.[0]
+const cv = profiles.filter((item) => item.network?.toLowerCase() === 'cv')?.[0]
 
 const SOCIAL_ICONS: SocialIcon = {
 	GitHub: "mdi:github",
@@ -23,11 +27,23 @@ const SOCIAL_ICONS: SocialIcon = {
 <Section>
 	<div class="flex flex-col-reverse gap-8 pt-2">
 		<div class="info">
-			<h1 class="text-skin-hue">{name}</h1>
-			<h2 class="text-skin-hue font-bold !text-xl">{label}</h2>
-			<div class="flex items-center gap-2 pt-2 text-sm text-skin-muted">
-				<Icon name="fa6-solid:location-dot" />
-				{city}, {region}
+			<div class="flex gap-4 justify-between">
+				<div class="">
+					<h1 class="text-skin-hue">{name}</h1>
+					<h2 class="text-skin-hue font-bold !text-xl">{label}</h2>
+					<div class="flex items-center gap-2 pt-2 text-sm text-skin-muted">
+						<Icon name="fa6-solid:location-dot" />
+						{city}, {region}
+					</div>
+				</div>
+				<div class="hidden print:flex flex-col justify-start items-end text-xs text-skin-muted">
+					<div class="text-[8px] text-skin-muted/50">Last updated: {getLastUpdated()}</div>
+					<div class="flex gap-1">
+						<div>This <a class="underline text-blue-500 italic" href={cv.url}>CV</a> is also available as</div>
+						<div>a <a class="underline text-blue-500 italic" href={url}>website</a></div>
+						<div>or a <a class="underline text-blue-500 italic" href={mindMap.url}>mind map</a>.</div>
+					</div>
+				</div>
 			</div>
 			<div
 				class="hidden grid-cols-3 flex-wrap gap-x-2 whitespace-nowrap text-sm text-skin-muted print:grid"

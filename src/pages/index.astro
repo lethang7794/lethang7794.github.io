@@ -15,6 +15,7 @@ import KeyboardManager from "@/components/KeyboardManager.astro";
 import ThemeSwitch from "@/components/ThemeSwitch.astro";
 
 import { basics } from "@cv";
+import LastUpdated from "@/components/LastUpdated.astro";
 const { name, label } = basics;
 ---
 
@@ -28,6 +29,7 @@ const { name, label } = basics;
 			<Hero />
 			<About />
 			<ThemeSwitch />
+			<LastUpdated />
 		</div>
 		<div
 			class="space-y-8 md:col-span-4 lg:space-y-12 print:col-span-1 print:mt-5 print:grid print:grid-cols-1 print:gap-2 print:space-y-0"

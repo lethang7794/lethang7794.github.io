@@ -6,6 +6,7 @@
 		"phone": "+84 944 990 631",
 		"website": "https://lethang7794.github.io",
 		"url": "https://lethang7794.github.io",
+		"urlLastUpdated": "https://github.com/lethang7794/lethang7794.github.io/releases",
 		"picture-TODO": "",
 		"picture": "",
 		"image": "",
@@ -34,12 +35,12 @@
 			{
 				"network": "CV",
 				"username": "CV",
-				"url": "/CV.pdf"
+				"url": "https://lethang7794.github.io/CV.pdf"
 			},
 			{
 				"network": "Mindmap",
 				"username": "mindmap",
-				"url": "/mindmap"
+				"url": "https://lethang7794.github.io/mindmap"
 			}
 		]
 	},
@@ -358,13 +359,13 @@
 		},
 		{
 			"name": "Modern Minimal CV",
-			"description": "JSON -> Portfolio Website -> PDF + Mind map",
+			"description": "JSON → Portfolio Website → PDF + Mind map",
 			"highlights": [
 				"Seamlessly converts JSON data into a sleek portfolio website, generates a professional PDF CV and views the CV as a mind map."
 			],
 			"startDate": "2025-02",
 			"url": "https://lethang7794.github.io",
-			"github": "https://github.com/lethang7794/",
+			"github": "https://github.com/lethang7794/lethang7794.github.io",
 			"isActive": true,
 			"skills": ["Astro", "React", "Tailwind", "Playwright"],
 			"hidden": false
