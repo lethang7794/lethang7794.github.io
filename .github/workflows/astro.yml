@@ -151,25 +151,32 @@ jobs:
           retention-days: 30
 
   release:
+    environment:
+      name: release
+      url: ${{ steps.release-artifact.outputs.upload_url }}
     needs: [build, test]
     runs-on: ubuntu-latest
     name: Release
     if: ${{ github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/') }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          filter: tree:0
+
       - uses: pnpm/action-setup@v4
         name: Install pnpm
         with:
-          run_install: false
+          run_install: true
 
-      - name: Setup java (used by git-changelog-command-line )
-        uses: actions/setup-java@v2
-        with:
-          distribution: 'zulu'
-          java-version: 17
       - name: Get release context
         run: |
-          echo "NEXT_VERSION=$(pnpm run get-next-version)" >> $GITHUB_ENV
+          echo "NEXT_VERSION=$(pnpm exec git-cliff --bumped-version)" >> $GITHUB_ENV
+
+      - name: Setup Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
       - name: Bump version in code and bump tag
         run: |
@@ -196,13 +203,20 @@ jobs:
           SHA=${{ github.sha }}
           echo "SHA=${SHA:0:7}" >> $GITHUB_ENV
 
+      - name: Get current tag changelog
+        run: |
+          pnpm run --silent get-latest-tag-changelog-diff | tail -n +3 | head -n -2 > CURRENT_CHANGELOG.md
+
       - name: Release artifact
+        id: release-artifact
         uses: softprops/action-gh-release@v2
         with:
           name: "${{ startsWith(github.ref, 'refs/tags/') && github.ref_name || env.NEXT_VERSION }} — ${{ env.DATE }}"
           files: |
             github-pages.tar.gz
             *.pdf
+          make_latest: "{{ github.ref == 'refs/heads/main' && true }}"
+          body_path: CURRENT_CHANGELOG.md
 
       # Copy CV to astro build output
       - name: Upload artifact with PDF
