@@ -15,7 +15,7 @@
 		"release": "pnpm run --silent set-next-version && pnpm run gen-changelog && pnpm run commit-version-and-push-tag",
 		"get-next-version": "pnpm exec git-cliff --bumped-version",
 		"//set-next-version": "Bump version in package.json and create new git tag",
-		"set-next-version": "pnpm version $(pnpm run --silent set-next-version)",
+		"set-next-version": "pnpm version $(pnpm exec git-cliff --bumped-version)",
 		"prepend-changelog": "npm exec git-cliff --bump >> CHANGELOG.md",
 		"commit-version-and-push-tag": "git commit -a -m 'chore: bump version and update CHANGELOG.md [skip ci]' && && git push --follow-tags"
 	},
