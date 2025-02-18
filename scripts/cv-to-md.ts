@@ -87,8 +87,8 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 	}
 
 	md += `## **Contacts**\n\n`;
-	md += `- Email: ${resume.basics.email}\n`;
-	md += `- Phone: ${resume.basics.phone}\n`;
+	md += `- Email: [${resume.basics.email}](mailto:${resume.basics.email})\n`;
+	md += `- Phone: [${resume.basics.phone}](tel:${resume.basics.phone?.replaceAll(" ", "")})\n`;
 	md += `- Website: [${resume.basics.website}](${resume.basics.website})\n`;
 	md += `- Location: ${resume.basics.location.city}, ${resume.basics.location.region}\n\n`;
 

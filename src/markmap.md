@@ -18,8 +18,8 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 
 ## **Contacts**
 
-- Email: lethang7794@gmail.com
-- Phone: +84 944 990 631
+- Email: [lethang7794@gmail.com](mailto:lethang7794@gmail.com)
+- Phone: [+84 944 990 631](tel:+84944990631)
 - Website: [https://lethang7794.github.io](https://lethang7794.github.io)
 - Location: Ho Chi Minh City, Vietnam
 
