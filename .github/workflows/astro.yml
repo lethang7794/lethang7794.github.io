@@ -160,19 +160,16 @@ jobs:
       - uses: pnpm/action-setup@v4
         name: Install pnpm
         with:
-          run_install: false
+          run_install: true
 
-      - name: Setup java (used by git-changelog-command-line )
-        uses: actions/setup-java@v2
-        with:
-          distribution: 'zulu'
-          java-version: 17
       - name: Get release context
         run: |
-          echo "NEXT_VERSION=$(pnpm run get-next-version)" >> $GITHUB_ENV
+          echo "NEXT_VERSION=$(pnpm exec git-cliff --bumped-version)" >> $GITHUB_ENV
 
       - name: Bump version in code and bump tag
         run: |
+          echo NEXT_VERSION
+          echo ${{ env.NEXT_VERSION }}
           npm run release
 
       - uses: actions/download-artifact@v4
