@@ -159,6 +159,15 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 	resume.interests.forEach((interest) => {
 		md += `- ${interest.name}\n`;
 	});
+	md += "\n";
+
+	const time = process.env.TIME;
+	const now = new Date();
+	const nowStr = now.toUTCString();
+	if (time !== "") {
+		md += `## Last updated\n\n`;
+		md += `- ${time === undefined ? nowStr : time}\n\n`;
+	}
 
 	return md;
 }
