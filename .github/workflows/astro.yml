@@ -161,7 +161,7 @@ jobs:
     needs: [build, test]
     runs-on: ubuntu-latest
     name: Release
-    if: ${{ github.ref == 'refs/heads/main' || startsWith(env.TAG, 'm.') }}
+    if: github.ref == 'refs/heads/main' || startsWith(${{ env.TAG }}, 'm.')
     steps:
       # Use GitHub App Token so workflow can push to main which is protected via rule "- Changes must be made through a pull request."
       - name: Create GitHub App Token
