@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.26] - 2025-02-18
+
+### 🐛 Bug Fixes
+
+- Script commit message (#33)
+
+### ⚙️ Miscellaneous Tasks
+
+- Git cliff v4 (#32)
+
 ## [0.0.25] - 2025-02-18
 
 ### 🐛 Bug Fixes
@@ -16,6 +26,8 @@ All notable changes to this project will be documented in this file.
 - Trigger workflow (#23)
 - Setup pmpm in workflow (#25)
 - Migrate to git cliff (#29)
+- Bump version and update CHANGELOG.md [skip ci]
+- Remove tag trigger (#31)
 
 ## [0.0.24] - 2025-02-18
 
