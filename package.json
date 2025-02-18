@@ -1,17 +1,15 @@
 {
 	"name": "minimalist-portfolio-json",
 	"type": "module",
-	"version": "0.0.1",
+	"version": "0.0.25",
 	"scripts": {
-		"//": "ASTRO",
+		"//": "RELEASE",
 		"dev": "astro dev",
 		"start": "astro dev",
 		"build": "astro check && astro build",
 		"preview": "astro preview",
 		"astro": "astro",
-		"//": "BUILD",
 		"gen-markmap": "ts-node ./scripts/cv-to-md.ts",
-		"//": "RELEASE",
 		"release": "pnpm run set-version && pnpm run changelog",
 		"set-version": "pnpm version $(npx git-changelog-command-line --print-next-version)",
 		"changelog": "pnpx git-changelog-command-line -of CHANGELOG.md && git commit -a -m 'chore: bump version and update CHANGELOG.md [skip ci]' && git push --follow-tags"
