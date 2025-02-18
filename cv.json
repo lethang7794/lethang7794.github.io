@@ -34,12 +34,12 @@
 			{
 				"network": "CV",
 				"username": "CV",
-				"url": "/CV.pdf"
+				"url": "https://lethang7794.github.io/CV.pdf"
 			},
 			{
 				"network": "Mindmap",
 				"username": "mindmap",
-				"url": "/mindmap"
+				"url": "https://lethang7794.github.io/mindmap"
 			}
 		]
 	},
