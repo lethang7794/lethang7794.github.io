@@ -84,21 +84,23 @@ const certsInfo = certificates
 	</div>
 </footer>
 
-<Icon
-	name="mdi:apple-keyboard-command"
-	class="footer-button no-print z-30 h-8 w-8 p-2 text-black"
-/>
-
-<div
-	id="hotkeypad"
-	data-placeholder="Search - e.g. GitHub, AWS"
-	data-info={JSON.stringify([
-		...profilesInfo,
-		...projectsInfo,
-		moreProjects,
-		...certsInfo,
-	])}
->
+{/* Wrap in a div to not populate the markup */}
+<div>
+	<Icon
+		name="mdi:apple-keyboard-command"
+		class="footer-button no-print z-30 h-8 w-8 p-2 text-black"
+	/>
+	<div
+		id="hotkeypad"
+		data-placeholder="Search - e.g. GitHub, AWS"
+		data-info={JSON.stringify([
+			...profilesInfo,
+			...projectsInfo,
+			moreProjects,
+			...certsInfo,
+		])}
+	>
+	</div>
 </div>
 
 <script>
