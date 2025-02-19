@@ -349,6 +349,7 @@
 				"Radix UI",
 				"shadcn/ui",
 				"Open Graph",
+				"CI/CD",
 				"GitHub Actions",
 				"Vercel",
 				"Cloudflare Page"
@@ -467,6 +468,7 @@
 				"Lens",
 				"Docker",
 				"Terraform",
+				"CI/CD",
 				"GitLab CI/CD",
 				"GitHub Actions",
 				"Bash Script"
