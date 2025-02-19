@@ -18,6 +18,7 @@ const cv = profiles.filter((item) => item.network?.toLowerCase() === 'cv')?.[0]
 const SOCIAL_ICONS: SocialIcon = {
 	GitHub: "mdi:github",
 	LinkedIn: "mdi:linkedin",
+	Credly: "simple-icons:credly",
 	CV: "cv",
 	Mindmap: "mindmap",
 };
@@ -146,7 +147,7 @@ const SOCIAL_ICONS: SocialIcon = {
 				{
 					profiles.map(({ network, url }) => {
 						const iconName = SOCIAL_ICONS[network];
-						if (!Icon) {
+						if (!iconName) {
 							return null;
 						}
 
