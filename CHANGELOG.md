@@ -2,11 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.30](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.29...v0.0.30) - 2025-02-19
+
+### 🚜 Refactor
+
+- Wrap hotpadkey in a div to not populate the markup (#37)
+
 ## [0.0.29](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.28...v0.0.29) - 2025-02-18
 
 ### ⚙️ Miscellaneous Tasks
 
 - Link workflow to release (#36)
+- Bump to v0.0.29 [skip ci]
 
 ## [0.0.28](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.27...v0.0.28) - 2025-02-18
 
