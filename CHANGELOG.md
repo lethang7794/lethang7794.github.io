@@ -2,11 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.32](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.31...v0.0.32) - 2025-02-19
+
+### ⚙️ Miscellaneous Tasks
+
+- Improve release info (#39)
+
 ## [0.0.31](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.30...v0.0.31) - 2025-02-19
 
 ### ⚙️ Miscellaneous Tasks
 
 - Link release to workflow run (#38)
+- Bump to v0.0.31 [skip ci]
 
 ## [0.0.30](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.29...v0.0.30) - 2025-02-19
 
