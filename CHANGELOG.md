@@ -2,11 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.0.32](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.31...v0.0.32) - 2025-02-19
+## [0.0.33](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.32...v0.0.33) - 2025-02-19
+
+### ⚙️ Miscellaneous Tasks
+
+- Improve bump message, add first contributors (#40)
+
+
+
+* @lethang7794 made their first contribution in #40## [0.0.32](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.31...v0.0.32) - 2025-02-19
 
 ### ⚙️ Miscellaneous Tasks
 
 - Improve release info (#39)
+- Bump to v0.0.32 [skip ci]
+
 
 ## [0.0.31](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.30...v0.0.31) - 2025-02-19
 
@@ -14,6 +24,7 @@ All notable changes to this project will be documented in this file.
 
 - Link release to workflow run (#38)
 - Bump to v0.0.31 [skip ci]
+
 
 ## [0.0.30](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.29...v0.0.30) - 2025-02-19
 
@@ -25,6 +36,7 @@ All notable changes to this project will be documented in this file.
 
 - Bump to v0.0.30 [skip ci]
 
+
 ## [0.0.29](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.28...v0.0.29) - 2025-02-18
 
 ### ⚙️ Miscellaneous Tasks
@@ -32,12 +44,14 @@ All notable changes to this project will be documented in this file.
 - Link workflow to release (#36)
 - Bump to v0.0.29 [skip ci]
 
+
 ## [0.0.28](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.27...v0.0.28) - 2025-02-18
 
 ### ⚙️ Miscellaneous Tasks
 
 - Update commit message (#35)
 - Bump to v0.0.28 [skip ci]
+
 
 ## [0.0.27](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.26...v0.0.27) - 2025-02-18
 
@@ -49,6 +63,7 @@ All notable changes to this project will be documented in this file.
 
 - Bump to v0.0.27 and update CHANGELOG.md [skip ci]
 
+
 ## [0.0.26](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.25...v0.0.26) - 2025-02-18
 
 ### 🐛 Bug Fixes
@@ -59,6 +74,7 @@ All notable changes to this project will be documented in this file.
 
 - Git cliff v4 (#32)
 - Bump to v0.0.26 and update CHANGELOG.md [skip ci]
+
 
 ## [0.0.25](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.24...v0.0.25) - 2025-02-18
 
@@ -77,17 +93,21 @@ All notable changes to this project will be documented in this file.
 - Bump version and update CHANGELOG.md [skip ci]
 - Remove tag trigger (#31)
 
-## [0.0.24](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.23...v0.0.24) - 2025-02-18
+
+
+* @github-actions[bot] made their first contribution in ### [0.0.24](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.23...v0.0.24) - 2025-02-18
 
 ### 🚀 Features
 
 - Last update, link between markmap, cv, website (#21)
+
 
 ## [0.0.22](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.21...v0.0.22) - 2025-02-17
 
 ### 🚀 Features
 
 - View cv as markmap (#19)
+
 
 ## [0.0.20](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.19...v0.0.20) - 2025-02-17
 
@@ -99,11 +119,13 @@ All notable changes to this project will be documented in this file.
 
 - Add bullet for certs, projects (#16)
 
+
 ## [0.0.19](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.17...v0.0.19) - 2025-02-17
 
 ### 💼 Other
 
 - Defautl to dark mode to prevent flick if dark mode is on (#14)
+
 
 ## [0.0.17](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.16...v0.0.17) - 2025-02-17
 
@@ -111,11 +133,13 @@ All notable changes to this project will be documented in this file.
 
 - *(layout)* Add languages, interests, skill of projects, fit in 4 pages (#13)
 
+
 ## [0.0.16](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.14...v0.0.16) - 2025-02-16
 
 ### 💼 Other
 
 - Firefox print (#12)
+
 
 ## [0.0.14](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.13...v0.0.14) - 2025-02-15
 
@@ -123,11 +147,13 @@ All notable changes to this project will be documented in this file.
 
 - Color-text-secondary variable name (#9)
 
+
 ## [0.0.13](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.12...v0.0.13) - 2025-02-15
 
 ### 🚀 Features
 
 - Download CV (#7)
+
 
 ## [0.0.12](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.11...v0.0.12) - 2025-02-15
 
@@ -135,11 +161,13 @@ All notable changes to this project will be documented in this file.
 
 - *(pdf)* Print background and use page size from CSS (#5)
 
+
 ## [0.0.10](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.9...v0.0.10) - 2025-02-15
 
 ### ⚙️ Miscellaneous Tasks
 
 - Deploy for tags start with v
+
 
 ## [0.0.9](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.8...v0.0.9) - 2025-02-15
 
@@ -147,11 +175,13 @@ All notable changes to this project will be documented in this file.
 
 - Wrong cv path
 
+
 ## [0.0.8](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.7...v0.0.8) - 2025-02-15
 
 ### 🐛 Bug Fixes
 
 - Duplicate dir when extract artifact
+
 
 ## [eh](https://github.com/lethang7794/lethang7794.github.io/compare/...eh) - 2025-02-14
 
@@ -189,3 +219,27 @@ All notable changes to this project will be documented in this file.
 - Remove padding right to info
 
 
+
+* @lethang7794 made their first contribution in #
+* @Smilesharks made their first contribution in #
+* @midudev made their first contribution in #
+* @Snakeblack made their first contribution in #
+* @JavierLaguna made their first contribution in #
+* @RomanFama592 made their first contribution in #
+* @jesubohr made their first contribution in #
+* @johnsi15 made their first contribution in #
+* @FernandoArteaga made their first contribution in #
+* @andrespick made their first contribution in #
+* @evertzner made their first contribution in #
+* @lucasangelino made their first contribution in #
+* @YeiserBytes made their first contribution in #
+* @kizzandev made their first contribution in #
+* @salvaft made their first contribution in #
+* @DavidSepulvedaCh made their first contribution in #
+* @jrodolforojas made their first contribution in #
+* @geroxima made their first contribution in #
+* @rxtsel made their first contribution in #
+* @ArgeNH made their first contribution in #
+* @rchavarria77 made their first contribution in #
+* @OctaEDLP00 made their first contribution in #
+* @soker90 made their first contribution in #
