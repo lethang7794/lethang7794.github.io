@@ -179,14 +179,7 @@
 			"achievements": [
 				"Authored official onboarding documentation for setting up the backend environment, streamlining the process for new team members."
 			],
-			"skills": [
-				"Golang",
-				"TypeScript",
-				"React",
-				"Material UI",
-				"TanStack Table",
-				"gRPC"
-			]
+			"skills": ["Golang", "TypeScript", "React", "Material UI", "gRPC"]
 		}
 	],
 	"education": [
@@ -349,16 +342,12 @@
 			"skills": [
 				"Next.js",
 				"React",
+				"SSG",
 				"Tailwind CSS",
-				"Radix UI",
-				"shadcn/ui",
 				"Open Graph",
 				"GitHub Actions",
 				"Vercel",
-				"Cloudflare Page",
-				"CI/CD",
-				"SSG",
-				"SEO"
+				"Cloudflare Page"
 			]
 		},
 		{
@@ -371,7 +360,7 @@
 			"endDate": "2025-01",
 			"url": "https://luat.gtdb.app",
 			"isActive": true,
-			"skills": ["Next.js", "React", "MDX", "SSG"]
+			"skills": ["Next.js", "SSG", "MDX"]
 		},
 		{
 			"name": "Modern Minimal CV",
@@ -397,7 +386,7 @@
 			"url": "https://lethang7794.github.io/awssome/",
 			"isActive": true,
 			"github": "https://github.com/lethang7794/AWSsome",
-			"skills": ["Next.js", "React", "Tailwind", "SPA"]
+			"skills": ["Next.js", "React", "Tailwind"]
 		},
 		{
 			"name": "Cantrill AWS Courses",
@@ -410,7 +399,7 @@
 			"url": "https://cantrill-aws.vercel.app/",
 			"isActive": true,
 			"github": "https://github.com/lethang7794/cantrill-aws",
-			"skills": ["Next.js", "React", "Tailwind", "Radix UI", "Zod", "SPA"]
+			"skills": ["Next.js", "React", "Tailwind"]
 		}
 	],
 	"skills": [
@@ -433,13 +422,9 @@
 				"React",
 				"TypeScript",
 				"JavaScript",
-				"React Hook Form",
-				"TanStack Table",
 				"Material UI",
 				"Bootstrap",
 				"Ant Design",
-				"Radix UI",
-				"shadcn/ui",
 				"Tailwind CSS",
 				"Styled Components",
 				"CSS Modules",
@@ -448,8 +433,7 @@
 				"HTML",
 				"Micro Frontend",
 				"SPA",
-				"SSG",
-				"SEO"
+				"SSG"
 			]
 		},
 		{
@@ -475,7 +459,6 @@
 				"Lens",
 				"Docker",
 				"Terraform",
-				"CI/CD",
 				"GitLab CI/CD",
 				"GitHub Actions",
 				"Bash Script"
