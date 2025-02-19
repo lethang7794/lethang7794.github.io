@@ -2,15 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.0.33](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.32...v0.0.33) - 2025-02-19
+## [0.0.34](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.33...v0.0.34) - 2025-02-19
+
+### ⚙️ Miscellaneous Tasks
+
+- Cache deps (#41)
+
+
+
+* @lethang7794 made their first contribution in #41## [0.0.33](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.32...v0.0.33) - 2025-02-19
 
 ### ⚙️ Miscellaneous Tasks
 
 - Improve bump message, add first contributors (#40)
 
 
-
-* @lethang7794 made their first contribution in #40## [0.0.32](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.31...v0.0.32) - 2025-02-19
+## [0.0.32](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.31...v0.0.32) - 2025-02-19
 
 ### ⚙️ Miscellaneous Tasks
 
