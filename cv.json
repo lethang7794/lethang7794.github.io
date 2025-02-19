@@ -174,7 +174,14 @@
 			"achievements": [
 				"Authored official onboarding documentation for setting up the backend environment, streamlining the process for new team members."
 			],
-			"skills": ["Golang", "TypeScript", "React", "Material UI", "gRPC"]
+			"skills": [
+				"Golang",
+				"TypeScript",
+				"React",
+				"Material UI",
+				"TanStack Table",
+				"gRPC"
+			]
 		}
 	],
 	"education": [
@@ -339,6 +346,8 @@
 				"React",
 				"SSG",
 				"Tailwind CSS",
+				"Radix UI",
+				"shadcn/ui",
 				"Open Graph",
 				"GitHub Actions",
 				"Vercel",
@@ -394,7 +403,7 @@
 			"url": "https://cantrill-aws.vercel.app/",
 			"isActive": true,
 			"github": "https://github.com/lethang7794/cantrill-aws",
-			"skills": ["Next.js", "React", "Tailwind"]
+			"skills": ["Next.js", "React", "Tailwind", "Radix UI", "Zod"]
 		}
 	],
 	"skills": [
@@ -417,9 +426,13 @@
 				"React",
 				"TypeScript",
 				"JavaScript",
+				"React Hook Form",
+				"TanStack Table",
 				"Material UI",
 				"Bootstrap",
 				"Ant Design",
+				"Radix UI",
+				"shadcn/ui",
 				"Tailwind CSS",
 				"Styled Components",
 				"CSS Modules",
