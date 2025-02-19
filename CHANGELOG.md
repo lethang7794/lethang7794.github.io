@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.1](https://github.com/lethang7794/lethang7794.github.io/compare/v0.1.0...v0.1.1) - 2025-02-19
+
+### 🐛 Bug Fixes
+
+- Add skills (#46)
+
+
 ## [0.1.0](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.35...v0.1.0) - 2025-02-19
 
 ### 🚀 Features
