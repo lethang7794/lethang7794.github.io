@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.0.35](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.34...v0.0.35) - 2025-02-19
+
+### ⚙️ Miscellaneous Tasks
+
+- Remove wrong contributors (#42)
+
+
 ## [0.0.34](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.33...v0.0.34) - 2025-02-19
 
 ### ⚙️ Miscellaneous Tasks
@@ -9,8 +16,7 @@ All notable changes to this project will be documented in this file.
 - Cache deps (#41)
 
 
-
-* @lethang7794 made their first contribution in #41## [0.0.33](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.32...v0.0.33) - 2025-02-19
+## [0.0.33](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.32...v0.0.33) - 2025-02-19
 
 ### ⚙️ Miscellaneous Tasks
 
@@ -101,8 +107,7 @@ All notable changes to this project will be documented in this file.
 - Remove tag trigger (#31)
 
 
-
-* @github-actions[bot] made their first contribution in ### [0.0.24](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.23...v0.0.24) - 2025-02-18
+## [0.0.24](https://github.com/lethang7794/lethang7794.github.io/compare/v0.0.23...v0.0.24) - 2025-02-18
 
 ### 🚀 Features
 
@@ -227,26 +232,3 @@ All notable changes to this project will be documented in this file.
 
 
 
-* @lethang7794 made their first contribution in #
-* @Smilesharks made their first contribution in #
-* @midudev made their first contribution in #
-* @Snakeblack made their first contribution in #
-* @JavierLaguna made their first contribution in #
-* @RomanFama592 made their first contribution in #
-* @jesubohr made their first contribution in #
-* @johnsi15 made their first contribution in #
-* @FernandoArteaga made their first contribution in #
-* @andrespick made their first contribution in #
-* @evertzner made their first contribution in #
-* @lucasangelino made their first contribution in #
-* @YeiserBytes made their first contribution in #
-* @kizzandev made their first contribution in #
-* @salvaft made their first contribution in #
-* @DavidSepulvedaCh made their first contribution in #
-* @jrodolforojas made their first contribution in #
-* @geroxima made their first contribution in #
-* @rxtsel made their first contribution in #
-* @ArgeNH made their first contribution in #
-* @rchavarria77 made their first contribution in #
-* @OctaEDLP00 made their first contribution in #
-* @soker90 made their first contribution in #
