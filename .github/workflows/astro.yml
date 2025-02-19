@@ -221,6 +221,8 @@ jobs:
       - name: Get current tag changelog
         run: |
           pnpm run --silent get-latest-tag-changelog-diff > CURRENT_CHANGELOG.md
+          RUN_URL="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          echo "\n\n---\n\nReleased automatically at [${{ env.DATE_AND_TIME }}]($RUN_URL)" >> CURRENT_CHANGELOG.md
 
       - name: Release artifact
         id: release-artifact
