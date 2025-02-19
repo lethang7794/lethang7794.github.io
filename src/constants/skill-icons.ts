@@ -49,6 +49,7 @@ export const SKILLS_ICONS: Record<string, { iconName: string }> = {
 	Playwright: { iconName: "logos:playwright" },
 	"Protocol Buffers": { iconName: "protobuf" },
 	"React Hook Form": { iconName: "react-hook-form" },
+	"Radix UI": { iconName: "simple-icons:radixui" },
 	React: { iconName: "skill-icons:react-dark" },
 	Redux: { iconName: "skill-icons:redux" },
 	Regex: { iconName: "skill-icons:regex-dark" },
@@ -56,6 +57,7 @@ export const SKILLS_ICONS: Record<string, { iconName: string }> = {
 	SASS: { iconName: "skill-icons:sass" },
 	Selenium: { iconName: "skill-icons:selenium" },
 	Slack: { iconName: "logos:slack-icon" },
+	"shadcn/ui": { iconName: "simple-icons:shadcnui" },
 	"Styled Components": { iconName: "skill-icons:styledcomponents" },
 	"Tailwind CSS": { iconName: "skill-icons:tailwindcss-dark" },
 	Tailwind: { iconName: "skill-icons:tailwindcss-dark" },
@@ -63,4 +65,5 @@ export const SKILLS_ICONS: Record<string, { iconName: string }> = {
 	TypeScript: { iconName: "skill-icons:typescript" },
 	Vercel: { iconName: "skill-icons:vercel-dark" },
 	Windows: { iconName: "logos:microsoft-windows-icon" },
+	Zod: { iconName: "logos:zod" },
 };

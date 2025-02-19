@@ -344,15 +344,16 @@
 			"skills": [
 				"Next.js",
 				"React",
-				"SSG",
 				"Tailwind CSS",
 				"Radix UI",
 				"shadcn/ui",
 				"Open Graph",
-				"CI/CD",
 				"GitHub Actions",
 				"Vercel",
-				"Cloudflare Page"
+				"Cloudflare Page",
+				"CI/CD",
+				"SSG",
+				"SEO"
 			]
 		},
 		{
@@ -365,7 +366,7 @@
 			"endDate": "2025-01",
 			"url": "https://luat.gtdb.app",
 			"isActive": true,
-			"skills": ["Next.js", "SSG", "MDX"]
+			"skills": ["Next.js", "React", "MDX", "SSG"]
 		},
 		{
 			"name": "Modern Minimal CV",
@@ -391,7 +392,7 @@
 			"url": "https://lethang7794.github.io/awssome/",
 			"isActive": true,
 			"github": "https://github.com/lethang7794/AWSsome",
-			"skills": ["Next.js", "React", "Tailwind"]
+			"skills": ["Next.js", "React", "Tailwind", "SPA"]
 		},
 		{
 			"name": "Cantrill AWS Courses",
@@ -404,7 +405,7 @@
 			"url": "https://cantrill-aws.vercel.app/",
 			"isActive": true,
 			"github": "https://github.com/lethang7794/cantrill-aws",
-			"skills": ["Next.js", "React", "Tailwind", "Radix UI", "Zod"]
+			"skills": ["Next.js", "React", "Tailwind", "Radix UI", "Zod", "SPA"]
 		}
 	],
 	"skills": [
@@ -442,7 +443,8 @@
 				"HTML",
 				"Micro Frontend",
 				"SPA",
-				"SSG"
+				"SSG",
+				"SEO"
 			]
 		},
 		{
