@@ -22,7 +22,7 @@ const iconEmpty = "<svg width='24' height='24' viewBox='0 0 24 24'></svg>";
 const profilesInfo = profiles
 	.filter((item) => !["CV", "Mindmap"].includes(item.network))
 	.map(({ network, url }) => {
-		const icon = SOCIAL_ICONS[network];
+		const icon = SOCIAL_ICONS[network] || iconEmpty;
 		const firstLetter = network[0].toUpperCase();
 
 		return {
