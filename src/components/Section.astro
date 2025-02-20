@@ -6,7 +6,7 @@ const { className, title } = Astro.props;
 	{
 		title && (
 			<a href={"#" + title}>
-				<h3 class="border-skin-hue text-skin-hue sticky top-0 z-10 mb-2 flex w-full items-center gap-3 border-0 border-b-2 border-solid bg-transparent pb-2 pt-2 text-3xl backdrop-blur-lg print:static print:gap-1 print:pb-0 print:text-2xl">
+				<h3 class="sticky top-0 z-10 mb-2 flex w-full items-center gap-3 border-0 border-b-2 border-solid border-skin-hue bg-transparent pb-2 pt-2 text-3xl font-semibold text-skin-hue backdrop-blur-lg print:static print:gap-1 print:pb-0 print:text-2xl">
 					{/* <div class="absolute -left-8 top-0 h-full bg-skin-fill/30 pl-8 backdrop-blur-lg" /> */}
 					<div id={title}>{title}</div>
 				</h3>
