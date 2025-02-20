@@ -202,8 +202,8 @@ jobs:
         run: |
           echo git status
           git status
-          echo git log -n 10 --oneline --graph
-          git log -n 10 --oneline --graph
+          echo git log -n 20 --oneline --graph
+          git log -n 20 --oneline --graph
           BASE_REF=${{ github.head_ref }}
           MERGE_BASE=$(git merge-base $BASE_REF HEAD)
           echo echo $MERGE_BASE
@@ -212,7 +212,7 @@ jobs:
           git reset --soft $MERGE_BASE
           git status
           PULL_REQUEST_TITLE=${{ github.event.pull_request.title }}
-          git commit -m $PULL_REQUEST_TITLE
+          git commit -m "$PULL_REQUEST_TITLE"
 
       - uses: pnpm/action-setup@v4
         name: Install pnpm
