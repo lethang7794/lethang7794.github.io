@@ -179,6 +179,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Release
     if: github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch'
+    outputs:
+      is_new_version: ${{ steps.bump_version.outputs.is_new_version }}
     steps:
       # Use GitHub App Token so workflow can push to main which is protected via rule "- Changes must be made through a pull request."
       - name: Create GitHub App Token
@@ -221,12 +223,14 @@ jobs:
 
       - name: Bump version in code and bump tag for any code push in main (a PR merged, or any push)
         if: github.ref == 'refs/heads/main'
+        id: bump_version
         run: |
           CUR_VERSION="v"$(jq -r '.version' package.json)
           echo "\$CUR_VERSION: $CUR_VERSION"
 
           if [[ "$CUR_VERSION" != "$NEXT_VERSION" ]]; then
             echo "IS_NEW_VERSION=true" >> "$GITHUB_ENV"
+            echo "is_new_version=true" >> "$GITHUB_OUTPUT"
             pnpm run release
           fi
 
@@ -292,7 +296,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     needs: release
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' && ${{ needs.release.outputs.is_new_version }}
     runs-on: ubuntu-latest
     name: Deploy
     steps:
