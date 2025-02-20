@@ -213,10 +213,22 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+      - name: Get release context
+        id: next-version
+        run: |
+          echo "NEXT_VERSION=$(pnpm exec git-cliff --bumped-version)" >> $GITHUB_ENV
+          echo "version=$(pnpm exec git-cliff --bumped-version)" >> $GITHUB_OUTPUT
+
       - name: Bump version in code and bump tag for any code push in main (a PR merged, or any push)
         if: github.ref == 'refs/heads/main'
         run: |
-          npm run release
+          CUR_VERSION="v$(pnpm run get-next-version)"
+          echo "\$CUR_VERSION: $CUR_VERSION"
+
+          if [[$CUR_VERSION != $NEXT_VERSION]] {
+            echo "IS_NEW_VERSION=true" >> $GITHUB_ENV
+            pnpm run release
+          }
 
       - uses: actions/download-artifact@v4
         with:
@@ -251,6 +263,7 @@ jobs:
 
       - name: Release artifact
         id: release-artifact
+        if: ${{ env.IS_NEW_VERSION }}
         uses: softprops/action-gh-release@v2
         with:
           name: "${{ env.NEXT_VERSION || env.TAG }} — ${{ env.DATE }}"
