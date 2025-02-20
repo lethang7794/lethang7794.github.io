@@ -297,13 +297,13 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     needs: release
-    if: github.ref == 'refs/heads/main' && jobs.release.outputs.is_new_version
+    if: github.ref == 'refs/heads/main' && needs.release.outputs.is_new_version
     runs-on: ubuntu-latest
     name: Deploy
     steps:
       - name: Debug
         run: |
-          echo ${{ jobs.release.outputs.is_new_version }}
+          echo ${{ needs.release.outputs.is_new_version }}
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
