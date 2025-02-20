@@ -200,16 +200,14 @@ jobs:
           ref: ${{ github.head_ref }}
           path: ${{ github.head_ref }}
 
-      - name: Setup Git fake user for the commit
+      - name: Squash all the commits in the pull request' branch
         run: |
+          cd ${{ github.head_ref }}
+
           EMAIL=$(git log -n 1 --pretty=format:%ae)
           NAME=${git log -n 1 --pretty=format:%an}
           git config user.name  "$NAME"
           git config user.email "$EMAIL"
-
-      - name: Squash all the commits in the pull request' branch
-        run: |
-          cd ${{ github.head_ref }}
 
           echo git status
           git status
