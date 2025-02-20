@@ -187,6 +187,7 @@ jobs:
         with:
           app-id: ${{ vars.GH_APP_ID }}
           private-key: ${{ secrets.GH_APP_PRIVATE_KEY }}
+
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -197,9 +198,19 @@ jobs:
 
           # Checkout the PR's branch
           ref: ${{ github.head_ref }}
+          path: ${{ github.head_ref }}
 
-      - name: Squash all the commits in the pull request
+      - name: Setup Git fake user for the commit
         run: |
+          EMAIL=$(git log -n 1 --pretty=format:%ae)
+          NAME=${git log -n 1 --pretty=format:%an}
+          git config user.name  "$NAME"
+          git config user.email "$EMAIL"
+
+      - name: Squash all the commits in the pull request' branch
+        run: |
+          cd ${{ github.head_ref }}
+
           echo git status
           git status
           echo git log -n 20 --oneline --graph
@@ -235,7 +246,7 @@ jobs:
           echo "NEXT_VERSION=$(pnpm exec git-cliff --bumped-version)" >> $GITHUB_ENV
           echo "version=$(pnpm exec git-cliff --bumped-version)" >> $GITHUB_OUTPUT
 
-      - name: Setup Git
+      - name: Setup Git user for Bot
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
