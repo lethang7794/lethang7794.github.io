@@ -4,10 +4,25 @@ All notable changes to this project will be documented in this file.
 
 ## [0.2.3](https://github.com/lethang7794/lethang7794.github.io/compare/v0.2.2...v0.2.3) - 2025-02-20
 
+### 🐛 Bug Fixes
+
+- Test release patch (#57)
+- Dumb contexts (#59)
+
+### 💼 Other
+
+- Dumb env (#58)
+
 ### ⚙️ Miscellaneous Tasks
 
 - Squash commits in PR (#49)
 - Release and bump version (#50)
+- Release for new version (#51)
+- Fix syntax (#52)
+- Fix cur_vercion (#53)
+- Only deploy new version (#54)
+- Only deploy new version (#55)
+- Fix syntax for accessing job outputs (#56)
 
 
 ## [0.2.2](https://github.com/lethang7794/lethang7794.github.io/compare/v0.2.0...v0.2.2) - 2025-02-20
