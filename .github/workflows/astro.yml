@@ -275,7 +275,7 @@ jobs:
           files: |
             github-pages.tar.gz
             *.pdf
-          make_latest: "{{ github.ref == 'refs/heads/main' && true }}"
+          make_latest: "${{ github.ref == 'refs/heads/main' && true }}"
           body_path: CURRENT_CHANGELOG.md
           tag_name: ${{ env.NEXT_VERSION || env.TAG }}
 
@@ -301,9 +301,6 @@ jobs:
     runs-on: ubuntu-latest
     name: Deploy
     steps:
-      - name: Debug
-        run: |
-          echo ${{ needs.release.outputs.is_new_version }}
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
