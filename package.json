@@ -18,7 +18,7 @@
 		"get-current-tag-changelog-diff": "pnpm exec git-cliff --current --strip header",
 		"get-latest-tag-changelog-diff": "pnpm exec git-cliff --latest --strip header",
 		"gen-changelog": "pnpm exec git-cliff --bump > CHANGELOG.md",
-		"commit-version-and-push-tag": "NEXT_VERSION=$(pnpm exec git-cliff --bumped-version); git commit --amend -a -m \"chore(release): bump to $NEXT_VERSION [skip ci]\""
+		"commit-version-and-push-tag": "NEXT_VERSION=$(pnpm exec git-cliff --bumped-version); git commit --amend -a -m \"chore(release): bump to $NEXT_VERSION [skip ci]\" && git push --follow-tags"
 	},
 	"dependencies": {
 		"@astrojs/check": "0.4.1",
