@@ -248,7 +248,7 @@ jobs:
           # Get NEXT_VERSION and CHANGELOG.md in the branch with squash commit
           echo "NEXT_VERSION=$(pnpm exec git-cliff --bumped-version)" >> $GITHUB_ENV
           echo "version=$(pnpm exec git-cliff --bumped-version)" >> $GITHUB_OUTPUT
-          pnpm exec git-cliff --bump > ../CHANGELOG.md
+          pnpm exec git-cliff --bump > "${{ github.workspace }}/CHANGELOG.md"
 
       - name: Setup Git user for Bot
         run: |
