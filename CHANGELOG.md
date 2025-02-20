@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.4](https://github.com/lethang7794/lethang7794.github.io/compare/v0.2.3...v0.2.4) - 2025-02-20
+
+### 🐛 Bug Fixes
+
+- Markmap not load in some cases (#60)
+
+
 ## [0.2.3](https://github.com/lethang7794/lethang7794.github.io/compare/v0.2.2...v0.2.3) - 2025-02-20
 
 ### 🐛 Bug Fixes
