@@ -204,6 +204,10 @@ jobs:
           git status
           echo git log -n 20 --oneline --graph
           git log -n 20 --oneline --graph
+          echo git branch
+          git branch
+          echo git branch -r
+          git branch -r
           BASE_REF=${{ github.base_ref }}
           MERGE_BASE=$(git merge-base $BASE_REF HEAD)
           echo echo $MERGE_BASE
