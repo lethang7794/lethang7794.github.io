@@ -225,10 +225,10 @@ jobs:
           CUR_VERSION="v$(pnpm run get-next-version)"
           echo "\$CUR_VERSION: $CUR_VERSION"
 
-          if [[$CUR_VERSION != $NEXT_VERSION]] {
-            echo "IS_NEW_VERSION=true" >> $GITHUB_ENV
+          if [[ "$CUR_VERSION" != "$NEXT_VERSION" ]]; then
+            echo "IS_NEW_VERSION=true" >> "$GITHUB_ENV"
             pnpm run release
-          }
+          fi
 
       - uses: actions/download-artifact@v4
         with:
