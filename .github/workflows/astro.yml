@@ -188,6 +188,12 @@ jobs:
           app-id: ${{ vars.GH_APP_ID }}
           private-key: ${{ secrets.GH_APP_PRIVATE_KEY }}
 
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          filter: tree:0
+          token: ${{ steps.app-token.outputs.token }}
+
       - uses: pnpm/action-setup@v4
         name: Install pnpm
         with:
@@ -198,6 +204,9 @@ jobs:
         with:
           node-version: "23"
           cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install
 
       - uses: actions/checkout@v4
         with:
@@ -210,9 +219,6 @@ jobs:
           # Checkout the PR's branch
           ref: ${{ github.head_ref }}
           path: ${{ github.head_ref }}
-
-      - name: Install dependencies
-        run: pnpm install
 
       - name: Squash all the commits in the pull request' branch
         run: |
