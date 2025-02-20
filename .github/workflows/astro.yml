@@ -188,6 +188,17 @@ jobs:
           app-id: ${{ vars.GH_APP_ID }}
           private-key: ${{ secrets.GH_APP_PRIVATE_KEY }}
 
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          run_install: false
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "23"
+          cache: pnpm
+
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -199,6 +210,9 @@ jobs:
           # Checkout the PR's branch
           ref: ${{ github.head_ref }}
           path: ${{ github.head_ref }}
+
+      - name: Install dependencies
+        run: pnpm install
 
       - name: Squash all the commits in the pull request' branch
         run: |
@@ -221,23 +235,10 @@ jobs:
           git commit -m "$PULL_REQUEST_TITLE"
 
           git status
-          echo git log -n 20 --oneline --graph
+          git log -n 20 --oneline --graph
 
-          npm run get-next-version
-
-      - uses: pnpm/action-setup@v4
-        name: Install pnpm
-        with:
-          run_install: false
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "23"
-          cache: pnpm
-
-      - name: Install dependencies
-        run: pnpm install
+          pnpm install
+          pnpm run get-next-version
 
       - name: Get release context
         id: next-version
