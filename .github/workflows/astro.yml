@@ -260,9 +260,12 @@ jobs:
         run: |
           # Remove the other checkout
           rm -rf ${{ github.head_ref }}
-          npm version $NEXT_VERSION
+          # Commit the CHANGELOG
+          git commit -a -m "chore(release): gen CHANGELOG"
           git status
-          git commit --amend -a -m "chore(release): bump to $NEXT_VERSION [skip ci]"
+          npm version $NEXT_VERSION
+          git reset --soft HEAD~2
+          git commit -m "chore(release): bump to $NEXT_VERSION [skip ci]"
           git status
 
       # - uses: actions/download-artifact@v4
