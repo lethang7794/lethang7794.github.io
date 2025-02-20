@@ -27,6 +27,7 @@
 		"astro-font-picker": "^0.2.2",
 		"astro-icon": "^1.1.5",
 		"hotkeypad": "1.0.1",
+		"marked": "^15.0.7",
 		"prettier-plugin-tailwindcss": "^0.6.11",
 		"tailwindcss": "^3.4.4",
 		"typescript": "5.3.3"
