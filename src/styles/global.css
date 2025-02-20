@@ -1,3 +1,14 @@
+/* 
+	Global styles
+ */
+em {
+	font-style: italic;
+}
+b,
+strong {
+	font-weight: 600;
+}
+
 /* KeyboardManager */
 #hotkeypad [data-sections] {
 	height: 60vh;
