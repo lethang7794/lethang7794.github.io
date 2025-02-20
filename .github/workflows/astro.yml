@@ -220,7 +220,7 @@ jobs:
           ref: ${{ github.head_ref }}
           path: ${{ github.head_ref }}
 
-      - name: Squash all the commits in the pull request' branch
+      - name: Squash all the commits in the pull request' branch then get the next version
         run: |
           cd ${{ github.head_ref }}
 
@@ -244,13 +244,11 @@ jobs:
           git log -n 20 --oneline --graph
 
           pnpm install
-          pnpm run get-next-version
 
-      - name: Get release context
-        id: next-version
-        run: |
+          # Get NEXT_VERSION and CHANGELOG.md in the branch with squash commit
           echo "NEXT_VERSION=$(pnpm exec git-cliff --bumped-version)" >> $GITHUB_ENV
           echo "version=$(pnpm exec git-cliff --bumped-version)" >> $GITHUB_OUTPUT
+          pnpm exec git-cliff --bump > ../CHANGELOG.md
 
       - name: Setup Git user for Bot
         run: |
@@ -260,9 +258,10 @@ jobs:
       - name: Bump version in code and bump tag
         # if: github.ref == 'refs/heads/main'
         run: |
-          echo ${{ env.NEXT_VERSION }}
-          npm run get-next-version
-          npm run release
+          npm version $NEXT_VERSION
+          git status
+          git commit --amend -a -m "chore(release): bump to $NEXT_VERSION [skip ci]"
+          git status
 
       # - uses: actions/download-artifact@v4
       #   with:
