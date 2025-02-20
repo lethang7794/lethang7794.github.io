@@ -192,15 +192,21 @@ jobs:
           fetch-depth: 0
           filter: tree:0
           token: ${{ steps.app-token.outputs.token }}
-          # Checkout pull request HEAD commit instead of merge commit
-          ref: ${{ github.event.pull_request.head.sha }}
+          # # Checkout pull request HEAD commit instead of merge commit
+          # ref: ${{ github.event.pull_request.head.sha }}
+
+          # Checkout the PR's branch
+          ref: ${{ github.head_ref }}
 
       - name: Squash all the commits in the pull request
         run: |
+          echo git status
           git status
-          git log -n 5 --oneline
+          echo git log -n 10 --oneline --graph
+          git log -n 10 --oneline --graph
           DEFAULT_BRANCH=$(git config --get init.defaultBranch || echo main)
           MERGE_BASE=$(git merge-base $DEFAULT_BRANCH HEAD)
+          echo git reset --soft $MERGE_BASE
           git reset --soft $MERGE_BASE
           git status
           PULL_REQUEST_TITLE=${{ github.event.pull_request.title }}
