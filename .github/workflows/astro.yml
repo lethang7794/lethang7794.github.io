@@ -187,6 +187,7 @@ jobs:
         with:
           app-id: ${{ vars.GH_APP_ID }}
           private-key: ${{ secrets.GH_APP_PRIVATE_KEY }}
+
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -207,13 +208,49 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Get release context
-        id: next-version
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          filter: tree:0
+          token: ${{ steps.app-token.outputs.token }}
+          # # Checkout pull request HEAD commit instead of merge commit
+          # ref: ${{ github.event.pull_request.head.sha }}
+
+          # Checkout the PR's branch
+          ref: ${{ github.head_ref }}
+          path: ${{ github.head_ref }}
+
+      - name: Squash all the commits in the pull request' branch then get the next version
         run: |
+          cd ${{ github.head_ref }}
+
+          EMAIL=$(git log -n 1 --pretty=format:%ae)
+          NAME=$(git log -n 1 --pretty=format:%an)
+          git config user.name  "$NAME"
+          git config user.email "$EMAIL"
+
+          echo git status
+          git status
+          echo git log -n 20 --oneline --graph
+          git log -n 20 --oneline --graph
+
+          git checkout main
+          git merge --no-ff --no-commit ${{ github.head_ref }}
+
+          PULL_REQUEST_TITLE="${{ github.event.pull_request.title }}"
+          git commit -m "$PULL_REQUEST_TITLE"
+
+          git status
+          git log -n 20 --oneline --graph
+
+          pnpm install
+
+          # Get NEXT_VERSION and CHANGELOG.md in the branch with squash commit
           echo "NEXT_VERSION=$(pnpm exec git-cliff --bumped-version)" >> $GITHUB_ENV
           echo "version=$(pnpm exec git-cliff --bumped-version)" >> $GITHUB_OUTPUT
+          pnpm exec git-cliff --bump > "${{ github.workspace }}/CHANGELOG.md"
 
-      - name: Setup Git
+      - name: Setup Git user for Bot
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -221,7 +258,20 @@ jobs:
       - name: Bump version in code and bump tag
         if: github.ref == 'refs/heads/main'
         run: |
-          npm run release
+          # Remove the other checkout
+          rm -rf ${{ github.head_ref }}
+          # Commit the CHANGELOG
+          git commit -a -m "chore(release): gen CHANGELOG"
+          git status
+          npm version --git-tag-version false $NEXT_VERSION
+          git commit --amend -a -m "chore(release): bump to $NEXT_VERSION [skip ci]"
+          git tag $NEXT_VERSION
+
+          git log -n 5 --oneline --graph
+
+          git status
+
+          git push --follow-tags
 
       - uses: actions/download-artifact@v4
         with:
@@ -239,7 +289,7 @@ jobs:
 
       - name: Get context
         run: |
-          # UTC time - ISO 8601 
+          # UTC time - ISO 8601
           echo "DATE_AND_TIME=$(date -u +%Y-%m-%dT%H:%M:%S%Z)" >> $GITHUB_ENV
 
           # Date - ISO 8601
@@ -285,7 +335,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     needs: release
-    if: github.ref == 'refs/heads/main'
+    if: false && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     name: Deploy
     steps:
