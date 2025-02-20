@@ -2,7 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.2.1](https://github.com/lethang7794/lethang7794.github.io/compare/v0.2.0...v0.2.1) - 2025-02-20
+## [0.2.3](https://github.com/lethang7794/lethang7794.github.io/compare/v0.2.2...v0.2.3) - 2025-02-20
+
+### ⚙️ Miscellaneous Tasks
+
+- Squash commits in PR (#49)
+- Release and bump version (#50)
+
+
+## [0.2.2](https://github.com/lethang7794/lethang7794.github.io/compare/v0.2.0...v0.2.2) - 2025-02-20
 
 ### ⚙️ Miscellaneous Tasks
 
