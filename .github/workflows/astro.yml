@@ -222,7 +222,7 @@ jobs:
       - name: Bump version in code and bump tag for any code push in main (a PR merged, or any push)
         if: github.ref == 'refs/heads/main'
         run: |
-          CUR_VERSION="v$(pnpm run get-next-version)"
+          CUR_VERSION="v"$(jq -r '.version' package.json)
           echo "\$CUR_VERSION: $CUR_VERSION"
 
           if [[ "$CUR_VERSION" != "$NEXT_VERSION" ]]; then
