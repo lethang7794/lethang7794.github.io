@@ -15,12 +15,12 @@ const summaries = s_md || s;
 				{summaries ? (
 					summaries.map((item) => (
 						<li>
-							<Markdown of={item} />
+							<Markdown inline of={item} />
 						</li>
 					))
 				) : (
 					<li>
-						<Markdown of={summary} />
+						<Markdown inline of={summary} />
 					</li>
 				)}
 			</ul>

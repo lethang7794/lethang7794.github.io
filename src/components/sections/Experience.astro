@@ -120,7 +120,7 @@ import Markdown from "../Markdown.astro";
 													{Array.isArray(summary) ? (
 														summary.map((item) => ({ item }))
 													) : (
-														<li><Markdown of={summary} /></li>
+														<li><Markdown inline of={summary} /></li>
 													)}
 												</ul>
 											</div>
@@ -133,7 +133,7 @@ import Markdown from "../Markdown.astro";
                             <h4 class="text-skin-base print:dark:text-black/60">Responsibilities:</h4>
                             <ul class="text-skin-muted [&>li]:ml-4 flex list-disc flex-col gap-2">
                               {responsibilities.map(responsibility => (
-                                <li><Markdown of={responsibility} /></li>
+                                <li><Markdown inline of={responsibility} /></li>
                               ))}
                             </ul>
                           </div>
@@ -144,7 +144,7 @@ import Markdown from "../Markdown.astro";
                             <h4 class="text-skin-base print:dark:text-black/60">Achievements:</h4>
                             <ul class="text-skin-muted [&>li]:ml-4 flex list-disc flex-col gap-2">
                               {achievements.map(achievement => (
-                                <li><Markdown of={achievement} /></li>
+                                <li><Markdown inline of={achievement} /></li>
                               ))}
                             </ul>
                           </div>
