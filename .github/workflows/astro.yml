@@ -221,8 +221,9 @@ jobs:
           git commit -m "$PULL_REQUEST_TITLE"
 
           git status
+          echo git log -n 20 --oneline --graph
 
-          pnpm run get-next-version
+          npm run get-next-version
 
       - uses: pnpm/action-setup@v4
         name: Install pnpm
