@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3.0](https://github.com/lethang7794/lethang7794.github.io/compare/v0.2.4...v0.3.0) - 2025-02-20
+
+### 🚀 Features
+
+- Workflow input color for cv (#61)
+
+
 ## [0.2.4](https://github.com/lethang7794/lethang7794.github.io/compare/v0.2.3...v0.2.4) - 2025-02-20
 
 ### 🐛 Bug Fixes
