@@ -205,7 +205,7 @@ jobs:
           cd ${{ github.head_ref }}
 
           EMAIL=$(git log -n 1 --pretty=format:%ae)
-          NAME=${git log -n 1 --pretty=format:%an}
+          NAME=$(git log -n 1 --pretty=format:%an)
           git config user.name  "$NAME"
           git config user.email "$EMAIL"
 
