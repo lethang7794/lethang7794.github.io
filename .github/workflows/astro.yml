@@ -204,19 +204,16 @@ jobs:
           git status
           echo git log -n 20 --oneline --graph
           git log -n 20 --oneline --graph
-          echo git branch
-          git branch
-          echo git branch -r
-          git branch -r
-          BASE_REF=${{ github.base_ref }}
-          MERGE_BASE=$(git merge-base origin/$BASE_REF HEAD)
-          echo echo $MERGE_BASE
-          echo $MERGE_BASE
-          echo git reset --soft $MERGE_BASE
-          git reset --soft $MERGE_BASE
-          git status
+
+          git checkout main
+          git merge --no-ff --no-commit ${{ github.head_ref }}
+
           PULL_REQUEST_TITLE=${{ github.event.pull_request.title }}
           git commit -m "$PULL_REQUEST_TITLE"
+
+          git status
+
+          pnpm run get-next-version
 
       - uses: pnpm/action-setup@v4
         name: Install pnpm
