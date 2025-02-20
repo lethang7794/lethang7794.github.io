@@ -178,7 +178,7 @@ jobs:
     needs: [build, test]
     runs-on: ubuntu-latest
     name: Release
-    if: github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch'
+    # if: github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch'
     steps:
       # Use GitHub App Token so workflow can push to main which is protected via rule "- Changes must be made through a pull request."
       - name: Create GitHub App Token
@@ -221,63 +221,65 @@ jobs:
       - name: Bump version in code and bump tag
         if: github.ref == 'refs/heads/main'
         run: |
+          echo ${{ env.NEXT_VERSION }}
+          npm run get-next-version
           npm run release
 
-      - uses: actions/download-artifact@v4
-        with:
-          name: github-pages
-      - name: Display structure of downloaded files
-        run: ls -R
-      - name: Extract downloaded artifact and compress extracted files
-        run: |
-          mkdir dist
-          tar xf artifact.tar --directory=dist
-          tar czf github-pages.tar.gz --directory=dist .
-      - uses: actions/download-artifact@v4
-        with:
-          name: playwright-result
+      # - uses: actions/download-artifact@v4
+      #   with:
+      #     name: github-pages
+      # - name: Display structure of downloaded files
+      #   run: ls -R
+      # - name: Extract downloaded artifact and compress extracted files
+      #   run: |
+      #     mkdir dist
+      #     tar xf artifact.tar --directory=dist
+      #     tar czf github-pages.tar.gz --directory=dist .
+      # - uses: actions/download-artifact@v4
+      #   with:
+      #     name: playwright-result
 
-      - name: Get context
-        run: |
-          # UTC time - ISO 8601 
-          echo "DATE_AND_TIME=$(date -u +%Y-%m-%dT%H:%M:%S%Z)" >> $GITHUB_ENV
+      # - name: Get context
+      #   run: |
+      #     # UTC time - ISO 8601 
+      #     echo "DATE_AND_TIME=$(date -u +%Y-%m-%dT%H:%M:%S%Z)" >> $GITHUB_ENV
 
-          # Date - ISO 8601
-          echo "DATE=$(date +%Y-%m-%d)" >> $GITHUB_ENV
+      #     # Date - ISO 8601
+      #     echo "DATE=$(date +%Y-%m-%d)" >> $GITHUB_ENV
 
-          # First 7 characters of SHA, matched with GitHub
-          SHA=${{ github.sha }}
-          echo "SHA=${SHA:0:7}" >> $GITHUB_ENV
+      #     # First 7 characters of SHA, matched with GitHub
+      #     SHA=${{ github.sha }}
+      #     echo "SHA=${SHA:0:7}" >> $GITHUB_ENV
 
-      - name: Get current tag changelog
-        run: |
-          pnpm run --silent get-latest-tag-changelog-diff > CURRENT_CHANGELOG.md
-          RUN_URL="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-          printf "\n\n---\n\nReleased at [${{ env.DATE_AND_TIME }}]($RUN_URL)" >> CURRENT_CHANGELOG.md
+      # - name: Get current tag changelog
+      #   run: |
+      #     pnpm run --silent get-latest-tag-changelog-diff > CURRENT_CHANGELOG.md
+      #     RUN_URL="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+      #     printf "\n\n---\n\nReleased at [${{ env.DATE_AND_TIME }}]($RUN_URL)" >> CURRENT_CHANGELOG.md
 
-      - name: Release artifact
-        id: release-artifact
-        uses: softprops/action-gh-release@v2
-        with:
-          name: "${{ env.NEXT_VERSION || env.TAG }} — ${{ env.DATE }}"
-          files: |
-            github-pages.tar.gz
-            *.pdf
-          make_latest: "{{ github.ref == 'refs/heads/main' && true }}"
-          body_path: CURRENT_CHANGELOG.md
-          tag_name: ${{ env.NEXT_VERSION || env.TAG }}
+      # - name: Release artifact
+      #   id: release-artifact
+      #   uses: softprops/action-gh-release@v2
+      #   with:
+      #     name: "${{ env.NEXT_VERSION || env.TAG }} — ${{ env.DATE }}"
+      #     files: |
+      #       github-pages.tar.gz
+      #       *.pdf
+      #     make_latest: "{{ github.ref == 'refs/heads/main' && true }}"
+      #     body_path: CURRENT_CHANGELOG.md
+      #     tag_name: ${{ env.NEXT_VERSION || env.TAG }}
 
-      # Copy CV to astro build output
-      - name: Upload artifact with PDF
-        run: |
-          cp *.pdf dist/
+      # # Copy CV to astro build output
+      # - name: Upload artifact with PDF
+      #   run: |
+      #     cp *.pdf dist/
 
-      # Reupload github-pages
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ${{ env.BUILD_PATH }}/dist
-          name: github-pages-with-cv
+      # # Reupload github-pages
+      # - name: Upload artifact
+      #   uses: actions/upload-pages-artifact@v3
+      #   with:
+      #     path: ${{ env.BUILD_PATH }}/dist
+      #     name: github-pages-with-cv
 
   # Continuous Deployment: Any changes to main branch will be deploy
   deploy:
@@ -285,7 +287,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     needs: release
-    if: github.ref == 'refs/heads/main'
+    if: false && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     name: Deploy
     steps:
