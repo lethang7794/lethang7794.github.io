@@ -271,6 +271,8 @@ jobs:
 
           git status
 
+          git push --follow-tags
+
       # - uses: actions/download-artifact@v4
       #   with:
       #     name: github-pages
