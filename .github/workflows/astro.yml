@@ -217,7 +217,7 @@ jobs:
           git checkout main
           git merge --no-ff --no-commit ${{ github.head_ref }}
 
-          PULL_REQUEST_TITLE=${{ github.event.pull_request.title }}
+          PULL_REQUEST_TITLE="${{ github.event.pull_request.title }}"
           git commit -m "$PULL_REQUEST_TITLE"
 
           git status
