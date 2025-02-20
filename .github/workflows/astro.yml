@@ -258,6 +258,8 @@ jobs:
       - name: Bump version in code and bump tag
         # if: github.ref == 'refs/heads/main'
         run: |
+          # Remove the other checkout
+          rm -rf ${{ github.head_ref }}
           npm version $NEXT_VERSION
           git status
           git commit --amend -a -m "chore(release): bump to $NEXT_VERSION [skip ci]"
