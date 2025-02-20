@@ -1,0 +1,8 @@
+---
+import { marked } from "marked";
+
+const { of, inline } = Astro.props;
+const content = inline ? marked.parseInline(of) : marked.parse(of);
+---
+
+<Fragment set:html={content} />
