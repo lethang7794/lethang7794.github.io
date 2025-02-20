@@ -204,8 +204,10 @@ jobs:
           git status
           echo git log -n 10 --oneline --graph
           git log -n 10 --oneline --graph
-          DEFAULT_BRANCH=$(git config --get init.defaultBranch || echo main)
-          MERGE_BASE=$(git merge-base $DEFAULT_BRANCH HEAD)
+          BASE_REF=${{ github.head_ref }}
+          MERGE_BASE=$(git merge-base $BASE_REF HEAD)
+          echo echo $MERGE_BASE
+          echo $MERGE_BASE
           echo git reset --soft $MERGE_BASE
           git reset --soft $MERGE_BASE
           git status
