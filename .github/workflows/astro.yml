@@ -291,6 +291,9 @@ jobs:
           path: ${{ env.BUILD_PATH }}/dist
           name: github-pages-with-cv
 
+      - name: Dumb env
+        run: echo '${{ toJSON(env) }}'
+
   # Continuous Deployment: Any changes to main branch will be deploy
   deploy:
     environment:
