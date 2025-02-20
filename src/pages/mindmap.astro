@@ -26,24 +26,5 @@ markmap:
 </Layout>
 
 <script>
-	declare global {
-		interface Window {
-			markmap: any;
-		}
-	}
-	window.markmap = {
-		/** @type AutoLoaderOptions */
-		autoLoader: {
-			toolbar: true,
-			manual: true,
-		},
-	};
-</script>
-<script is:inline src="https://cdn.jsdelivr.net/npm/markmap-autoloader@latest"
-></script>
-
-<script is:inline>
-	setTimeout(() => {
-		markmap.autoLoader.renderAll();
-	}, 500);
+	import markmap from "markmap-autoloader";
 </script>
