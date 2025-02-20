@@ -221,6 +221,7 @@ jobs:
       - name: Bump version in code and bump tag
         # if: github.ref == 'refs/heads/main'
         run: |
+          git log -n 5 --oneline
           echo ${{ env.NEXT_VERSION }}
           npm run get-next-version
           npm run release
@@ -241,7 +242,7 @@ jobs:
 
       # - name: Get context
       #   run: |
-      #     # UTC time - ISO 8601 
+      #     # UTC time - ISO 8601
       #     echo "DATE_AND_TIME=$(date -u +%Y-%m-%dT%H:%M:%S%Z)" >> $GITHUB_ENV
 
       #     # Date - ISO 8601
