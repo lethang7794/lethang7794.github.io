@@ -11,9 +11,13 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: "The tag to be released. For example: m-google"
+        description: "The tag to be released."
         type: string
         required: true
+      data-theme:
+        description: "The data theme to be used. For example: default, red, blue, green"
+        type: string
+        required: false
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -31,6 +35,7 @@ env:
   BUILD_PATH: "." # default value when not using subfolders
   # BUILD_PATH: subfolder
   TAG: ${{ inputs.tag }}
+  THEME: ${{ inputs.data-theme }}
 
 jobs:
   build:
@@ -155,6 +160,11 @@ jobs:
       - name: Install Playwright Browsers
         run: pnpm exec playwright install --with-deps chromium
         if: steps.playwright-cache.outputs.cache-hit != 'true'
+
+      - name: Setup theme
+        if: inputs.data-theme != ''
+        run: |
+          sed -i 's|http://localhost:4321|http://localhost:4321/?color=${{ env.THEME }}|g' e2e/generate-pdf.spec.ts
 
       - name: Run Playwright tests
         run: pnpm exec playwright test
