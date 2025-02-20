@@ -192,6 +192,19 @@ jobs:
           fetch-depth: 0
           filter: tree:0
           token: ${{ steps.app-token.outputs.token }}
+          # Checkout pull request HEAD commit instead of merge commit
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Squash all the commits in the pull request
+        run: |
+          git status
+          git log -n 5 --oneline
+          DEFAULT_BRANCH=$(git config --get init.defaultBranch || echo main)
+          MERGE_BASE=$(git merge-base $DEFAULT_BRANCH HEAD)
+          git reset --soft $MERGE_BASE
+          git status
+          PULL_REQUEST_TITLE=${{ github.event.pull_request.title }}
+          git commit -m $PULL_REQUEST_TITLE
 
       - uses: pnpm/action-setup@v4
         name: Install pnpm
@@ -221,7 +234,6 @@ jobs:
       - name: Bump version in code and bump tag
         # if: github.ref == 'refs/heads/main'
         run: |
-          git log -n 5 --oneline
           echo ${{ env.NEXT_VERSION }}
           npm run get-next-version
           npm run release
