@@ -4,25 +4,17 @@
 		return urlParams.get(param);
 	}
 
-	function updateThemeColorFromQuery() {
-		const theme = getQueryParam("color");
-		if (theme) {
-			document.body.setAttribute("data-theme", theme);
-		}
-	}
-
-	function updateThemeFromQuery() {
-		const theme = getQueryParam("theme");
-		if (theme) {
-			localStorage.setItem("theme", theme);
-			document.documentElement.classList.remove("light", "dark");
-			document.documentElement.classList.add(theme);
-		}
+	function updateDataTheme(dataTheme: string) {
+		document.body.setAttribute("data-theme", dataTheme);
+		localStorage.setItem("data-theme", dataTheme);
 	}
 
 	// Run on page load
 	window.addEventListener("DOMContentLoaded", () => {
-		updateThemeColorFromQuery();
-		updateThemeFromQuery();
+		const dataThemeQuery = getQueryParam("color");
+		const dataTheme = dataThemeQuery || localStorage.getItem("data-theme");
+		if (dataTheme) {
+			updateDataTheme(dataTheme);
+		}
 	});
 </script>

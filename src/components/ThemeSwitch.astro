@@ -48,8 +48,17 @@ import { Icon } from "astro-icon/components";
 </div>
 
 <script>
+	function getQueryParam(param: string) {
+		const urlParams = new URLSearchParams(window.location.search);
+		return urlParams.get(param);
+	}
+
 	const select = document.getElementById("themeSwitch") as HTMLSelectElement;
-	const theme = localStorage.getItem("theme");
+	const themeQuery = getQueryParam("theme");
+	const theme = themeQuery || localStorage.getItem("theme");
+	if (themeQuery) {
+		saveTheme(themeQuery);
+	}
 	const getSystemTheme = () =>
 		window.matchMedia("(prefers-color-scheme: dark)").matches
 			? "dark"
