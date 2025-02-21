@@ -167,7 +167,7 @@ jobs:
         if: steps.playwright-cache.outputs.cache-hit != 'true'
 
       - name: "Setup customize data: color, url"
-        if: inputs.data-theme != ''
+        if: inputs.color != ''
         run: |
           sed -i 's|http://localhost:4321|http://localhost:4321/?color=${{ env.COLOR }}|g' e2e/generate-pdf.spec.ts
           mv cv.json cv-origin.json
@@ -191,7 +191,7 @@ jobs:
   release:
     environment:
       name: release
-      url: https://github.com/${{ github.repository }}/releases/tag/${{ steps.next-version.outputs.version }}
+      url: https://github.com/${{ github.repository }}/releases/tag/${{ inputs.tag && inputs.tag || steps.next-version.outputs.version }}
     needs: [build, test]
     runs-on: ubuntu-latest
     name: Release
