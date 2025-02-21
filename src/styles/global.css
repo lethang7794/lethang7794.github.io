@@ -46,6 +46,7 @@ strong {
 	height: 1.5rem;
 }
 
+#hotkeypad [data-section="socials"] > ul > li > div:nth-child(3),
 #hotkeypad [data-section="projects"] > ul > li > div:nth-child(3),
 #hotkeypad [data-section="certificates"] > ul > li > div:nth-child(3) {
 	display: none;
