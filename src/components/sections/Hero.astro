@@ -7,13 +7,14 @@ import Phone from "@/icons/Phone.astro";
 import type { SocialIcon } from "@/types";
 import { getLastUpdated } from "@/libs/get-last-updated";
 
-const { name, label, image, location, profiles, phone, email, website, url } =
+const { name, label, image, location, profiles, phone, email, website: websiteUrl,  url } =
 	basics;
 const { city, region } = location;
-const printProfiles = profiles.filter((item) => !["CV", "Mindmap"].includes(item.network))
+const printProfiles = profiles.filter((item) => !["CV", "Mindmap", 'Website'].includes(item.network))
 
 const mindMap = profiles.filter((item) => item.network?.toLowerCase() === 'mindmap')?.[0]
 const cv = profiles.filter((item) => item.network?.toLowerCase() === 'cv')?.[0]
+const website = profiles.filter((item) => item.network?.toLowerCase() === 'website')?.[0]
 
 const SOCIAL_ICONS: SocialIcon = {
 	GitHub: "mdi:github",
@@ -79,12 +80,12 @@ const SOCIAL_ICONS: SocialIcon = {
 					website && (
 						<a
 							class="flex items-center gap-2 pt-2 text-sm text-skin-muted"
-							href={`${website}`}
-							title={`Visit ${name}'s website at ${website}`}
+							href={`${websiteUrl}`}
+							title={`Visit ${name}'s website at ${websiteUrl}`}
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<Icon name="www" /> {website.replace("https://", "")}
+							<Icon name="www" /> {website.username}
 						</a>
 					)
 				}
