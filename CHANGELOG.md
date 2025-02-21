@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.9](https://github.com/lethang7794/lethang7794.github.io/compare/v0.5.8...v0.5.9) - 2025-02-21
+
+### 🐛 Bug Fixes
+
+- Website url in pdf (#74)
+
+
 ## [0.5.8](https://github.com/lethang7794/lethang7794.github.io/compare/v0.5.7...v0.5.8) - 2025-02-21
 
 ### 🐛 Bug Fixes
