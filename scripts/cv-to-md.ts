@@ -94,7 +94,7 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 
 	md += `## **Profiles**\n\n`;
 	resume.basics.profiles
-		.filter((item) => !["cv", "mindmap"].includes(item.network.toLowerCase()))
+		.filter((item) => !["cv", "mindmap", 'website'].includes(item.network.toLowerCase()))
 		.forEach((profile) => {
 			md += `- ${profile.network}: [${profile.username}](${profile.url})\n`;
 		});
