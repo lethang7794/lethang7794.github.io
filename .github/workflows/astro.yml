@@ -278,7 +278,7 @@ jobs:
 
       - name: Release artifact
         id: release-artifact
-        if: ${{ env.IS_NEW_VERSION }}
+        if: ${{ env.IS_NEW_VERSION || env.TAG }}
         uses: softprops/action-gh-release@v2
         with:
           name: "${{ env.NEXT_VERSION || env.TAG }} — ${{ env.DATE }}"
