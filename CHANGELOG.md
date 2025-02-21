@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.11](https://github.com/lethang7794/lethang7794.github.io/compare/v0.5.10...v0.5.11) - 2025-02-21
+
+### 🚜 Refactor
+
+- Group css vars by data-theme (#76)
+
+
 ## [0.5.10](https://github.com/lethang7794/lethang7794.github.io/compare/v0.5.9...v0.5.10) - 2025-02-21
 
 ### 🐛 Bug Fixes
