@@ -69,13 +69,13 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 	if (resume.basics.website || cv || mindmap) {
 		md += `## **Also available as**\n\n`;
 		if (resume.basics.website) {
-			md += `- Website: [${resume.basics.website}](${resume.basics.website + "/?utm_medium=mindmap"})\n`;
+			md += `- Website: [${resume.basics.website}](${resume.basics.website})\n`;
 		}
 		if (cv) {
-			md += `- PDF: [${cv.url}](${cv.url + "/?utm_medium=mindmap"})\n`;
+			md += `- PDF: [${cv.url}](${cv.url})\n`;
 		}
 		if (mindmap) {
-			md += `- Mind map: [${mindmap.url}](${mindmap.url + "/?utm_medium=mindmap"}) (You're viewing this)\n`;
+			md += `- Mind map: [${mindmap.url}](${mindmap.url}) (You're viewing this)\n`;
 		}
 		md += `\n`;
 
