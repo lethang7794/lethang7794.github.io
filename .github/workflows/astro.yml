@@ -278,16 +278,16 @@ jobs:
 
       - name: Release artifact
         id: release-artifact
-        if: ${{ env.IS_NEW_VERSION || env.TAG }}
+        if: ${{ env.TAG || env.IS_NEW_VERSION }}
         uses: softprops/action-gh-release@v2
         with:
-          name: "${{ env.NEXT_VERSION || env.TAG }} — ${{ env.DATE }}"
+          name: "${{ env.TAG || env.NEXT_VERSION }} — ${{ env.DATE }}"
           files: |
             github-pages.tar.gz
             *.pdf
           make_latest: "${{ github.ref == 'refs/heads/main' && true }}"
           body_path: CURRENT_CHANGELOG.md
-          tag_name: ${{ env.NEXT_VERSION || env.TAG }}
+          tag_name: ${{ env.TAG || env.NEXT_VERSION }}
 
       # Copy CV to astro build output
       - name: Upload artifact with PDF
