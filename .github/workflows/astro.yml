@@ -161,10 +161,12 @@ jobs:
         run: pnpm exec playwright install --with-deps chromium
         if: steps.playwright-cache.outputs.cache-hit != 'true'
 
-      - name: Setup theme
+      - name: "Setup customize data: color, url"
         if: inputs.data-theme != ''
         run: |
           sed -i 's|http://localhost:4321|http://localhost:4321/?color=${{ env.THEME }}|g' e2e/generate-pdf.spec.ts
+          mv cv.json cv-origin.json
+          jq '.basics.url += "/?color=${{ env.THEME }}"' cv-origin.json > cv.json
 
       - name: Run Playwright tests
         run: pnpm exec playwright test
