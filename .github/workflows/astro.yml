@@ -171,7 +171,7 @@ jobs:
         run: |
           sed -i 's|http://localhost:4321|http://localhost:4321/?color=${{ env.COLOR }}|g' e2e/generate-pdf.spec.ts
           mv cv.json cv-origin.json
-          jq '.basics.url += "/?color=${{ env.COLOR }}&utm_medium=pdf&utm_id=${{ env.TRACKING }}" | .basics.profiles |= map(.url += "?utm_source=pdf&utm_id=${{ env.TRACKING }}")' cv-origin.json > cv.json
+          jq '.basics.url += "/?color=${{ env.COLOR }}&utm_medium=pdf&utm_id=${{ env.TRACKING }}" | .basics.website += "/?color=${{ env.COLOR }}&utm_medium=pdf&utm_id=${{ env.TRACKING }}" | .basics.profiles |= map(.url += "?utm_source=pdf&utm_id=${{ env.TRACKING }}")' cv-origin.json > cv.json
 
       - name: Run Playwright tests
         run: pnpm exec playwright test
@@ -285,8 +285,8 @@ jobs:
 
       - name: Add version as suffix to artifacts
         run: |
-          mv CV.pdf "CV-${{ env.TAG || env.NEXT_VERSION }}-${{ env.DATE }}.pdf"
-          mv github-pages.tar.gz "github-pages-${{ env.TAG || env.NEXT_VERSION }}-${{ env.DATE }}.tar.gz"
+          cp CV.pdf "CV-${{ env.TAG || env.NEXT_VERSION }}-${{ env.DATE }}.pdf"
+          cp github-pages.tar.gz "github-pages-${{ env.TAG || env.NEXT_VERSION }}-${{ env.DATE }}.tar.gz"
 
       - name: Release artifact
         id: release-artifact
@@ -295,8 +295,8 @@ jobs:
         with:
           name: "${{ env.TAG || env.NEXT_VERSION }} — ${{ env.DATE }}"
           files: |
-            github-pages*.tar.gz
-            CV*.pdf
+            github-pages-*.tar.gz
+            CV-*.pdf
           make_latest: "${{ github.ref == 'refs/heads/main' && !env.TAG }}"
           body_path: CURRENT_CHANGELOG.md
           tag_name: ${{ env.TAG || env.NEXT_VERSION }}
@@ -304,7 +304,7 @@ jobs:
       # Copy CV to astro build output
       - name: Upload artifact with PDF
         run: |
-          cp *.pdf dist/
+          cp CV.pdf dist/
 
       # Reupload github-pages
       - name: Upload artifact
