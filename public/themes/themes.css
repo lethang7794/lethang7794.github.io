@@ -2,181 +2,139 @@
 @layer base {
 	:root {
 		--color-brand: 24.6, 95%, 53.1%;
-
 		--color-main: var(--color-brand);
 		--color-fill: 0, 0%, 96.1%;
 		--color-muted: 0, 0%, 78.4%;
-
 		--color-bg: var(--color-brand);
 		--color-bg-inverse: 10, 21.4%, 94.5%;
-
 		--color-text: 0, 0%, 20%;
 		--color-text-secondary: 0, 0%, 47.1%;
 		--color-text-inverse: 0, 0%, 100%;
-
-		[data-theme="blue"] {
-			--color-brand: 217.2, 91.2%, 59.8%;
-
-			--color-main: var(--color-brand);
-			--color-fill: 212.7, 26.8%, 83.9%;
-			--color-muted: 215, 20.2%, 65.1%;
-
-			--color-bg: var(--color-brand);
-			--color-bg-inverse: 214.3, 31.8%, 91.4%;
-
-			--color-text: 222.2, 47.4%, 11.2%;
-			--color-text-secondary: 215.4, 16.3%, 46.9%;
-			--color-text-inverse: 0, 0%, 94.1%;
-		}
-
-		[data-theme="red"] {
-			--color-brand: 0, 84.2%, 60.2%;
-
-			--color-main: var(--color-brand);
-			--color-fill: 20, 5.9%, 90%;
-			--color-muted: 0, 0%, 86.3%;
-
-			--color-bg: var(--color-brand);
-			--color-bg-inverse: 0, 0%, 96.1%;
-
-			--color-text: 24, 9.8%, 10%;
-			--color-text-secondary: 0, 0%, 39.2%;
-			--color-text-inverse: 0, 0%, 96.1%;
-		}
-
-		[data-theme="green"] {
-			--color-brand: 84.8, 85.2%, 34.5%;
-
-			--color-main: var(--color-brand);
-			--color-fill: 79.6, 89.1%, 89.2%;
-			--color-muted: 85.5, 51%, 72%;
-
-			--color-bg: var(--color-brand);
-			--color-bg-inverse: 83.2, 60.8%, 80%;
-
-			--color-text: 0, 0%, 15.7%;
-			--color-text-secondary: 0, 0%, 43.1%;
-			--color-text-inverse: 0, 0%, 90.2%;
-		}
-
-		[data-theme="cyber"] {
-			--color-brand: 353.8, 84.3%, 50.2%;
-
-			--color-main: var(--color-brand);
-			--color-fill: 60.9, 100%, 62.5%;
-			--color-muted: 0, 0%, 19.6%;
-
-			--color-bg: var(--color-brand);
-			--color-bg-inverse: 57.5, 95.3%, 50%;
-
-			--color-text: 0, 0%, 5.9%;
-			--color-text-secondary: 56.1, 93.3%, 29.2%;
-			--color-text-inverse: 0, 0%, 94.1%;
-		}
-
-		[data-theme="eh"] {
-			--color-brand: 267.66666, 72%, 49%;
-
-			--color-main: var(--color-brand);
-			--color-fill: 0, 0%, 100%;
-			--color-muted: 0, 0%, 78.4%;
-
-			--color-bg: 267.66666, 72%, 70%;
-			--color-bg-inverse: 265.65515, 88%, 68%;
-
-			--color-text: 0, 0%, 0%;
-			--color-text-secondary: 0, 0%, 47.1%;
-			--color-text-inverse: 0, 0%, 100%;
-		}
 	}
-
 	:root.dark {
 		--color-brand: 18.5, 91.6%, 46.5%;
-
 		--color-main: var(--color-brand);
 		--color-fill: 0, 0%, 7.1%;
 		--color-muted: 0, 0%, 14.1%;
-
 		--color-bg: var(--color-brand);
 		--color-bg-inverse: 0, 0%, 10.2%;
-
 		--color-text: 0, 0%, 85%;
 		--color-text-secondary: 0, 0%, 58.8%;
 		--color-text-inverse: 0, 0%, 100%;
+	}
 
-		[data-theme="blue"] {
-			--color-brand: 217.2, 91.2%, 59.8%;
+	:root [data-theme="blue"] {
+		--color-brand: 217.2, 91.2%, 59.8%;
+		--color-main: var(--color-brand);
+		--color-fill: 212.7, 26.8%, 83.9%;
+		--color-muted: 215, 20.2%, 65.1%;
+		--color-bg: var(--color-brand);
+		--color-bg-inverse: 214.3, 31.8%, 91.4%;
+		--color-text: 222.2, 47.4%, 11.2%;
+		--color-text-secondary: 215.4, 16.3%, 46.9%;
+		--color-text-inverse: 0, 0%, 94.1%;
+	}
+	:root.dark [data-theme="blue"] {
+		--color-brand: 217.2, 91.2%, 59.8%;
+		--color-main: var(--color-brand);
+		--color-fill: 228.6, 84%, 4.9%;
+		--color-muted: 215.3, 25%, 26.7%;
+		--color-bg: var(--color-brand);
+		--color-bg-inverse: 217.2, 32.6%, 17.5%;
+		--color-text: 210, 40%, 98%;
+		--color-text-secondary: 215, 20.2%, 65.1%;
+		--color-text-inverse: 0, 0%, 94.1%;
+	}
 
-			--color-main: var(--color-brand);
-			--color-fill: 228.6, 84%, 4.9%;
-			--color-muted: 215.3, 25%, 26.7%;
+	:root [data-theme="red"] {
+		--color-brand: 0, 84.2%, 60.2%;
+		--color-main: var(--color-brand);
+		--color-fill: 20, 5.9%, 90%;
+		--color-muted: 0, 0%, 86.3%;
+		--color-bg: var(--color-brand);
+		--color-bg-inverse: 0, 0%, 96.1%;
+		--color-text: 24, 9.8%, 10%;
+		--color-text-secondary: 0, 0%, 39.2%;
+		--color-text-inverse: 0, 0%, 96.1%;
+	}
+	:root.dark [data-theme="red"] {
+		--color-brand: 0, 90.6%, 70.8%;
+		--color-main: var(--color-brand);
+		--color-fill: 24, 9.8%, 10%;
+		--color-muted: 0, 0%, 17.6%;
+		--color-bg: var(--color-brand);
+		--color-bg-inverse: 25, 5.3%, 44.7%;
+		--color-text: 20, 5.9%, 90%;
+		--color-text-secondary: 24, 5.4%, 63.9%;
+		--color-text-inverse: 0, 0%, 96.1%;
+	}
 
-			--color-bg: var(--color-brand);
-			--color-bg-inverse: 217.2, 32.6%, 17.5%;
+	:root [data-theme="green"] {
+		--color-brand: 84.8, 85.2%, 34.5%;
+		--color-main: var(--color-brand);
+		--color-fill: 79.6, 89.1%, 89.2%;
+		--color-muted: 85.5, 51%, 72%;
+		--color-bg: var(--color-brand);
+		--color-bg-inverse: 83.2, 60.8%, 80%;
+		--color-text: 0, 0%, 15.7%;
+		--color-text-secondary: 0, 0%, 43.1%;
+		--color-text-inverse: 0, 0%, 90.2%;
+	}
+	:root.dark [data-theme="green"] {
+		--color-brand: 83.7, 80.5%, 44.3%;
+		--color-main: var(--color-brand);
+		--color-fill: 120, 33.3%, 5.9%;
+		--color-muted: 120, 8.5%, 23.1%;
+		--color-bg: var(--color-brand);
+		--color-bg-inverse: 120, 12.8%, 15.3%;
+		--color-text: 0, 0%, 90.2%;
+		--color-text-secondary: 120, 8.8%, 44.7%;
+		--color-text-inverse: 0, 0%, 90.2%;
+	}
 
-			--color-text: 210, 40%, 98%;
-			--color-text-secondary: 215, 20.2%, 65.1%;
-			--color-text-inverse: 0, 0%, 94.1%;
-		}
+	:root [data-theme="cyber"] {
+		--color-brand: 353.8, 84.3%, 50.2%;
+		--color-main: var(--color-brand);
+		--color-fill: 60.9, 100%, 62.5%;
+		--color-muted: 0, 0%, 19.6%;
+		--color-bg: var(--color-brand);
+		--color-bg-inverse: 57.5, 95.3%, 50%;
+		--color-text: 0, 0%, 5.9%;
+		--color-text-secondary: 56.1, 93.3%, 29.2%;
+		--color-text-inverse: 0, 0%, 94.1%;
+	}
+	:root.dark [data-theme="cyber"] {
+		--color-brand: 185.2, 95.3%, 66.9%;
+		--color-main: var(--color-brand);
+		--color-fill: 0, 0%, 5.9%;
+		--color-muted: 0, 0%, 19.6%;
+		--color-bg: var(--color-brand);
+		--color-bg-inverse: 184.9, 55%, 21.8%;
+		--color-text: 60.9, 100%, 62.5%;
+		--color-text-secondary: 0, 0%, 49%;
+		--color-text-inverse: 0, 0%, 94.1%;
+	}
 
-		[data-theme="red"] {
-			--color-brand: 0, 90.6%, 70.8%;
-
-			--color-main: var(--color-brand);
-			--color-fill: 24, 9.8%, 10%;
-			--color-muted: 0, 0%, 17.6%;
-
-			--color-bg: var(--color-brand);
-			--color-bg-inverse: 25, 5.3%, 44.7%;
-
-			--color-text: 20, 5.9%, 90%;
-			--color-text-secondary: 24, 5.4%, 63.9%;
-			--color-text-inverse: 0, 0%, 96.1%;
-		}
-
-		[data-theme="green"] {
-			--color-brand: 83.7, 80.5%, 44.3%;
-
-			--color-main: var(--color-brand);
-			--color-fill: 120, 33.3%, 5.9%;
-			--color-muted: 120, 8.5%, 23.1%;
-
-			--color-bg: var(--color-brand);
-			--color-bg-inverse: 120, 12.8%, 15.3%;
-
-			--color-text: 0, 0%, 90.2%;
-			--color-text-secondary: 120, 8.8%, 44.7%;
-			--color-text-inverse: 0, 0%, 90.2%;
-		}
-
-		[data-theme="cyber"] {
-			--color-brand: 185.2, 95.3%, 66.9%;
-
-			--color-main: var(--color-brand);
-			--color-fill: 0, 0%, 5.9%;
-			--color-muted: 0, 0%, 19.6%;
-
-			--color-bg: var(--color-brand);
-			--color-bg-inverse: 184.9, 55%, 21.8%;
-
-			--color-text: 60.9, 100%, 62.5%;
-			--color-text-secondary: 0, 0%, 49%;
-			--color-text-inverse: 0, 0%, 94.1%;
-		}
-
-		[data-theme="eh"] {
-			--color-brand: 267.66666, 72%, 49%;
-
-			--color-main: var(--color-brand);
-			--color-fill: 266.6667, 69%, 95%;
-			--color-muted: 0, 0%, 78.4%;
-
-			--color-bg: 267.66666, 72%, 70%;
-			--color-bg-inverse: 265.65515, 88%, 68%;
-
-			--color-text: 0, 0%, 0%;
-			--color-text-secondary: 0, 0%, 47.1%;
-			--color-text-inverse: 0, 0%, 100%;
-		}
+	:root [data-theme="eh"] {
+		--color-brand: 267.66666, 72%, 49%;
+		--color-main: var(--color-brand);
+		--color-fill: 0, 0%, 100%;
+		--color-muted: 0, 0%, 78.4%;
+		--color-bg: 267.66666, 72%, 70%;
+		--color-bg-inverse: 265.65515, 88%, 68%;
+		--color-text: 0, 0%, 0%;
+		--color-text-secondary: 0, 0%, 47.1%;
+		--color-text-inverse: 0, 0%, 100%;
+	}
+	:root.dark [data-theme="eh"] {
+		--color-brand: 267.66666, 72%, 49%;
+		--color-main: var(--color-brand);
+		--color-fill: 266.6667, 69%, 95%;
+		--color-muted: 0, 0%, 78.4%;
+		--color-bg: 267.66666, 72%, 70%;
+		--color-bg-inverse: 265.65515, 88%, 68%;
+		--color-text: 0, 0%, 0%;
+		--color-text-secondary: 0, 0%, 47.1%;
+		--color-text-inverse: 0, 0%, 100%;
 	}
 }
