@@ -283,6 +283,11 @@ jobs:
           RUN_URL="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           printf "\n\n---\n\nReleased at [${{ env.DATE_AND_TIME }}]($RUN_URL)" >> CURRENT_CHANGELOG.md
 
+      - name: Add version as suffix to artifacts
+        run: |
+          mv CV.pdf "CV-${{ env.TAG || env.NEXT_VERSION }}—${{ env.DATE }}.pdf"
+          mv github-pages.tar.gz "github-pages-${{ env.TAG || env.NEXT_VERSION }}—${{ env.DATE }}.tar.gz"
+
       - name: Release artifact
         id: release-artifact
         if: ${{ env.TAG || env.IS_NEW_VERSION }}
@@ -290,8 +295,8 @@ jobs:
         with:
           name: "${{ env.TAG || env.NEXT_VERSION }} — ${{ env.DATE }}"
           files: |
-            github-pages.tar.gz
-            *.pdf
+            github-pages*.tar.gz
+            CV*.pdf
           make_latest: "${{ github.ref == 'refs/heads/main' && !env.TAG }}"
           body_path: CURRENT_CHANGELOG.md
           tag_name: ${{ env.TAG || env.NEXT_VERSION }}
