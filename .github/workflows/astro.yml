@@ -171,7 +171,7 @@ jobs:
         run: |
           sed -i 's|http://localhost:4321|http://localhost:4321/?color=${{ env.COLOR }}|g' e2e/generate-pdf.spec.ts
           mv cv.json cv-origin.json
-          jq '.basics.url += "/?color=${{ env.COLOR }}&utm_medium=pdf&utm_id=${{ env.tracking }}" | .basics.profiles |= map(.url += "?utm_source=pdf&utm_id=${{ env.tracking }}")' cv-origin.json > cv.json
+          jq '.basics.url += "/?color=${{ env.COLOR }}&utm_medium=pdf&utm_id=${{ env.TRACKING }}" | .basics.profiles |= map(.url += "?utm_source=pdf&utm_id=${{ env.TRACKING }}")' cv-origin.json > cv.json
 
       - name: Run Playwright tests
         run: pnpm exec playwright test
