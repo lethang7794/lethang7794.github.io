@@ -20,8 +20,10 @@ const iconProject =
 const iconEmpty = "<svg width='24' height='24' viewBox='0 0 24 24'></svg>";
 
 const profilesInfo = profiles
-	.filter((item) => !["CV", "Mindmap"].includes(item.network))
-	.map(({ network, url }) => {
+	.filter(
+		(item) => !["cv", "mindmap", "website"].includes(item.network.toLowerCase())
+	)
+	.map(({ network, url }, idx) => {
 		const icon = SOCIAL_ICONS[network] || iconEmpty;
 		const firstLetter = network[0].toUpperCase();
 
@@ -31,7 +33,7 @@ const profilesInfo = profiles
 			title: `Visit ${network}`,
 			url,
 			icon,
-			hotkey: `ctrl+${firstLetter}`,
+			hotkey: `ctrl+${idx + 1}`,
 		};
 	});
 
@@ -42,7 +44,7 @@ const projectsInfo = projects.map(({ name, url, iconSearch }, idx) => {
 		title: `Visit ${name}`,
 		icon: iconSearch || iconProject,
 		url,
-		hotkey: `ctrl+${idx + 1}`,
+		hotkey: `ctrl+${profilesInfo.length + idx + 1}`,
 	};
 });
 
@@ -56,7 +58,7 @@ const moreProjects = {
 	title: `Visit more projects`,
 	icon: iconEmpty,
 	url: githubUrl,
-	hotkey: `ctrl+${projectsInfo.length + 1}`,
+	hotkey: `ctrl+${profilesInfo.length + projectsInfo.length + 1}`,
 };
 
 const certsInfo = certificates
@@ -68,7 +70,7 @@ const certsInfo = certificates
 			title: `Visit ${name}`,
 			icon: iconSearch,
 			url,
-			hotkey: `ctrl+${projectsInfo.length + idx + 2}`,
+			hotkey: `ctrl+${profilesInfo.length + projectsInfo.length + idx + 2}`,
 		};
 	});
 
