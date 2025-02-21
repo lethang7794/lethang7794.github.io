@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.10](https://github.com/lethang7794/lethang7794.github.io/compare/v0.5.9...v0.5.10) - 2025-02-21
+
+### 🐛 Bug Fixes
+
+- Cmd hoykey conflict (#75)
+
+
 ## [0.5.9](https://github.com/lethang7794/lethang7794.github.io/compare/v0.5.8...v0.5.9) - 2025-02-21
 
 ### 🐛 Bug Fixes
