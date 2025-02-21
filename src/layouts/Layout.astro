@@ -4,6 +4,7 @@ import { env } from "@/env";
 import EasterEgg from "@/components/EasterEgg.astro";
 import ThemeColor from "@/components/ThemeColor.astro";
 import GoogleAnalytics from "@/components/GoogleAnalytics.astro";
+import QueryStringCleanup from "@/components/QueryStringCleanup.astro";
 
 interface Props {
 	title: string;
@@ -55,8 +56,10 @@ const { picture, summary, url, theme } = basics;
 
 		<link rel="stylesheet" href={env.PUBLIC_BASE_PATH + "/themes/themes.css"} />
 
-		<ThemeColor />
 		{env.PUBLIC_GA_ID ? <GoogleAnalytics id={env.PUBLIC_GA_ID} /> : null}
+
+		<ThemeColor />
+		<QueryStringCleanup />
 	</head>
 	<body
 		data-theme={theme}

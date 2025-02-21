@@ -14,7 +14,7 @@ on:
         description: "The tag to be released."
         type: string
         required: true
-      theme:
+      color:
         description: "The data-theme to be used. For example: default, red, blue, green"
         type: string
         required: false
@@ -39,7 +39,7 @@ env:
   BUILD_PATH: "." # default value when not using subfolders
   # BUILD_PATH: subfolder
   TAG: ${{ inputs.tag }}
-  THEME: ${{ inputs.theme }}
+  COLOR: ${{ inputs.color }}
   TRACKING: ${{ inputs.tracking }}
 
 jobs:
@@ -169,9 +169,9 @@ jobs:
       - name: "Setup customize data: color, url"
         if: inputs.data-theme != ''
         run: |
-          sed -i 's|http://localhost:4321|http://localhost:4321/?color=${{ env.THEME }}|g' e2e/generate-pdf.spec.ts
+          sed -i 's|http://localhost:4321|http://localhost:4321/?color=${{ env.COLOR }}|g' e2e/generate-pdf.spec.ts
           mv cv.json cv-origin.json
-          jq '.basics.url += "/?color=${{ env.THEME }}&t=${{ env.tracking }}"' cv-origin.json > cv.json
+          jq '.basics.url += "/?color=${{ env.COLOR }}&utm_medium=pdf&utm_id=${{ env.tracking }}" | .basics.profiles |= map(.url += "?utm_source=pdf&utm_id=${{ env.tracking }}")' cv-origin.json > cv.json
 
       - name: Run Playwright tests
         run: pnpm exec playwright test
