@@ -285,8 +285,8 @@ jobs:
 
       - name: Add version as suffix to artifacts
         run: |
-          mv CV.pdf "CV-${{ env.TAG || env.NEXT_VERSION }}—${{ env.DATE }}.pdf"
-          mv github-pages.tar.gz "github-pages-${{ env.TAG || env.NEXT_VERSION }}—${{ env.DATE }}.tar.gz"
+          mv CV.pdf "CV-${{ env.TAG || env.NEXT_VERSION }}-${{ env.DATE }}.pdf"
+          mv github-pages.tar.gz "github-pages-${{ env.TAG || env.NEXT_VERSION }}-${{ env.DATE }}.tar.gz"
 
       - name: Release artifact
         id: release-artifact
