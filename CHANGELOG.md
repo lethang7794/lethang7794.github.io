@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.8](https://github.com/lethang7794/lethang7794.github.io/compare/v0.5.7...v0.5.8) - 2025-02-21
+
+### 🐛 Bug Fixes
+
+- Cv not found (#73)
+
+
 ## [0.5.7](https://github.com/lethang7794/lethang7794.github.io/compare/v0.5.6...v0.5.7) - 2025-02-21
 
 ### 🐛 Bug Fixes
