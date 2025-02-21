@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3.1](https://github.com/lethang7794/lethang7794.github.io/compare/v0.3.0...v0.3.1) - 2025-02-21
+
+### ⚙️ Miscellaneous Tasks
+
+- Release for tag (#62)
+
+
 ## [0.3.0](https://github.com/lethang7794/lethang7794.github.io/compare/v0.2.4...v0.3.0) - 2025-02-20
 
 ### 🚀 Features

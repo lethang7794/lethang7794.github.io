@@ -1,7 +1,7 @@
 {
 	"name": "minimalist-portfolio-json",
 	"type": "module",
-	"version": "0.3.0",
+	"version": "0.3.1",
 	"scripts": {
 		"//ASTRO": "ASTRO",
 		"dev": "astro dev",
