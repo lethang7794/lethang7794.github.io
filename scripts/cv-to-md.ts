@@ -19,9 +19,12 @@ interface Resume {
 		startDate: string;
 		endDate?: string;
 		summary: string;
+		summary_md: string;
 		highlights: string[];
 		responsibilities: string[];
+		responsibilities_md: string[];
 		achievements: string[];
+		achievements_md: string[];
 	}[];
 	education: {
 		institution: string;
@@ -94,7 +97,10 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 
 	md += `## **Profiles**\n\n`;
 	resume.basics.profiles
-		.filter((item) => !["cv", "mindmap", 'website'].includes(item.network.toLowerCase()))
+		.filter(
+			(item) =>
+				!["cv", "mindmap", "website"].includes(item.network.toLowerCase()),
+		)
 		.forEach((profile) => {
 			md += `- ${profile.network}: [${profile.username}](${profile.url})\n`;
 		});
@@ -104,19 +110,24 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 	resume.work.forEach((job) => {
 		md += `### **${job.position}** - _${job.company}_ (${job.startDate} - ${job.endDate || "Present"})\n\n`;
 		md += `#### Summary\n\n`;
-		md += `- ${job.summary}\n\n`;
+		md += `- ${job.summary_md || job.summary}\n\n`;
 
-		if (job.responsibilities?.length > 0) {
+		const responsibilities = job.responsibilities_md || job.responsibilities;
+		if (responsibilities?.length > 0) {
 			md += `#### Responsibilities <!-- markmap: fold -->\n\n`;
-			job.responsibilities?.forEach((item) => {
-				md += `- ${item}\n\n`;
+			responsibilities?.forEach((item) => {
+				md += `- ${item}\n`;
 			});
+			md += `\n`;
 		}
 
-		md += `#### Achievements\n\n`;
-		job.achievements.forEach((item) => {
-			md += `- _${item}_\n`;
-		});
+		const achievements = job.achievements_md || job.achievements;
+		if (achievements?.length > 0) {
+			md += `#### Achievements\n\n`;
+			achievements.forEach((item) => {
+				md += `- ${item}\n`;
+			});
+		}
 		md += `\n`;
 	});
 
@@ -124,14 +135,13 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 	resume.projects.forEach((project) => {
 		md += `### [${project.name}](${project.url})\n\n`;
 		md += `#### ${project.description} <!-- markmap: fold -->\n\n`;
+		md += `##### Highlights\n\n`;
 		project.highlights.forEach((highlight) => {
-			md += `##### ${highlight}\n`;
+			md += `- ${highlight}\n`;
 		});
 		if (project.skills) {
 			md += `##### Skills\n\n`;
-			project.skills?.forEach((item) => {
-				md += `- ${item}\n\n`;
-			});
+			md += `- ${project.skills.join(" · ")}\n\n`;
 		}
 		md += `\n`;
 	});
@@ -139,7 +149,7 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 	md += `## [**Skills**](${resume.basics.website}#Skills)\n\n`;
 	resume.skills.forEach((skill) => {
 		md += `### **${skill.name}**\n\n`;
-		md += skill.keywords.map((k) => `- ${k}`).join(" ") + "\n\n";
+		md += `- ${skill.keywords.join(" · ")}\n\n`;
 	});
 
 	md += `## [**Education**](${resume.basics.website}#Education)\n\n`;
