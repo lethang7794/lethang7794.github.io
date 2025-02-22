@@ -21,18 +21,21 @@ import { SKILLS_ICONS } from "@/constants/skill-icons";
 							<span class="text-skin-hue">{skill}</span>
 						</h4>
 
-						<div class="mt-3 flex flex-wrap gap-2 print:mt-1 print:justify-start print:gap-1">
+						<div class="mt-3 flex flex-wrap gap-2 print:mt-1 print:hidden print:justify-start print:gap-1">
 							{keywords?.map((skill) => {
 								let skillName = skill?.replace(/ \(.*\)/, "");
 								const icon = SKILLS_ICONS[skillName];
 								const iconName = icon?.iconName || "";
 								return (
 									<div class="flex items-center gap-1 rounded-md border border-solid border-skin-hue/30 bg-transparent px-2 py-0.5 text-xs text-skin-muted print:border-none print:bg-transparent print:p-0 print:text-skin-base">
-										{iconName && <Icon name={iconName} class="print:hidden" />}
+										{iconName && <Icon name={iconName} />}
 										<span class="">{skill}</span>
 									</div>
 								);
 							})}
+						</div>
+						<div class="mt-3 hidden gap-2 text-xs print:mt-1 print:block">
+							{keywords?.join(" · ")}
 						</div>
 					</li>
 				);
