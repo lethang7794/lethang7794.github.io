@@ -5,6 +5,7 @@ import EasterEgg from "@/components/EasterEgg.astro";
 import ThemeColor from "@/components/ThemeColor.astro";
 import GoogleAnalytics from "@/components/GoogleAnalytics.astro";
 import QueryStringCleanup from "@/components/QueryStringCleanup.astro";
+import { DEFAULT_THEME } from "@/constants/theme";
 
 interface Props {
 	title: string;
@@ -16,7 +17,7 @@ const { picture, summary, url, theme } = basics;
 ---
 
 <!doctype html>
-<html lang="en" class="dark h-full">
+<html lang="en" class={`${DEFAULT_THEME} h-full`}>
 	<head>
 		<meta charset="UTF-8" />
 		<title>{title}</title>
