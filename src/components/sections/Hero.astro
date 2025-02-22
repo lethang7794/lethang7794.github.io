@@ -17,8 +17,8 @@ const cv = profiles.filter((item) => item.network?.toLowerCase() === 'cv')?.[0]
 const website = profiles.filter((item) => item.network?.toLowerCase() === 'website')?.[0]
 
 const SOCIAL_ICONS: SocialIcon = {
-	GitHub: "mdi:github",
-	LinkedIn: "mdi:linkedin",
+	GitHub: "lucide:github",
+	LinkedIn: "lucide:linkedin",
 	Credly: "simple-icons:credly",
 	CV: "cv",
 	Mindmap: "mindmap",
@@ -28,17 +28,14 @@ const SOCIAL_ICONS: SocialIcon = {
 
 <Section>
 	<div class="flex flex-col-reverse gap-8 pt-2">
-		<div class="info">
-			<div class="flex gap-4 justify-between">
+		<div class="info print:flex print:!flex-row print:!justify-between print:gap-4">
+			<div class="shrink-0 flex gap-4 justify-between">
 				<div class="">
 					<h1 class="text-skin-hue">{name}</h1>
-					<h2 class="text-skin-hue font-bold !text-xl">{label}</h2>
-					<div class="flex items-center gap-2 pt-2 text-sm text-skin-muted">
-						<Icon name="fa6-solid:location-dot" />
-						{city}, {region}
-					</div>
+					<h2 class="mt-1 text-skin-hue font-semibold !text-xl italic">{label}</h2>
+				
 				</div>
-				<div class="hidden print:flex flex-col justify-start items-end text-xs text-skin-muted">
+				<div class="hidden print:flex- flex-col justify-start items-end text-[xs] text-skin-muted">
 					<div class="flex gap-1">
 						<div>This <a class="underline text-blue-500 italic" href={cv.url}>CV</a> is also available as</div>
 						<div>a <a class="underline text-blue-500 italic" href={url}>website</a></div>
@@ -46,124 +43,128 @@ const SOCIAL_ICONS: SocialIcon = {
 					</div>
 				</div>
 			</div>
-			<div
-				class="hidden grid-cols-3 flex-wrap gap-x-2 whitespace-nowrap text-sm text-skin-muted print:grid print:text-xs"
-			>
-				{
-					phone && (
-						<a
-							class="flex items-center gap-2 pt-2 text-sm text-skin-muted"
-							href={`tel:${phone}`}
-							title={`Call ${name} at ${phone}`}
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<Phone /> {phone}
-						</a>
-					)
-				}
-				{
-					email && (
-						<a
-							class="flex items-center gap-2 pt-2 text-sm text-skin-muted"
-							href={`mailto:${email}`}
-							title={`Email ${name} at ${email}`}
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<Mail /> {email}
-						</a>
-					)
-				}
-				{
-					website && (
-						<a
-							class="flex items-center gap-2 pt-2 text-sm text-skin-muted"
-							href={`${websiteUrl}`}
-							title={`Visit ${name}'s website at ${websiteUrl}`}
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<Icon name="www" /> {website.username}
-						</a>
-					)
-				}
-				{
-					printProfiles.map(({ network, url, username }) => {
-						const iconName = SOCIAL_ICONS[network];
-						if (!iconName) {
-							return null;
-						}
-
-						return (
+			<div>
+				<div
+					class="hidden grid-cols-2 flex-wrap gap-x-4 whitespace-nowrap text-sm text-skin-muted print:grid print:text-xs"
+				>
+					{
+						website && (
 							<a
-								class="flex items-center gap-2 pt-2 text-sm text-skin-muted"
-								href={url}
-								title={`Visit ${name} profile on ${network}`}
+								class="flex items-center gap-2 pt-2 text-xs text-skin-muted"
+								href={`${websiteUrl}`}
+								title={`Visit ${name}'s website at ${websiteUrl}`}
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<Icon name={iconName} /> {username}
+								<Icon name="lucide:globe" class="flex-shrink-0 text-base" /> {website.username}
 							</a>
-						);
-					})
-				}
-			</div>
-			<footer class="no-print">
-				{
-					email && (
-						<div x-data=`{ copyText: '${email}', copyNotification: false, copyToClipboard() { navigator.clipboard.writeText(this.copyText); this.copyNotification = true; let that = this; setTimeout(function(){ that.copyNotification = false; }, 3000); } }` class="relative flex items-center">
-							<div x-show="copyNotification" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-3" x-transition:enter-end="opacity-100 translate-x-0" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 translate-x-0" x-transition:leave-end="opacity-0 translate-y-2" style="display:none;" class="absolute left-0" x-cloak>
-								<div class="-mt-1.5 flex h-7 -translate-y-full items-center rounded border-r border-green-500 bg-green-500 px-3 text-xs text-white">
-									<span class="!text-white">Copied!</span>
-									<div class="absolute left-0 bottom-0 inline-block h-full translate-x-full translate-y-5 overflow-hidden">
-										<div class="h-3 w-3 origin-center rotate-45 transform border border-transparent bg-green-500" />
+						)
+					}
+					{
+						printProfiles.map(({ network, url, username }) => {
+							const iconName = SOCIAL_ICONS[network];
+							if (!iconName) {
+								return null;
+							}
+							return (
+								<a
+									class="flex items-center gap-2 pt-2 text-xs text-skin-muted"
+									href={url}
+									title={`Visit ${name} profile on ${network}`}
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<Icon name={iconName} class="flex-shrink-0 text-base" /> {username}
+								</a>
+							);
+						})
+					}
+					{
+						email && (
+							<a
+								class="flex items-center gap-2 pt-2 text-xs text-skin-muted"
+								href={`mailto:${email}`}
+								title={`Email ${name} at ${email}`}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<Icon name="lucide:mail" class="flex-shrink-0 text-base" /> {email}
+							</a>
+						)
+					}
+					{
+						phone && (
+							<a
+								class="flex items-center gap-2 pt-2 text-xs text-skin-muted"
+								href={`tel:${phone}`}
+								title={`Call ${name} at ${phone}`}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<Icon name="lucide:phone" class="flex-shrink-0 text-base" /> {phone}
+							</a>
+						)
+					}
+				</div>
+				<div class="flex items-center gap-2 pt-2 text-xs text-skin-muted">
+					<Icon name="lucide:map-pin" class="flex-shrink-0 text-base" />
+					{city}, {region}
+				</div>
+				<footer class="no-print -ml-2">
+					{
+						profiles.map(({ network, url }) => {
+							const iconName = SOCIAL_ICONS[network];
+							if (!iconName) {
+								return null;
+							}
+							return (
+								<a
+									href={url}
+									title={`Visit ${name} profile on ${network}`}
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<Icon name={iconName} class="text-base" />
+								</a>
+							);
+						})
+					}
+					{
+						email && (
+							<div x-data=`{ copyText: '${email}', copyNotification: false, copyToClipboard() { navigator.clipboard.writeText(this.copyText); this.copyNotification = true; let that = this; setTimeout(function(){ that.copyNotification = false; }, 3000); } }` class="relative flex items-center">
+								<div x-show="copyNotification" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-3" x-transition:enter-end="opacity-100 translate-x-0" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 translate-x-0" x-transition:leave-end="opacity-0 translate-y-2" style="display:none;" class="absolute left-0" x-cloak>
+									<div class="-mt-1.5 flex h-7 -translate-y-full items-center rounded border-r border-green-500 bg-green-500 px-3 text-xs text-white">
+										<span class="!text-white">Copied!</span>
+										<div class="absolute left-0 bottom-0 inline-block h-full translate-x-full translate-y-5 overflow-hidden">
+											<div class="h-3 w-3 origin-center rotate-45 transform border border-transparent bg-green-500" />
+										</div>
 									</div>
 								</div>
+								<button title={`Copy ${name}'s email (${email})`} @click="copyToClipboard();" class="group flex h-8 w-9 cursor-pointer items-center justify-center rounded-md text-skin-muted hover:bg-skin-button-accent hover:text-skin-inverted [&>span]:hover:text-skin-inverted">
+									<svg x-show="copyNotification" class="h-4 w-4 stroke-current text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" x-cloak>
+										<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+									</svg>
+									<span x-show="!copyNotification">
+										<Mail />
+									</span>
+								</button>
 							</div>
-							<button title={`Copy ${name}'s email (${email})`} @click="copyToClipboard();" class="group flex h-8 w-9 cursor-pointer items-center justify-center rounded-md text-skin-muted hover:bg-skin-button-accent hover:text-skin-inverted [&>span]:hover:text-skin-inverted">
-								<svg x-show="copyNotification" class="h-4 w-4 stroke-current text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" x-cloak>
-									<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-								</svg>
-								<span x-show="!copyNotification">
-									<Mail />
-								</span>
-							</button>
-						</div>
-					)
-				}
-				{
-					phone && (
-						<a
-							href={`tel:${phone}`}
-							title={`Call ${name} at ${phone}`}
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<Phone />
-						</a>
-					)
-				}
-				{
-					profiles.map(({ network, url }) => {
-						const iconName = SOCIAL_ICONS[network];
-						if (!iconName) {
-							return null;
-						}
-
-						return (
+						)
+					}
+					{
+						phone && (
 							<a
-								href={url}
-								title={`Visit ${name} profile on ${network}`}
+								href={`tel:${phone}`}
+								title={`Call ${name} at ${phone}`}
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<Icon name={iconName} />
+								<Phone />
 							</a>
-						);
-					})
-				}
-			</footer>
+						)
+					}
+				</footer>
+			</div>
 		</div>
 		{
 			image ? (

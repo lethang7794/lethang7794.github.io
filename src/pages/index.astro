@@ -24,7 +24,7 @@ const { name, label } = basics;
 		class="relative grid max-w-7xl gap-12 p-8 max-sm:py-16 md:grid-cols-6 md:p-12 lg:p-16 xl:gap-24 print:block print:max-w-none print:grid-cols-1 print:gap-6 print:px-10 print:py-6"
 	>
 		<div
-			class="h-min space-y-6 md:sticky md:top-12 md:col-span-2 lg:top-16 print:static print:col-span-1 print:grid print:grid-cols-1 print:gap-5 print:space-y-0"
+			class="print:grid- h-min space-y-6 md:sticky md:top-12 md:col-span-2 lg:top-16 print:static print:col-span-1 print:block print:grid-cols-1 print:gap-0 print:space-y-0"
 		>
 			<Hero />
 			<About />
@@ -32,13 +32,13 @@ const { name, label } = basics;
 			<LastUpdated />
 		</div>
 		<div
-			class="space-y-8 md:col-span-4 lg:space-y-12 print:col-span-1 print:mt-5 print:grid print:grid-cols-1 print:gap-2 print:space-y-0"
+			class="space-y-8 md:col-span-4 lg:space-y-12 print:col-span-1 print:mt-5 print:block print:grid-cols-1 print:gap-2 print:space-y-0"
 		>
 			<Experience className="print:order-1 print:col-span-1" />
 			<Projects className="print:order-2" />
-			<Skills className="break-before-page print:order-3" />
+			<Skills className="print:order-3" />
 			<Education className="print:order-4" />
-			<Certificates className="order-last break-before-page" />
+			<Certificates className="order-last" />
 			<Languages className="order-last" />
 			<Interests className="order-last" />
 		</div>

@@ -27,6 +27,7 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 
 - GitHub: [lethang7794](https://github.com/lethang7794)
 - LinkedIn: [thanglequang](https://linkedin.com/in/thanglequang)
+- Credly: [lequangthang](https://www.credly.com/users/lequangthang/)
 
 ## [**Experience**](https://lethang7794.github.io#Experience)
 
@@ -34,76 +35,66 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 
 #### Summary
 
-- Collaborated with product owners, UI/UX designers, and cross-functional teams to refine product specifications, ensuring seamless alignment between business requirements and technical solutions.
+- **Collaborated** with product owners, UI/UX designers, and cross-functional teams to **refine product specifications**, ensuring seamless alignment between **business requirements** and **technical solutions**.
 
 #### Responsibilities <!-- markmap: fold -->
 
-- Developed a CMS for a gaming system, enhancing content management and operational efficiency.
-
-- Developed and deployed a performance review system used by 100+ employees, improving evaluation processes.
-
-- Led the migration of a legacy system from Docker Compose to Kubernetes, boosting scalability and reliability.
-
-- Contributed to the development of a design system, ensuring UI consistency and efficiency across products.
-
-- Mentored a Frontend and a Backend Developer, accelerating their technical growth and productivity.
+- Developed a **CMS** for a gaming system, _enhancing content management and operational efficiency_.
+- Developed and deployed a **performance review system** used by 100+ employees, _improving evaluation processes_.
+- Led the **migration** of a legacy system from Docker Compose **to Kubernetes**, _boosting scalability and reliability_.
+- Contributed to the development of a **design system**, _ensuring UI consistency and efficiency_ across products.
+- **Mentored** a Frontend and a Backend Developer, accelerating their technical _growth and productivity_.
 
 #### Achievements
 
-- _Engineered an optimized table component for the CMS using React, significantly improving performance and usability across key features._
-- _Promoted four times in two years — twice the typical pace — recognizing outstanding contributions and impact._
+- Engineered an **optimized table component** for the CMS using React, significantly _improving performance and usability_ across key features.
+- **Promoted four times** in **two years** — _twice the typical pace_ — recognizing _outstanding contributions_ and _impact_.
 
 ### **Junior Full Stack Developer** - _Inspire Lab Technology_ (2022-01 - 2022-07)
 
 #### Summary
 
-- Focused on frontend development, creating reusable libraries to support team members and improve code efficiency.
+- **Focused on frontend** development, creating **reusable libraries** to _support team members_ and _improve code efficiency_.
 
 #### Responsibilities <!-- markmap: fold -->
 
-- Set up CI pipelines to automate the publishing of frontend core NPM packages.
-
-- Developed key UI components for company-wide projects.
-
-- Translated design wireframes into functional UI components.
-
-- Built pixel-perfect landing pages.
-
-- Mentored a Frontend Developer, providing guidance and support.
-
-- Researched and evaluated micro frontend technologies to improve performance and scalability.
+- Set up **CI pipelines** to _automate_ the _publishing_ of frontend core NPM packages.
+- Developed key **UI components** for _company-wide_ projects.
+- Translated design **wireframes** into functional **UI components**.
+- Built _pixel-perfect_ **landing pages** for a stunning user experience.
+- **Mentored** a Frontend Developer, providing _guidance and support_.
+- Researched and evaluated **micro frontend** technologies to _improve performance_ and _scalability_.
 
 #### Achievements
 
-- _Introduced Tailwind CSS to a team of six frontend developers, accelerating development speed for new projects and improving UI consistency._
-- _Achieved a 100% salary increase within my first year, reflecting exceptional performance._
+- Introduced Tailwind CSS to a team of six frontend developers, accelerating development speed for new projects and improving UI consistency.
+- Achieved a 100% salary increase within my first year, reflecting exceptional performance.
 
 ### **Junior Backend Developer** - _Inspire Lab Technology_ (2021-07 - 2021-12)
 
 #### Summary
 
-- Worked as a Full-Stack Developer (beyond the job description) in a cross-functional product team alongside a Product Manager, Product Owner, UI/UX Designer, and two Frontend Developers to develop a Human Resource Management System.
+- Worked as a **Full-Stack Developer** (_beyond responsibilities_) in a cross-functional team alongside a Product Manager, Product Owner, UI/UX Designer, and two Frontend Developers to **develop a Human Resource Management System**.
 
 #### Responsibilities <!-- markmap: fold -->
 
-- Collaborated with frontend engineers to design and integrate gRPC APIs, ensuring seamless communication between services.
-
-- Managed regular deployments with an Agile approach.
+- **Collaborated with frontend engineers** to design and integrate gRPC APIs, ensuring _smooth communication between services_.
+- Managed smooth, efficient **deployments** using an **Agile approach**.
 
 #### Achievements
 
-- _Optimized Dockerfile, reducing feedback loops by up to 600% (from 60s to 5-10s) for each microservice._
-- _Automated the attendance tracking and approval process, reducing processing time from several days to just hours, achieving a 95%+ satisfaction rate._
+- **Optimized Dockerfile**, _reducing feedback loops_ by up to **600%** (from 60s to 5-10s) for each microservice.
+- **Automated** the **attendance tracking and approval process**, _reducing processing time_ from several **days to just hours**, achieving a 95%+ satisfaction rate.
 
 ### **Fresher Backend Developer** - _Inspire Lab Technology_ (2021-04 - 2021-06)
 
 #### Summary
 
-- Joined as the second team member for a new product, contributing to backend development while establishing frontend foundations for other projects.
+- Joined as the **second team member** for a **new product**, contributing to **backend** development while **establishing frontend foundations** for other projects.
 
 #### Achievements
 
-- _Authored official onboarding documentation for setting up the backend environment, streamlining the process for new team members._
+- Authored official **onboarding documentation** for setting up the backend environment, _streamlining the process_ for new team members.
 
 ## [**Projects**](https://lethang7794.github.io#Projects)
 
@@ -111,121 +102,99 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 
 #### A place to be a better driver in Vietnam <!-- markmap: fold -->
 
-##### Leveraged social media to educate users on driving safety, including road signs, road markings, and Vietnam driving laws.
+##### Highlights
+
+- Leveraged social media to educate users on driving safety, including road signs, road markings, and Vietnam driving laws.
 ##### Skills
 
-- Next.js
-
-- React
-
-- SSG
-
-- Tailwind CSS
-
-- Open Graph
-
-- GitHub Actions
-
-- Vercel
-
-- Cloudflare Page
+- Next.js · React · Tailwind CSS · Radix UI · shadcn/ui · Open Graph · GitHub Actions · Vercel · Cloudflare Page · CI/CD · SSG · SEO
 
 
 ### [gtdb's laws](https://luat.gtdb.app)
 
 #### Modern way to read Vietnam driving laws. <!-- markmap: fold -->
 
-##### Use web technology to make driving laws accessible, searchable, and easy to understand.
+##### Highlights
+
+- Use web technology to make driving laws accessible, searchable, and easy to understand.
 ##### Skills
 
-- Next.js
-
-- SSG
-
-- MDX
+- Next.js · React · MDX · SSG
 
 
 ### [Modern Minimal CV](https://lethang7794.github.io)
 
 #### JSON → Portfolio Website → PDF + Mind map <!-- markmap: fold -->
 
-##### Seamlessly converts JSON data into a sleek portfolio website, generates a professional PDF CV and views the CV as a mind map.
+##### Highlights
+
+- Seamlessly converts JSON data into a sleek portfolio website, generates a professional PDF CV and views the CV as a mind map.
 ##### Skills
 
-- Astro
-
-- React
-
-- Tailwind
-
-- Playwright
+- Astro · React · Tailwind · Playwright
 
 
 ### [AWSsome](https://lethang7794.github.io/awssome/)
 
 #### Mind-maps for AWS certificates. <!-- markmap: fold -->
 
-##### A collections of mind-maps written in Xmind for AWS certificates, available as a web app.
+##### Highlights
+
+- A collections of mind-maps written in Xmind for AWS certificates, available as a web app.
 ##### Skills
 
-- Next.js
-
-- React
-
-- Tailwind
+- Next.js · React · Tailwind · SPA
 
 
 ### [Cantrill AWS Courses](https://cantrill-aws.vercel.app/)
 
 #### Compare the Cantrill courses for the AWS certificates. <!-- markmap: fold -->
 
-##### Select your next AWS certification and skip lessons you've already mastered.
+##### Highlights
+
+- Select your next AWS certification and skip lessons you've already mastered.
 ##### Skills
 
-- Next.js
-
-- React
-
-- Tailwind
+- Next.js · React · Tailwind · Radix UI · Zod · SPA
 
 
 ## [**Skills**](https://lethang7794.github.io#Skills)
 
 ### **Backend**
 
-- Golang - Node.js - Ruby on Rails - Microservices - Protocol Buffers - gRPC - REST
+- Golang · Node.js · Ruby on Rails · Microservices · Protocol Buffers · gRPC · REST
 
 ### **Frontend**
 
-- Next.js - React - TypeScript - JavaScript - Material UI - Bootstrap - Ant Design - Tailwind CSS - Styled Components - CSS Modules - SASS - CSS - HTML - Micro Frontend - SPA - SSG
+- Next.js · React · TypeScript · JavaScript · React Hook Form · TanStack Table · Material UI · Bootstrap · Ant Design · Radix UI · shadcn/ui · Tailwind CSS · Styled Components · CSS Modules · SASS · CSS · HTML · Micro Frontend · SPA · SSG · SEO
 
 ### **Database**
 
-- SQL - NoSQL - ORM - MySQL - MongoDB
+- SQL · NoSQL · ORM · MySQL · MongoDB
 
 ### **Testing**
 
-- Minitest - Capybara - Selenium - BloomRPC - Postman - TDD
+- Minitest · Capybara · Selenium · BloomRPC · Postman · TDD
 
 ### **DevOps**
 
-- Kubernetes - Helm - Lens - Docker - Terraform - GitLab CI/CD - GitHub Actions - Bash Script
+- Kubernetes · Helm · Lens · Docker · Terraform · CI/CD · GitLab CI/CD · GitHub Actions · Bash Script
 
 ### **Cloud Computing**
 
-- AWS - Google Cloud - Cloudflare - Vercel - Netlify - Heroku
+- AWS · Google Cloud · Cloudflare · Vercel · Netlify · Heroku
 
 ### **Collaboration**
 
-- Git - Agile - Jira - Confluence - Figma - Slack
+- Git · Agile · Jira · Confluence · Figma · Slack
 
 ### **OS**
 
-- Linux - MacOS - Windows
+- Linux · MacOS · Windows
 
 ### **Misc**
 
-- Regex - Markdown - MDX - CLI
+- Regex · Markdown · MDX · CLI
 
 ## [**Education**](https://lethang7794.github.io#Education)
 
@@ -360,4 +329,4 @@ To update modify 'cv-to-md.ts' then run 'pnpm run gen-markmap'
 
 ## Last updated
 
-- Tue Feb 18 2025
+- Sat Feb 22 2025
