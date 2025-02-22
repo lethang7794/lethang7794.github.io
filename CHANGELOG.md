@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.15](https://github.com/lethang7794/lethang7794.github.io/compare/v0.5.14...v0.5.15) - 2025-02-22
+
+### 🐛 Bug Fixes
+
+- Partytown config (#80)
+
+
 ## [0.5.14](https://github.com/lethang7794/lethang7794.github.io/compare/v0.5.13...v0.5.14) - 2025-02-22
 
 ### 🐛 Bug Fixes
