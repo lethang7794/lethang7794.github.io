@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.14](https://github.com/lethang7794/lethang7794.github.io/compare/v0.5.13...v0.5.14) - 2025-02-22
+
+### 🐛 Bug Fixes
+
+- Default to light mode, style cmd-k text color (#79)
+
+
 ## [0.5.13](https://github.com/lethang7794/lethang7794.github.io/compare/v0.5.12...v0.5.13) - 2025-02-22
 
 ### 🎨 Styling
