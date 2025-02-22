@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.12](https://github.com/lethang7794/lethang7794.github.io/compare/v0.5.11...v0.5.12) - 2025-02-22
+
+### 🎨 Styling
+
+- Use text-primary for print text (#77)
+
+
 ## [0.5.11](https://github.com/lethang7794/lethang7794.github.io/compare/v0.5.10...v0.5.11) - 2025-02-21
 
 ### 🚜 Refactor
