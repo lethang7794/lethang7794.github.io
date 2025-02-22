@@ -94,13 +94,13 @@ const githubUrl = githubInfo?.projects || githubInfo?.url;
 									)}
 								</div>
 
-								<p class="mt-1 text-sm text-skin-base print:mb-1 print:mt-0 print:dark:text-black/60">
+								<p class="mt-1 text-sm text-skin-base print:mb-1 print:mt-0 print:text-skin-base">
 									{description}
 								</p>
 								{highlights ? (
-									<ul class="mt-1 text-xs text-skin-muted print:mt-0">
+									<ul class="mt-1 text-xs text-skin-muted print:mt-0 print:text-skin-base">
 										{highlights.map((highlight) => {
-											return <li>{highlight}</li>;
+											return <li class="print:!text-skin-base">{highlight}</li>;
 										})}
 									</ul>
 								) : null}

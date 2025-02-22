@@ -26,9 +26,8 @@ import { SKILLS_ICONS } from "@/constants/skill-icons";
 								let skillName = skill?.replace(/ \(.*\)/, "");
 								const icon = SKILLS_ICONS[skillName];
 								const iconName = icon?.iconName || "";
-
 								return (
-									<div class="flex items-center gap-1 rounded-md border border-solid border-skin-hue/30 bg-transparent px-2 py-0.5 text-xs text-skin-muted print:border-none print:bg-transparent print:p-0 print:text-skin-muted">
+									<div class="flex items-center gap-1 rounded-md border border-solid border-skin-hue/30 bg-transparent px-2 py-0.5 text-xs text-skin-muted print:border-none print:bg-transparent print:p-0 print:text-skin-base">
 										{iconName && <Icon name={iconName} class="print:hidden" />}
 										<span class="">{skill}</span>
 									</div>

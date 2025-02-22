@@ -39,7 +39,6 @@ const SOCIAL_ICONS: SocialIcon = {
 					</div>
 				</div>
 				<div class="hidden print:flex flex-col justify-start items-end text-xs text-skin-muted">
-					<div class="text-[8px] text-skin-muted/50">Last updated: {getLastUpdated()}</div>
 					<div class="flex gap-1">
 						<div>This <a class="underline text-blue-500 italic" href={cv.url}>CV</a> is also available as</div>
 						<div>a <a class="underline text-blue-500 italic" href={url}>website</a></div>
@@ -48,7 +47,7 @@ const SOCIAL_ICONS: SocialIcon = {
 				</div>
 			</div>
 			<div
-				class="hidden grid-cols-3 flex-wrap gap-x-2 whitespace-nowrap text-sm text-skin-muted print:grid"
+				class="hidden grid-cols-3 flex-wrap gap-x-2 whitespace-nowrap text-sm text-skin-muted print:grid print:text-xs"
 			>
 				{
 					phone && (
