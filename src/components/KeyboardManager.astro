@@ -291,7 +291,7 @@ const certsInfo = certificates
 		--hotkeypad-border-container: hsl(var(--color-muted));
 		--hotkeypad-border-container-hover: hsl(var(--color-fill));
 		--hotkeypad-fg-muted: hsla(
-			var(--color-text-secondary),
+			var(--color-text),
 			var(--tw-text-opacity)
 		);
 		@media (prefers-color-scheme: dark) {
@@ -312,7 +312,7 @@ const certsInfo = certificates
 	html.light {
 		#hotkeypad [data-container] header input,
 		#hotkeypad [data-section] h4 {
-			--hotkeypad-fg-muted: hsla(var(--color-text-secondary), 80);
+			--hotkeypad-fg-muted: hsla(var(--color-text), 80%);
 		}
 	}
 </style>
