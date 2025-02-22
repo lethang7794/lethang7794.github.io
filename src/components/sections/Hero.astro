@@ -28,7 +28,7 @@ const SOCIAL_ICONS: SocialIcon = {
 
 <Section>
 	<div class="flex flex-col-reverse gap-8 pt-2">
-		<div class="info print:flex print:!flex-row print:!justify-between">
+		<div class="info print:flex print:!flex-row print:!justify-between print:gap-4">
 			<div class="shrink-0 flex gap-4 justify-between">
 				<div class="">
 					<h1 class="text-skin-hue">{name}</h1>
@@ -44,39 +44,9 @@ const SOCIAL_ICONS: SocialIcon = {
 				</div>
 			</div>
 			<div>
-				<div class="flex items-center gap-2 pt-2 text-xs text-skin-muted">
-					<Icon name="lucide:map-pin" class="text-base" />
-					{city}, {region}
-				</div>
 				<div
-					class="hidden grid-cols-2 flex-wrap gap-x-5 whitespace-nowrap text-sm text-skin-muted print:grid print:text-xs"
+					class="hidden grid-cols-2 flex-wrap gap-x-4 whitespace-nowrap text-sm text-skin-muted print:grid print:text-xs"
 				>
-					{
-						phone && (
-							<a
-								class="flex items-center gap-2 pt-2 text-xs text-skin-muted"
-								href={`tel:${phone}`}
-								title={`Call ${name} at ${phone}`}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<Icon name="lucide:phone" class="text-base" /> {phone}
-							</a>
-						)
-					}
-					{
-						email && (
-							<a
-								class="flex items-center gap-2 pt-2 text-xs text-skin-muted"
-								href={`mailto:${email}`}
-								title={`Email ${name} at ${email}`}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<Icon name="lucide:mail" class="text-base" /> {email}
-							</a>
-						)
-					}
 					{
 						website && (
 							<a
@@ -86,7 +56,7 @@ const SOCIAL_ICONS: SocialIcon = {
 								target="_blank"
 								rel="noopener noreferrer"
 							>
-								<Icon name="lucide:globe" class="text-base" /> {website.username}
+								<Icon name="lucide:globe" class="flex-shrink-0 text-base" /> {website.username}
 							</a>
 						)
 					}
@@ -104,11 +74,41 @@ const SOCIAL_ICONS: SocialIcon = {
 									target="_blank"
 									rel="noopener noreferrer"
 								>
-									<Icon name={iconName} class="text-base" /> {username}
+									<Icon name={iconName} class="flex-shrink-0 text-base" /> {username}
 								</a>
 							);
 						})
 					}
+					{
+						email && (
+							<a
+								class="flex items-center gap-2 pt-2 text-xs text-skin-muted"
+								href={`mailto:${email}`}
+								title={`Email ${name} at ${email}`}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<Icon name="lucide:mail" class="flex-shrink-0 text-base" /> {email}
+							</a>
+						)
+					}
+					{
+						phone && (
+							<a
+								class="flex items-center gap-2 pt-2 text-xs text-skin-muted"
+								href={`tel:${phone}`}
+								title={`Call ${name} at ${phone}`}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<Icon name="lucide:phone" class="flex-shrink-0 text-base" /> {phone}
+							</a>
+						)
+					}
+				</div>
+				<div class="flex items-center gap-2 pt-2 text-xs text-skin-muted">
+					<Icon name="lucide:map-pin" class="flex-shrink-0 text-base" />
+					{city}, {region}
 				</div>
 				<footer class="no-print">
 					{

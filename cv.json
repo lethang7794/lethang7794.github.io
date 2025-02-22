@@ -167,8 +167,8 @@
 			"position": "Junior Backend Developer",
 			"startDate": "2021-07",
 			"endDate": "2021-12",
-			"summary": "Worked as a Full-Stack Developer (beyond the job description) in a cross-functional product team alongside a Product Manager, Product Owner, UI/UX Designer, and two Frontend Developers to develop a Human Resource Management System.",
-			"summary_md": "Worked as a **Full-Stack Developer** (_beyond the job description_) in a cross-functional product team alongside a Product Manager, Product Owner, UI/UX Designer, and two Frontend Developers to **develop a Human Resource Management System**.",
+			"summary": "Worked as a Full-Stack Developer (beyond responsibilities) in a cross-functional team alongside a Product Manager, Product Owner, UI/UX Designer, and two Frontend Developers to develop a Human Resource Management System.",
+			"summary_md": "Worked as a **Full-Stack Developer** (_beyond responsibilities_) in a cross-functional team alongside a Product Manager, Product Owner, UI/UX Designer, and two Frontend Developers to **develop a Human Resource Management System**.",
 			"highlights": [
 				"Collaborated with frontend engineers to design and integrate gRPC APIs, ensuring smooth communication between services.",
 				"Managed regular deployments with an Agile approach.",
