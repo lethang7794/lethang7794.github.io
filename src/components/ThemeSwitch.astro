@@ -1,4 +1,5 @@
 ---
+import { THEMES } from "@/constants/theme";
 import Theme from "@/icons/themeSwitch.astro";
 import { Icon } from "astro-icon/components";
 ---
@@ -7,9 +8,9 @@ import { Icon } from "astro-icon/components";
 	<!-- <div class="flex items-center gap-1">
 		<Theme />
 		<select name="themeSwitch" id="themeSwitch" class="block w-full rounded-md border-0 py-1.5 pl-3 pr-10 text-gray-900 dark:text-gray-100 dark:ring-gray-700 sm:text-sm sm:leading-6">
-			<option value="system">System</option>
-			<option value="dark">Dark</option>
-			<option value="light">Light</option>
+			<option value=THEMES.system>System</option>
+			<option value=THEMES.dark>Dark</option>
+			<option value=THEMES.light>Light</option>
 		</select>
 	</div> -->
 
@@ -27,9 +28,9 @@ import { Icon } from "astro-icon/components";
 			name="themeSwitch"
 			class="block w-full rounded-md border-[1px] border-solid border-skin-muted py-1.5 pl-3 pr-10 text-skin-base ring-1 ring-skin-muted hover:border-skin-hue focus:border-skin-hue focus:ring-2 focus:ring-skin-hue sm:text-sm sm:leading-6"
 		>
-			<option value="system" class="text-black">System</option>
-			<option value="dark" class="text-black">Dark</option>
-			<option value="light" class="text-black">Light</option>
+			<option value={THEMES.system} class="text-black">System</option>
+			<option value={THEMES.dark} class="text-black">Dark</option>
+			<option value={THEMES.light} class="text-black">Light</option>
 		</select>
 	</div>
 
@@ -48,6 +49,9 @@ import { Icon } from "astro-icon/components";
 </div>
 
 <script>
+	import { THEMES } from "@/constants/theme";
+	import type { DarkModeTheme } from "@/types";
+
 	function getQueryParam(param: string) {
 		const urlParams = new URLSearchParams(window.location.search);
 		return urlParams.get(param);
@@ -61,28 +65,28 @@ import { Icon } from "astro-icon/components";
 	}
 	const getSystemTheme = () =>
 		window.matchMedia("(prefers-color-scheme: dark)").matches
-			? "dark"
-			: "light";
+			? THEMES.dark
+			: THEMES.light;
 
-	function updateTheme(value: string) {
-		const theme = value === "system" ? getSystemTheme() : value;
-		document.documentElement.classList.remove("light", "dark");
+	function updateTheme(value: DarkModeTheme) {
+		const theme = value === THEMES.system ? getSystemTheme() : value;
+		document.documentElement.classList.remove(THEMES.light, THEMES.dark);
 		document.documentElement.classList.add(theme);
 	}
 
-	function updateThemeIcon(theme: string) {
+	function updateThemeIcon(theme: DarkModeTheme) {
 		const iconContainer = document.getElementById("iconContainer");
 		if (!iconContainer) {
 			return;
 		}
 		iconContainer.innerHTML = "";
-		if (theme === "system") {
+		if (theme === THEMES.system) {
 			iconContainer.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-moon"><path d="M12 8a2.83 2.83 0 0 0 4 4 4 4 0 1 1-4-4"></path><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.9 4.9 1.4 1.4"></path><path d="m17.7 17.7 1.4 1.4"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.3 17.7-1.4 1.4"></path><path d="m19.1 4.9-1.4 1.4"></path></svg>`;
 		}
-		if (theme === "dark") {
+		if (theme === THEMES.dark) {
 			iconContainer.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>`;
 		}
-		if (theme === "light") {
+		if (theme === THEMES.light) {
 			iconContainer.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>`;
 		}
 	}
@@ -101,37 +105,37 @@ import { Icon } from "astro-icon/components";
 		.matchMedia("(prefers-color-scheme: dark)")
 		.addEventListener("change", (event) => {
 			const theme = localStorage.getItem("theme");
-			if (theme !== "system") {
+			if (theme !== THEMES.system) {
 				return;
 			}
 			const isDarkMode = event.matches;
-			updateTheme(isDarkMode ? "dark" : "light");
-			updateThemeIcon("system");
+			updateTheme(isDarkMode ? THEMES.dark : THEMES.light);
+			updateThemeIcon(THEMES.system);
 		});
 
-	updateTheme(select.value);
+	updateTheme(select.value as DarkModeTheme);
 
 	select.addEventListener("change", (event: Event) => {
 		const select = event.target as HTMLSelectElement;
-		updateTheme(select.value);
-		updateThemeIcon(select.value);
+		updateTheme(select.value as DarkModeTheme);
+		updateThemeIcon(select.value as DarkModeTheme);
 		saveTheme(select.value);
 	});
 
 	// Deshabilitar modo oscuro al imprimir
 	window.addEventListener("beforeprint", () => {
-		document.documentElement.classList.remove("dark");
-		document.documentElement.classList.add("light");
+		document.documentElement.classList.remove(THEMES.dark);
+		document.documentElement.classList.add(THEMES.light);
 	});
 
 	// Restaurar el modo oscuro después de imprimir
 	window.addEventListener("afterprint", () => {
-		let theme = "light";
+		let theme: DarkModeTheme = THEMES.light;
 		if (
-			select.value === "dark" ||
-			(select.value === "system" && getSystemTheme() === "dark")
+			select.value === THEMES.dark ||
+			(select.value === THEMES.system && getSystemTheme() === THEMES.dark)
 		) {
-			theme = "dark";
+			theme = THEMES.dark;
 		}
 		updateTheme(theme);
 	});
