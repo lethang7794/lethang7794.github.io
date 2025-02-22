@@ -32,7 +32,7 @@ const SOCIAL_ICONS: SocialIcon = {
 			<div class="shrink-0 flex gap-4 justify-between">
 				<div class="">
 					<h1 class="text-skin-hue">{name}</h1>
-					<h2 class="text-skin-hue font-bold !text-xl">{label}</h2>
+					<h2 class="mt-1 text-skin-hue font-semibold !text-xl italic">{label}</h2>
 				
 				</div>
 				<div class="hidden print:flex- flex-col justify-start items-end text-[xs] text-skin-muted">
@@ -110,7 +110,25 @@ const SOCIAL_ICONS: SocialIcon = {
 					<Icon name="lucide:map-pin" class="flex-shrink-0 text-base" />
 					{city}, {region}
 				</div>
-				<footer class="no-print">
+				<footer class="no-print -ml-2">
+					{
+						profiles.map(({ network, url }) => {
+							const iconName = SOCIAL_ICONS[network];
+							if (!iconName) {
+								return null;
+							}
+							return (
+								<a
+									href={url}
+									title={`Visit ${name} profile on ${network}`}
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<Icon name={iconName} class="text-base" />
+								</a>
+							);
+						})
+					}
 					{
 						email && (
 							<div x-data=`{ copyText: '${email}', copyNotification: false, copyToClipboard() { navigator.clipboard.writeText(this.copyText); this.copyNotification = true; let that = this; setTimeout(function(){ that.copyNotification = false; }, 3000); } }` class="relative flex items-center">
@@ -144,24 +162,6 @@ const SOCIAL_ICONS: SocialIcon = {
 								<Phone />
 							</a>
 						)
-					}
-					{
-						profiles.map(({ network, url }) => {
-							const iconName = SOCIAL_ICONS[network];
-							if (!iconName) {
-								return null;
-							}
-							return (
-								<a
-									href={url}
-									title={`Visit ${name} profile on ${network}`}
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									<Icon name={iconName} />
-								</a>
-							);
-						})
 					}
 				</footer>
 			</div>
