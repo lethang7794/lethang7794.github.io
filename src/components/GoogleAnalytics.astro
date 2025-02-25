@@ -9,7 +9,7 @@ const gtagUrl = `https://www.googletagmanager.com/gtag/js?id=${id}`;
 
 <script is:inline type="text/partytown" src={gtagUrl}></script>
 
-<script is:inline type="text/partytown">
+<script is:inline type="text/partytown" define:vars={{ id }}>
 	window.dataLayer = window.dataLayer || [];
 	window.gtag = function gtag() {
 		dataLayer.push(arguments);
