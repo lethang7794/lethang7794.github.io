@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.19](https://github.com/lethang7794/lethang7794.github.io/compare/v0.5.18...v0.5.19) - 2025-02-25
+
+### 🐛 Bug Fixes
+
+- Ga id not populated (#84)
+
+
 ## [0.5.18](https://github.com/lethang7794/lethang7794.github.io/compare/v0.5.17...v0.5.18) - 2025-02-25
 
 ### 🐛 Bug Fixes
