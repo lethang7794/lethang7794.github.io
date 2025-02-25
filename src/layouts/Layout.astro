@@ -3,7 +3,7 @@ import { basics } from "@cv";
 import { env } from "@/env";
 import EasterEgg from "@/components/EasterEgg.astro";
 import ThemeColor from "@/components/ThemeColor.astro";
-import GoogleAnalyticsRaw from "@/components/GoogleAnalyticsRaw.astro";
+import GoogleAnalytics from "@/components/GoogleAnalytics.astro";
 import QueryStringCleanup from "@/components/QueryStringCleanup.astro";
 import { DEFAULT_THEME } from "@/constants/theme";
 
@@ -57,7 +57,7 @@ const { picture, summary, url, theme } = basics;
 
 		<link rel="stylesheet" href={env.PUBLIC_BASE_PATH + "/themes/themes.css"} />
 
-		{env.PUBLIC_GA_ID ? <GoogleAnalyticsRaw id={env.PUBLIC_GA_ID} /> : null}
+		{env.PUBLIC_GA_ID ? <GoogleAnalytics id={env.PUBLIC_GA_ID} /> : null}
 
 		<ThemeColor />
 		<QueryStringCleanup />
