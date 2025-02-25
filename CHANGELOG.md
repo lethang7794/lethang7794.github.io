@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.20](https://github.com/lethang7794/lethang7794.github.io/compare/v0.5.19...v0.5.20) - 2025-02-25
+
+### 🐛 Bug Fixes
+
+- Cookie SameSite (#85)
+
+
 ## [0.5.19](https://github.com/lethang7794/lethang7794.github.io/compare/v0.5.18...v0.5.19) - 2025-02-25
 
 ### 🐛 Bug Fixes
