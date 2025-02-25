@@ -20,5 +20,5 @@ const gtagUrl = `https://www.googletagmanager.com/gtag/js?id=${id}`;
 	};
 	gtag("js", new Date());
 
-	gtag("config", getId(id));
+	gtag("config", getId(id), { cookie_flags: "SameSite = None; Secure" });
 </script>
