@@ -1,7 +1,7 @@
 {
 	"basics": {
 		"name": "Le Quang Thang",
-		"label": "Full Stack Developer",
+		"label": "Full Stack Developer / Cloud Engineer",
 		"email": "lethang7794@gmail.com",
 		"phone": "+84 944 990 631",
 		"website": "https://lethang7794.github.io",
@@ -13,11 +13,11 @@
 		"theme": "default",
 		"summary": "Ambitious, passionate, and self-motivated Full Stack Developer with expertise in cloud computing (AWS) and DevOps culture, driven by challenges, growth, and innovation. Seeking opportunities to build impactful solutions and deliver value to businesses and users.",
 		"summaries": [
-			"Ambitious, passionate, and self-motivated Full Stack Developer with expertise in cloud computing (AWS) and DevOps culture, driven by challenges, growth, and innovation.",
+			"Ambitious, passionate, and self-motivated Full Stack Developer with expertise in cloud computing (AWS) and DevOps culture & practice, driven by challenges, growth, and innovation.",
 			"Seeking opportunities to build impactful solutions and deliver value to businesses and users."
 		],
 		"summaries_md": [
-			"**Ambitious, passionate, and self-motivated Full Stack Developer** with expertise in **cloud computing (AWS)** and **DevOps** culture, driven by _challenges, growth, and innovation_.",
+			"**Ambitious, passionate, and self-motivated Full Stack Developer** with expertise in **cloud computing (AWS)**, **DevOps** culture & practice, driven by _challenges, growth, and innovation_.",
 			"Seeking opportunities to build **impactful solutions** and **deliver value** to _businesses and users_."
 		],
 		"location": {
@@ -59,14 +59,24 @@
 	},
 	"work": [
 		{
-			"institution": "Self-directed learning and professional development",
+			"company": "Amazon Web Services Vietnam",
+			"position": "Cloud Engineer Internship",
+			"startDate": "2025-05",
+			"summary_md": "Building 5 real-world AWS projects each showing a case study"
+		},
+		{
+			"company": "Self-directed learning & professional development",
 			"url": "",
-			"area": "Computer, software & DevOps",
+			"position": "Full-time Learner & Builder",
 			"startDate": "2023-07",
 			"endDate": "2024-12",
-			"highlights": [
-				"Dedicated 18 months to independently mastering startup methodologies, software design, software delivery, Linux, DevOps, cloud computing, networking, security...",
-				"Applied knowledge through hands-on projects, earned industry-recognized certifications, and actively contributed to open-source communities."
+			"summary_md": "Dedicated 18 months to independently mastering startup methodologies, software design, software delivery, Linux, DevOps, cloud computing, networking, security...",
+			"responsibilities_md": [
+				"Applied knowledge through hands-on projects",
+				"Actively contributed to open-source communities"
+			],
+			"achievements_md": [
+				"Earned industry-recognized certifications in cloud computing"
 			]
 		},
 		{
@@ -247,6 +257,16 @@
 		}
 	],
 	"education": [
+		{
+			"institution": "AWS First Cloud Journey 2025 Bootcamp",
+			"url": "https://cloudjourney.awsstudygroup.com/8-fcjworkforce/",
+			"area": "Cloud Computing & AWS",
+			"startDate": "2025-03",
+			"endDate": "2025-05",
+			"highlights": [
+				"Joined a 6-month journey program to learn cloud computing and AWS services by doing a lot of hand-ons labs."
+			]
+		},
 		{
 			"institution": "Inspire Lab Technology",
 			"area": "DevOps Fresher Program",
