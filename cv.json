@@ -382,6 +382,18 @@
 	],
 	"projects": [
 		{
+			"name": "AWS Explorer",
+			"description": "A place to explorer AWS services",
+			"highlights": [
+				"Browse, explorer, and find your next AWS services...or quickly find the docs you need."
+			],
+			"startDate": "2025-06",
+			"url": "https://aws-explorer.vercel.app",
+			"isActive": true,
+			"skills": ["Next.js", "React", "Tailwind", "Windsurf", "v0"],
+			"hidden": false
+		},
+		{
 			"name": "gtdb",
 			"description": "A place to be a better driver in Vietnam",
 			"highlights": [
