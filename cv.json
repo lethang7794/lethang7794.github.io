@@ -1,7 +1,7 @@
 {
 	"basics": {
 		"name": "Le Quang Thang",
-		"label": "Full Stack Developer",
+		"label": "Full Stack Developer | Cloud Engineer",
 		"email": "lethang7794@gmail.com",
 		"phone": "+84 944 990 631",
 		"website": "https://lethang7794.github.io",
@@ -11,13 +11,13 @@
 		"picture": "",
 		"image": "",
 		"theme": "default",
-		"summary": "Ambitious Full Stack Developer with expertise in cloud computing, driven by challenges, growth, and innovation. Seeking opportunities to build impactful solutions and deliver value to businesses and users.",
+		"summary": "Ambitious, passionate, and self-motivated Full Stack Developer with expertise in cloud computing (AWS) and DevOps culture & practice, and cloud-native solutions, driven by challenges, growth, and innovation. Seeking opportunities to build impactful solutions and deliver value to businesses and users.",
 		"summaries": [
-			"Ambitious Full Stack Developer with expertise in cloud computing, driven by challenges, growth, and innovation.",
+			"Ambitious, passionate, and self-motivated Full Stack Developer with expertise in cloud computing (AWS) and DevOps culture & practice, and cloud-native solutions, driven by challenges, growth, and innovation.",
 			"Seeking opportunities to build impactful solutions and deliver value to businesses and users."
 		],
 		"summaries_md": [
-			"**Ambitious Full Stack Developer** with expertise in **cloud computing**, driven by _challenges, growth, and innovation_.",
+			"**Ambitious, passionate, and self-motivated Full Stack Developer** with expertise in **cloud computing (AWS)**, **DevOps** culture & practice, and **cloud-native** solutions, driven by _challenges, growth, and innovation_.",
 			"Seeking opportunities to build **impactful solutions** and **deliver value** to _businesses and users_."
 		],
 		"location": {
@@ -58,6 +58,27 @@
 		]
 	},
 	"work": [
+		{
+			"company": "Amazon Web Services Vietnam",
+			"position": "Cloud Engineer Intern",
+			"startDate": "2025-05",
+			"summary_md": "_Developing_ and _documenting_ 5 **_comprehensive_ AWS cloud solutions** with **_detailed_ case studies**, demonstrating practical implementation of **cloud architecture _best practices_**."
+		},
+		{
+			"company": "Personal professional development",
+			"url": "",
+			"position": "Full-time Learner & Builder",
+			"startDate": "2023-07",
+			"endDate": "2024-12",
+			"summary_md": "Dedicated 18 months to independently mastering **startup methodologies**, **software design**, **software delivery**, **Linux**, **DevOps**, **cloud computing**, **networking**, and **security**...",
+			"responsibilities_md": [
+				"**Applied** knowledge through **hands-on projects**",
+				"**Actively contributed** to **open-source communities**"
+			],
+			"achievements_md": [
+				"Earned **industry-recognized certifications** in **cloud computing**"
+			]
+		},
 		{
 			"company": "Inspire Lab Technology",
 			"url": "",
@@ -237,14 +258,13 @@
 	],
 	"education": [
 		{
-			"institution": "Self-taught and continuous-improvement",
-			"url": "",
-			"area": "Computer, software & DevOps",
-			"startDate": "2023-07",
-			"endDate": "2024-12",
+			"institution": "AWS First Cloud Journey 2025 Bootcamp",
+			"url": "https://cloudjourney.awsstudygroup.com/8-fcjworkforce/",
+			"area": "Cloud Computing & AWS",
+			"startDate": "2025-03",
+			"endDate": "2025-05",
 			"highlights": [
-				"Dedicated 18 months to independently mastering startup methodologies, software design, software delivery, Linux, DevOps, cloud computing, networking, security...",
-				"Applied knowledge through hands-on projects, earned industry-recognized certifications, and actively contributed to open-source communities."
+				"Joined a 6-month journey program to learn cloud computing and AWS services by doing a lot of hand-ons labs."
 			]
 		},
 		{
@@ -381,6 +401,18 @@
 		}
 	],
 	"projects": [
+		{
+			"name": "AWS Explorer",
+			"description": "A place to explorer AWS services",
+			"highlights": [
+				"Browse, explorer, and find your next AWS services...or quickly find the docs you need."
+			],
+			"startDate": "2025-06",
+			"url": "https://aws-explorer.vercel.app",
+			"isActive": true,
+			"skills": ["Next.js", "React", "Tailwind", "Windsurf", "v0"],
+			"hidden": false
+		},
 		{
 			"name": "gtdb",
 			"description": "A place to be a better driver in Vietnam",

@@ -30,9 +30,9 @@ import Markdown from "../Markdown.astro";
 					const start = new Date(startDate);
 					const startYear = start.getFullYear();
 					const startMonth = start.toLocaleString("en-US", { month: "short" });
-					const end = new Date(endDate);
+					const end = endDate ? new Date(endDate) : new Date();
 					const endYear = endDate != null ? end.getFullYear() : "Present";
-					const endMonth = end.toLocaleString("en-US", { month: "short" });
+					const endMonth =endDate != null ? end.toLocaleString("en-US", { month: "short" }) : ''
 
 					const id = encodeURI(position);
 
