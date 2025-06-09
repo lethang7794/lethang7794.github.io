@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.6.0](https://github.com/lethang7794/lethang7794.github.io/compare/v0.5.22...v0.6.0) - 2025-06-09
+
+### 🚀 Features
+
+- Update data (#88)
+
+
 ## [0.5.22](https://github.com/lethang7794/lethang7794.github.io/compare/v0.5.21...v0.5.22) - 2025-02-25
 
 ### 🐛 Bug Fixes
