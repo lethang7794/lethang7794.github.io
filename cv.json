@@ -3,7 +3,7 @@
 		"name": "Le Quang Thang",
 		"label": "Full Stack Developer | Cloud Engineer",
 		"email": "lethang7794@gmail.com",
-		"phone": "+84 944 990 631",
+		"phone": "+84944990631",
 		"website": "https://lethang7794.github.io",
 		"url": "https://lethang7794.github.io",
 		"urlLastUpdated": "https://github.com/lethang7794/lethang7794.github.io/releases",
@@ -405,10 +405,11 @@
 			"name": "AWS Explorer",
 			"description": "A place to explorer AWS services",
 			"highlights": [
-				"Browse, explorer, and find your next AWS services...or quickly find the docs you need."
+				"Easier way to explore AWS products, services, docs and download AWS architecture icons"
 			],
 			"startDate": "2025-06",
 			"url": "https://aws-explorer.vercel.app",
+			"github": "https://github.com/lethang7794/aws-explorer",
 			"isActive": true,
 			"skills": ["Next.js", "React", "Tailwind", "Windsurf", "v0"],
 			"hidden": false
