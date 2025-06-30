@@ -268,17 +268,6 @@
 			]
 		},
 		{
-			"institution": "Inspire Lab Technology",
-			"area": "DevOps Fresher Program",
-			"studyType": "In-house Training",
-			"iconName": "fa6-solid:house-user",
-			"startDate": "2022-02",
-			"endDate": "2022-04",
-			"highlights": [
-				"Joined the DevOps Fresher Program while working as a Full Stack Developer."
-			]
-		},
-		{
 			"institution": "CoderSchool Vietnam",
 			"area": "Full Stack Web Development",
 			"studyType": "Bootcamp",
