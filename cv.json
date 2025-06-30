@@ -60,7 +60,7 @@
 	"work": [
 		{
 			"company": "Amazon Web Services Vietnam",
-			"position": "Cloud Engineer Intern",
+			"position": "First Cloud Journey Trainee",
 			"startDate": "2025-05",
 			"summary_md": "_Developing_ and _documenting_ 5 **_comprehensive_ AWS cloud solutions** with **_detailed_ case studies**, demonstrating practical implementation of **cloud architecture _best practices_**."
 		},
@@ -265,17 +265,6 @@
 			"endDate": "2025-05",
 			"highlights": [
 				"Joined a 6-month journey program to learn cloud computing and AWS services by doing a lot of hand-ons labs."
-			]
-		},
-		{
-			"institution": "Inspire Lab Technology",
-			"area": "DevOps Fresher Program",
-			"studyType": "In-house Training",
-			"iconName": "fa6-solid:house-user",
-			"startDate": "2022-02",
-			"endDate": "2022-04",
-			"highlights": [
-				"Joined the DevOps Fresher Program while working as a Full Stack Developer."
 			]
 		},
 		{
